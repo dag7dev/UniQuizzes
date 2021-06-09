@@ -198,8 +198,12 @@
 
                     // se il flag nel json è 1, allora renderizzamelo come blocco pre 
                     if (questions[i]['answers_have_code']) {
-                        description = document.createElement('pre');
+                        description = document.createElement('textarea');
+                        description.name = "taAnswerCode"
                         description.textContent = replies[j];
+                        description.readOnly = true;
+                        description.cols = 100;
+                        description.rows = 10
                     } else {
                         var description = document.createTextNode(replies[j]);
                     }
@@ -365,7 +369,5 @@
 
     <p id="risultati" hidden=""></p>
 </body>
-
-</html>
 
 </html>

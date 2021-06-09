@@ -197,7 +197,7 @@
         "question": "Quali delle seguenti affermazioni sui comandi della bash è vera?",
         "replies": [
             " Il comando cat stringa può essere usato per scrivere una stringa su stdout",
-            " Eseguendo il comando echo ‘date’ viene stampata la data e l’ora corrente (secondo l’orologio di sistema)",
+            " Eseguendo il comando echo 'date' viene stampata la data e l’ora corrente (secondo l’orologio di sistema)",
             " Il comando man cmd restituisce in sequenza tutte le pagine di manuale per il comando cmd contenute nelle varie sezioni del manuale",
             " Il comando clear può essere usato per pulire completamente lo schermo: dopo l’esecuzione, il terminale non conterrà alcuna scritta"
         ],
@@ -617,7 +617,7 @@
             " Nessula delle opzioni è vera",
             " Se presente in uno script, tutto quello che lo segue è sempre considerato commento"
         ],
-        "correct": "c",
+        "correct": "b",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -822,7 +822,7 @@
         "replies": [
             " Se lanciato con il comando top, per terminarlo è necessario premere CTRL+C",
             " Il suo output è uguale a quello di ps, ma le opzioni sono diverse",
-            " Se lanciato con il comando top b, per terminarlo è sufficiente premere il tasto Q",
+            " Se lanciato con il comando top -b, per terminarlo è sufficiente premere il tasto Q",
             " Nessuna delle altre affermazioni è vera"
         ],
         "correct": "d",
@@ -1314,10 +1314,10 @@
     {
         "question": "Si consideri il seguente programma in codice C:",
         "replies": [
-            "Se COPIA consiste nell'istruzione memcpy(p[1], p[0], sizeof(struct s));, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile",
-            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
-            "Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione scriverà  c0ao ciao ciao ciao",
-            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile"
+            " Se COPIA consiste nell'istruzione memcpy(p[1], p[0], sizeof(struct s));, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile",
+            " Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
+            " Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione scriverà  c0ao ciao ciao ciao",
+            " Se COPIA consiste nell'assegnamento p[1] = p[0];, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile"
         ],
         "correct": "c",
         "answers_have_code": 0,
@@ -1327,10 +1327,10 @@
     {
         "question": "Si consideri il seguente frammento di codice C:",
         "replies": [
-            "Non è stata allocata la memoria per le 5 aree puntate dai 5 campi a",
-            "È stata allocata la memoria per 5 strutture di tipo struct s sullo heap",
-            "È stata allocata la memoria per 5 strutture di tipo struct s sullo stack delle chiamate",
-            "È stata allocata la memoria per i 100 caratteri dei 5 campi b sullo stack delle chiamate"
+            " Non è stata allocata la memoria per le 5 aree puntate dai 5 campi a",
+            " È stata allocata la memoria per 5 strutture di tipo struct s sullo heap",
+            " È stata allocata la memoria per 5 strutture di tipo struct s sullo stack delle chiamate",
+            " È stata allocata la memoria per i 100 caratteri dei 5 campi b sullo stack delle chiamate"
         ],
         "correct": "b",
         "answers_have_code": 0,
@@ -1340,11 +1340,10 @@
     {
         "question": "Si supponga di eseguire con successo i seguenti comandi da una shell sulla quale non ci sono job in background:",
         "replies": [
-
-            "Entrambi i job lanciati saranno in stato di Stopped",
-            "Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
-            "Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
-            "Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
+            " Entrambi i job lanciati saranno in stato di Stopped",
+            " Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            " Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            " Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
         ],
         "correct": "b",
         "answers_have_code": 0,
@@ -1354,10 +1353,10 @@
     {
         "question": "Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola 'error' per gli errori veri e propri, e con 'error warning' per i semplici warning (è garantito che la stringa 'error warning' non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?",
         "replies": [
-            "grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'",
-            "Nessuna delle altre opzioni è corretta",
-            "grep -E '^error' nomefile | grep -v warning",
-            "grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile"
+            " grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'",
+            " Nessuna delle altre opzioni è corretta",
+            " grep -E '^error' nomefile | grep -v warning",
+            " grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile"
         ],
         "correct": "c",
         "answers_have_code": 0,
@@ -1367,10 +1366,10 @@
     {
         "question": "Quale delle seguenti affermazioni sulle syscall wait e waitpid è falsa?",
         "replies": [
-            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato Ã¨ terminato in modo normale",
-            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, l'exit status del processo figlio appena terminato",
-            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, il PID del processo figlio appena terminato",
-            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato è stato ucciso da un segnale"
+            " Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato Ã¨ terminato in modo normale",
+            " Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, l'exit status del processo figlio appena terminato",
+            " Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, il PID del processo figlio appena terminato",
+            " Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato è stato ucciso da un segnale"
         ],
         "correct": "c",
         "answers_have_code": 0,
@@ -1380,10 +1379,10 @@
     {
         "question": "Si consideri il seguente frammento di codice C:",
         "replies": [
-            "È stata allocata la memoria per 5 strutture di tipo struct s sullo heap",
-            "Nessuna delle altre opzioni è vera",
-            "È stata allocata la memoria per i 100 caratteri dei 5 campi b sullo stack delle chiamate",
-            "È stata allocata la memoria per 5 strutture di tipo struct s sullo stack delle chiamate"
+            " È stata allocata la memoria per 5 strutture di tipo struct s sullo heap",
+            " Nessuna delle altre opzioni è vera",
+            " È stata allocata la memoria per i 100 caratteri dei 5 campi b sullo stack delle chiamate",
+            " È stata allocata la memoria per 5 strutture di tipo struct s sullo stack delle chiamate"
         ],
         "correct": "b",
         "answers_have_code": 0,
@@ -1393,10 +1392,10 @@
     {
         "question": "Si consideri il seguente programma in codice C:",
         "replies": [
-            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
-            "Se COPIA consiste nell'istruzione memcpy(&p[1], &p[0], sizeof(struct s));, allora l'ultima istruzione scriverà  c0ao ciao c0ao ciao",
-            "Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione avrà un effetto non predicibile",
-            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà c0ao ciao c0ao ciao"
+            " Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
+            " Se COPIA consiste nell'istruzione memcpy(&p[1], &p[0], sizeof(struct s));, allora l'ultima istruzione scriverà  c0ao ciao c0ao ciao",
+            " Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione avrà un effetto non predicibile",
+            " Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà c0ao ciao c0ao ciao"
         ],
         "correct": "a",
         "answers_have_code": 0,
@@ -1406,10 +1405,10 @@
     {
         "question": "La directory corrente di una shell bash contiene N directory non nascoste. In ognuna di queste directory è contenuto un file di testo .txt contenente una sola riga con un numero M, potenzialmente diverso da directory a directory. Inoltre può essere presente un file dati.M.txt. Si vuole sapere quanti sono in totale, tra le varie directory, questi file dati.M.txt, senza scrivere nulla su standard error. Quale dei seguenti comandi bash è corretto?",
         "replies": [
-            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt | wc -l; done",
-            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo si; done | wc -l",
-            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt || echo no; done | wc -l",
-            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo no; done | wc -l"
+            " for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt | wc -l; done",
+            " for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo si; done | wc -l",
+            " for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt || echo no; done | wc -l",
+            " for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo no; done | wc -l"
         ],
         "correct": "b",
         "answers_have_code": 0,
@@ -1419,12 +1418,116 @@
     {
         "question": "Si supponga di eseguire con successo i seguenti comandi da una shell sulla quale non ci sono job in background: sudo cp -a `which cat` . sudo chmod u+s cat ./cat & cat & Quale delle seguenti affermazioni è falsa?",
         "replies": [
-            "Entrambi i job lanciati saranno in stato di Stopped",
-            "Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
-            "Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
-            "Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
+            " Entrambi i job lanciati saranno in stato di Stopped",
+            " Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            " Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            " Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
         ],
         "correct": "b",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice:",
+        "replies": [
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_CUR);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_END);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, -100, SEEK_END);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = ltell(fd);"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
+    },
+    {
+        "question": "Si vuole scrivere un programma equivalente al seguente script: ",
+        "replies": [
+            " Nessuna delle altre opzioni è corretta",
+            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n",
+            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\");\nprintf(\"fatto\\n\");\n",
+            " printf(char **argv = {\"-la\", \"\/\", 0};\n\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
+    },
+    {
+        "question": "Quale dei seguenti frammenti di codice è corretto?",
+        "replies": [
+            " int pid = fork();\r\nif (pid == 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n",
+            " int pid = fork();\r\nif (pid == 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n",
+            " Tutte le altre opzioni sono sbagliate",
+            " int pid = fork();\r\nif (pid < 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice, quale dei seguenti frammenti di codice ha lo stesso effetto?",
+        "replies": [
+            " int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\\n\", var);\r\nwrite(1, buf, sizeof(var) + 1);\r\nsprintf(buf, \"%lf\\n\", var2);\r\nwrite(1, buf, sizeof(var2) + 1);\r\n",
+            " int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar buf[4];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));write(1, \"\\n\", 1);\r\n",
+            " int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));\r\n",
+            " int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);\r\n"
+        ],
+        "correct": "d",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nfprintf(stdout, \"%d\\n%lf\\n\", var, var2);\r\n"
+    },
+    {
+        "question": "Si consideri la riga di comando bash while condizione; do comando1 | comando2; done | comando3. Assumendo che condizione, comando1, comando2 e comando3 non contengano errori, quale delle seguenti affermazioni è vera?",
+        "replies": [
+            " Se espressione risulta essere falsa, comando2 viene eseguito almeno una volta",
+            " Nessuna delle altre opzioni è vera",
+            " Se espressione risulta essere falsa, comando1 viene eseguito almeno una volta",
+            " Se espressione risulta essere falsa, comando3 viene eseguito almeno una volta "
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri la riga di comando bash if condizione; then comando1; fi. Assumendo che comando1 non contenga errori di sintassi, quale delle seguenti affermazioni è vera?",
+        "replies": [
+            " comando1 viene eseguito solo se condizione scrive 0 su standard output e nulla su standard error",
+            " comando1 viene eseguito solo se condizione scrive 1 su standard output e nulla su standard error",
+            " comando1 viene eseguito solo se condizione scrive 1 su standard error e nulla su standard output",
+            " Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che le variabili bash a, b e c abbiano valori, rispettivamente, b, c e 1. Quale delle seguenti affermazioni è vera?",
+        "replies": [
+            "L'espansione aritmetica di a è 1",
+            "Nessuna delle altre opzioni è vera",
+            "L'espansione standard di a è 1",
+            "La variabile a viene sempre espansa ad 1"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando top è vera?",
+        "replies": [
+            " Nessuna delle altre affermazioni è vera",
+            " Senza argomenti, il suo output è uguale a quello di ps senza argomenti",
+            " Se lanciato con la riga di comando top, per terminarlo è necessario premere CTRL + C",
+            " Se lanciato con la riga di comando top - b, per terminarlo è sufficiente premere il tasto Q"
+        ],
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
