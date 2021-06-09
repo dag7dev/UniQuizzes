@@ -617,10 +617,11 @@
             " Nessula delle opzioni è vera",
             " Se presente in uno script, tutto quello che lo segue è sempre considerato commento"
         ],
-        "correct": "b",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
-        "code": ""
+        "code": "",
+        "comment": "La​​ B ​​può ​​trarre​​ in​​ inganno:​​ lo ​​shabang ​​si ​​applica ​​solo​​ alla​​ prima​​ riga ​​dello​​ script"
     },
     {
         "question": "Quale delle seguenti affermazioni sulle syscall dei processi Linux è falsa?",
@@ -1529,6 +1530,58 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler inizializzare una variabile var1 di una shell bash in modo tale che sia il contenuto del file filename.txt se tale file esiste, ed il valore della variabile var2 altrimenti. Quale dei seguenti comandi realizza correttamente quanto sopra ? ",
+        "replies": [
+            "var1=`echo filename.txt 2> /dev/null || cat $var2`",
+            "var1=`cat filename.txt 2> /dev/null || echo $var2`",
+            "var1=`cat filename.txt > /dev/null || echo $var2`",
+            "var1=`cat filename.txt 2> /dev/null && echo $var2`"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il comando ssh hostname cmd esegue il comando cmd sulla bash della macchina remota hostname, dopo aver richiesto l'immissione della password per l'utente corrente. Supponendo che la fase di connessione e di immissione della password vada a buon fine, quale delle seguenti affermazioni è falsa?",
+        "replies": [
+            "Il comando ssh hostname 'ls '| wc -l esegue sia ls che wc su hostname",
+            "Il comando ssh hostname ls \\| wc -l esegue sia ls che wc su hostname",
+            "Il comando ssh hostname ls | wc -l esegue ls su hostname, e wc sulla macchina attuale",
+            "Il comando ssh hostname ls '|' wc -l esegue sia ls che wc su hostname"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice, e che  il file file_esistente.txt abbia il seguente contenuto (comprensivo di 2 caratteri carriage return) 4567 34.56",
+        "replies": [
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar buf[4];\r\nread(fd, buf, sizeof(var));\r\nvar = atoi(buf);\r\nread(fd, buf, sizeof(var2));\r\nvar2 = atof(buf);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nread(fd, &var, sizeof(var));\r\nread(fd, &var2, sizeof(var2));\r\n",
+            "fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar buf[6];\r\nread(fd, buf, 5);\r\nvar = atoi(buf);\r\nread(fd, buf, 6);\r\nvar2 = atof(buf);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nfscanf(fd, \"%d\\n%lf\\n\", &var, &var2);\r\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\", \"r\");\r\nint var;\r\ndouble var2;\r\nfscanf(stream, \"%d\\n%lf\\n\", &var, &var2);"
+    },
+    {
+        "question": "Ignorando eventuali memory leaks, quale dei seguenti frammenti di codice può portare ad un segmentation fault?",
+        "replies": [
+            "char * p = malloc(10 * sizeof(char)); \r\np[1]='a';\r\nfree(p)",
+            "char * p = malloc(10 * sizeof(char)); \r\np[9]='a';\r\np = NULL;\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)",
+            "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)",
+            "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\nfree(p)\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
         "has_code": 0,
         "code": ""
     }
