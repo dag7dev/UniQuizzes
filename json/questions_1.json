@@ -7,6 +7,7 @@
             " Nessuna delle altre opzioni \u00e8 vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -19,6 +20,7 @@
             " La disabilitazione delle interruzioni non funziona su sistemi con pi\u00f9 processori o pi\u00f9 core"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -31,6 +33,7 @@
             " Lo scheduler ha, tra i suoi obiettivi, quello di minimizzare il tempo di inattivit\u00e0 del processore"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -43,6 +46,7 @@
             " Ha 9 stati (10 con Exit)"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -55,6 +59,7 @@
             " In assenza di translation lookaside buffer, l'accesso ad un indirizzo virtuale pu\u00f2 richiedere almeno 2 accessi in memoria"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -67,6 +72,7 @@
             " Per \"integrit\u00e0\" dei dati si intende la garanzia che essi non vengano mai modificati"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -79,6 +85,7 @@
             " Pu\u00f2 consistere nel completare un'istruzione di output I (\u00e8 una i) dopo che alcune istruzioni successive ad I siano state eseguite "
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -91,6 +98,7 @@
             " Andando dall'alto in basso, diminuisce la frequenza di accesso alla memoria da parte del processore"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -103,6 +111,7 @@
             " L\u2019identificatore del processo"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -115,6 +124,7 @@
             " Anche assumendo che tutti i processi prima o poi terminino, lo scheduler First Come First Served soffre di starvation"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -127,6 +137,7 @@
             " Un indirizzo di memoria principale va visto come un numero di segmento pi\u00f9 uno spiazzamento all'interno di tale segmento"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -139,6 +150,7 @@
             " Nessuna delle altre opzioni \u00e8 vera"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -151,6 +163,7 @@
             " Decide quali processi, tra quelli appena creati, possono essere ammessi in memoria principale per l'esecuzione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -163,6 +176,7 @@
             " Il difetto principale del paging on demand \u00e8 che causa molti page fault dopo alcuni secondi di esecuzione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -175,6 +189,7 @@
             " Si pu\u00f2 assumere che un processo che non sia nella sezione critica prima o poi ci entri"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -187,6 +202,7 @@
             " Se viene usata la lista di blocchi liberi, una parte viene memorizzata su disco ed una parte in memoria principale"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -199,6 +215,7 @@
             " Nessuna delle altre opzioni \u00e8 corretta"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -211,6 +228,7 @@
             " Nel controllo di accesso discrezionale, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-oggetti"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -223,6 +241,7 @@
             " Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -235,6 +254,7 @@
             " Nessuna delle altre opzioni \u00e8 vera"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -247,6 +267,7 @@
             " Nessuna delle altre opzioni \u00e8 corretta"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -259,6 +280,7 @@
             " Una race condition \u00e8 una violazione della mutua esclusione || \u00c8 possibile che 2 distinti processi chiamino la stessa funzione atomica"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -271,6 +293,7 @@
             " La tabella delle pagine di secondo livello"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -283,6 +306,7 @@
             " Dimensione del \ufb01le"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -295,6 +319,7 @@
             " Per valutare le prestazioni dell'algoritmo con priorit\u00e0 \u00e8 necessario fornire il ruolo dell'utente"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -307,6 +332,7 @@
             " L'algoritmo random ha la stessa funzione dell'algoritmo ottimo dei rimpiazzamenti di pagina: ha delle prestazioni ottime non raggiungibili dagli altri algoritmi"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -319,6 +345,7 @@
             " La tabella di allocazione dei file necessita di memorizzare, per ogni file, il solo blocco di partenza"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -331,6 +358,7 @@
             " Soffre del problema della frammentazione interna, e quindi necessita compattazione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -343,6 +371,7 @@
             " Nessuna delle altre opzioni \u00e8 vera"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -355,6 +384,7 @@
             " In un grafo dell'allocazione delle risorse, all'interno di un nodo rappresentante una risorsa, c'\u00e8 un pallino per ogni istanza di quella risorsa"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -367,6 +397,7 @@
             " La confidenzialit\u00e0 di un sistema operativo consiste nel fatto che il sistema operativo deve essere sempre pronto a rispondere alle richieste di un utente"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -379,6 +410,7 @@
             " Placement policy e replacement policy sono sinonimi ed indicano lo stesso insieme di metodologie"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -391,6 +423,7 @@
             " Per selezionare un settore su una traccia di un disco magnetico a testina mobile, \u00e8 sufficiente posizionare la testina sulla giusta traccia"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -403,6 +436,7 @@
             " Nessuna delle altre opzioni \u00e8 vera"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -415,6 +449,7 @@
             " L'implementazione delle primitive sui semafori \u00e8 garantita atomica dal sistema operativo"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -427,6 +462,7 @@
             " Gli algoritmi Minimum Service Time, SCAN, C-SCAN, N-steps-SCAN ed F-SCAN non sono ottimizzati per essere usati su dischi con testine multiple selezionabili elettronicamente"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -439,6 +475,7 @@
             " Avendo le necessarie informazioni, una tipica strategia \u00e8 ammettere in memoria principale i processi che richiedono dispositivi di I\/O diversi da quelli richiesti dai processi gi\u00e0 attivi"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -451,6 +488,7 @@
             " Se viene usata la lista di blocchi liberi, c'\u00e8 un overhead di spazio, contrariamente alla concatenazione di blocchi liberi"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -463,6 +501,7 @@
             " \u00c8 sempre necessario identificare un file di un file system fornendone il path assoluto"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -475,6 +514,7 @@
             " L'algoritmo di rimpiazzamento per la cache stabilisce quale blocco di RAM deve essere sostituito da un blocco di cache"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -487,6 +527,7 @@
             " Per il problema dei produttori\/consumatori, deve essere sempre possibile che pi\u00f9 consumatori accedano contemporaneamente al buffer, mentre nel problema dei lettori\/scrittori non deve essere mai possibile che pi\u00f9 scrittori accedano all'area di memoria"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -499,6 +540,7 @@
             " Con il partizionamento dinamico, si manifesta il problema della frammentazione esterna"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -511,6 +553,7 @@
             " Se uno scheduler \u00e8 non-preemptive, \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -523,6 +566,7 @@
             " Blocked == Ready"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -535,6 +579,7 @@
             " Non c'\u00e8 modo per il sistema operativo di distinguere tra blocchi con dati e blocchi con indici"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -547,6 +592,7 @@
             " Se viene realizzato tramite sostituzione degli indirizzi nel programma sorgente (al momento della creazione del processo), serve hardware speciale"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -559,6 +605,7 @@
             " Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -571,6 +618,7 @@
             " Se un processo fa richiesta di entrare nella sezione critica, deve poter entrare subito nella sezione critica stessa"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -583,6 +631,7 @@
             " La predictability \u00e8 un criterio utente prestazionale"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -595,6 +644,7 @@
             " Possono essere creati direttamente dai dispositivi di I\/O"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -607,6 +657,7 @@
             " Come per la disabilitazione delle interruzioni, non funzionano per architetture con pi\u00f9 processori o core"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -619,6 +670,7 @@
             " Un processo pu\u00f2 essere creato dal modulo di gestione della memoria per gestire la traduzione da indirizzi virtuali a fisici"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -631,6 +683,7 @@
             " Nel caso di un sistema operativo in cui le funzioni del sistema operativo vengono eseguite come processi separati, c'\u00e8 sempre bisogno di un process switch per eseguire una funzionalit\u00e0 del sistema operativo"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -643,6 +696,7 @@
             " Viene usato con porzioni di dimensione variabile, ma piccola"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -655,6 +709,7 @@
             " Nessuna delle altre opzioni \u00e8 corretta"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -667,6 +722,7 @@
             " Per prevenire il deadlock impedendo l'hold-and-wait, si pu\u00f2 in alcuni casi imporre ai processi di richiedere tutte le risorse fin dall'inizio"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -679,6 +735,7 @@
             " La modalit\u00e0 di un processo utente \u00e8 sempre la modalit\u00e0 utente"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -691,6 +748,7 @@
             " La gestione del resident set tramite politica dinamica mira ad ampliare il numero di pagine di un processo durante l'esecuzione del processo stesso"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -703,6 +761,7 @@
             " La fairness \u00e8 un criterio di sistema non prestazionale"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -715,6 +774,7 @@
             " Diversi thread di uno stesso processo condividono i file aperti"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -727,6 +787,7 @@
             " L'algoritmo di sostituzione basato su frequenza a 3 segmenti della page cache pu\u00f2 avere buone performance anche quando dei settori vengono acceduti spesso, ma tra il primo accesso e quelli successivi ci sono molti altri accessi ad altri settori"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -739,6 +800,7 @@
             " Deve massimizzare l'uso delle risorse per unit\u00e0 di tempo, tenendo presenti eventuali priorit\u00e0"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -751,6 +813,7 @@
             " P*R\/60"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -763,6 +826,7 @@
             " B\/P"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -775,6 +839,7 @@
             "Sono possibili deadlock"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "int bolt = 0;\r\nvoid P(int i)\r\n    while (bolt == 1) \/* do nothing *\/;\r\n    bolt = 1;\r\n    \/* critical section *\/;\r\n    bolt = 0;\r\n    \/* remainder *\/;"
     },
@@ -788,6 +853,7 @@
             " La soluzione non implementa correttamente la mutua esclusione"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "int bolt = 1;\r\nvoid P(int i)\r\n    while(true)\r\n      while (compare_and_swap(bolt, 1, 0) == 0) ;\r\n      critical_section();\r\n      bolt = 1;"
     },
@@ -801,6 +867,7 @@
             " Se si elimina la chiamata a semWait, il requisito base della mutua esclusione (sul numero massimo di processi nella sezione critica) è rispettato"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "semaphore s = 0;\r\nvoid P(int i)\r\n    semWait(s);\r\n    \/* critical section *\/;\r\n    semSignal(s);\r\n    \/* remainder *\/;"
     },
@@ -814,6 +881,7 @@
             "N*2 + 1, 2*(N + 1), N + 1, N*2"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "semaphore S = 1;\r\nint X = N;\r\n\r\n[Process 1]             [Process 2]\r\n    int Y;                       int Z;\r\n    semWait(S);          semWait(S);    \r\n    Y = X*2;                  Z = X+1;\r\n    X = Y;                      X = Z;\r\n    semSignal(S);       semSignal(S); "
     },
@@ -827,6 +895,7 @@
             "Nessuna delle altre opzioni è corretta"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "semaphore U = 3; \r\nsemaphore V = 0;\r\n\r\n[Process 1]                      [Process 2]                        [Process 3]\r\n  while(1)                           while(1)                              while(1)  \r\n        semWait(U);                     semWait(V);                       semWait(V);\r\n        print(\"A\");                          print(\"B\");                             print(\"C\");\r\n        semSignal(V);                  semSignal(V);\r\n"
     },
@@ -840,6 +909,7 @@
             "Almeno un requisito della mutua esclusione non è rispettato "
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "const message null = \/* null message *\/; \r\nmailbox box;\r\nvoid P(int i) { \r\n     message msg;\r\n     while (true) {\r\n          receive(box, msg);\r\n          \/* critical section *\/;  \r\n          send(box, msg);\r\n          \/* remainder *\/;  } }\r\n\r\nvoid main() {\r\n     box = create_mailbox();\r\n     nbsend(box, null);\r\n     parbegin (P(1), P(2), . . ., P(n));  }"
     },
@@ -853,6 +923,7 @@
             " Nessuna delle altre opzioni è corretta"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "const int capacity = \/* buffering capacity *\/ ;\r\n           mailbox mayproduce, mayconsume;\r\n    \r\n     void main() {\r\n         mayproduce = create_mailbox(),\r\n         mayconsume = create_mailbox();\r\n         for (int i = 1; i <= capacity; i++)\r\n              nbsend (mayproduce,null);\r\n         parbegin (producer,consumer); }\r\n    \r\n    void producer() {\r\n         message pmsg;\r\n         while (true) {\r\n           receive (mayproduce,pmsg);\r\n           pmsg = produce(); \/* fa anche append *\/\r\n           nbsend (mayconsume,pmsg);  } }\r\n    \r\n    void consumer() {\r\n         message cmsg;\r\n         while (true) {\r\n           receive (mayconsume,cmsg);\r\n           consume (cmsg); \/* fa anche take *\/\r\n           nbsend (mayproduce,null);  } }"
     },
@@ -866,6 +937,7 @@
             " Non ci sono sufficienti informazioni per determinare come si comporterebbe l'algoritmo di scheduling SRT"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "Processo    Tempo di Arrivo Tempo di Esecuzione\r\nP1  0   14\r\nP2  8   16\r\nP3  5   3\r\nP4  11  7\r\nP5  17  9\r\n"
     }, {
@@ -878,6 +950,7 @@
             " Il tempo medio di turnaround è tra 2 e 3 ms "
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 1,
         "code": "Processo    Tempo di Arrivo Tempo di Esecuzione\r\nP1  0   14\r\nP2  8   16\r\nP3  5   3\r\nP4  11  7\r\nP5  17  9\r\n"
     }
