@@ -1,9 +1,9 @@
-# SO2-exam-simulator
-App per esercitarsi in vista dell'esame Sistemi Operativi 2 - Sapienza, Informatica.
+# SO-exam-simulator
+App per esercitarsi in vista degli esami di Sistemi Operativi, modulo 1 e modulo 2 - Sapienza, Informatica.
 
-Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'esame di SO2.
+Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'esame di SO1 e SO2.
 
-Stai cercando l'app "da terminale"? Clicca qui: https://github.com/andrea-gasparini/SO2-exam-simulator
+Stai cercando l'app "da terminale" per il modulo? Clicca qui: https://github.com/andrea-gasparini/SO2-exam-simulator ma ricordati che non è più mantenuta!
 
 ## Disclaimer
 ---
@@ -15,9 +15,9 @@ Invece, aggiungila tu e aiuta i tuoi colleghi!
 ---
 
 ## Istruzioni
-**Versione Windows/Linux/Mac**: https://github.com/andrea-gasparini/SO2-exam-simulator
+**Versione Windows/Linux/Mac (SOLO MODULO 2, NON AGGIORNATA E NON MANTENUTA)**: https://github.com/andrea-gasparini/SO2-exam-simulator
 
-**Versione web (cross-platform anche per mobile)**: [https://dag7dev.github.io/SO2-exam-simulator/](https://dag7dev.github.io/SO2-exam-simulator/)
+**Versione web (cross-platform anche per mobile)**: [https://dag7dev.github.io/SO-exam-simulator/](https://dag7dev.github.io/SO-exam-simulator/)
 
 ## Requisiti
 La versione web è stata scritta in **JavaScript** molto velocemente. Se vuoi migliorare il codice sei il benvenuto!
@@ -37,7 +37,7 @@ Oppure dai un'occhiata alla [TODO List dei desideri](#todo-list-dei-desideri).
 - [X] **GUI cross-platform** (con JavaFX o con altro, ogni proposta è ben accetta, soprattutto JS, purché giri su Github Sites e funzioni).
 **FATTO**
 - [ ] Una pagina dove generare un JSON già pronto in caso si voglia contribuire e non si è tecnici
-- [ ] Un json che **include i quesiti di SO1**
+- [X] Un json che **include i quesiti di SO1**
 - [ ] Linee guida per contribuire
 
 Per qualsiasi cosa, **apri una PR** o una **issue**.
