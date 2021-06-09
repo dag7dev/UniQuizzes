@@ -8,7 +8,9 @@ Stai cercando l'app "da terminale"? Clicca qui: https://github.com/andrea-gaspar
 ## Disclaimer
 ---
 Ci solleviamo da ogni responsabilità di utilizzo improprio di questo strumento.
-Utilizzalo a tuo rischio e pericolo, ma soprattutto non venirci a dire "eh ma questa domanda non c'era" a compito di esame finito (magari puoi aggiungerla tu e aiutare i tuoi colleghi).
+Utilizzalo a tuo rischio e pericolo, ma soprattutto non venirci a dire "eh ma questa domanda non c'era" o cose come "questa domanda è sbagliata" a compito di esame finito.
+
+Invece, aggiungila tu e aiuta i tuoi colleghi!
 
 ---
 
@@ -23,7 +25,11 @@ La versione web è stata scritta in **JavaScript** molto velocemente. Se vuoi mi
 ## Come contribuire
 Per **aggiungere** o **modificare** le domande: `json/questions_2.json` o `json/questions_1.json`, seguire la struttura delle domande già esistenti.
 
-Se la domanda contiene del codice sorgente, impostare `has_code` a "1" e inserire il codice nell'apposita sezione. Esso verrà mostrato subito dopo il testo della domanda.
+Se la domanda contiene del codice sorgente, impostare `has_code` a "1" nel JSON e inserire il codice nel campo `code`. Esso verrà mostrato subito dopo il testo della domanda in un apposito riquadro.
+
+Se le risposte contengono del codice sorgente, impostare `answers_have_code` a "1" nel JSON. Le domande verranno renderizzate come codice in un box.
+
+**ATTENZIONE**: il codice deve essere propriamente escapizzato, e ogni nuova riga deve avere /n alla fine
 
 Oppure dai un'occhiata alla [TODO List dei desideri](#todo-list-dei-desideri).
 
