@@ -12,49 +12,114 @@
     <h1>QUIZ NON UFFICIALE, FAC SIMILE</h1>
     <h3>Versione per SO1: coming soon</h3>
 
+    <label for="so-quiz-version">Scegli un quiz:</label>
+    <select name="so-quiz-version" id="so-quiz-version">
+        <option value="questions_2.json" selected="selected">SO2</option>
+        <option value="questions_1.json">SO1</option>
+        <!-- <option value="questions_untested.json">Quiz non testati</option> -->
+    </select>
+
+    <button name="btn-quiz-reload" id="btn-quiz-reload">Ricarica domande di questo modulo</button>
+
     <p id="timeleft">:
     </p>
 
     <h2 id="end"></h2>
 
-    <script>
-        // The data/time we want to countdown to
-        var countDownDate = new Date();
-        countDownDate.setMinutes(countDownDate.getMinutes() + 30);
-
-        var timeUpd = setInterval(function() {
-
-            var now = new Date().getTime();
-            var timeleft = countDownDate - now;
-
-            // calcola minuti e secondi rimasti
-            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-
-            // mostra quanto tempo manca all'inizio
-            document.getElementById("timeleft").innerHTML = format(minutes, 2) + ":" + format(seconds, 2)
-
-            // tempo scaduto
-            if (timeleft < 0) {
-                clearInterval(myfunc);
-                document.getElementById("timeleft").innerHTML = ""
-                document.getElementById("end").innerHTML = "TEMPO SCADUTO!";
-
-                validate();
-            }
-        }, 1000);
-    </script>
-
     <div id="container"></div>
 
     <script>
+        var nMinutes = 30; // per debuggare con più rapidità: deve stare a 30
+        var timeUpd // poi le altre funzioni non lo vedono
+        var pRisultati // poi le altre funzioni non lo vedono
         // one-liner figa che permette di fare il padding delle stringhe con gli zeri
         const format = (num, places) => String(num).padStart(places, '0')
 
-        var nDomande = 40;
+        // TODO: controllare se effettivamente ci siano 40 domande, siccome se ce ne sono di meno il programma potrebbe non funzionare correttamente
+        var numeroDomande = 40
 
-        var questions; // contiene tutte le domande e le risposte (parsate dal json)
+        var questions // contiene tutte le domande e le risposte (parsate dal json)
 
+        // event listener sulla combobox
+        document.getElementById('so-quiz-version').onchange = function() {
+            // TODO: bisogna fare un file json con modulo 1
+            // TODO-Later: rimuovere questo if una volta che le domande del modulo 1 saranno state implementate
+            if (this.value === "questions_1.json") {
+                // clearo la pagina
+                pRisultati = document.getElementById("risultati");
+                pRisultati.hidden = true
+
+                clearBox("container")
+                clearInterval(timeUpd);
+                document.getElementById("timeleft").innerHTML = ""
+                document.getElementById("end").innerHTML = "";
+                document.getElementById("btnInvia").style.visibility = "hidden";
+
+                // visualizzo opportuno messaggio
+                var p = document.createElement("p")
+                p.innerHTML = "Le domande del modulo 1 sono in costruzione!"
+                container.appendChild(p)
+            } else {
+                pRisultati = document.getElementById("risultati");
+                pRisultati.hidden = true
+                clearBox("container")
+                clearInterval(timeUpd);
+                buildJSON(this.value)
+                document.getElementById("end").innerHTML = "";
+                timeStart()
+                document.getElementById("btnInvia").style.visibility = "visible";
+            }
+        }
+
+        // event listener sul button
+        document.getElementById('btn-quiz-reload').onclick = function() {
+            pRisultati = document.getElementById("risultati");
+            pRisultati.hidden = true
+            clearBox("container")
+            clearInterval(timeUpd);
+            buildJSON(document.getElementById('so-quiz-version').value)
+            document.getElementById("end").innerHTML = "";
+            timeStart()
+            document.getElementById("btnInvia").style.visibility = "visible";
+        }
+
+        // cancella il contenuto di un div, container nel nostro caso
+        function clearBox(elementID) {
+            var div = document.getElementById(elementID);
+
+            while (div.firstChild) {
+                div.removeChild(div.firstChild);
+            }
+        }
+
+        // setta un conto alla rovescia
+        function timeStart() {
+            var countDownDate = new Date();
+            countDownDate.setMinutes(countDownDate.getMinutes() + nMinutes);
+
+            timeUpd = setInterval(function() {
+                var now = new Date().getTime();
+                var timeleft = countDownDate - now;
+
+                // calcola minuti e secondi rimasti
+                var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+
+                // mostra quanto tempo manca all'inizio
+                document.getElementById("timeleft").innerHTML = format(minutes, 2) + ":" + format(seconds, 2)
+
+                // tempo scaduto
+                if (timeleft < 0) {
+                    clearInterval(timeUpd);
+                    document.getElementById("timeleft").innerHTML = ""
+                    document.getElementById("end").innerHTML = "TEMPO SCADUTO!";
+
+                    validate();
+                }
+            }, 1000);
+        }
+
+        // mescola due array con lo stesso "ordinamento casuale"
         function shuffle(obj1, obj2) {
             var index = obj1.length;
             var rnd, tmp1, tmp2;
@@ -71,18 +136,20 @@
             }
         }
 
-        // parsing del json
-        fetch('json/questions_2.json')
-            .then(res => res.json())
-            .then(data => questions = data)
-            .then(() => console.log(questions))
-            .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
-            .then(() => loadElements(questions)); // buildiamo le varie parti della pagina web 
-
+        // builda i container col json
+        function buildJSON(path) {
+            // parsing del json
+            fetch('json/' + path)
+                .then(res => res.json())
+                .then(data => questions = data)
+                .then(() => console.log(questions))
+                .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
+                .then(() => loadElements(questions)); // buildiamo le varie parti della pagina web 
+        }
 
         // carichiamo gli elementi nella pagina web
         function loadElements(questions) {
-            for (i = 0; i < nDomande; i++) {
+            for (i = 0; i < numeroDomande; i++) {
                 var container = document.getElementById('container');
                 var containingDiv = document.createElement("div");
                 containingDiv.id = i;
@@ -101,7 +168,7 @@
                 // (sebbene sarebbe stato più comodo avere un numero abbiamo delle lettere, quindi dobbiamo convertirle)
                 var replyNumber = Array.from(Array(replies.length).keys())
 
-                //shuffle(replies, replyNumber);
+                //shuffle(replies, replyNumber);    // TODO: rimuovere questo commento --- disabilitato, in quanto anche la risposta giusta deve essere mescolata
 
                 var uglyTabella = document.createElement("table");
                 uglyTabella.border = 1;
@@ -176,7 +243,7 @@
             }
         }
 
-        // questa funzione valida le risposte inserite a seguito della pressione del tasto invia
+        // valida le risposte inserite a seguito della pressione del tasto invia
         // o della scadenza del popup
         function validate() {
             contSkip = 0;
@@ -184,7 +251,7 @@
             contWrong = 0;
             punteggio = 0;
 
-            for (i = 0; i < nDomande; i++) {
+            for (i = 0; i < numeroDomande; i++) {
                 var buttons = document.getElementsByName("radioBtns" + i);
                 var rightAnswer = document.getElementById("span" + i);
                 var result = -1;
@@ -248,17 +315,18 @@
             }
 
             // aggiungo i risultati a fine pagina
-            var pRisposte = document.getElementById("risultati");
-            pRisposte.innerHTML =
+            pRisultati = document.getElementById("risultati");
+            pRisultati.innerHTML =
                 "Risposte giuste: <b>" + contRight + "</b>" + "<br>" +
                 "Risposte errate: <b>" + contWrong + "</b>" + "<br>" +
                 "Non risposte: <b>" + contSkip + "</b>" + "<br>" +
                 "<b>Punteggio: " + punteggio + "/" + "40" + "</b>" + "<br>";
 
-            pRisposte.hidden = false;
+            pRisultati.hidden = false;
 
             // ciò viene fatto altrimenti il timer continua
             document.getElementById("timeleft").innerHTML = ""
+            clearInterval(timeUpd);
 
             // TODO: trovare un modo migliore per fare ciò rispeto a fare un copia-incolla
             // fa un popup contenente il testo "copia" dell'innerhtml
@@ -267,15 +335,30 @@
                 "Non risposte: " + contSkip + "\r\n" +
                 "Punteggio: " + punteggio + "/" + "80" + "\r\n";
 
+            document.getElementById("btnInvia").style.visibility = "hidden";
+
             window.alert(testoAlert);
         }
     </script>
 
-    <button onclick="validate()">
-        Invia
-    </button>
+
+    <script>
+        timeStart()
+
+        // builda il file all'inizio --> il file predefinito è questions_2.json
+        buildJSON("questions_2.json");
+    </script>
+
+
+    <div id="btnInvia" name="btnInvia">
+        <button onclick="validate()">
+            Invia
+        </button>
+    </div>
 
     <p id="risultati" hidden=""></p>
 </body>
+
+</html>
 
 </html>
