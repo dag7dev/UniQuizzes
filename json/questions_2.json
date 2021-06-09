@@ -1580,7 +1580,7 @@
             "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)",
             "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\nfree(p)\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)"
         ],
-        "correct": "a",
+        "correct": "d",
         "answers_have_code": 1,
         "has_code": 0,
         "code": ""
