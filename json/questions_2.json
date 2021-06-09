@@ -7,6 +7,7 @@
             " Ogni processo può conoscere il suo PID"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -19,6 +20,7 @@
             " Per stampare su stderr la spiegazione di un errore verificatosi in una syscall, il cui nome sia contenuto nella variabile syscall_name (di tipo char *), si può effettuare la seguente chiamata: perror(\"Si e' verificato il seguente errore nella chiamata a %s\", syscall_name);"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -31,6 +33,7 @@
             " Con l’eccezione del primo processo, tutti i processi sono creati con una fork effettuata da un altro processo in esecuzione"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -43,6 +46,7 @@
             " Qualsiasi computazione eseguita dal sistema operativo è contenuta dentro un qualche processo"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -55,6 +59,7 @@
             " Un processo è sempre un’istanza di uno script bash"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -67,6 +72,7 @@
             " Rappresenta le stringhe come array di caratteri terminate dal carattere ‘\\0’"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -79,6 +85,7 @@
             " Richard Stallman ha descritto per primo la licenza GPL"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -91,6 +98,7 @@
             " Ad ogni filesystem corrisponde un disco fisico o parte di esso(partizione)"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -103,6 +111,7 @@
             " Usando le named pipes, è possibile far comunicare solo processi parenti(ad es., padre con figlio)"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -115,6 +124,7 @@
             " Usando le named pipes, è possibile far comunicare solo processi parenti(ad es., padre con figlio)"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -127,6 +137,7 @@
             " int fd = open(NOMEFILE, O_WRONLY | O_CREAT | O_TRUNC, 0666);"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -139,6 +150,7 @@
             " Le syscall ioctl e fcntl ammettono 2 o 3 argomenti, a seconda dell’operazione richiesta"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -151,6 +163,7 @@
             " Nessuna delle altre affermazioni è vera"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -163,6 +176,7 @@
             " Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è necessario scrivere uno switch sulla variabile globale errno"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -175,6 +189,7 @@
             " [^IKU]nformatica"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -187,6 +202,7 @@
             " Il comando clear può essere usato per pulire completamente lo schermo: dopo l’esecuzione, il terminale non conterrà alcuna scritta"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -199,6 +215,7 @@
             " Rappresenta il carattere utilizzato per la separazione in parole (word splitting)"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -211,6 +228,7 @@
             " È stato definito presso i laboratori di ricerca di una compagnia telefonica americana"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -223,6 +241,7 @@
             " I risultati di malloc, calloc e realloc possono essere passati alla funzione free per poter essere riallocati da future malloc, calloc e/o realloc"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -235,6 +254,7 @@
             " La memoria allocata da malloc e/o calloc si trova sullo heap"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -247,6 +267,7 @@
             " MULTICS"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -259,6 +280,7 @@
             " Il comando modifica tutti i tempi(atime, mtime e ctime) di tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente dalla directory Documenti"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -271,6 +293,7 @@
             " Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è il PPID (che quindi non è copiato)"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -283,6 +306,7 @@
             " L’opzione -i di cmp permette di considerare come uguali le differenze sul solo minuscolo/maiuscolo"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -295,6 +319,7 @@
             " cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z bg bg"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -307,6 +332,7 @@
             " cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z fg"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -319,6 +345,7 @@
             " La syscall symlink(oldpath, newpath) ha lo stesso effetto del comando bash ln -s oldpath newpath"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -331,6 +358,7 @@
             " Quando un processo in foreground termina, la bash stampa il job id del processo e la ragione della terminazione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -343,6 +371,7 @@
             " Permette di definire quali segnali vanno ignorati finché l’handler del segnale è in esecuzione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -355,6 +384,7 @@
             " Permette tramite il campo sa_mask della struttura struct sigaction, di definire quali segnali vanno ignorati finché l’handler del segnale è in esecuzione"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -367,6 +397,7 @@
             " cmd1; cmd2 &"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -379,6 +410,7 @@
             " Nessuna delle altre opzioni è corretta"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -391,6 +423,7 @@
             " cmd1; cmd2 &"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -403,6 +436,7 @@
             " Il comando time cmd, eseguito dalla bash, può solo mostrare il tempo (di CPU, di sistema e reale)"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -415,6 +449,7 @@
             " Sono entrambi interattivi"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -427,6 +462,7 @@
             " Le chiamate alla waitpid possono non essere bloccanti"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -439,6 +475,7 @@
             " Non è possibile definire array associativi"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -451,6 +488,7 @@
             " Ha sempre una directory padre, eventualmente corrisponde a se stessa"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -463,6 +501,7 @@
             " La syscall chroot ha l’effetto di cambiare l’esecuzione delle sole chiamate ad open che usano path assoluti come primo argomento"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -475,6 +514,7 @@
             " Le syscall Linux permettono solamente le seguenti operazioni: apertura, chiusura, scrittura, lettura, posizionamento"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -487,6 +527,7 @@
             " Per poter leggere il contenuto di una directory occorre aprirla con la syscall opendir"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -499,6 +540,7 @@
             " Per mandare il segnale 9 al processo con PID 10, è sufficiente scrivere il comando kill -KILL %10"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -511,6 +553,7 @@
             " utilizzare il comando uniq"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -523,6 +566,7 @@
             " usando la syscall mkfifo, viene aperto un solo file descriptor"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -535,6 +579,7 @@
             " La syscall stat(nomefile, buf) ha lo stesso effetto del comando bash stat nomefile"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -547,6 +592,7 @@
             " Sono file di testo composti da sequenze di linee del tipo condizione azione, dove la condizione può essere, ad esempio, un numero di linea o una espressione regolare"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -559,6 +605,7 @@
             " Il comando od scrive ogni singolo byte letto usando il suo valore numerico"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -571,6 +618,7 @@
             " Se presente in uno script, tutto quello che lo segue è sempre considerato commento"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -583,6 +631,7 @@
             " La syscall getpid() ritorna il PID del processo chiamante"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -595,6 +644,7 @@
             " Non è possibile dichiarare una variabile in sola lettura: una variabile definita in uno script bash è sempre modificabile"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -607,6 +657,7 @@
             " Non è possibile dichiarare una variabile in sola lettura: una variabile definita in uno script bash è sempre modificabile"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -619,6 +670,7 @@
             " È possibile usarlo per vedere solo i processi che superano un certo uso della RAM"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -631,6 +683,7 @@
             " Se si vuole dare input da stdin senza redirezioni ad un processo, è necessario lanciarlo in foreground"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -643,6 +696,7 @@
             " Il processo control block (PCB) mantiene le informazioni essenziali di ogni processo, e uno stesso PCB può essere condiviso tra processi diversi"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -655,6 +709,7 @@
             " Un comando builtin della bash non corrisponde ad alcun file eseguibile dedicato"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -667,6 +722,7 @@
             " Current working directory"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -679,6 +735,7 @@
             " Il comando which cmd mostra qual è il file eseguibile che viene eseguito quando si lancia il comando cmd, ma solo per i comando che non sono builtin"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -691,6 +748,7 @@
             " Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere valore con la chiamata a putenv(\"var=valore\");"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -703,6 +761,7 @@
             " Linux è multiprocesso, perché puù essere usato su una macchina con più processi"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -715,6 +774,7 @@
             " Linux è multiprocesso, perché puù essere usato su una macchina con più processi"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -727,6 +787,7 @@
             " E un linguaggio non strutturato e compilato"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -739,6 +800,7 @@
             " Continued"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -751,6 +813,7 @@
             " Orphaned"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -763,6 +826,7 @@
             " Nessuna delle altre affermazioni è vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -775,6 +839,7 @@
             " Nessuna delle opzioni"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -787,6 +852,7 @@
             " Per stoppare un processo in foreground, si può sia mandare un segnale SIGTSTP che premere CTRL+Z in una qualsiasi shell"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -799,6 +865,7 @@
             " tr"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -811,6 +878,7 @@
             " ps -uutente -o pid,ppid,cmd,vsz,rss"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -823,6 +891,7 @@
             " Non può essere formata da soli caratteri literal"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -835,6 +904,7 @@
             " In un sistema Unix tutte le risorse sono rappresentate da un file"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -847,6 +917,7 @@
             " Nessuna delle opzioni è vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -859,6 +930,7 @@
             " Nessuna delle altre affermazioni è vera"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -871,6 +943,7 @@
             " Fissato un istante nell’esecuzione del sistema operativo, ci sarà sempre al massimo un job in foreground, mentre quelli in background possono essere più d’uno"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -883,6 +956,7 @@
             " Nel processo padre, la variabile pid assume 2 diversi valori"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -895,6 +969,7 @@
             " Deve contenere, come valore, un solo carattere, da usare per la separazione in parole nella bash (word splitting)"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -907,6 +982,7 @@
             " Nessuna delle altre opzioni è vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -919,6 +995,7 @@
             " Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -931,6 +1008,7 @@
             " Un carattere literal ha un match con se stesso"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -943,6 +1021,7 @@
             " Il file System di Linux è gerarchico, perché per accedere ad un file occorre effettuare una chiamata di sistema al kernel"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -955,6 +1034,7 @@
             " È possibile cercare anche directory, e non solo file"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -967,6 +1047,7 @@
             " È una struttura ad albero in cui le directory sono nodi intermedi e non possono mai essere nodi terminali"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -979,6 +1060,7 @@
             " Tutte le risposte sono vere"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -991,6 +1073,7 @@
             " L’opzione -j B di od permette di cominciare la visualizzazione a partire dal (B + 1)-esimo byte"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1003,6 +1086,7 @@
             " La concatenazione di due o più regex è una regex"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1015,6 +1099,7 @@
             " Nasce negli anni 70 come evoluzione del linguaggio B"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1027,6 +1112,7 @@
             " Si"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1039,6 +1125,7 @@
             " nessuna delle altre risposte è vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1051,6 +1138,7 @@
             " Nessuna delle altre opzioni è vera"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1063,6 +1151,7 @@
             " Sia il server che il client devono sempre chiamare la syscall socket"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1075,6 +1164,7 @@
             " Non è possibile essere immuni al CTRL+C"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1087,6 +1177,7 @@
             " echo niente | awk '{print \"'\"'\"'\";}'"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1099,6 +1190,7 @@
             " for file in `find . -type f`; do head -1 $file | awk '{print $1}'; done | sort | uniq"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1111,6 +1203,7 @@
             " Nessuna delle altre opzioni è corretta"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1123,6 +1216,7 @@
             " È un linguaggio compilato"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1135,6 +1229,7 @@
             " È un linguaggio strutturato e compilato"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1147,6 +1242,7 @@
             " find/ -type l -ctime 0 -exec mv '{}' /tmp/ \\;"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1159,6 +1255,7 @@
             " La syscall setuid() ritorna il real user ID del processo chiamante"
         ],
         "correct": "d",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1171,6 +1268,7 @@
             " Nessuna delle altre opzioni è vera"
         ],
         "correct": "a",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1183,6 +1281,7 @@
             " Nessuna delle altre opzioni è vera"
         ],
         "correct": "b",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1195,6 +1294,7 @@
             " Nessuna delle altre opzioni è vera"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     },
@@ -1207,6 +1307,7 @@
             " Possono esistere uno o più path assoluti che permettono di richiedere l'accesso a tale file"
         ],
         "correct": "c",
+        "answers_have_code": 0,
         "has_code": 0,
         "code": ""
     }
