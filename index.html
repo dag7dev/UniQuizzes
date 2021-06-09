@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>SO2 Simulator - SECONDO MODULO</title>
+    <title>SO2 Simulator - PRIMO E SECONDO MODULO</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
 
 <body style="max-width: 100%;">
     <h1>QUIZ NON UFFICIALE, FAC SIMILE</h1>
-    <h3>Versione per SO1: coming soon</h3>
 
     <label for="so-quiz-version">Scegli un quiz:</label>
     <select name="so-quiz-version" id="so-quiz-version">
@@ -29,7 +28,7 @@
     <div id="container"></div>
 
     <script>
-        var nMinutes = 30; // per debuggare con più rapidità: deve stare a 30
+        var nMinutes = 25; // per debuggare con più rapidità: deve stare a 25 normalmente
         var timeUpd // poi le altre funzioni non lo vedono
         var pRisultati // poi le altre funzioni non lo vedono
         // one-liner figa che permette di fare il padding delle stringhe con gli zeri
@@ -42,33 +41,14 @@
 
         // event listener sulla combobox
         document.getElementById('so-quiz-version').onchange = function() {
-            // TODO: bisogna fare un file json con modulo 1
-            // TODO-Later: rimuovere questo if una volta che le domande del modulo 1 saranno state implementate
-            if (this.value === "questions_1.json") {
-                // clearo la pagina
-                pRisultati = document.getElementById("risultati");
-                pRisultati.hidden = true
-
-                clearBox("container")
-                clearInterval(timeUpd);
-                document.getElementById("timeleft").innerHTML = ""
-                document.getElementById("end").innerHTML = "";
-                document.getElementById("btnInvia").style.visibility = "hidden";
-
-                // visualizzo opportuno messaggio
-                var p = document.createElement("p")
-                p.innerHTML = "Le domande del modulo 1 sono in costruzione!"
-                container.appendChild(p)
-            } else {
-                pRisultati = document.getElementById("risultati");
-                pRisultati.hidden = true
-                clearBox("container")
-                clearInterval(timeUpd);
-                buildJSON(this.value)
-                document.getElementById("end").innerHTML = "";
-                timeStart()
-                document.getElementById("btnInvia").style.visibility = "visible";
-            }
+            pRisultati = document.getElementById("risultati");
+            pRisultati.hidden = true
+            clearBox("container")
+            clearInterval(timeUpd);
+            buildJSON(this.value)
+            document.getElementById("end").innerHTML = "";
+            timeStart()
+            document.getElementById("btnInvia").style.visibility = "visible";
         }
 
         // event listener sul button
