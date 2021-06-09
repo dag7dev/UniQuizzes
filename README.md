@@ -1,5 +1,5 @@
 # SO2-exam-simulator
-App per esercitarci in vista dell'esame Sistemi Operativi 2 - Sapienza, Informatica.
+App per esercitarsi in vista dell'esame Sistemi Operativi 2 - Sapienza, Informatica.
 
 Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'esame di SO2.
 
