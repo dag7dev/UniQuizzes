@@ -144,6 +144,7 @@
                 .then(data => questions = data)
                 .then(() => console.log(questions))
                 .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
+                //.then(() => questions = questions)
                 .then(() => loadElements(questions)); // buildiamo le varie parti della pagina web 
         }
 
@@ -195,7 +196,13 @@
                     label.htmlFor = 'lblRadio' + i + "." + j;
                     label.name = 'lblRadio' + i + "." + j;
 
-                    var description = document.createTextNode(replies[j]);
+                    // se il flag nel json è 1, allora renderizzamelo come blocco pre 
+                    if (questions[i]['answers_have_code']) {
+                        description = document.createElement('pre');
+                        description.textContent = replies[j];
+                    } else {
+                        var description = document.createTextNode(replies[j]);
+                    }
                     label.appendChild(description);
 
                     var newline = document.createElement('br');
