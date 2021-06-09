@@ -3,6 +3,8 @@ App per esercitarci in vista dell'esame Sistemi Operativi 2 - Sapienza, Informat
 
 Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'esame di SO2.
 
+Stai cercando l'app "da terminale"? [clicca qui](https://github.com/andrea-gasparini/SO2-exam-simulator)
+
 ## Disclaimer
 ---
 Ci solleviamo da ogni responsabilità di utilizzo improprio di questo strumento.
@@ -11,7 +13,8 @@ Utilizzalo a tuo rischio e pericolo, ma soprattutto non venirci a dire "eh ma qu
 ---
 
 ## Istruzioni
-**Versione web**: [https://dag7dev.github.io/SO2-exam-simulator/](https://dag7dev.github.io/SO2-exam-simulator/)
+**Versione Windows/Linux/Mac**: https://github.com/andrea-gasparini/SO2-exam-simulator(clicca qui per la versione Windows, Mac o Linux)
+**Versione web (cross-platform anche per mobile)**: [https://dag7dev.github.io/SO2-exam-simulator/](https://dag7dev.github.io/SO2-exam-simulator/)
 
 ## Requisiti
 La versione web è stata scritta in **JavaScript** molto velocemente. Se vuoi migliorare il codice sei il benvenuto!
