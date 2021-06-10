@@ -11,6 +11,16 @@
 <body style="max-width: 100%;">
     <h1>QUIZ NON UFFICIALE, FAC SIMILE</h1>
 
+    <h3>+2 per ogni risposta giusta, -1 per ogni risposta sbagliata, 0 per ogni risposta non data</h3>
+
+    <details>
+        <summary>Cosa c'è di nuovo</summary>
+        <p style="color:red">- aggiunto slider per selezionare un numero di risposte massimo<br> utile per testare la propria resistenza e memoria</p>
+        <p style="color:red">- aggiunta la possibilità di customizzare l'allenamento</p>
+        <p style="color:black">- aggiunte le domande del modulo1</p>
+    </details>
+
+    <hr>
     <label for="so-quiz-version">Scegli un quiz:</label>
     <select name="so-quiz-version" id="so-quiz-version">
         <option value="questions_2.json" selected="selected">SO2</option>
@@ -20,6 +30,28 @@
 
     <button name="btn-quiz-reload" id="btn-quiz-reload">Ricarica domande di questo modulo</button>
 
+    <br>
+
+    <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Ordinamento casuale domande" checked />
+    <label for="chk-shuffle-questions">Ordinamento casuale domande</label>
+    <br>
+
+    <input type="checkbox" id="chk-shuffle-answers" name="chk-shuffle-answers" title="Ordinamento casuale risposte" checked />
+    <label for="chk-shuffle-answers">Ordinamento casuale risposte</label>
+
+    <br>
+    <input type="checkbox" id="chk-timer" name="chk-timer" title="Abilita / Disabilita tempo" checked />
+    <label for="chk-timer">Abilita / Disabilita tempo</label>
+
+    <br>
+
+    <div class="slidecontainer">
+        <input type="range" autocomplete="off" min="0" step="5" max="60" value="40" class="slider" id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
+        <span id="sliderText"></span>
+    </div>
+
+    <hr>
+
     <p id="timeleft"><br></p>
 
     <h2 id="end"></h2>
@@ -28,6 +60,16 @@
     <script src="js/main.js"></script>
 
     <script>
+        var slider = document.getElementById("sliderQuestionsNumber");
+        var outputslider = document.getElementById("sliderText");
+        outputslider.innerHTML = slider.value;
+
+        // riporto le checkbox ai valori originali
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        [].forEach.call(allCheckboxes, function(checkbox) {
+            checkbox.checked = checkbox.defaultChecked;
+        });
+
         timeStart()
 
         // builda il file all'inizio --> il file predefinito è questions_2.json
@@ -39,7 +81,17 @@
         <button onclick="validate()">Invia</button>
     </div>
 
+    <br>
     <p id="risultati" hidden=""></p>
+    <details>
+        <summary>Link utili</summary>
+        <a href="https://twiki.di.uniroma1.it/twiki/view/SO/SO1213AL/SistemiOperativi12CFU">Twiki Sistemi Operativi</a> <br>
+        <a href="https://gitlab.com/sapienzastudents">SapienzaStudents</a> <br>
+        <a href="https://github.com/dag7dev/SO-exam-simulator/">Github del progetto</a> <br>
+        <b>
+            <center>SE IL PROGETTO TI È STATO UTILE, PUOI LASCIARE UNA STELLA SU GITHUB!<br></center>
+        </b>
+    </details>
 </body>
 
 </html>
