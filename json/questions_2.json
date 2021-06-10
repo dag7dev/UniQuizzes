@@ -1346,10 +1346,10 @@
             " Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
             " Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
         ],
-        "correct": "b",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 1,
-        "code": "sudo cp -a `w hich cat` .\nsudo chmod u+s cat\n./cat &\ncat &\n"
+        "code": "sudo cp -a `which cat` .\nsudo chmod u+s cat\n./cat &\ncat &\n"
     },
     {
         "question": "Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola 'error' per gli errori veri e propri, e con 'error warning' per i semplici warning (è garantito che la stringa 'error warning' non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?",
