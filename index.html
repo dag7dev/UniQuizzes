@@ -173,8 +173,7 @@
                     radiobox.value = String.fromCharCode(replyNumber[j] + 97);
 
                     var label = document.createElement('label')
-                    label.htmlFor = 'lblRadio' + i + "." + j;
-                    label.name = 'lblRadio' + i + "." + j;
+                    label.htmlFor = 'risposta' + i + "." + j;
 
                     // se il flag nel json è 1, allora renderizzamelo come blocco pre 
                     if (questions[i]['answers_have_code']) {
