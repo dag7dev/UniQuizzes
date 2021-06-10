@@ -1,13 +1,13 @@
 var nMinutes = 25; // per debuggare con più rapidità: deve stare a 25 normalmente
 var timeUpd // poi le altre funzioni non lo vedono
-var pRisultati // poi le altre funzioni non lo vedono
+var pResults // poi le altre funzioni non lo vedono
 var shuffleQuestionMode = true // mescola le domande
 var shuffleAnswerMode = true // mescola le risposte
 var timer = true;
 
 const format = (num, places) => String(num).padStart(places, '0') // funzione one-line figa che permette di fare il padding delle stringhe con gli zeri
 
-var numeroDomande = 40 // numero domande che si vuole mostrare
+var numberOfQuestions = 40 // numero domande che si vuole mostrare
 var questions // contiene tutte le domande e le risposte (parsate dal json)
 
 ////////////////////
@@ -18,7 +18,7 @@ var slider = document.getElementById("sliderQuestionsNumber");
 var outslider = document.getElementById("sliderText");
 
 function changeAnswers() {
-    numeroDomande = slider.value;
+    numberOfQuestions = slider.value;
     restart()
 }
 
@@ -28,8 +28,8 @@ slider.oninput = function() {
 
 // event listener sulla combobox
 document.getElementById('so-quiz-version').onchange = function() {
-    pRisultati = document.getElementById("risultati")
-    pRisultati.hidden = true
+    pResults = document.getElementById("risultati")
+    pResults.hidden = true
     clearBox("container")
     clearInterval(timeUpd)
     buildJSON(this.value)
@@ -44,8 +44,8 @@ document.getElementById('btn-quiz-reload').onclick = function() {
 }
 
 function restart() {
-    pRisultati = document.getElementById("risultati")
-    pRisultati.hidden = true
+    pResults = document.getElementById("risultati")
+    pResults.hidden = true
     clearBox("container")
     clearInterval(timeUpd)
     buildJSON(document.getElementById('so-quiz-version').value)
@@ -115,6 +115,27 @@ function timeStart() {
     }, 1000)
 }
 
+// pure shuffle --> https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function pureShuffle(array) {
+    var currentIndex = array.length,
+        randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]
+        ];
+    }
+
+    return array;
+}
+
 // mescola due array con lo stesso "ordinamento casuale"
 function shuffle(obj1, obj2) {
     var index = obj1.length;
@@ -139,7 +160,7 @@ function buildJSON(path) {
         fetch('json/' + path)
             .then(res => res.json())
             .then(data => questions = data)
-            .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
+            .then(() => questions = pureShuffle(questions)) // randomizziamo l'ordine delle domande
             .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web
     } else {
         fetch('json/' + path)
@@ -152,24 +173,23 @@ function buildJSON(path) {
 
 // carichiamo gli elementi nella pagina web
 function loadElements(questions) {
-    for (i = 0; i < numeroDomande; i++) {
+    for (i = 0; i < numberOfQuestions; i++) {
         var container = document.getElementById('container')
         var containingDiv = document.createElement("div")
         containingDiv.id = i;
         container.appendChild(containingDiv)
 
-        var tabella = document.createElement("table")
-        tabella.border = 1;
+        var bigTable = document.createElement("table")
+        bigTable.border = 1;
 
-        tabella.innerHTML = "<b><font color='blue'>" + (i + 1) + ". " + questions[i]['question'] + "</font></b><br>";
-        containingDiv.appendChild(tabella)
+        bigTable.innerHTML = "<b><font color='blue'>" + (i + 1) + ". " + questions[i]['question'] + "</font></b><br>";
+        containingDiv.appendChild(bigTable)
 
         // shufflo gli array insieme (risposte casuali)
         var replies = questions[i]['replies'];
 
         // questo array mi serve perchè altrimenti avrei dovuto cambiare il json da capo
         // (sebbene sarebbe stato più comodo avere un numero abbiamo delle lettere, quindi dobbiamo convertirle)
-        var base = Array.from(Array(replies.length).keys())
         var replyNumber = Array.from(Array(replies.length).keys())
 
         // casuale
@@ -178,8 +198,8 @@ function loadElements(questions) {
         }
 
         // tabella per la risposta
-        var uglyTabella = document.createElement("table")
-        uglyTabella.border = 1;
+        var uglyTable = document.createElement("table")
+        uglyTable.border = 1;
 
         // ora mi calcolo la risposta giusta
         var rightAnswerText = questions[i]['correct'].charCodeAt(0) - 97 // prima mi calcolo il numero dalla lettera
@@ -192,7 +212,7 @@ function loadElements(questions) {
             preBlock = document.createElement('pre')
             preBlock.textContent = questions[i]['code'];
             tablePre.append(preBlock)
-            uglyTabella.append(tablePre)
+            uglyTable.append(tablePre)
         }
 
         // per ogni risposta del json (le varie scelte)
@@ -221,9 +241,9 @@ function loadElements(questions) {
 
             var newline = document.createElement('br')
 
-            uglyTabella.appendChild(radiobox)
-            uglyTabella.appendChild(label)
-            uglyTabella.appendChild(newline)
+            uglyTable.appendChild(radiobox)
+            uglyTable.appendChild(label)
+            uglyTable.appendChild(newline)
         };
 
         // definisco radiobutton della risposta saltata
@@ -242,19 +262,19 @@ function loadElements(questions) {
 
         var newline = document.createElement('br')
 
-        uglyTabella.appendChild(radiobox)
-        uglyTabella.appendChild(label)
-        uglyTabella.appendChild(newline)
+        uglyTable.appendChild(radiobox)
+        uglyTable.appendChild(label)
+        uglyTable.appendChild(newline)
 
         // aggiungo la tabella al div gigante
-        containingDiv.appendChild(uglyTabella)
+        containingDiv.appendChild(uglyTable)
 
         // aggiungo lo span nascosto della risposta giusta
         var answer = document.createElement("span")
         answer.textContent = rightAnswerText
         answer.hidden = "true";
         answer.id = "span" + i;
-        uglyTabella.appendChild(answer)
+        uglyTable.appendChild(answer)
 
         var newline2 = document.createElement('br')
 
@@ -269,9 +289,9 @@ function validate() {
     contSkip = 0;
     contRight = 0;
     contWrong = 0;
-    punteggio = 0;
+    score = 0;
 
-    for (i = 0; i < numeroDomande; i++) {
+    for (i = 0; i < numberOfQuestions; i++) {
         var buttons = document.getElementsByName("radioBtns" + i)
         var rightAnswer = document.getElementById("span" + i)
         var result = -1;
@@ -315,7 +335,7 @@ function validate() {
                 // se becco quella giusta, allora coloramela in verde
                 labelElement.style.backgroundColor = "#00FF00";
 
-                punteggio += 2;
+                score += 2;
                 contRight++;
             } else {
                 // colora in rosso la label della sbagliata
@@ -328,21 +348,21 @@ function validate() {
                 var labelElement = inputElement.nextElementSibling
                 labelElement.style.backgroundColor = "#00FF00";
 
-                punteggio -= 1;
+                score -= 1;
                 contWrong++;
             }
         }
     }
 
     // aggiungo i risultati a fine pagina
-    pRisultati = document.getElementById("risultati")
-    pRisultati.innerHTML =
+    pResults = document.getElementById("risultati")
+    pResults.innerHTML =
         "Risposte giuste: <b>" + contRight + "</b>" + "<br>" +
         "Risposte errate: <b>" + contWrong + "</b>" + "<br>" +
         "Non risposte: <b>" + contSkip + "</b>" + "<br>" +
-        "<b>Punteggio: " + punteggio + "/" + (numeroDomande * 2) + "</b>" + "<br>";
+        "<b>Punteggio: " + score + "/" + (numberOfQuestions * 2) + "</b>" + "<br>";
 
-    pRisultati.hidden = false;
+    pResults.hidden = false;
 
     // ciò viene fatto altrimenti il timer continua
     document.getElementById("timeleft").innerHTML = ""
@@ -353,7 +373,7 @@ function validate() {
     testoAlert = "Risposte giuste:" + contRight + "\r\n" +
         "Risposte errate: " + contWrong + "\r\n" +
         "Non risposte: " + contSkip + "\r\n" +
-        "Punteggio: " + punteggio + "/" + (numeroDomande * 2) + "\r\n";
+        "Punteggio: " + score + "/" + (numberOfQuestions * 2) + "\r\n";
 
     document.getElementById("btnInvia").style.visibility = "hidden";
 
