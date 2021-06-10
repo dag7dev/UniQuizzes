@@ -40,7 +40,7 @@ Oppure dai un'occhiata alla [TODO List dei desideri](#todo-list-dei-desideri).
 **FATTO**
 - [ ] Una pagina dove generare un JSON già pronto in caso si voglia contribuire e non si è tecnici
 - [X] Un json che **include i quesiti di SO1**
-- [ ] Linee guida per contribuire
+- [X] Linee guida per contribuire
 
 Per qualsiasi cosa, **apri una PR** o una **issue**.
 
