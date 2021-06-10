@@ -1430,6 +1430,19 @@
         "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
     },
     {
+        "question": "Si vuole scrivere un programma equivalente a questo script ",
+        "replies": [
+            " Nessuna delle altre opzioni è corretta",
+            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n",
+            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\");\nprintf(\"fatto\\n\");\n",
+            " printf(char **argv = {\"-la\", \"\/\", 0};\n\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "echo -n \"Esecuzione in corso...\"\r\n\/bin\/ls -la \/\r\necho \" fatto\"\r\n"
+    },
+    {
         "question": "Quale dei seguenti frammenti di codice è corretto?",
         "replies": [
             " int pid = fork();\r\nif (pid == 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n",
