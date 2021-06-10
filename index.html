@@ -179,12 +179,12 @@
                     if (questions[i]['answers_have_code']) {
                         description = document.createElement('textarea');
                         description.name = "taAnswerCode"
-                        description.textContent = replies[j];
+                        description.textContent = " " + replies[j];
                         description.readOnly = true;
                         description.cols = 100;
                         description.rows = 10
                     } else {
-                        var description = document.createTextNode(replies[j]);
+                        var description = document.createTextNode(" " + replies[j]);
                     }
                     label.appendChild(description);
 
