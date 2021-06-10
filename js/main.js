@@ -1,3 +1,4 @@
+// VARIABILI
 var nMinutes = 25; // per debuggare con più rapidità: deve stare a 25 normalmente
 var timeUpd // poi le altre funzioni non lo vedono
 var pResults // poi le altre funzioni non lo vedono
@@ -10,9 +11,9 @@ const format = (num, places) => String(num).padStart(places, '0') // funzione on
 var numberOfQuestions = 40 // numero domande che si vuole mostrare
 var questions // contiene tutte le domande e le risposte (parsate dal json)
 
-////////////////////
-// EVENT LISTENER //
-////////////////////
+/////////////////////
+// EVENT LISTENERS //
+/////////////////////
 
 var slider = document.getElementById("sliderQuestionsNumber");
 var outslider = document.getElementById("sliderText");
@@ -43,6 +44,7 @@ document.getElementById('btn-quiz-reload').onclick = function() {
     restart()
 }
 
+// restart the game
 function restart() {
     pResults = document.getElementById("risultati")
     pResults.hidden = true
@@ -223,8 +225,8 @@ function loadElements(questions) {
             radiobox.name = 'radioBtns' + i;
             radiobox.value = replyNumber[j]
 
-            var label = document.createElement('label')
-            label.htmlFor = 'risposta' + i + "." + j;
+            var lblAnswer = document.createElement('label')
+            lblAnswer.htmlFor = 'risposta' + i + "." + j;
 
             // se il flag nel json è 1, allora renderizzamelo come blocco pre 
             if (questions[i]['answers_have_code']) {
@@ -237,12 +239,12 @@ function loadElements(questions) {
             } else {
                 var description = document.createTextNode(" " + replies[j])
             }
-            label.appendChild(description)
+            lblAnswer.appendChild(description)
 
             var newline = document.createElement('br')
 
             uglyTable.appendChild(radiobox)
-            uglyTable.appendChild(label)
+            uglyTable.appendChild(lblAnswer)
             uglyTable.appendChild(newline)
         };
 
@@ -254,16 +256,16 @@ function loadElements(questions) {
         radiobox.value = "s";
         radiobox.checked = true; // settato a true di default
 
-        var label = document.createElement('label')
-        label.htmlFor = 'risposta' + i + "." + j;
+        var lblAnswer = document.createElement('label')
+        lblAnswer.htmlFor = 'risposta' + i + "." + j;
 
         var description = document.createTextNode(" Nessuna risposta")
-        label.appendChild(description)
+        lblAnswer.appendChild(description)
 
         var newline = document.createElement('br')
 
         uglyTable.appendChild(radiobox)
-        uglyTable.appendChild(label)
+        uglyTable.appendChild(lblAnswer)
         uglyTable.appendChild(newline)
 
         // aggiungo la tabella al div gigante
@@ -311,8 +313,8 @@ function validate() {
             var num = rightAnswer.textContent
 
             var inputElement = buttons[num];
-            var labelElement = inputElement.nextElementSibling
-            labelElement.style.backgroundColor = "#00FF00";
+            var lblElement = inputElement.nextElementSibling
+            lblElement.style.backgroundColor = "#00FF00";
 
 
         } else {
@@ -329,24 +331,24 @@ function validate() {
             }
 
             var inputElement = buttons[checked]; // prendo l'elemento checkato
-            var labelElement = inputElement.nextElementSibling; // prendo la label associata
+            var lblElement = inputElement.nextElementSibling; // prendo la label associata
 
             if (result != -1) {
                 // se becco quella giusta, allora coloramela in verde
-                labelElement.style.backgroundColor = "#00FF00";
+                lblElement.style.backgroundColor = "#00FF00";
 
                 score += 2;
                 contRight++;
             } else {
                 // colora in rosso la label della sbagliata
-                labelElement.style.backgroundColor = "#FF0000";
+                lblElement.style.backgroundColor = "#FF0000";
 
                 // quella giusta era
                 var num = rightAnswer.textContent
 
                 var inputElement = buttons[num]; // quella giusta ce l'ho salvata in num
-                var labelElement = inputElement.nextElementSibling
-                labelElement.style.backgroundColor = "#00FF00";
+                var lblElement = inputElement.nextElementSibling
+                lblElement.style.backgroundColor = "#00FF00";
 
                 score -= 1;
                 contWrong++;
