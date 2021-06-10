@@ -3,6 +3,7 @@ var timeUpd // poi le altre funzioni non lo vedono
 var pRisultati // poi le altre funzioni non lo vedono
 var shuffleQuestionMode = true // mescola le domande
 var shuffleAnswerMode = true // mescola le risposte
+var timer = true;
 
 const format = (num, places) => String(num).padStart(places, '0') // funzione one-line figa che permette di fare il padding delle stringhe con gli zeri
 
@@ -63,6 +64,19 @@ document.getElementById("chk-shuffle-questions").onclick = function() {
 document.getElementById("chk-shuffle-answers").onclick = function() {
     shuffleAnswerMode = !shuffleAnswerMode
     restart()
+}
+
+// event listener domande casuali
+document.getElementById("chk-timer").onclick = function() {
+    timer = !timer
+
+    if (!timer) {
+        // ciò viene fatto altrimenti il timer continua
+        document.getElementById("timeleft").innerHTML = ""
+        clearInterval(timeUpd)
+    } else {
+        timeStart()
+    }
 }
 
 // cancella il contenuto di un div, container nel nostro caso
