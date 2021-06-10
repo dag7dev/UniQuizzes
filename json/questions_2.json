@@ -116,19 +116,6 @@
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla comunicazione tra processi in Linux è vera?",
-        "replies": [
-            "Per far comunicare qualunque coppia di processi è necessario metterli in pipeling da shell",
-            "Usando la syscall pipe, è possibile far comunicare qualunque coppia di processi",
-            "Usando le socket si può far comunicare qualsiasi coppia di processi",
-            "Usando le named pipes, è possibile far comunicare solo processi parenti(ad es., padre con figlio)"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "has_code": 0,
-        "code": ""
-    },
-    {
         "question": "Si supponga di avere il seguente frammento di codice: FILE *stream = fopen(NOMEFILE, \"w\"); Dire quale frammento di codice ha lo stesso effetto.",
         "replies": [
             "int fd = open(NOMEFILE, O_WRONLY | O_CREAT, 0666);",

@@ -13,6 +13,18 @@ var questions // contiene tutte le domande e le risposte (parsate dal json)
 // EVENT LISTENER //
 ////////////////////
 
+var slider = document.getElementById("sliderQuestionsNumber");
+var outslider = document.getElementById("sliderText");
+
+function changeAnswers() {
+    numeroDomande = slider.value;
+    restart()
+}
+
+slider.oninput = function() {
+    outputslider.innerHTML = this.value;
+}
+
 // event listener sulla combobox
 document.getElementById('so-quiz-version').onchange = function() {
     pRisultati = document.getElementById("risultati")
@@ -143,6 +155,7 @@ function loadElements(questions) {
 
         // questo array mi serve perchè altrimenti avrei dovuto cambiare il json da capo
         // (sebbene sarebbe stato più comodo avere un numero abbiamo delle lettere, quindi dobbiamo convertirle)
+        var base = Array.from(Array(replies.length).keys())
         var replyNumber = Array.from(Array(replies.length).keys())
 
         // casuale
@@ -156,7 +169,7 @@ function loadElements(questions) {
 
         // ora mi calcolo la risposta giusta
         var rightAnswerText = questions[i]['correct'].charCodeAt(0) - 97 // prima mi calcolo il numero dalla lettera
-        //rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // lo cerco nell'array delle risposte shufflate e mi salvo l'indice "shufflato" 
+        rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // lo cerco nell'array delle risposte shufflate e mi salvo l'indice "shufflato" 
 
         // se c'è codice renderizziamolo in opportuna tabella e blocco pre
         if (questions[i]['has_code'] == 1) {
@@ -174,7 +187,7 @@ function loadElements(questions) {
             radiobox.id = 'risposta' + i + "." + j;
             radiobox.type = 'radio';
             radiobox.name = 'radioBtns' + i;
-            radiobox.value = (replyNumber[j])
+            radiobox.value = replyNumber[j]
 
             var label = document.createElement('label')
             label.htmlFor = 'risposta' + i + "." + j;
@@ -274,7 +287,7 @@ function validate() {
                 if (buttons[j].checked) {
                     checked = j; // salvo cosa ho checkato
 
-                    if (buttons[j].value === rightAnswer.textContent) {
+                    if (("" + j) === rightAnswer.textContent) {
                         result = j; // salvo se ho beccato quello giusto o no
                         break;
                     }
@@ -313,7 +326,7 @@ function validate() {
         "Risposte giuste: <b>" + contRight + "</b>" + "<br>" +
         "Risposte errate: <b>" + contWrong + "</b>" + "<br>" +
         "Non risposte: <b>" + contSkip + "</b>" + "<br>" +
-        "<b>Punteggio: " + punteggio + "/" + "80" + "</b>" + "<br>";
+        "<b>Punteggio: " + punteggio + "/" + (numeroDomande * 2) + "</b>" + "<br>";
 
     pRisultati.hidden = false;
 
@@ -326,7 +339,7 @@ function validate() {
     testoAlert = "Risposte giuste:" + contRight + "\r\n" +
         "Risposte errate: " + contWrong + "\r\n" +
         "Non risposte: " + contSkip + "\r\n" +
-        "Punteggio: " + punteggio + "/" + "80" + "\r\n";
+        "Punteggio: " + punteggio + "/" + (numeroDomande * 2) + "\r\n";
 
     document.getElementById("btnInvia").style.visibility = "hidden";
 
