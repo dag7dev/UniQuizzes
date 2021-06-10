@@ -318,7 +318,7 @@
             "cmd1 #premere Ctrl+Z cmd2 bg #premere Ctrl+Z bg",
             "cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z bg bg"
         ],
-        "correct": "c",
+        "correct": "d",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
