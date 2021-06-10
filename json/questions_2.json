@@ -1419,23 +1419,10 @@
     {
         "question": "Si supponga di avere il seguente frammento di codice:",
         "replies": [
-            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_CUR);",
-            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_END);",
-            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, -100, SEEK_END);",
-            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nfseek(fd, -100, SEEK_END);\nlong pos = ltell(fd);"
-        ],
-        "correct": "a",
-        "answers_have_code": 1,
-        "has_code": 1,
-        "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
-    },
-    {
-        "question": "Si vuole scrivere un programma equivalente al seguente script: ",
-        "replies": [
-            " Nessuna delle altre opzioni è corretta",
-            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n",
-            " printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\");\nprintf(\"fatto\\n\");\n",
-            " printf(char **argv = {\"-la\", \"\/\", 0};\n\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n"
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_CUR);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_END);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, -100, SEEK_END);",
+            " int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = ltell(fd);"
         ],
         "correct": "a",
         "answers_have_code": 1,
