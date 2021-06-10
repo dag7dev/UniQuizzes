@@ -46,14 +46,12 @@ function restart() {
 // event listener domande casuali
 document.getElementById("chk-shuffle-questions").onclick = function() {
     shuffleQuestionMode = !shuffleQuestionMode
-    console.log(shuffleQuestionMode)
     restart()
 }
 
 // event listener domande casuali
 document.getElementById("chk-shuffle-answers").onclick = function() {
     shuffleAnswerMode = !shuffleAnswerMode
-    console.log(shuffleAnswerMode)
     restart()
 }
 
@@ -117,15 +115,13 @@ function buildJSON(path) {
         fetch('json/' + path)
             .then(res => res.json())
             .then(data => questions = data)
-            .then(() => console.log(questions))
             .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
             .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web
     } else {
         fetch('json/' + path)
             .then(res => res.json())
             .then(data => questions = data)
-            .then(() => console.log(questions))
-            .then(() => questions = questions)
+            .then(() => questions = questions) // non randomizzo
             .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web
     }
 }
