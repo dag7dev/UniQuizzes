@@ -3,7 +3,7 @@ App per esercitarsi in vista degli esami di Sistemi Operativi, modulo 1 e modulo
 
 Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'esame di SO1 e SO2.
 
-Stai cercando l'app "da terminale" per il modulo? Clicca qui: https://github.com/andrea-gasparini/SO2-exam-simulator ma ricordati che non è più mantenuta!
+Stai cercando l'app "da terminale" per il modulo 2? Clicca qui: https://github.com/andrea-gasparini/SO2-exam-simulator ma ricordati che non è più mantenuta!
 
 ## Disclaimer
 ---
@@ -19,6 +19,8 @@ Invece, aggiungila tu e aiuta i tuoi colleghi!
 
 **Versione web (cross-platform anche per mobile)**: [https://dag7dev.github.io/SO-exam-simulator/](https://dag7dev.github.io/SO-exam-simulator/)
 
+Il punteggio è calcolato nel seguente modo: +2 punti per ogni risposta corretta, -1 punto per ogni risposta errata, 0 per ogni risposta saltata
+
 ## Requisiti
 La versione web è stata scritta in **JavaScript** molto velocemente. Se vuoi migliorare il codice sei il benvenuto!
 
@@ -29,7 +31,7 @@ Se la domanda contiene del codice sorgente, impostare `has_code` a "1" nel JSON 
 
 Se le risposte contengono del codice sorgente, impostare `answers_have_code` a "1" nel JSON. Le domande verranno renderizzate come codice in un box.
 
-**ATTENZIONE**: il codice deve essere propriamente escapizzato, e ogni nuova riga deve avere /n alla fine
+**ATTENZIONE**: il codice deve essere propriamente escapizzato, e ogni nuova riga deve avere `\n` alla fine
 
 Oppure dai un'occhiata alla [TODO List dei desideri](#todo-list-dei-desideri).
 
