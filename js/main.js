@@ -6,9 +6,7 @@ var shuffleAnswerMode = true // mescola le risposte
 
 const format = (num, places) => String(num).padStart(places, '0') // funzione one-line figa che permette di fare il padding delle stringhe con gli zeri
 
-// TODO: controllare se effettivamente ci siano 40 domande, siccome se ce ne sono di meno il programma potrebbe non funzionare correttamente
-var numeroDomande = 40
-
+var numeroDomande = 40 // numero domande che si vuole mostrare
 var questions // contiene tutte le domande e le risposte (parsate dal json)
 
 ////////////////////
