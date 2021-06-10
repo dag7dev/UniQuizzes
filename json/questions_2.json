@@ -1307,7 +1307,7 @@
             " Può esistere un solo path relativo che permette di richiedere l'accesso a tale file",
             " Possono esistere uno o più path assoluti che permettono di richiedere l'accesso a tale file"
         ],
-        "correct": "c",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -1320,7 +1320,7 @@
             " Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione scriverà  c0ao ciao ciao ciao",
             " Se COPIA consiste nell'assegnamento p[1] = p[0];, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile"
         ],
-        "correct": "c",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 1,
         "code": "#include <string.h>\n        #include <stdlib.h>\n        #include <stdio.h>\n        \n        int main() {\n          struct s {\n            char *a;\n            char b[20];\n          } *p[2];\n          char *a = strdup(\"ciao\");\n          p[0] = (struct s*)malloc(sizeof(struct s));\n          p[0]->a = a;\n          strcpy(p[0]->b, a);\n          COPIA\n          a[1] = '0';\n          printf(\"%s %s %s %s\\n\", p[0]->a, p[0]->b, p[1]->a, p[1]->b);\n        }\n"
