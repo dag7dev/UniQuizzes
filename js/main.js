@@ -1,12 +1,19 @@
 var nMinutes = 25; // per debuggare con più rapidità: deve stare a 25 normalmente
 var timeUpd // poi le altre funzioni non lo vedono
 var pRisultati // poi le altre funzioni non lo vedono
-const format = (num, places) => String(num).padStart(places, '0') // one-liner figa che permette di fare il padding delle stringhe con gli zeri
+var shuffleQuestionMode = true // mescola le domande
+var shuffleAnswerMode = true // mescola le risposte
+
+const format = (num, places) => String(num).padStart(places, '0') // funzione one-line figa che permette di fare il padding delle stringhe con gli zeri
 
 // TODO: controllare se effettivamente ci siano 40 domande, siccome se ce ne sono di meno il programma potrebbe non funzionare correttamente
 var numeroDomande = 40
 
 var questions // contiene tutte le domande e le risposte (parsate dal json)
+
+////////////////////
+// EVENT LISTENER //
+////////////////////
 
 // event listener sulla combobox
 document.getElementById('so-quiz-version').onchange = function() {
@@ -22,6 +29,10 @@ document.getElementById('so-quiz-version').onchange = function() {
 
 // event listener sul button
 document.getElementById('btn-quiz-reload').onclick = function() {
+    restart()
+}
+
+function restart() {
     pRisultati = document.getElementById("risultati")
     pRisultati.hidden = true
     clearBox("container")
@@ -30,6 +41,20 @@ document.getElementById('btn-quiz-reload').onclick = function() {
     document.getElementById("end").innerHTML = "";
     timeStart()
     document.getElementById("btnInvia").style.visibility = "visible";
+}
+
+// event listener domande casuali
+document.getElementById("chk-shuffle-questions").onclick = function() {
+    shuffleQuestionMode = !shuffleQuestionMode
+    console.log(shuffleQuestionMode)
+    restart()
+}
+
+// event listener domande casuali
+document.getElementById("chk-shuffle-answers").onclick = function() {
+    shuffleAnswerMode = !shuffleAnswerMode
+    console.log(shuffleAnswerMode)
+    restart()
 }
 
 // cancella il contenuto di un div, container nel nostro caso
@@ -88,13 +113,21 @@ function shuffle(obj1, obj2) {
 // builda i container col json
 function buildJSON(path) {
     // parsing del json
-    fetch('json/' + path)
-        .then(res => res.json())
-        .then(data => questions = data)
-        .then(() => console.log(questions))
-        .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
-        //.then(() => questions = questions)
-        .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web 
+    if (shuffleQuestionMode) {
+        fetch('json/' + path)
+            .then(res => res.json())
+            .then(data => questions = data)
+            .then(() => console.log(questions))
+            .then(() => questions = questions.sort(() => Math.random() - 0.5)) // randomizziamo l'ordine delle domande con la oneline figa
+            .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web
+    } else {
+        fetch('json/' + path)
+            .then(res => res.json())
+            .then(data => questions = data)
+            .then(() => console.log(questions))
+            .then(() => questions = questions)
+            .then(() => loadElements(questions)) // buildiamo le varie parti della pagina web
+    }
 }
 
 // carichiamo gli elementi nella pagina web
@@ -118,10 +151,18 @@ function loadElements(questions) {
         // (sebbene sarebbe stato più comodo avere un numero abbiamo delle lettere, quindi dobbiamo convertirle)
         var replyNumber = Array.from(Array(replies.length).keys())
 
-        //shuffle(replies, replyNumber)    // TODO: rimuovere questo commento --- disabilitato, in quanto anche la risposta giusta deve essere mescolata
+        // casuale
+        if (shuffleAnswerMode) {
+            shuffle(replies, replyNumber)
+        }
 
+        // tabella per la risposta
         var uglyTabella = document.createElement("table")
         uglyTabella.border = 1;
+
+        // ora mi calcolo la risposta giusta
+        var rightAnswerText = questions[i]['correct'].charCodeAt(0) - 97 // prima mi calcolo il numero dalla lettera
+        //rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // lo cerco nell'array delle risposte shufflate e mi salvo l'indice "shufflato" 
 
         // se c'è codice renderizziamolo in opportuna tabella e blocco pre
         if (questions[i]['has_code'] == 1) {
@@ -139,7 +180,7 @@ function loadElements(questions) {
             radiobox.id = 'risposta' + i + "." + j;
             radiobox.type = 'radio';
             radiobox.name = 'radioBtns' + i;
-            radiobox.value = String.fromCharCode(replyNumber[j] + 97)
+            radiobox.value = (replyNumber[j])
 
             var label = document.createElement('label')
             label.htmlFor = 'risposta' + i + "." + j;
@@ -189,7 +230,7 @@ function loadElements(questions) {
 
         // aggiungo lo span nascosto della risposta giusta
         var answer = document.createElement("span")
-        answer.textContent = (questions[i]['correct'])
+        answer.textContent = rightAnswerText
         answer.hidden = "true";
         answer.id = "span" + i;
         uglyTabella.appendChild(answer)
@@ -226,7 +267,7 @@ function validate() {
             contSkip++;
 
             // quella giusta era
-            var num = parseInt(rightAnswer.textContent, 20) - 10 // perchè 20? boh, però funziona
+            var num = rightAnswer.textContent
 
             var inputElement = buttons[num];
             var labelElement = inputElement.nextElementSibling
@@ -260,7 +301,7 @@ function validate() {
                 labelElement.style.backgroundColor = "#FF0000";
 
                 // quella giusta era
-                var num = parseInt(rightAnswer.textContent, 20) - 10 // perchè 20? boh, però funziona
+                var num = rightAnswer.textContent
 
                 var inputElement = buttons[num]; // quella giusta ce l'ho salvata in num
                 var labelElement = inputElement.nextElementSibling

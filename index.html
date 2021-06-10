@@ -11,6 +11,13 @@
 <body style="max-width: 100%;">
     <h1>QUIZ NON UFFICIALE, FAC SIMILE</h1>
 
+    <details>
+        <summary>Cosa c'è di nuovo</summary>
+        <p style="color:red">- aggiunta la possibilità di customizzare l'allenamento</p>
+        <p style="color:black">- aggiunte le domande del modulo1</p>
+    </details>
+
+    <hr>
     <label for="so-quiz-version">Scegli un quiz:</label>
     <select name="so-quiz-version" id="so-quiz-version">
         <option value="questions_2.json" selected="selected">SO2</option>
@@ -20,6 +27,16 @@
 
     <button name="btn-quiz-reload" id="btn-quiz-reload">Ricarica domande di questo modulo</button>
 
+    <br>
+
+    <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Ordinamento casuale domande" checked />
+    <label for="chk-shuffle-questions">Ordinamento casuale domande</label>
+
+    <input type="checkbox" id="chk-shuffle-answers" name="chk-shuffle-answers" title="Ordinamento casuale risposte" checked />
+    <label for="chk-shuffle-answers">Ordinamento casuale risposte</label>
+
+    <hr>
+
     <p id="timeleft"><br></p>
 
     <h2 id="end"></h2>
@@ -28,6 +45,13 @@
     <script src="js/main.js"></script>
 
     <script>
+        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+
+        // loop on all checkboxes found (trick to iterate on nodeList)
+        [].forEach.call(allCheckboxes, function(checkbox) {
+            checkbox.checked = checkbox.defaultChecked;
+        });
+
         timeStart()
 
         // builda il file all'inizio --> il file predefinito è questions_2.json
