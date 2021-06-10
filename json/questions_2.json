@@ -614,7 +614,7 @@
         "replies": [
             " Rappresenta sempre l’inizio di un commento, con un’unica eccezione: quando è preceduto dal carattere $",
             " Se è seguito dal carattere !, non rappresenta mai l’inizio di un commento",
-            " Nessula delle opzioni è vera",
+            " Nessuna delle opzioni è vera",
             " Se presente in uno script, tutto quello che lo segue è sempre considerato commento"
         ],
         "correct": "c",
