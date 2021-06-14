@@ -1,0 +1,40 @@
+[{
+        "question": "What's the favorite letter of the author?",
+        "answers": [
+            "The letter A",
+            "The letter B",
+            "The letter C",
+            "The letter D"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "What does this program prints?",
+        "answers": [
+            "No World",
+            "Hello World",
+            "Hello, World",
+            "None of the above"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "has_code": 1,
+        "code": "#include <stdlib.h>\r\n#include <stdio.h>\r\nint main() {\r\n    printf(\"Hello, world!\");\r\n}"
+    },
+    {
+        "question": "What do I need to write in this program to print \"hello world\"?",
+        "answers": [
+            "printf(\"hello world\");",
+            "printf(\"hello World\");",
+            "printf(\"Hello world\");",
+            "None of the above"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "has_code": 1,
+        "code": "#include <stdlib.h>\r\n#include <stdio.h>\r\nint main() {\r\n    ANSWER GOES HERE\r\n}"
+    }
+]
