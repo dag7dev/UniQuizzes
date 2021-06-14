@@ -89,7 +89,7 @@ You will have four entries :
 ## Deploy it on a website
 Since everything is made up by client, you can upload every modified file and folder in the JSQuizee directory into a web space.
 
-Your website will load `index.html` as default. 
+Your website will load `index.html` by default. 
 
 You could even use Github Pages, by forking this repo, modifying / adding your files and upload them back in your repo.
 
