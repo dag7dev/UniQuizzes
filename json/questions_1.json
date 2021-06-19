@@ -220,19 +220,6 @@
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul controllo di accesso \u00e8 vera?",
-        "replies": [
-            "Nel controllo di accesso basato su ruoli, ad ogni ruolo \u00e8 assegnato un utente",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Nel controllo di accesso basato su ruoli, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-ruoli-oggetti",
-            "Nel controllo di accesso discrezionale, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-oggetti"
-        ],
-        "correct": "d",
-        "answers_have_code": 0,
-        "has_code": 0,
-        "code": ""
-    },
-    {
         "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sulla preemption \u00e8 vera?",
         "replies": [
             "Se uno scheduler \u00e8 non-preemptive, permette sempre ai suoi processi di essere eseguiti sul processore, senza interruzioni, fino al loro completamento",
@@ -306,19 +293,6 @@
             "Dimensione del \ufb01le"
         ],
         "correct": "a",
-        "answers_have_code": 0,
-        "has_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sugli algoritmi di scheduling per i dischi \u00e8 vera?",
-        "replies": [
-            "L'algoritmo random ha la stessa funzione dell'algoritmo ottimo dei rimpiazzamenti di pagina: ha delle prestazioni ottime non raggiungibili dagli altri algoritmi",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "L'algoritmo C-SCAN deriva da SCAN, ed \u00e8 stato sviluppato per evitare di favorire le richieste di tracce ai bordi del disco",
-            "Per valutare le prestazioni dell'algoritmo con priorit\u00e0 \u00e8 necessario fornire il ruolo dell'utente"
-        ],
-        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
