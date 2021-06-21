@@ -605,7 +605,7 @@
             "Normalmente, non vengono gestiti dal programmatore dell'applicazione che li ha causati",
             "Possono essere creati direttamente dai dispositivi di I\/O"
         ],
-        "correct": "b",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
