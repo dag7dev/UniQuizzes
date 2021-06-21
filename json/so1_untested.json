@@ -501,7 +501,7 @@
             "Con il partizionamento fisso, ci possono essere al massimo N processi attivi (ovvero, accettati per l'esecuzione), dove N \u00e8 il numero di partizioni",
             "Con il partizionamento dinamico, si manifesta il problema della frammentazione esterna"
         ],
-        "correct": "d",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
