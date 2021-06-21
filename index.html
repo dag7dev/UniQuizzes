@@ -2,95 +2,108 @@
 <html lang="en">
 
 <head>
-    <meta name="robots" content="noindex" />
-    <title>SO Simulator - PRIMO E SECONDO MODULO</title>
+    <title>JSQuizee - JS Simple Quiz Engine</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body style="max-width: 100%;">
-    <h1>QUIZ NON UFFICIALE, FAC SIMILE</h1>
 
-    <h3>+2 per ogni risposta giusta, -1 per ogni risposta sbagliata, 0 per ogni risposta non data</h3>
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+
+    <h1>JSQuizee - JS Simple Quiz Engine</h1>
+
+    <h3 id="h3Explaination"></h3>
 
     <details>
-        <summary>Cosa c'è di nuovo</summary>
-        <p style="color:red">- aggiunto slider per selezionare un numero di risposte massimo<br> utile per testare la propria resistenza e memoria</p>
-        <p style="color:red">- aggiunta la possibilità di customizzare l'allenamento</p>
-        <p style="color:black">- aggiunte le domande del modulo1</p>
+        <summary>What's new</summary>
+        <p style="color:red">- enhancement: now yellow is prompted instead of green if answer has been skipped<br></p>
+        <p style="color:black">- implemented: new and fresh version<br></p>
+        <p style="color:black">- added: slider<br></p>
+        <p style="color:black">- customize your training by shuffling questions or answers</p>
     </details>
 
     <hr>
-    <label for="so-quiz-version">Scegli un quiz:</label>
-    <select name="so-quiz-version" id="so-quiz-version">
-        <option value="questions_2.json">SO2</option>
-        <option value="questions_1.json" selected="selected">SO1</option>
-        <!-- <option value="questions_untested.json">Quiz non testati</option> -->
+    <label for="quiz-version">Choose a quiz:</label>
+    <select name="quiz-version" id="quiz-version">
+        <script>
+            if (typeof jsonFiles !== 'undefined' && jsonFiles.constructor == Object) {
+                i = 0
+                // create select elements
+                for (var key in jsonFiles) {
+                    var value = jsonFiles[key];
+
+                    i == 0 ? createSelectBox("quiz-version", value, key, true) : createSelectBox("quiz-version", value, key)
+                    i++
+                }
+            }
+        </script>
     </select>
 
-    <button name="btn-quiz-reload" id="btn-quiz-reload">Ricarica domande di questo modulo</button>
+    <button name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
 
-    <br>
+    <div id="div-chk-shuffle-questions">
+        <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Shuffle Questions" checked />
+        <label for="chk-shuffle-questions">Shuffle Questions</label>
+    </div>
 
-    <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Ordinamento casuale domande" checked />
-    <label for="chk-shuffle-questions">Ordinamento casuale domande</label>
-    <br>
+    <div id="div-chk-shuffle-answers">
+        <input type="checkbox" id="chk-shuffle-answers" name="chk-shuffle-answers" title="Shuffle Answers" checked />
+        <label for="chk-shuffle-answers">Shuffle Answers</label>
+    </div>
 
-    <input type="checkbox" id="chk-shuffle-answers" name="chk-shuffle-answers" title="Ordinamento casuale risposte" checked />
-    <label for="chk-shuffle-answers">Ordinamento casuale risposte</label>
+    <div id="div-chk-timer">
+        <input type="checkbox" id="chk-timer" name="chk-timer" title="Enable / Disable Time" checked />
+        <label for="chk-timer">Enable / Disable Time</label>
+    </div>
 
-    <br>
-    <input type="checkbox" id="chk-timer" name="chk-timer" title="Abilita / Disabilita tempo" checked />
-    <label for="chk-timer">Abilita / Disabilita tempo</label>
+    <div id="div-slider" class="slidecontainer">
+        <input type="range" autocomplete="off" min="0" step="1" max="100" value="40" class="slider" id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
 
-    <br>
-
-    <div class="slidecontainer">
-        <input type="range" autocomplete="off" min="0" step="5" max="60" value="40" class="slider" id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
         <span id="sliderText"></span>
     </div>
 
     <hr>
 
-    <p id="timeleft"><br></p>
+    <div>
+        <p id="timeleft"></p>
+        <h2 id="end"></h2>
+    </div>
 
-    <h2 id="end"></h2>
+
     <div id="container"></div>
 
-    <script src="js/main.js"></script>
+    <div id="btn-send" name="btn-send">
+        <button onclick="validate()">Send</button>
+    </div>
 
     <script>
-        var slider = document.getElementById("sliderQuestionsNumber");
-        var outputslider = document.getElementById("sliderText");
-        outputslider.innerHTML = slider.value;
+        if (init() == 0) {
 
-        // riporto le checkbox ai valori originali
-        var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
-        [].forEach.call(allCheckboxes, function(checkbox) {
-            checkbox.checked = checkbox.defaultChecked;
-        });
+            outslider.innerHTML = slider.value;
 
-        timeStart()
-
-        // file predefinito da buildare all'inizio
-        buildJSON("questions_1.json");
+            // checkbox at the original values after a refresh
+            var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+            [].forEach.call(allCheckboxes, function(checkbox) {
+                checkbox.checked = checkbox.defaultChecked;
+            });
+        } else {
+            document.getElementById("btn-send").hidden = true
+        }
     </script>
 
 
-    <div id="btnInvia" name="btnInvia">
-        <button onclick="validate()">Invia</button>
-    </div>
-
     <br>
-    <p id="risultati" hidden=""></p>
+    <p id="results" hidden=""></p>
     <details>
-        <summary>Link utili</summary>
-        <a href="https://twiki.di.uniroma1.it/twiki/view/SO/SO1213AL/SistemiOperativi12CFU">Twiki Sistemi Operativi</a> <br>
-        <a href="https://gitlab.com/sapienzastudents">SapienzaStudents</a> <br>
+        <summary>Useful Links</summary>
+        <a href="https://github.com/dag7dev/JSQuizee">Github's project page - JSQuizee</a> <br>
         <br>
         <b>
-            <center><br></center>
+            <center>If you like this project, consider to star this repo on Github, thanks!<br></center>
         </b>
     </details>
 </body>
