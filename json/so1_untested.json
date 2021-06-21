@@ -1072,7 +1072,7 @@
             "Per avere un overhead accettabile, occorre demandare all'hardware la traduzione degli indirizzi ed il prelievo, il posizionamento e la sostituzione delle pagine",
             "Per avere un overhead accettabile, occorre demandare al software anche la traduzione degli indirizzi"
         ],
-        "correct": "d",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""    
