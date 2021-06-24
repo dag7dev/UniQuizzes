@@ -20,7 +20,7 @@
             "Se un processo pu\u00f2 disabilitare le interruzioni tramite un'istruzione macchina dedicata, allora pu\u00f2 far diminuire l'uso del processore",
             "La disabilitazione delle interruzioni non funziona su sistemi con pi\u00f9 processori o pi\u00f9 core"
         ],
-        "correct": "a",
+        "correct": "d",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -410,7 +410,7 @@
             "Per i processi in modalit\u00e0 blocked, tutte le informazioni che contiene sono cancellate",
             "Nessuna delle altre opzioni \u00e8 vera"
         ],
-        "correct": "b",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -671,7 +671,7 @@
             "Il numero di bit di una entry di una tabella delle pagine di ultimo livello \u00e8 uguale al numero di bit di controllo pi\u00f9 il logaritmo (arrotondato all'intero superiore) del massimo numero di frame in memoria principale",
             "Nessuna delle altre opzioni \u00e8 corretta"
         ],
-        "correct": "c",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -994,7 +994,7 @@
             "Il contatore di programma",
             "I dati contenuti nella porzione di memoria a lui dedicata"
         ],
-        "correct": "d",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""    
@@ -1257,6 +1257,19 @@
             "Se viene usata una tabella di bit, allora il metodo di allocazione non può essere la preallocazione"
         ],
         "correct": "b",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti operazioni non è tipicamente effettuata su un file?",
+        "answers": [
+            "Apertura",
+            "Connessione",
+            "Posizionamento (seek)",
+            "Lock / Unlock"
+        ],
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
