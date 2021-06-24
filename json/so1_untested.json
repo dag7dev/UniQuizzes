@@ -501,7 +501,7 @@
             "Con il partizionamento fisso, ci possono essere al massimo N processi attivi (ovvero, accettati per l'esecuzione), dove N \u00e8 il numero di partizioni",
             "Con il partizionamento dinamico, si manifesta il problema della frammentazione esterna"
         ],
-        "correct": "d",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -605,7 +605,7 @@
             "Normalmente, non vengono gestiti dal programmatore dell'applicazione che li ha causati",
             "Possono essere creati direttamente dai dispositivi di I\/O"
         ],
-        "correct": "b",
+        "correct": "c",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""
@@ -1062,5 +1062,97 @@
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""    
-    }
+    },
+
+    {
+        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione è vera?",
+        "answers": [
+            "Per avere un overhead accettabile, occorre demandare la traduzione degli indirizzi all'hardware, mentre al software resta da gestire prelievo, posizionamento e sostituzione delle pagine",
+            "Per avere un overhead accettabile, occorre demandare la traduzione degli indirizzi e la politica di sostituzione delle pagine all'hardware, mentre al software resta da gestire prelievo e posizionamento delle pagine",
+            "Per avere un overhead accettabile, occorre demandare all'hardware la traduzione degli indirizzi ed il prelievo, il posizionamento e la sostituzione delle pagine",
+            "Per avere un overhead accettabile, occorre demandare al software anche la traduzione degli indirizzi"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla concorrenza tra processi o thread è vera?",
+        "answers": [
+           "L'istruzione exchange non può ricevere costanti in input su nessun suo argomento, mentre per l'istruzione compare_and_swap questo non vale",
+           "Per realizzare opportunamente l'istruzione compare_and_swap è sufficiente disabilitare le interruzioni",
+           "Le istruzioni speciali exchange e compare_and_swap sono garantite atomiche dal sistema operativo",
+           "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sugli algoritmi di scheduling è vera?",
+        "answers": [
+            "L'exponential averaging permette di stimare la dimensione dell'immagine di un processo, a partire dalle precedenti immagini di quello stesso processo",
+            "La funzione di decisione dello scheduler Highest Response Ratio Next considera tanto il tempo di esecuzione stimato quanto il tempo trascorso in attesa",
+            "L'exponential averaging è una tecnica applicabile dal solo scheduler Short Process Next",
+            "La funzione di decisione dello scheduler Shortest Remaining Time considera tanto il tempo di esecuzione richiesto quanto il tempo trascorso in attesa"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question":"Quale delle seguenti azioni non viene necessariamente eseguita al momento della creazione di un processo in un sistema operativo moderno?",
+        "answers": [
+            "Inizializzazione del process control block",
+            "Allocazione di spazio di memoria RAM e di swap",
+            "Esecuzione del processo",
+            "Creazione di un PID unico"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question":"Quale delle seguenti affermazioni sul file system FAT è vera?",
+        "answers": [
+            "Usa il metodo di allocazione contiguo",
+            "La tabella di allocazione dei file contiene tante righe quanti sono i file memorizzati sul disco, più una riga speciale per i blocchi liberi",
+            "Ogni cluster del disco contiene sia dati del disco che l'indirizzo del prossimo cluster (o l'indicazione che si tratta dell'ultimo cluster)",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question":"Quale delle seguenti affermazioni sul requisito di rilocazione nella gestione della memoria è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "Prevede che un processo possa essere allocato in memoria principale, in fase di avvio o al rientro da uno swap, in una tra diverse posizioni possibili",
+            "Prevede che chi programma un processo utente possa richiedere, tramite system call, la posizione del processo in memoria principale",
+            "Per poterlo soddisfare senza creare overhead inaccettabile, è sempre stato necessario dell'hardware aggiuntivo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    },
+    {
+        "question":"Quale delle seguenti affermazioni sul modello dei processi a 7 stati è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Gli stati Ready, New e Blocked del modello a 5 stati vengono sdoppiati, e ne viene creata una versione Suspend",
+            "Un processo è Suspend quando scade il timeout del dispatcher",
+            "È possibile la transizione Ready/Suspend ==> Blocked/Suspend"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "has_code": 0,
+        "code": ""    
+    } 
 ]
