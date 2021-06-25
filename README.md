@@ -100,6 +100,7 @@ Create a general purpose JSON file (quiz on flowers or animals or whatever you p
 
 ## Todo wish list
 - [ ] JSON editor: will let you create in an easy way a JSON file with all your questions
+- [ ] run this project from a server side mode: in this way, people can use it in a real scenario (with students for example)
 - [ ] Clean source code: since source code has been developed in very few hours, it would be nice to clean it a little bit or to optimize things
 - [X] Guidelines and docs
 
