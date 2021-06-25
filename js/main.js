@@ -640,7 +640,7 @@ function validate() {
 
             var inputElement = buttons[rightNumber];
             var lblElement = inputElement.nextElementSibling
-            lblElement.style.backgroundColor = "#00FF00";
+            lblElement.style.backgroundColor = "#FFFF66";
         } else {
             // if one of the buttons contains the right answer, let's set the boolean to true
             for (j = 0; j < (buttons.length - 1); j++) { // -1 because skipped answer has already been analyzed before
