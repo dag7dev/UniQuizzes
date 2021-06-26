@@ -112,7 +112,8 @@ If you don't know how to enable Github Pages for your webpage, [click here](http
 ## How to contribute
 
 Create a general purpose JSON file (flower or animal quiz or whatever you like) and share it with me, or if you're not sure, check out the todo-wish-list.
-Todo wish-list
+
+## Todo wish-list
 
 - [ ] JSON editor: it will allow you to easily create a JSON file with all your questions
 - [ ] run this project from a server-side mode: this way, people can use it in a real scenario (with students for example)
