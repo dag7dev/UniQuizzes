@@ -31,6 +31,8 @@ Clone this repository on your space by downloading the zip of this repo and goin
 git clone https://github.com/dag7dev/JSQuizee.git && cd JSQuizee
 ```
 
+---
+
 ⚠️**Warning - read carefully**⚠️
 Thanks to a user, if you are going to use it **locally, on your pc**, you will need to find a way to enable CORS request on your browser, since loading local files is disabled on every major browser.
 
@@ -41,7 +43,8 @@ Here it is a simple way:
 
 ---
 
-You will have four entries :
+# How to set up JSQuizee
+You will have four entries in JSQuizee folder:
 - `README.MD`: the file which are you currently reading
 - `js`
     - `config.json`: this is the config file for the quiz. You must not delete anything, just set things you need / no need.
@@ -56,8 +59,8 @@ You will have four entries :
         - `showShuffleQuestions`: shows / hides box for shuffling questions part (true / false value)
         - `showShuffleAnswers`: shows / hides box for shuffling answers part (true / false value)
 
-        - `jsonFolder`: name of the folder where you have placed your json files
-        - `jsonFiles`: additional (or default quiz) made by you. The first file in this list will be loaded as the default quiz. Syntax:
+        - `jsonFolder`: name of the folder where you have placed your json files; DO NOT PUT ABSOLUTE PATH, IT WORKS WITH RELATIVE PATH
+        - `jsonFiles`: additional (or default quiz) made by you. The first file in this list will be loaded as the default quiz. DO NOT PUT ABSOLUTE PATH, IT WORKS WITH RELATIVE PATH Syntax:
         ```
             var jsonFiles = { // load other quizzes
                 "example.json": "Example questions",
