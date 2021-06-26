@@ -31,6 +31,16 @@ Clone this repository on your space by downloading the zip of this repo and goin
 git clone https://github.com/dag7dev/JSQuizee.git && cd JSQuizee
 ```
 
+⚠️**Warning - read carefully**⚠️
+Thanks to a user, if you are going to use it **locally, on your pc**, you will need to find a way to enable CORS request on your browser, since loading local files is disabled on every major browser.
+
+Here it is a simple way:
+- install Python3
+- from terminal `python -m http.server 8000`
+- head your browser into `localhost:8000`: you should find JSQuizee folder, open index.html file
+
+---
+
 You will have four entries :
 - `README.MD`: the file which are you currently reading
 - `js`
