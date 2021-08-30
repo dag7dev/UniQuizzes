@@ -927,7 +927,7 @@
             "Può essere usato per determinare quando uno dei due processi va in esecuzione a discapito dell'altro",
             "Può essere usato per determinare quando uno dei due processi sperimenta un page fault"    
         ],
-        "correct": "d",
+        "correct": "a",
         "answers_have_code": 0,
         "has_code": 0,
         "code": ""    
