@@ -11,8 +11,6 @@ Ci solleviamo da ogni responsabilità di utilizzo improprio di questo strumento,
 Utilizzalo a tuo rischio e pericolo ma cosa più importante: dai una mano ai tuoi colleghi aggiungendo o modificando domande,
 **basta una PR o una issue!**
 
----
-
 ## Istruzioni
 **Versione Windows/Linux/Mac (CONTIENE SOLO QUESTIONS_2, NON AGGIORNATA E NON MANTENUTA)**: https://github.com/andrea-gasparini/SO2-exam-simulator
 
