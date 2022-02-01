@@ -68,144 +68,67 @@ function checkForBadInt(variable, nameOfVar, allowsZero) {
     return 0
 }
 
+function undefinedIntegerCheck(variable, variableName, errHtmlString, allowsZero) {
+    // check for nMinutes
+    if (typeof variable === 'undefined') {
+        console.log("Undefined " + variableName)
+        document.getElementById("container").innerHTML = errHtmlString
+        return 1
+    } else {
+        if (checkForBadInt(variable, variableName, allowsZero)) {
+            return 1
+        }
+    }
+}
 
+// useful for printing from stackoverflow
+const varToString = varObj => Object.keys({ varObj })[0]
+
+function undefinedBadTypeCheck(variable, expectedType, allowsZero) {
+    // check for nMinutes
+    if (typeof variable === 'undefined') {
+        console.log("Undefined " + varToString({ variable }))
+        document.getElementById("container").innerHTML = "Undefined " + varToString({ variable }) + "in config.js. Make sure to set that variable in a correct way and try again!"
+        return 1
+    } else {
+        if (typeof variable !== expectedType) {
+            console.log(varToString({ variable }) + " is not a " + varToString({ expectedType }))
+            document.getElementById("container").innerHTML = varToString({ variable }) + " must be a " + expectedType + " in config.js. Make sure to set that variable in a correct way and try again!"
+            return 1
+        }
+
+        // check if bad int
+        if (typeof variable === "integer") {
+            if (typeof allowsZero === 'undefined') allowsZero = false
+            if (checkForBadInt(variable, variableName, allowsZero)) {
+                return 1
+            }
+        }
+
+    }
+}
 
 // check: things exist, if yes load them correctly
 function checkForParams() {
-    //////////////////////
-    /// INTEGER CHECKS  //
-    //////////////////////
-
-    // check for nMinutes
-    if (typeof nMinutes === 'undefined') {
-        console.log("Undefined nMinutes")
-        document.getElementById("container").innerHTML = "Undefined nMinutes in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        if (checkForBadInt(nMinutes, "nMinutes", true)) {
-            return 1
-        }
+    ////////////////////////
+    /// INTEGRITY CHECKS  //
+    ////////////////////////
+    if (
+        undefinedBadTypeCheck(nMinutes, "number", true) == -1 ||
+        undefinedBadTypeCheck(rightAnswerPoints, "number", true) == -1 ||
+        undefinedBadTypeCheck(wrongAnswerPoints, "number", true) == -1 ||
+        undefinedBadTypeCheck(noAnswerPoints, "number", true) == -1 ||
+        undefinedBadTypeCheck(numberOfQuestions, "number", false) == -1) {
+        return 1;
     }
 
-
-    // check for rightAnswerPoints
-    if (typeof rightAnswerPoints === 'undefined') {
-        console.log("Undefined rightAnswerPoints")
-        document.getElementById("container").innerHTML = "Undefined rightAnswerPoints in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        if (checkForBadInt(rightAnswerPoints, "rightAnswerPoints", true)) {
-            return 1
-        }
-    }
-
-
-    // check for wrongAnswerPoints
-    if (typeof wrongAnswerPoints === 'undefined') {
-        console.log("Undefined wrongAnswerPoints")
-        document.getElementById("container").innerHTML = "Undefined wrongAnswerPoints in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        if (checkForBadInt(wrongAnswerPoints, "wrongAnswerPoints", true)) {
-            return 1
-        }
-    }
-
-    // check for noAnswerPoints
-    if (typeof noAnswerPoints === 'undefined') {
-        console.log("Undefined noAnswerPoints")
-        document.getElementById("container").innerHTML = "Undefined noAnswerPoints in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        if (checkForBadInt(noAnswerPoints, "noAnswerPoints", true)) {
-            return 1
-        }
-    }
-
-    // check for numberOfQuestions
-    if (typeof numberOfQuestions === 'undefined') {
-        console.log("Undefined numberOfQuestions")
-        document.getElementById("container").innerHTML = "Undefined numberOfQuestions in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        if (checkForBadInt(numberOfQuestions, "numberOfQuestions")) {
-            return 1
-        }
-    }
-
-
-    //////////////////////
-    /// BOOLEAN CHECKS  //
-    //////////////////////
-    // check for showSlider
-    if (typeof showSlider === 'undefined') {
-        console.log("Undefined showSlider")
-        document.getElementById("container").innerHTML = "Undefined showSlider in config.js. Make sure to set that variable in a correct way (true or false) and try again!"
-        return 1
-    } else {
-        if (typeof showSlider !== 'boolean') {
-            console.log("showSlider is not a boolean")
-            document.getElementById("container").innerHTML = "showSlider must be a boolean (true / false value) in config.js. Make sure to set that variable in a correct way and try again!"
-            return 1
-
-        }
-    }
-
-    // check for showTimer
-    if (typeof showTimer === 'undefined') {
-        console.log("Undefined showTimer")
-        document.getElementById("container").innerHTML = "Undefined showTimer in config.js. Make sure to set that variable in a correct way (true or false) and try again!"
-        return 1
-    } else {
-        if (typeof showTimer !== 'boolean') {
-            console.log("showTimer is not a boolean")
-            document.getElementById("container").innerHTML = "showTimer must be a boolean (true / false value) in config.js. Make sure to set that variable in a correct way and try again!"
-            return 1
-        }
-    }
-
-    // check for showShuffleQuestions
-    if (typeof showShuffleQuestions === 'undefined') {
-        console.log("Undefined showShuffleQuestions")
-        document.getElementById("container").innerHTML = "Undefined showShuffleQuestions in config.js. Make sure to set that variable in a correct way (true or false) and try again!"
-        return 1
-    } else {
-        if (typeof showShuffleQuestions !== 'boolean') {
-            console.log("showShuffleQuestions is not a boolean")
-            document.getElementById("container").innerHTML = "showShuffleQuestions must be a boolean (true / false value) in config.js. Make sure to set that variable in a correct way and try again!"
-            return 1
-        }
-    }
-
-
-    // check for showShuffleAnswers
-    // showShuffleAnswers is null
-    if (typeof showShuffleAnswers === 'undefined') {
-        console.log("Undefined showShuffleAnswers")
-        document.getElementById("container").innerHTML = "Undefined showShuffleAnswers in config.js. Make sure to set that variable in a correct way (true or false) and try again!"
-        return 1
-    } else {
-        // showShuffleAnswers is not a boolean
-        if (typeof showShuffleAnswers !== 'boolean') {
-            console.log("showShuffleAnswers is not a boolean")
-            document.getElementById("container").innerHTML = "showShuffleAnswers must be a boolean (true / false value) in config.js. Make sure to set that variable in a correct way and try again!"
-            return 1
-        }
-    }
-
-    // check for jsonFolder
-    if (typeof jsonFolder === 'undefined') {
-        // jsonFolder is null
-        console.log("Undefined jsonFolder")
-        document.getElementById("container").innerHTML = "Undefined jsonFolder in config.js. Make sure to set that variable in a correct way and try again!"
-        return 1
-    } else {
-        // jsonFolder is not a string
-        if (typeof jsonFolder !== 'string') {
-            console.log("jsonFolder is not a string")
-            document.getElementById("container").innerHTML = "jsonFolder must be a string in config.js. Make sure to set that variable in a correct way and try again!"
-            return 1
-        } else {}
+    if (
+        undefinedBadTypeCheck(showSlider, "boolean") == -1 ||
+        undefinedBadTypeCheck(showTimer, "boolean") == -1 ||
+        undefinedBadTypeCheck(showShuffleQuestions, "boolean") == -1 ||
+        undefinedBadTypeCheck(showShuffleAnswers, "boolean") == -1 ||
+        undefinedBadTypeCheck(jsonFolder, "string") == -1) {
+        return 1;
     }
 
     return 0
@@ -232,17 +155,12 @@ function timerHandler(timer) {
 
 // func: initialize things, checking if each variable has everything 
 function init() {
-    // check: params must be valid
-    if (checkForParams() != 0) {
-        return 1
-    }
-
 
     slider = document.getElementById("sliderQuestionsNumber")
     outslider = document.getElementById("sliderText")
     h3Explaination = document.getElementById("h3Explaination")
 
-    slider.oninput = function() {
+    slider.oninput = function () {
         outslider.innerHTML = this.value;
     }
 
@@ -271,9 +189,13 @@ function init() {
         shuffleAnswerMode = false
     }
 
+    // check: params must be valid
+    if (checkForParams() != 0) {
+        return 1
+    }
 
     // evt: cbx-quiz-version
-    document.getElementById('quiz-version').onchange = function() {
+    document.getElementById('quiz-version').onchange = function () {
         numberOfQuestions = slider.value;
 
         pResults = document.getElementById("results")
@@ -292,23 +214,23 @@ function init() {
     }
 
     // evt: reload-button
-    document.getElementById('btn-quiz-reload').onclick = function() {
+    document.getElementById('btn-quiz-reload').onclick = function () {
         restart()
     }
     // evt: chk-shuffle-questions
-    document.getElementById("chk-shuffle-questions").onclick = function() {
+    document.getElementById("chk-shuffle-questions").onclick = function () {
         shuffleQuestionMode = !shuffleQuestionMode
         restart()
     }
 
     // evt: chk-shuffle-answers
-    document.getElementById("chk-shuffle-answers").onclick = function() {
+    document.getElementById("chk-shuffle-answers").onclick = function () {
         shuffleAnswerMode = !shuffleAnswerMode
         restart()
     }
 
     // evt: chk-timer enable / disable
-    document.getElementById("chk-timer").onclick = function() {
+    document.getElementById("chk-timer").onclick = function () {
         // timer handler
 
         timer = !timer
@@ -334,8 +256,6 @@ function init() {
     } else {
         // default file to show at the beginning
         defaultFile = Object.keys(jsonFiles)[0]
-
-        console.log(Object.keys(jsonFiles)[0])
 
         if (buildFromJSON(defaultFile) == 0) {
             // timer handler
@@ -386,7 +306,7 @@ function timeStart() {
     var countDownDate = new Date()
     countDownDate.setMinutes(countDownDate.getMinutes() + nMinutes)
 
-    timeUpd = setInterval(function() {
+    timeUpd = setInterval(function () {
         var now = new Date().getTime()
         var timeleft = countDownDate - now;
 
@@ -454,7 +374,7 @@ function buildFromJSON(path) {
     if (shuffleQuestionMode) {
         fetch(jsonFolder + "/" + path)
             .then(
-                function(response) {
+                function (response) {
                     if (response.status !== 200) {
                         console.log('Status Code: ' +
                             response.status);
@@ -469,7 +389,7 @@ function buildFromJSON(path) {
                         .then(() => loadElements(questions)) // build the webpage
                 }
             )
-            .catch(function(err) {
+            .catch(function (err) {
                 console.log('Error:', err);
                 disableComponents(path, jsonFolder)
                 return 1
@@ -477,7 +397,7 @@ function buildFromJSON(path) {
     } else {
         fetch(jsonFolder + "/" + path)
             .then(
-                function(response) {
+                function (response) {
                     if (response.status !== 200) {
                         console.log('Looks like there was a problem. Status Code: ' +
                             response.status);
@@ -492,7 +412,7 @@ function buildFromJSON(path) {
                         .then(() => loadElements(questions))
                 }
             )
-            .catch(function(err) {
+            .catch(function (err) {
                 console.log('Error:', err);
                 disableComponents(path, jsonFolder)
                 return 1
