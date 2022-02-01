@@ -34,6 +34,7 @@ jobs:
           \cp -r JSQuizee/js/main.js SOSim/js
       
       - name: Pushes to another repository
+        run: echo "Pushes to another repo"
       - uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
