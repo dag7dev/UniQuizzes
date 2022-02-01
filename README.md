@@ -34,7 +34,7 @@ La versione web è stata scritta in un orribile **JavaScript** in fretta e furia
 - **revisionando i quiz esistenti**:
    - vai nella cartella `json` e modifica il file che vuoi correggere
    - in alternativa, apri una issue dove specifichi: `file, risposta attuale, risposta corretta, motivo` 
-- **implementando nuove funzionalità su JSQuizee**: l'engine sul quale si basa UniQuizzes è [JSQuizee](https://dag7dev.github.io/JSQuizee/), un engine di quiz offline. Si può dire che JSQuizee è il motore, e UniQuizzes è il carburante; se verranno implementate modifiche su JSQuizee, UniQuizzes verrà aggiornato all'ultima versione di JSQuizee.
+- **implementando nuove funzionalità su JSQuizee**: l'engine sul quale si basa UniQuizzes è [JSQuizee](https://github.com/dag7dev/JSQuizee/), un engine di quiz offline. Si può dire che JSQuizee è il motore, e UniQuizzes è il carburante; se verranno implementate modifiche su JSQuizee, UniQuizzes verrà aggiornato all'ultima versione di JSQuizee.
 
 Se il progetto ti è stato utile, o se hai passato esami, non dimenticare di lasciare una stella :D
 
