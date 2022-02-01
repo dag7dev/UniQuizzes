@@ -14,15 +14,17 @@
     <script src="js/main.js"></script>
     <script src="js/config.js"></script>
 
-    <h1>JSQuizee - JS Simple Quiz Engine</h1>
+    <h1>
+        <script>document.write(title)</script>
+    </h1>
 
     <h3 id="h3Explaination"></h3>
 
     <details>
         <summary>What's new</summary>
-        <p style="color:red">- implemented: new and fresh version<br></p>
-        <p style="color:black">- added: slider<br></p>
-        <p style="color:black">- customize your training by shuffling questions or answers</p>
+        <p style="color:red">- feat: new and fresh version<br></p>
+        <p style="color:black">- add: slider<br></p>
+        <p style="color:black">- feat: customize your training by shuffling questions or answers</p>
     </details>
 
     <hr>
@@ -45,7 +47,8 @@
     <button name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
 
     <div id="div-chk-shuffle-questions">
-        <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Shuffle Questions" checked />
+        <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Shuffle Questions"
+            checked />
         <label for="chk-shuffle-questions">Shuffle Questions</label>
     </div>
 
@@ -60,7 +63,8 @@
     </div>
 
     <div id="div-slider" class="slidecontainer">
-        <input type="range" autocomplete="off" min="0" step="1" max="100" value="40" class="slider" id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
+        <input type="range" autocomplete="off" min="0" step="1" max="100" value="40" class="slider"
+            id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
 
         <span id="sliderText"></span>
     </div>
@@ -81,12 +85,11 @@
 
     <script>
         if (init() == 0) {
-
             outslider.innerHTML = slider.value;
 
             // checkbox at the original values after a refresh
             var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
-            [].forEach.call(allCheckboxes, function(checkbox) {
+            [].forEach.call(allCheckboxes, function (checkbox) {
                 checkbox.checked = checkbox.defaultChecked;
             });
         } else {
@@ -94,15 +97,16 @@
         }
     </script>
 
-
     <br>
+
     <p id="results" hidden=""></p>
+
     <details>
         <summary>Useful Links</summary>
-        <a href="https://github.com/dag7dev/JSQuizee">Github's project page - JSQuizee</a> <br>
+        <a href="https://github.com/dag7dev/JSQuizee">Github's project page - JSQuizee: the original engine</a> <br>
         <br>
         <b>
-            <center>If you like this project, consider to star this repo on Github, thanks!<br></center>
+            If you like this project, consider to star this repo on Github, thanks!<br>
         </b>
     </details>
 </body>
