@@ -17,6 +17,7 @@ var showShuffleAnswers = true
 // FILES
 var jsonFolder = "json" // json folder where to load your json files
 var jsonFiles = { // load other quizzes
-    "questions_1.json": "SO1",
-    "questions_2.json": "SO2"
+    "so1.json": "SO1",
+    "so2.json": "SO2",
+    "swInedite.json": "SW - Inedite"
 };
