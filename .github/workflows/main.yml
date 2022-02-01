@@ -43,7 +43,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'SOSim'
+          source-directory: 'final'
           destination-github-username: 'dag7dev'
           destination-repository-name: 'SOSim'
           user-email: dag7@protonmail.com
