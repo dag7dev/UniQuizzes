@@ -26,15 +26,15 @@ jobs:
         run: git clone https://github.com/dag7dev/JSQuizee.git
 
       - name: Clone Quizzes repo
-        run: git clone https://github.com/dag7dev/SOSim.git
+        run: git clone https://github.com/dag7dev/UniQuizzes.git
 
       - name: Move and replaces files 
         run: |
-          mkdir final
-          \cp -r SOSim/* final
-          \cp -r JSQuizee/index.html final
-          \cp -r JSQuizee/js/main.js final/js
-          rm -rf SOSim
+          mkdir UniQuizzesFinal
+          \cp -r UniQuizzes/* UniQuizzesFinal
+          \cp -r JSQuizee/index.html UniQuizzesFinal
+          \cp -r JSQuizee/js/main.js UniQuizzesFinal/js
+          rm -rf UniQuizzes
           rm -rf JSQuizee
       
       - name: Pushes to another repository
@@ -43,9 +43,9 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'final'
+          source-directory: 'UniQuizzesFinal'
           destination-github-username: 'dag7dev'
-          destination-repository-name: 'SOSim'
+          destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
           target-branch: gh-pages
           
