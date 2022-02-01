@@ -1,4 +1,5 @@
-[{
+[
+    {
         "question": "What's the favorite letter of the author?",
         "answers": [
             "The letter A",
@@ -8,7 +9,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -21,7 +21,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 1,
         "code": "#include <stdlib.h>\r\n#include <stdio.h>\r\nint main() {\r\n    printf(\"Hello, world!\");\r\n}"
     },
     {
@@ -34,7 +33,6 @@
         ],
         "correct": "a",
         "answers_have_code": 1,
-        "has_code": 1,
         "code": "#include <stdlib.h>\r\n#include <stdio.h>\r\nint main() {\r\n    ANSWER GOES HERE\r\n}"
     }
 ]
