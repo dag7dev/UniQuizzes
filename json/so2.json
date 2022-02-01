@@ -1,4 +1,5 @@
-[{
+[
+    {
         "question": "Quale delle seguenti affermazioni sui processi Linux è falsa?",
         "answers": [
             "In un determinato istante, non possono esserci 2 processi distinti con lo stesso PID",
@@ -8,7 +9,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -21,7 +21,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -34,7 +33,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -47,7 +45,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -60,7 +57,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -73,7 +69,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -86,7 +81,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -99,7 +93,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -112,7 +105,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -125,7 +117,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -138,7 +129,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -151,7 +141,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -164,7 +153,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -177,7 +165,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -190,7 +177,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -203,7 +189,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -216,7 +201,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -229,7 +213,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -242,7 +225,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -255,7 +237,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -268,7 +249,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -281,7 +261,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -294,7 +273,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -307,7 +285,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -320,7 +297,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -333,7 +309,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -346,7 +321,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -359,7 +333,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -372,7 +345,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -385,7 +357,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -398,7 +369,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -411,7 +381,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -424,7 +393,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -437,7 +405,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -450,7 +417,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -463,7 +429,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -476,7 +441,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -489,7 +453,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -502,7 +465,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -515,7 +477,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -528,7 +489,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -541,7 +501,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -554,7 +513,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -567,7 +525,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -580,7 +537,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -593,7 +549,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -606,7 +561,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -619,7 +573,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": "",
         "comment": "La​​ B ​​può ​​trarre​​ in​​ inganno:​​ lo ​​shabang ​​si ​​applica ​​solo​​ alla​​ prima​​ riga ​​dello​​ script"
     },
@@ -633,7 +586,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -646,7 +598,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -659,7 +610,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -672,7 +622,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -685,7 +634,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -698,7 +646,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -711,7 +658,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -724,7 +670,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -737,7 +682,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -750,7 +694,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -763,7 +706,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -776,7 +718,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -789,7 +730,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -802,7 +742,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -815,7 +754,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -828,7 +766,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -841,7 +778,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -854,7 +790,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -867,7 +802,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -880,7 +814,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -893,7 +826,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -906,7 +838,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -919,7 +850,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -932,7 +862,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -945,7 +874,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -958,7 +886,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -971,7 +898,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -984,7 +910,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -997,7 +922,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1010,7 +934,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1023,7 +946,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1036,7 +958,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1049,7 +970,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1062,7 +982,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1075,7 +994,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1088,7 +1006,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1101,7 +1018,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1114,7 +1030,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1127,7 +1042,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1140,7 +1054,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1153,7 +1066,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1166,7 +1078,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1179,7 +1090,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1192,7 +1102,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1205,7 +1114,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1218,7 +1126,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1231,7 +1138,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1244,7 +1150,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1257,7 +1162,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1270,7 +1174,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1283,7 +1186,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1296,7 +1198,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1309,7 +1210,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1322,7 +1222,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 1,
         "code": "#include <string.h>\n        #include <stdlib.h>\n        #include <stdio.h>\n        \n        int main() {\n          struct s {\n            char *a;\n            char b[20];\n          } *p[2];\n          char *a = strdup(\"ciao\");\n          p[0] = (struct s*)malloc(sizeof(struct s));\n          p[0]->a = a;\n          strcpy(p[0]->b, a);\n          COPIA\n          a[1] = '0';\n          printf(\"%s %s %s %s\\n\", p[0]->a, p[0]->b, p[1]->a, p[1]->b);\n        }\n"
     },
     {
@@ -1335,7 +1234,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 1,
         "code": "int main() {\n    struct s {\n      char *a;\n      char b[20];\n    } p[5];\n  ...\n  }"
     },
     {
@@ -1348,7 +1246,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 1,
         "code": "sudo cp -a `which cat` .\nsudo chmod u+s cat\n./cat &\ncat &\n"
     },
     {
@@ -1361,7 +1258,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1374,7 +1270,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1387,7 +1282,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 1,
         "code": "#include <string.h>\n#include <stdlib.h>\n#include <stdio.h>\n\nint main() {\n  struct s {\n    char *a;\n    char b[20];\n  } p[2];\n  char *a = strdup(\"ciao\");\n  p[0].a = a;\n  strcpy(p[0].b, a);\n  COPIA\n  a[1] = '0';\n  printf(\"%s %s %s %s\\n\", p[0].a, p[0].b, p[1].a, p[1].b);\n}"
     },
     {
@@ -1400,7 +1294,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1413,7 +1306,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1426,7 +1318,6 @@
         ],
         "correct": "a",
         "answers_have_code": 1,
-        "has_code": 1,
         "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
     },
     {
@@ -1439,7 +1330,6 @@
         ],
         "correct": "a",
         "answers_have_code": 1,
-        "has_code": 1,
         "code": "echo -n \"Esecuzione in corso...\"\r\n\/bin\/ls -la \/\r\necho \"fatto\"\r\n"
     },
     {
@@ -1452,7 +1342,6 @@
         ],
         "correct": "a",
         "answers_have_code": 1,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1465,7 +1354,6 @@
         ],
         "correct": "d",
         "answers_have_code": 1,
-        "has_code": 1,
         "code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nfprintf(stdout, \"%d\\n%lf\\n\", var, var2);\r\n"
     },
     {
@@ -1478,7 +1366,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1491,7 +1378,6 @@
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1504,7 +1390,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1517,7 +1402,6 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1530,7 +1414,6 @@
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1543,7 +1426,6 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "has_code": 0,
         "code": ""
     },
     {
@@ -1556,7 +1438,6 @@
         ],
         "correct": "a",
         "answers_have_code": 1,
-        "has_code": 1,
         "code": "FILE *stream = fopen(\"file_esistente.txt\", \"r\");\r\nint var;\r\ndouble var2;\r\nfscanf(stream, \"%d\\n%lf\\n\", &var, &var2);"
     },
     {
@@ -1569,7 +1450,6 @@
         ],
         "correct": "d",
         "answers_have_code": 1,
-        "has_code": 0,
         "code": ""
     }
 ]
