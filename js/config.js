@@ -6,6 +6,7 @@ var rightAnswerPoints = 2
 var wrongAnswerPoints = 1
 var noAnswerPoints = 0
 var numberOfQuestions = 40 // default number of questions that you want to show
+var title = "UniQuizzes"
 
 // CUSTOMIZABLE PART OF THE PAGE - SHOWS OR HIDES SOME PARTS
 // if a part is disabled, then the related functionality will be disabled
