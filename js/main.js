@@ -454,7 +454,7 @@ function loadElements(questions) {
         rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
 
         // if question has source code, then renderize it into a table
-        if (questions[i]['has_code'] == 1) {
+        if (questions[i]['code'] !== "") {
             tablePre = document.createElement('table')
             tablePre.border = 2;
             preBlock = document.createElement('pre')
