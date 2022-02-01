@@ -30,8 +30,12 @@ jobs:
 
       - name: Move and replaces files 
         run: |
-          \cp -r JSQuizee/index.html SOSim
-          \cp -r JSQuizee/js/main.js SOSim/js
+          mkdir final
+          \cp -r SOSim/* final
+          \cp -r JSQuizee/index.html final
+          \cp -r JSQuizee/js/main.js final/js
+          rm -rf SOSim
+          rm -rf JSQuizee
       
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
