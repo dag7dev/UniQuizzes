@@ -6,13 +6,10 @@ Semplice app **ora anche da web** che si occuperà di addestrare il cadetto all'
 Stai cercando l'app "da terminale" per il modulo 2? Clicca qui: https://github.com/andrea-gasparini/SO2-exam-simulator ma ricordati che non è più mantenuta!
 
 ## Disclaimer
----
 Ci solleviamo da ogni responsabilità di utilizzo improprio di questo strumento, e non garantiamo in alcun modo che le risposte siano corrette o errate.
 
 Utilizzalo a tuo rischio e pericolo ma cosa più importante: dai una mano ai tuoi colleghi aggiungendo o modificando domande,
 **basta una PR o una issue!**
-
----
 
 ## Istruzioni
 **Versione Windows/Linux/Mac (CONTIENE SOLO QUESTIONS_2, NON AGGIORNATA E NON MANTENUTA)**: https://github.com/andrea-gasparini/SO2-exam-simulator
@@ -36,8 +33,7 @@ Se le risposte contengono del codice sorgente, impostare `answers_have_code` a "
 Oppure dai un'occhiata alla [TODO List dei desideri](#todo-list-dei-desideri).
 
 ## TODO List dei desideri
-- [X] **GUI cross-platform** (con JavaFX o con altro, ogni proposta è ben accetta, soprattutto JS, purché giri su Github Sites e funzioni).
-**FATTO**
+- [X] GUI cross-platform
 - [ ] Una pagina dove generare un JSON già pronto in caso si voglia contribuire e non si è tecnici
 - [X] Un json che **include quesiti SO1**
 - [X] Linee guida per contribuire
