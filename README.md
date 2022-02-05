@@ -42,8 +42,8 @@ Se il progetto ti è stato utile, o se hai passato esami, non dimenticare di las
 0. Requisiti fondamentali: avere `Python` e `git` installati
 1. Eseguire questi comandi sul terminale (o farsi uno script)
 ```
-`git clone https://github.com/dag7dev/JSQuizee`
-`git clone https://github.com/dag7dev/UniQuizzes`
+git clone https://github.com/dag7dev/JSQuizee
+git clone https://github.com/dag7dev/UniQuizzes
 mkdir UniQuizzesFinal
 \cp -r UniQuizzes/* UniQuizzesFinal
 \cp -r JSQuizee/index.html UniQuizzesFinal
@@ -57,18 +57,17 @@ cd UniQuizzesFinal
 Puoi eseguirlo in locale digitando `http://0.0.0.0:8000/` sul tuo browser.
 
 ### Troubleshooting sull'offline
-```
 Q: L'app non legge i JSON.
-A: Non l'hai avviata tramite server. È requisito fondamentale farlo, poiché normalmente i browser non possono accedere ai file locali.
+- Non l'hai avviata tramite server. È requisito fondamentale farlo, poiché normalmente i browser non possono accedere ai file locali.
 
 Q: Non trovo index.html
-A: Non hai seguito le istruzioni per l'offline. Verifica di aver seguito tutti i passaggi e riprova. 
+- Non hai seguito le istruzioni per l'offline. Verifica di aver seguito tutti i passaggi e riprova. 
 
 Q: Quando implementerai la pagina di creazione semplice dei JSON?
-A: Non ho una deadline, e lavoro a questo progetto nel tempo libero.
-```
+- Non ho una deadline, e lavoro a questo progetto nel tempo libero.
+
 ## TODO List dei desideri
 - [X] GUI cross-platform
-- [ ] Una pagina dove generare un JSON già pronto in caso si voglia contribuire e non si è tecnici
+- [ ] Editor json in-browser (aggiungere, modificare, rimuovere domande) 
 - [X] Un json che **include quesiti SO1**
 - [X] Linee guida per contribuire
