@@ -17,21 +17,26 @@
     <h1>
         <script>document.write(title)</script>
     </h1>
-
-    <h2 style="color:red">
-        <script>document.write(disclaimerText)</script>
-    </h2>
-
+    
     <h3 id="h3Explaination"></h3>
+    
+    <h2 style="color:red">
+        <script>
+            if(disclaimerText !== "") {
+                document.write("Warning: "  + disclaimerText)
+            }
+        </script>
+    </h2>
+    
+   <hr>
+   
+   <a href="javascript:document.location.href=getCustomLink();"><script>document.write(customDescription)</script></a>
 
-    <details>
-        <summary>What's new</summary>
-        <p style="color:red">- feat: new and fresh version<br></p>
-        <p style="color:black">- add: slider<br></p>
-        <p style="color:black">- feat: customize your training by shuffling questions or answers</p>
-    </details>
-
+    <a href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a> - If you like this project, consider to star this repo on Github, thanks!
     <hr>
+
+
+    <h3>Settings</h3>
     <label for="quiz-version">Choose a quiz:</label>
     <select name="quiz-version" id="quiz-version">
         <script>
@@ -104,15 +109,6 @@
     <br>
 
     <p id="results" hidden=""></p>
-
-    <details>
-        <summary>Useful Links</summary>
-        <a href="https://github.com/dag7dev/JSQuizee">Github's project page - JSQuizee: the original engine</a> <br>
-        <br>
-        <b>
-            If you like this project, consider to star this repo on Github, thanks!<br>
-        </b>
-    </details>
 </body>
 
 </html>

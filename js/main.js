@@ -135,6 +135,10 @@ function checkForParams() {
 
 }
 
+function getCustomLink() {
+    return customLink;
+}
+
 // func: handle things related to timer (start / end timer)
 function timerHandler(timer) {
     if (!showTimer) {

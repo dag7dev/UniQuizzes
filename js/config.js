@@ -16,6 +16,10 @@ var showTimer = true
 var showShuffleQuestions = true
 var showShuffleAnswers = true
 
+// additional URL and description shown in header
+var customLink = "https://github.com/dag7dev/UniQuizzes"
+var customDescription = "Github quizzes for uni people!"
+
 // FILES
 var jsonFolder = "json" // json folder where to load your json files
 var jsonFiles = { // load other quizzes
