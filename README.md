@@ -45,9 +45,9 @@ Se il progetto ti è stato utile, o se hai passato esami, non dimenticare di las
 git clone https://github.com/dag7dev/JSQuizee
 git clone https://github.com/dag7dev/UniQuizzes
 mkdir UniQuizzesFinal
-\cp -r UniQuizzes/* UniQuizzesFinal
-\cp -r JSQuizee/index.html UniQuizzesFinal
-\cp -r JSQuizee/js/main.js UniQuizzesFinal/js
+cp -r UniQuizzes/* UniQuizzesFinal
+cp -r JSQuizee/index.html UniQuizzesFinal
+cp -r JSQuizee/js/main.js UniQuizzesFinal/js
 rm -rf UniQuizzes
 rm -rf JSQuizee
 cd UniQuizzesFinal
@@ -68,6 +68,7 @@ Q: Quando implementerai la pagina di creazione semplice dei JSON?
 
 ## TODO List dei desideri
 - [X] GUI cross-platform
-- [ ] Editor json in-browser (aggiungere, modificare, rimuovere domande) 
+- [ ] Editor json in-browser (aggiungere, modificare, rimuovere domande)
+- [ ] Parser autoaggiornante che aggiorna i quesiti automaticamente
 - [X] Un json che **include quesiti SO1**
 - [X] Linee guida per contribuire
