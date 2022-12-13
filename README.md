@@ -73,6 +73,7 @@ Note: your `your_file.json` must be in your json folder
     ```
     [
     {
+        "image": optional, if you need to show a picture, place the picture into "img" folder, then, write the filename containing the picture you want to display
         "question": "Your question",
         "answers": [
             "First answer",
@@ -113,6 +114,7 @@ If you don't know how to enable Github Pages for your webpage, [click here](http
 - [ ] **style** this website with an awesome CSS: it was poorly designed (on purpose), some stylish css would be nice!
 - [X] **Clean source code**: since the source code was developed in a few hours, it would be nice to clean it up a bit or optimize things
 - [X] Guidelines and **documents**
+- [X] implement an **image display feature**
 
 For anything, open a PR or issue.
 

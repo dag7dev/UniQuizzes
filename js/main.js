@@ -434,6 +434,15 @@ function loadElements(questions) {
         containingDiv.id = i;
         container.appendChild(containingDiv)
 
+        // image to show, if any
+        if (questions[i]['img'] !== undefined) {
+            var img = document.createElement("img")
+            img.src = "img/" + questions[i]['img'].toString() + ".png";
+            img.width = 400
+            img.height = 400
+            containingDiv.appendChild(img)
+        }
+
         var bigTable = document.createElement("table")
         bigTable.border = 1;
 
