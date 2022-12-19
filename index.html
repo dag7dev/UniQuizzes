@@ -9,7 +9,12 @@
 </head>
 
 <body style="max-width: 100%;">
-
+    <style>
+        img {
+            max-width: 600px;
+            max-height: 400px;
+        }
+    </style>
 
     <script src="js/main.js"></script>
     <script src="js/config.js"></script>
@@ -17,22 +22,25 @@
     <h1>
         <script>document.write(title)</script>
     </h1>
-    
+
     <h3 id="h3Explaination"></h3>
-    
+
     <h2 style="color:red">
         <script>
-            if(disclaimerText !== "") {
-                document.write("Warning: "  + disclaimerText)
+            if (disclaimerText !== "") {
+                document.write("Warning: " + disclaimerText)
             }
         </script>
     </h2>
-    
-   <hr>
-   
-   <a href="javascript:document.location.href=getCustomLink();"><script>document.write(customDescription)</script></a>
 
-    <a href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a> - If you like this project, consider to star this repo on Github, thanks!
+    <hr>
+
+    <a href="javascript:document.location.href=getCustomLink();">
+        <script>document.write(customDescription)</script>
+    </a>
+
+    <a href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a> - If you like this project, consider to
+    star this repo on Github, thanks!
     <hr>
 
 
