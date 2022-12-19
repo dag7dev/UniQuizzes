@@ -434,6 +434,12 @@ function loadElements(questions) {
         containingDiv.id = i;
         container.appendChild(containingDiv)
 
+        var bigTable = document.createElement("table")
+        bigTable.border = 1;
+
+        bigTable.innerHTML = "<b><font color='blue'>" + (i + 1) + ". " + questions[i]['question'] + "</font></b><br>";
+        containingDiv.appendChild(bigTable)
+
         // image to show, if any
         if (questions[i]['img'] !== undefined) {
             var img = document.createElement("img")
@@ -442,12 +448,6 @@ function loadElements(questions) {
             img.height = 400
             containingDiv.appendChild(img)
         }
-
-        var bigTable = document.createElement("table")
-        bigTable.border = 1;
-
-        bigTable.innerHTML = "<b><font color='blue'>" + (i + 1) + ". " + questions[i]['question'] + "</font></b><br>";
-        containingDiv.appendChild(bigTable)
 
         // let's shuffle arrays together
         var answers = questions[i]['answers'];
