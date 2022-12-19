@@ -12,6 +12,8 @@ build() {
     
     touch $FOLDER_PATH/.gitignore
     echo "*" > .gitignore 
+     
+    touch $FOLDER_PATH/DO_NOT_EDIT_OR_MODIFY_THIS_FOLDER
     
     echo "---"
     echo "Cartella creata con successo: $FOLDER_PATH"
