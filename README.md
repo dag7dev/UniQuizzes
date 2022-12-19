@@ -40,28 +40,45 @@ Se il progetto ti è stato utile, o se hai passato esami, non dimenticare di las
 
 ## Istruzioni per l'offline
 0. Requisiti fondamentali: avere `Python` e `git` installati
-1. Eseguire questi comandi sul terminale (o farsi uno script)
+1. Rendere lo script .sh avviabile: 
 ```
-git clone https://github.com/dag7dev/JSQuizee
-git clone https://github.com/dag7dev/UniQuizzes
-mkdir UniQuizzesFinal
-cp -r UniQuizzes/* UniQuizzesFinal
-cp -r JSQuizee/index.html UniQuizzesFinal
-cp -r JSQuizee/js/main.js UniQuizzesFinal/js
-rm -rf UniQuizzes
-rm -rf JSQuizee
-cd UniQuizzesFinal
+chmod 755 start.sh
 ```
-4. `python -m http.server`
+2. Lanciare lo script con l'opzione desiderata:
+- local, per creare la versione con i file locali del tuo computer, 
+- online, per creare la versione con i file già presenti sulla repo di dag7 (questa)
 
-Puoi eseguirlo in locale digitando `http://0.0.0.0:8000/` sul tuo browser.
+File locali:
+```
+./start.sh --from-local
+```
+
+File sulla repo:
+```
+./start.sh --from-online
+```
+
+In caso di dubbi consultare l'help dello script.
+
+3. UniQuizzes viene salvato in ``$HOME/UniQuizzesFinal``
+
+Recarsi in quella directory con:
+```
+cd $HOME/UniQuizzesFinal
+```
+e digitare:
+```
+python -m http.server
+```
+
+Potrai eseguirlo in locale digitando `http://0.0.0.0:8000/` sul tuo browser.
 
 ### Troubleshooting sull'offline
-Q: L'app non legge i JSON.
+Q: L'app non legge i JSON tramite file locali. Normale?
 - Non l'hai avviata tramite server. È requisito fondamentale farlo, poiché normalmente i browser non possono accedere ai file locali.
 
-Q: Non trovo index.html
-- Non hai seguito le istruzioni per l'offline. Verifica di aver seguito tutti i passaggi e riprova. 
+Q: L'app non legge i JSON nonostante il server tramite file locali. Che ho sbagliato?
+- Il JSON
 
 Q: Quando implementerai la pagina di creazione semplice dei JSON?
 - Non ho una deadline, e lavoro a questo progetto nel tempo libero.
@@ -69,6 +86,6 @@ Q: Quando implementerai la pagina di creazione semplice dei JSON?
 ## TODO List dei desideri
 - [X] GUI cross-platform
 - [ ] Editor json in-browser (aggiungere, modificare, rimuovere domande)
-- [ ] Parser autoaggiornante che aggiorna i quesiti automaticamente
+- [ ] Parser autoaggiornante che aggiorna i quesiti automaticamente da un file google documenti
 - [X] Un json che **include quesiti SO1**
 - [X] Linee guida per contribuire
