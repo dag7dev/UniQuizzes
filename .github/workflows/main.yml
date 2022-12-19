@@ -23,21 +23,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Clone JSQuizee repo
-        run: git clone https://github.com/dag7dev/JSQuizee.git
+      - name: Run start script from local
+        run: ./start.sh --from-local
 
-      - name: Clone Quizzes repo
-        run: git clone https://github.com/dag7dev/UniQuizzes.git
+      - name: Move
+        run: mv $HOME/UniQuizzesFinal .
 
-      - name: Move and replaces files 
-        run: |
-          mkdir UniQuizzesFinal
-          \cp -r UniQuizzes/* UniQuizzesFinal
-          \cp -r JSQuizee/index.html UniQuizzesFinal
-          \cp -r JSQuizee/js/main.js UniQuizzesFinal/js
-          rm -rf UniQuizzes
-          rm -rf JSQuizee
-      
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
       - uses: cpina/github-action-push-to-another-repository@main
@@ -49,4 +40,3 @@ jobs:
           destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
           target-branch: gh-pages
-           
