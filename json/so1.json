@@ -1,1166 +1,1544 @@
 [
     {
-        "question": "Quale delle seguenti affermazioni sulle directory di un file system \u00e8 vera?",
+        "question": "Il sistema operativo",
         "answers": [
-            "\u00c8 sempre necessario identificare un file di un file system fornendone il path assoluto",
-            "\u00c8 sempre necessario identificare un file di un file system fornendone il path relativo alla directory corrente",
-            "\u00c8 sempre possibile dare lo stesso nome a file diversi",
-            "Nessuna delle altre opzioni \u00e8 vera"
+            "Coincide con il kernel",
+            "Costituisce l'interfaccia tra la macchina fisica (hardware) e le applicazioni utente",
+            "È soggetto alle politiche di scheduling",
+            "Risiede in memoria principale anche in seguito allo shutdown della macchina"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema operativo microkernel",
+        "answers": [
+            "Alcune delle funzionalità sono implementate in spazio utente anziché all'interno del kernel",
+            "I processi utente possono interagire direttamente con il sistema,evitando l'uso di system call",
+            "La comunicazione tra le varie componenti del sistema è più efficiente",
+            "Non sono previsti meccanismi di protezione  "
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Non sono previsti meccanismi di protezione  ",
+        "answers": [
+            "Non necessita di avere due modalità di utilizzo della CPU (user vs.kernel mode)",
+            "Non necessita di meccanismi di comunicazione tra porzioni diverse del sistema operativo",
+            "E' più efficiente di un sistema monolitico",
+            "Ad eccezione delle funzionalità fondamentali, implementa tutto il resto in spazio utente"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla concorrenza tra processi o thread \u00e8 falsa?",
+        "question": "L'insieme di istruzioni del livello macchina:",
         "answers": [
-            "La disabilitazione delle interruzioni impedisce la creazione di nuove interruzioni",
-            "L'abuso della disabilitazione delle interruzioni fa diminuire la multiprogrammazione, a parit\u00e0 di numero di processi",
-            "Se un processo pu\u00f2 disabilitare le interruzioni tramite un'istruzione macchina dedicata, allora pu\u00f2 far diminuire l'uso del processore",
-            "La disabilitazione delle interruzioni non funziona su sistemi con pi\u00f9 processori o pi\u00f9 core"
+            "Sono composte da un codice operativo e da zero o più operandi",
+            "Sono definite da uno specifico linguaggio macchina",
+            "Sono un'astrazione dell'architettura hardware",
+            "Tutte le risposte precedenti sono corrette"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni \u00e8 vera? ",
+        "question": "I registri interni della CPU e la cache sono unità di memoria:",
         "answers": [
-            "Lo scheduler ha, tra i suoi obiettivi, quello di minimizzare il numero di processi che rispettano la propria deadline",
-            "Lo scheduler ha, tra i suoi obiettivi, quello di minimizzare il volume di lavoro nel tempo",
-            "Lo scheduler ha, tra i suoi obiettivi, quello di massimizzare il tempo di risposta",
-            "Lo scheduler ha, tra i suoi obiettivi, quello di minimizzare il tempo di inattivit\u00e0 del processore"
+            "Non volatili",
+            "Gestite interamente dall'architettura a livello hardware",
+            "Gestite interamente dal sistema operativo",
+            "Molto economiche e altamente performanti"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La transizione da user a kernel mode avviene quando:",
+        "answers": [
+            "Un programma esegue una chiamata di funzione",
+            "Si avvia il computer (bootstrap)",
+            "Si esegue la prima istruzione di un programma",
+            "Scade il quanto di tempo assegnato al processo in esecuzione"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul modello dei processi in UNIX SVR4 System V Release 4 \u00e8 falsa?",
+        "question": "Il device controller di un dispositivo di I/O:",
         "answers": [
-            "Se un processo \u00e8 Zombie, allora \u00e8 terminato ma il suo process control block \u00e8 ancora in memoria",
-            "Asleep in Memory coincide con Blocked",
-            "Ha anche uno stato Zombie: serve per tutti i processi che sono terminati",
-            "Ha 9 stati (10 con Exit)"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 falsa? ",
-        "answers": [
-            "Quando un indirizzo non viene trovato nel translation lookaside buffer, \u00e8 necessario consultare la normale tabella delle pagine",
-            "Il translation lookaside buffer \u00e8 una particolare cache, ma non \u00e8 completamente trasparente al sistema operativo",
-            "Il translation lookaside buffer permette di accedere direttamente al contenuto degli indirizzi di memoria virtuali usati pi\u00f9 di recente",
-            "In assenza di translation lookaside buffer, l'accesso ad un indirizzo virtuale pu\u00f2 richiedere almeno 2 accessi in memoria"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sugli obiettivi di sicurezza di un sistema operativo \u00e8 vera?",
-        "answers": [
-            "Per \"disponibilit\u00e0\"dell'hardware si intende la garanzia che le workstation restino sempre fisse in un posto",
-            "Per \"confidenzialit\u00e0\"dei dati si intende la garanzia che essi non possano essere generati automaticamente",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Per \"integrit\u00e0\"dei dati si intende la garanzia che essi non vengano mai modificati"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul buffering dell'I\/O \u00e8 vera? ",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Avviene direttamente su disco, altrimenti si rischia il deadlock per interferenze con il DMA",
-            "Nel caso ci siano pi\u00f9 buffer, vanno gestiti come nel problema dei lettori\/scrittori",
-            "Pu\u00f2 consistere nel completare un'istruzione di output I (\u00e8 una i) dopo che alcune istruzioni successive ad I siano state eseguite "
+            "Contiene dei registri che ne indicano lo stato",
+            "Contiene dei registri che ne consentono il controllo da parte della CPU",
+            "Contiene dei registri per lo scambio di dati con la CPU",
+            "Tutte le risposte precedenti sono corrette"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla gerarchia della memoria \u00e8 vera?",
+        "question": "Le chiamate di sistema:",
         "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Andando dall'alto in basso, cresce il costo",
-            "Andando dall'alto in basso, diminuisce la capacit\u00e0",
-            "Andando dall'alto in basso, diminuisce la frequenza di accesso alla memoria da parte del processore"
+            "Sono sempre bloccanti",
+            "Causano la terminazione del processo in corso e l'avvio di un nuovo processo",
+            "Devono essere implementate in spazio utente",
+            "Devono essere implementate in spazio kernel"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale dei seguenti elementi non fa parte del process control block?",
+        "question": "Una chiamata di sistema bloccante",
         "answers": [
-            "Il puntatore alla tabella delle pagine",
-            "L\u2019identificatore del thread",
-            "Lo stato o modalit\u00e0",
-            "L\u2019identificatore del processo"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sugli algoritmi di scheduling \u00e8 vera?",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Il quanto di tempo ottimale per lo scheduler round-robin \u00e8 maggiore del tipico tempo di completa esecuzione di un processo interattivo",
-            "Lo scheduler First Come First Served favorisce i processi I\/O-bound",
-            "Anche assumendo che tutti i processi prima o poi terminino, lo scheduler First Come First Served soffre di starvation"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla segmentazione della memoria \u00e8 falsa? ",
-        "answers": [
-            "Diversi segmenti possono avere diverse lunghezze",
-            "Differentemente dalla paginazione, il programmatore assembler di un processo non interagisce esplicitamente con la gestione dei segmenti",
-            "Per accedere ad un indirizzo contenuto in un segmento di un processo, tale segmento dovr\u00e0 essere posizionato in memoria principale",
-            "Un indirizzo di memoria principale va visto come un numero di segmento pi\u00f9 uno spiazzamento all'interno di tale segmento"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sull'algoritmo per il rilevamento del deadlock visto a lezione \u00e8 vera?",
-        "answers": [
-            "Richiede in input, per ogni processo p e per ogni risorsa r, il numero massimo di istanze di r che p chieder\u00e0 nel corso della sua esecuzione",
-            "Se al passo 3 viene trovato un processo non marcato che soddisfi la condizione Qik \u2264 wik, allora c'\u00e8 un deadlock",
-            "I processi marcati sono quelli che non sono coinvolti in un deadlock",
-            "Nessuna delle altre opzioni \u00e8 vera"
+            "Sposta in coda pronti (ready) il processo che la esegue",
+            "Interrompe definitivamente il processo che la esegue",
+            "Interrompe temporaneamente il processo che la esegue",
+            "Necessità che il processo che la esegue ne verifichi periodicamente l'esito (polling)"
         ],
         "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul long-term scheduler \u00e8 falsa? ",
+        "question": "Il system call handler:",
         "answers": [
-            "Viene chiamato in causa esclusivamente quando viene creato un nuovo processo",
-            "Avendo le necessarie informazioni, una tipica strategia \u00e8 mantenere una giusta proporzione, stabilita a priori, tra processi I\/O-bound e CPU-bound",
-            "Avendo le necessarie informazioni, una tipica strategia \u00e8 ammettere in memoria principale i processi che richiedono dispositivi di I\/O diversi da [...]",
-            "Decide quali processi, tra quelli appena creati, possono essere ammessi in memoria principale per l'esecuzione"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera? ",
-        "answers": [
-            "Il difetto principale del prepaging \u00e8 che potrebbe portare in memoria pagine cui poi non si fa riferimento",
-            "Placement policy e replacement policy sono sinonimi ed indicano lo stesso insieme di metodologie",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Il difetto principale del paging on demand \u00e8 che causa molti page fault dopo alcuni secondi di esecuzione"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale dei seguenti requisiti deve soddisfare un meccanismo che offra la mutua esclusione?",
-        "answers": [
-            "Non deve essere fatta alcuna assunzione sulla velocit\u00e0 di esecuzione dei processi coinvolti",
-            "Se un processo fa richiesta di entrare nella sezione critica, deve poterlo fare subito",
-            "Se un processo non fa richiesta di entrare nella sezione critica, deve comunque accordarsi all'esecuzione degli altri processi",
-            "Si pu\u00f2 assumere che un processo che non sia nella sezione critica prima o poi ci entri"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui metodi di gestione dello spazio libero su disco \u00e8 vera?",
-        "answers": [
-            "Se viene usata la lista di blocchi liberi, c'\u00e8 un overhead di spazio, contrariamente alla concatenazione di blocchi liberi",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Se ci sono blocchi da 1kB, e il disco contiene 1TB, l'occupazione dovuta alla lista di blocchi liberi \u00e8 dell'1%",
-            "Se viene usata la lista di blocchi liberi, una parte viene memorizzata su disco ed una parte in memoria principale"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul kernel di un sistema operativo \u00e8 vera?",
-        "answers": [
-            "\u00c8 responsabile dell'accensione del computer ",
-            "Viene swappato dal disco alla memoria principale ad ogni context switch ",
-            "\u00c8 responsabile, tra le altre cose, della gestione dei processori",
-            "Nessuna delle altre opzioni \u00e8 corretta"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sulla preemption \u00e8 vera?",
-        "answers": [
-            "Se uno scheduler \u00e8 non-preemptive, permette sempre ai suoi processi di essere eseguiti sul processore, senza interruzioni, fino al loro completamento",
-            "Se uno scheduler \u00e8 non-preemptive, \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready",
-            "Se uno scheduler \u00e8 preemptive, non \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready",
-            "Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sugli algoritmi di scheduling \u00e8 vera?",
-        "answers": [
-            "Con lo scheduler Shortest Process Next, i processi con una grande immagine su RAM potrebbero soffrire di starvation",
-            "Lo scheduler round-robin virtuale migliora il round-robin classico, facendo s\u00ec che i processi I\/O-bound non vengano sfavoriti",
-            "Lo scheduler First Come First Served \"degenera\"nello scheduler round-robin se il quanto di tempo \u00e8 troppo lungo",
-            "Nessuna delle altre opzioni \u00e8 vera"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sugli indirizzi di memoria principale \u00e8 vera?",
-        "answers": [
-            "Un indirizzo \ufb01sico fa sempre riferimento alla memoria secondaria",
-            "Per rispettare il requisito di rilocazione, occorre trasformare indirizzi \ufb01sici in logici",
-            "Gli indirizzi relativi sono usati nella paginazione",
-            "Nessuna delle altre opzioni \u00e8 corretta"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui termini tipici della concorrenza \u00e8 falsa?",
-        "answers": [
-            "Una sezione critica \u00e8 una porzione di memoria che contiene almeno una variabile condivisa tra pi\u00f9 processi",
-            "Una operazione atomica \u00e8 una sequenza di istruzioni macchina tale che, se un processo la esegue, allora arriver\u00e0 a termine senza interruzioni da altri processi",
-            "Il requisito di mutua esclusione prevede che un solo processo possa eseguire un certo segmento di codice o accedere ad una determinata risorsa",
-            "Una race condition \u00e8 una violazione della mutua esclusione || \u00c8 possibile che 2 distinti processi chiamino la stessa funzione atomica"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale dei seguenti elementi fa parte del process control block?",
-        "answers": [
-            "Nessuna delle altre opzioni contiene elementi del process control block",
-            "Le informazioni sul contesto del processo, aggiornate ad ogni istruzione eseguita",
-            "L'intera immagine del processo in memoria",
-            "La tabella delle pagine di secondo livello"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti informazioni non \u00e8 presente in una tipica entry di una directory di un \ufb01le system?",
-        "answers": [
-            "Il gruppo cui appartiene l'utente che ha creato il \ufb01le",
-            "La data di creazione del \ufb01le",
-            "Autorizzazioni per l'accesso al \ufb01le",
-            "Dimensione del \ufb01le"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sugli algoritmi di scheduling per i dischi \u00e8 vera?",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "L'algoritmo C-SCAN deriva da SCAN, ed \u00e8 stato sviluppato per evitare di favorire le richieste di tracce ai bordi del disco",
-            "Per valutare le prestazioni dell'algoritmo con priorit\u00e0 \u00e8 sufficiente fornire il ruolo degli utenti dei processi che effettuano le richieste",
-            "L'algoritmo random ha la stessa funzione dell'algoritmo ottimo dei rimpiazzamenti di pagina: ha delle prestazioni ottime non raggiungibili dagli altri algoritmi"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul metodo di allocazione contigua dei file \u00e8 vera? ",
-        "answers": [
-            "\u00c8 possibile che ci sia frammentazione interna",
-            "La compattazione permette di memorizzare file che altrimenti non potrebbero esserlo (pur essendo la loro dimensione minore di quella dello spazio libero)",
-            "Non \u00e8 necessaria la preallocazione",
-            "La tabella di allocazione dei file necessita di memorizzare, per ogni file, il solo blocco di partenza"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla paginazione della memoria \u00e8 vera? ",
-        "answers": [
-            "Frame e pagine devono avere la stessa dimensione",
-            "Tutte le pagine di un processo dovranno essere, prima o poi, posizionate in un frame",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Soffre del problema della frammentazione interna, e quindi necessita compattazione"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul controllo di accesso \u00e8 vera? ",
-        "answers": [
-            "Nel controllo di accesso basato su ruoli, ad ogni ruolo \u00e8 assegnato un utente",
-            "Nel controllo di accesso basato su ruoli, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-ruoli-oggetti",
-            "Nel controllo di accesso discrezionale, prima di stabilire se un'operazione \u00e8 lecita, \u00e8 necessario consultare una tabella soggetti-oggetti",
-            "Nessuna delle altre opzioni \u00e8 vera"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni \u00e8 falsa? ",
-        "answers": [
-            "Nel caso delle risorse riusabili, in un grafo dell'allocazione delle risorse ci possono essere pi\u00f9 archi tra lo stesso nodo-processo e lo stesso nodo-risorsa",
-            "Nel caso delle risorse riusabili, in un grafo dell'allocazione delle risorse ci possono essere archi sia da nodi-processi a nodi-risorse che viceversa",
-            "Un grafo dell'allocazione delle risorse \u00e8 un grafo diretto aciclico",
-            "In un grafo dell'allocazione delle risorse, all'interno di un nodo rappresentante una risorsa, c'\u00e8 un pallino per ogni istanza di quella risorsa"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quali delle seguenti affermazioni \u00e8 vera? ",
-        "answers": [
-            "La confidenzialit\u00e0 di un sistema operativo consiste nel fatto che la shell del sistema operativo deve essere intuitiva e dare del tu agli utenti",
-            "La disponibilit\u00e0 (availability) di un sistema operativo consiste nel fatto che il sistema operativo deve essere sempre pronto a rispondere alle richieste di un utente",
-            "La disponibilit\u00e0 (availability) di un sistema operativo consiste nel fatto che devono esistere delle repository online che permettano sia di installare che di aggiornare il sistema operativo",
-            "La confidenzialit\u00e0 di un sistema operativo consiste nel fatto che il sistema operativo deve essere sempre pronto a rispondere alle richieste di un utente"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera? ",
-        "answers": [
-            "Il difetto principale del prepaging \u00e8 che potrebbe portare in memoria pagine cui poi non si fa riferimento",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Il difetto principale del paging on demand \u00e8 che, dopo una prima fase di assestamento, causa molti page fault",
-            "Placement policy e replacement policy sono sinonimi ed indicano lo stesso insieme di metodologie"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui dispositivi di memoria di massa \u00e8 vera? ",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Un settore di un disco magnetico a testina mobile \u00e8 l'area di una corona circolare del disco stesso",
-            "Una traccia di un disco magnetico a testina mobile \u00e8 l'area compresa da 2 raggi del disco stesso",
-            "Per selezionare un settore su una traccia di un disco magnetico a testina mobile, \u00e8 sufficiente posizionare la testina sulla giusta traccia"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul process control block \u00e8 vera? ",
-        "answers": [
-            "Viene salvato nella memoria utente assegnata al processo cui si riferisce",
-            "Contiene tutte le informazioni sui thread del processo cui si riferisce",
-            "Per i processi in modalit\u00e0 blocked, tutte le informazioni che contiene sono cancellate",
-            "Nessuna delle altre opzioni \u00e8 vera"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui semafori per la gestione della concorrenza \u00e8 falsa? ",
-        "answers": [
-            "Semafori generali e semafori binari hanno lo stesso potere computazionale (ovvero, permettono di risolvere gli stessi problemi)",
-            "Le primitive sui semafori sono in grado di mettere un processo in blocked, senza usare, a tal proposito, il busy-waiting",
-            "Per implementare le primitive sui semafori, servono un contatore ed una coda, che saranno condivisi da tutti i semafori usati",
-            "L'implementazione delle primitive sui semafori \u00e8 garantita atomica dal sistema operativo"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sugli algoritmi di scheduling per i dischi \u00e8 falsa? ",
-        "answers": [
-            "Nell'algoritmo F-SCAN, immediatamente prima che vengano scambiati i contenuti delle code F ed R, la coda F \u00e8 vuota, mentre la coda R contiene le richieste arrivate mentre si servivano le richieste dentro F",
-            "L'algoritmo Minimum Service Time pu\u00f2 portare alla starvation di un processo, che non verr\u00e0 quindi mai selezionato, se la richiesta era bloccante, per andare in esecuzione sul processore",
-            "L'algoritmo LIFO \u00e8 il pi\u00f9 equo nei confronti dei processi che effettuano le richieste al disco",
-            "Gli algoritmi Minimum Service Time, SCAN, C-SCAN, N-steps-SCAN ed F-SCAN non sono ottimizzati per essere usati su dischi con testine multiple selezionabili elettronicamente"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul long-term scheduler \u00e8 falsa? ",
-        "answers": [
-            "Decide quali processi, tra quelli appena creati, possono essere ammessi in memoria principale per l'esecuzione",
-            "Avendo le necessarie informazioni, una tipica strategia \u00e8 mantenere una giusta proporzione, stabilita a priori, tra processi I\/O-bound e CPU-bound",
-            "Viene chiamato in causa esclusivamente quando viene creato un nuovo processo",
-            "Avendo le necessarie informazioni, una tipica strategia \u00e8 ammettere in memoria principale i processi che richiedono dispositivi di I\/O diversi da quelli richiesti dai processi gi\u00e0 attivi"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui metodi di gestione dello spazio libero su disco \u00e8 vera? ",
-        "answers": [
-            "Se ci sono blocchi da 1kB, e il disco contiene 1TB, l'occupazione dovuta alla lista di blocchi liberi \u00e8 dell'1%",
-            "Se viene usata la lista di blocchi liberi, tale lista viene interamente mantenuta in memoria principale",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Se viene usata la lista di blocchi liberi, c'\u00e8 un overhead di spazio, contrariamente alla concatenazione di blocchi liberi"
+            "È invocato dallo scheduler del sistema operativo",
+            "Viene invocato alla scadenza del quanto temporale",
+            "Viene eseguito in spazio utente",
+            "Gestisce le chiamate di sistema tramite la system call table"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla memoria cache \u00e8 vera? ",
+        "question": " Il codice generico del system call handler:",
         "answers": [
-            "La memoria cache \u00e8 direttamente indirizzabile in assembler",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "\u00c8 possibile che, in un dato istante, la cache e la memoria RAM non siano coerenti tra loro",
-            "L'algoritmo di rimpiazzamento per la cache stabilisce quale blocco di RAM deve essere sostituito da un blocco di cache"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui problemi dei produttori\/consumatori e dei lettori\/scrittori, nelle accezioni viste a lezione, \u00e8 vera? ",
-        "answers": [
-            "Per il problema dei produttori\/consumatori, non deve essere mai possibile che pi\u00f9 consumatori accedano contemporaneamente al buffer, mentre nel problema dei lettori\/scrittori deve sempre possibile che pi\u00f9 lettori, in assenza di scrittori, accedano all'area di memoria",
-            "Per il problema dei produttori\/consumatori, non deve essere mai possibile che pi\u00f9 produttori accedano contemporaneamente al buffer, mentre nel problema dei lettori\/scrittori deve essere sempre possibile che pi\u00f9 scrittori (in assenza di lettori) accedano all'area di memoria",
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Per il problema dei produttori\/consumatori, deve essere sempre possibile che pi\u00f9 consumatori accedano contemporaneamente al buffer, mentre nel problema dei lettori\/scrittori non deve essere mai possibile che pi\u00f9 scrittori accedano all'area di memoria"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui (vecchi) metodi per il partizionamento della memoria \u00e8 vera? ",
-        "answers": [
-            "Con il partizionamento fisso, le partizioni devono avere tutte la stessa dimensione",
-            "Con il buddy system, ogni indirizzo di memoria pu\u00f2 ricadere in 2 porzioni",
-            "Con il partizionamento fisso, ci possono essere al massimo N processi attivi (ovvero, accettati per l'esecuzione), dove N \u00e8 il numero di partizioni",
-            "Con il partizionamento dinamico, si manifesta il problema della frammentazione esterna"
-        ],
-        "correct": "d",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sulla preemption \u00e8 vera? ",
-        "answers": [
-            "Se uno scheduler \u00e8 preemptive e vi \u00e8 pi\u00f9 di 1 processo ready, non \u00e8 possibile che un processo monopolizzi il processore",
-            "Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive",
-            "Se uno scheduler \u00e8 non-preemptive, permette sempre ai suoi processi di essere eseguiti senza interruzioni sul processore fino al loro completamento",
-            "Se uno scheduler \u00e8 non-preemptive, \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready"
-        ],
-        "correct": "d",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Nel modello dei processi a 5 stati, quali delle seguenti transizioni non \u00e8 possibile? ",
-        "answers": [
-            "Blocked == Running",
-            "Running == Ready",
-            "Blocked == Exit",
-            "Blocked == Ready"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul metodo di allocazione indicizzata dei file \u00e8 vera? ",
-        "answers": [
-            "Il consolidamento permette sempre di ridurre la dimensione dell'indice",
-            "Se usato con porzioni di dimensione variabile, i blocchi indice devono contenere anche la lunghezza di ogni porzione",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Non c'\u00e8 modo per il sistema operativo di distinguere tra blocchi con dati e blocchi con indici"
+            "Viene eseguito in spazio utente",
+            "È indicizzato tramite la interrupt vector table (IVT)",
+            "Viene invocato alla scadenza del quanto temporale",
+            "Viene invocato dallo scheduler del sistema operativo"
         ],
         "correct": "b",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul requisito di rilocazione nella gestione della memoria \u00e8 vera? ",
+        "question": "L'interrupt vector table(IVT):",
         "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Se viene realizzato tramite sostituzione degli indirizzi nel programma sorgente (al momento della creazione del processo), allora il relativo processo dovr\u00e0 cominciare sempre allo stesso indirizzo; tale indirizzo dovr\u00e0 essere uguale per tutti i processi",
-            "Se viene realizzato tramite sostituzione degli indirizzi nel programma sorgente (al momento della creazione del processo), allora il relativo processo potr\u00e0 trovarsi in diverse posizioni della memoria in diversi momenti del sua esecuzione",
-            "Se viene realizzato tramite sostituzione degli indirizzi nel programma sorgente (al momento della creazione del processo), serve hardware speciale"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sulla preemption \u00e8 vera?",
-        "answers": [
-            "Se uno scheduler \u00e8 non-preemptive, permette sempre ai suoi processi di essere eseguiti sul processore, senza interruzioni, fino al loro completamento",
-            "Se uno scheduler \u00e8 non-preemptive, \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready",
-            "Se uno scheduler \u00e8 preemptive, non \u00e8 possibile che un processo monopolizzi il processore, anche in presenza di altri processi ready",
-            "Per avere un trattamento equo sui processi, \u00e8 sufficiente usare uno scheduler preemptive"
+            "Si aggiorna dinamicamente ad ogni interruzione",
+            "E' una struttura dati che contiene puntatori ai vari gestori(handler) delle interruzioni",
+            "E' una struttura dati che è associata a ciascun processo",
+            "E' una struttura dati che contiene puntatori a codici di errori"
         ],
         "correct": "b",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale dei seguenti requisiti deve soddisfare un meccanismo che offra la mutua esclusione? ",
+        "question": "La system-call table:",
         "answers": [
-            "Non deve essere fatta alcuna assunzione sulla velocit\u00e0 di esecuzione dei processi coinvolti",
-            "Se un processo non fa richiesta di entrare nella sezione critica, deve comunque sincronizzarsi all'esecuzione degli altri processi",
-            "Se un processo \u00e8 nella sezione critica, occorre che rilasci subito la sezione critica stessa",
-            "Se un processo fa richiesta di entrare nella sezione critica, deve poter entrare subito nella sezione critica stessa"
-        ],
+            "Contiene tante entry quanto sono le chiamate di sistema supportare",
+            "Contiene tante entry quante sono le interruzioni supportare",
+            "Contiene tante entry quanti sono i dispositivi di I/O presenti nel sistema",
+            "Contiene tante entry quanti sono i processi in esecuzione"
+        ],    
         "correct": "a",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul dispatcher \u00e8 falsa? ",
+        "question": "La system-call table è una struttura dati gestita:",
         "answers": [
-            "Il resource balancing \u00e8 un criterio di sistema non prestazionale",
-            "Il rispetto delle deadline \u00e8 un criterio utente prestazionale",
-            "Il throughput \u00e8 un criterio di sistema prestazionale",
-            "La predictability \u00e8 un criterio utente prestazionale"
+            "Dai dispositivi di I/O",
+            "Dal processo utente",
+            "Sia dal kernel del sistema operativo che dal processo utente",
+            "Dal kernel del sistema operativo"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sugli interrupt (o eccezioni) \u00e8 falsa? ",
+        "question": "Se si cambia l'implementazione di una chiamata di sistema esistente:",
         "answers": [
-            "Devono essere gestiti da opportuno software di sistema",
-            "Una volta gestito l'interrupt o l'eccezione, quando (e se) si torna ad eseguire il processo interrotto, l'esecuzione ripartir\u00e0 sempre dall'istruzione successiva a quella dove \u00e8 stato ricevuto l'interrupt o l'eccezione",
-            "Normalmente, non vengono gestiti dal programmatore dell'applicazione che li ha causati",
-            "Possono essere creati direttamente dai dispositivi di I\/O"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulle istruzioni macchina speciali per la gestione della concorrenza \u00e8 vera? ",
-        "answers": [
-            "Sono basate sul busy-waiting, ovvero sul fatto che un processo si mette autonomamente in stato blocked",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Non riescono ad evitare il manifestarsi del deadlock, a meno che non sia presente un sistema a priorit\u00e0",
-            "Come per la disabilitazione delle interruzioni, non funzionano per architetture con pi\u00f9 processori o core"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui processi \u00e8 vera? ",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Per la terminazione normale di un processo, \u00e8 tipicamente prevista un'apposita system call, come ad esempio exit",
-            "Un processo pu\u00f2 morire quando si effettua il process spawning",
-            "Un processo pu\u00f2 essere creato dal modulo di gestione della memoria per gestire la traduzione da indirizzi virtuali a fisici"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni \u00e8 falsa? ",
-        "answers": [
-            "Nel caso di un sistema operativo a kernel separato, la gestione dei process switch \u00e8 a sua volta un processo",
-            "Nel caso di un sistema operativo in cui le funzioni del sistema operativo vengono eseguite all'interno dei processi utente, non c'\u00e8 bisogno di un process switch per eseguire una funzionalit\u00e0 del sistema operativo",
-            "Nel caso di un sistema operativo in cui le funzioni del sistema operativo vengono eseguite all'interno dei processi utente, se un processo effettua una syscall e poi pu\u00f2 continuare ad essere eseguito, non avviene alcun process switch",
-            "Nel caso di un sistema operativo in cui le funzioni del sistema operativo vengono eseguite come processi separati, c'\u00e8 sempre bisogno di un process switch per eseguire una funzionalit\u00e0 del sistema operativo"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul metodo di allocazione concatenata dei file \u00e8 vera? ",
-        "answers": [
-            "Il consolidamento permette di memorizzare file che altrimenti non potrebbero esserlo (pur essendo la loro dimensione minore di quella dello spazio libero)",
-            "La tabella di allocazione dei file deve contenere l'intera catena",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "Viene usato con porzioni di dimensione variabile, ma piccola"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera? ",
-        "answers": [
-            "Nel caso di una tabella delle pagine a 2 livelli, viene tipicamente richiesto che tutte le tabelle delle pagine di secondo livello entrino in una pagina",
-            "Il numero di bit di un indirizzo virtuale \u00e8 necessariamente diverso a seconda che si usi una tabella delle pagine ad 1 o a 2 livelli",
-            "Il numero di bit di una entry di una tabella delle pagine di ultimo livello \u00e8 uguale al numero di bit di controllo pi\u00f9 il logaritmo (arrotondato all'intero superiore) del massimo numero di frame in memoria principale",
-            "Nessuna delle altre opzioni \u00e8 corretta"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sul deadlock \u00e8 falsa? ",
-        "answers": [
-            "Affinch\u00e8 ci sia un deadlock, sono necessarie le condizioni di attesa circolare, hold-and-wait, mutua esclusione e no preemption",
-            "Per prevenire il deadlock, \u00e8 necessario cercare di impedire almeno una delle 3 condizioni di mutua esclusione, hold-and-wait e no preemption",
-            "Affinch\u00e8 il deadlock sia possibile, sono necessarie le condizioni di mutua esclusione, hold-and-wait e no preemption",
-            "Per prevenire il deadlock impedendo l'hold-and-wait, si pu\u00f2 in alcuni casi imporre ai processi di richiedere tutte le risorse fin dall'inizio"
+            "E' sempre necessario modificare il codice utente che ne fa uso",
+            "Non è mai necessario modificare il codice utente che ne fa uso",
+            "Non è necessario modificare il codice utente che ne fa uso, a patto che cambi anche l'interfaccia (API) della chiamata di sistema",
+            "Non è necessario modificare il codice utente che ne fa uso, a patto che non cambi anche l’interfaccia (API) della chiamata di sistema"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni \u00e8 vera? ",
+        "question": "Un processore impiega 5 cicli di clock per eseguire un'istruzione (CPI = 5), ossia per completare l'intero ciclo fetch-decode-execute. Assumendo che la frequenza di clock del processore sia pari a 5 MHz, quante istruzioni è in grado di eseguire in un secondo? (Si ricordi che 1 MHz = 1*10^6 cicli al secondo)",
         "answers": [
-            "La modalit\u00e0 di un processo utente \u00e8 sempre la modalit\u00e0 di sistema",
-            "La modalit\u00e0 di un processo utente \u00e8 inizialmente la modalit\u00e0 utente; pu\u00f2 diventare modalit\u00e0 sistema nel momento in cui va in esecuzione il dispatcher",
-            "Nessuna delle altre opzioni \u00e8 vera",
-            "La modalit\u00e0 di un processo utente \u00e8 sempre la modalit\u00e0 utente"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione \u00e8 vera? ",
-        "answers": [
-            "Nessuna delle altre opzioni \u00e8 corretta",
-            "Per ogni processo, il resident set contiene lo stesso numero di pagine",
-            "Un tipico algoritmo per il replacement scope \u00e8 quello dell'orologio",
-            "La gestione del resident set tramite politica dinamica mira ad ampliare il numero di pagine di un processo durante l'esecuzione del processo stesso"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul dispatcher \u00e8 falsa?",
-        "answers": [
-            "Il response time \u00e8 un criterio utente prestazionale",
-            "Il turnaround time (normalizzato o no) \u00e8 un criterio utente prestazionale",
-            "Il throughput \u00e8 un criterio di sistema non prestazionale",
-            "La fairness \u00e8 un criterio di sistema non prestazionale"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni \u00e8 falsa?",
-        "answers": [
-            "Diversi thread di uno stesso processo condividono lo stesso thread identifier",
-            "Tra le funzioni di sistema per i thread, \u00e8 tipicamente prevista una funzione per bloccare e sbloccare esplicitamente i thread stessi",
-            "Diversi thread di uno stesso processo condividono lo stesso process identifier",
-            "Diversi thread di uno stesso processo condividono i file aperti"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla page cache \u00e8 falsa?",
-        "answers": [
-            "Nell'algoritmo di sostituzione basato su frequenza a 3 segmenti della page cache, i contatori vengono sempre incrementati, tranne quando sono nel segmento vecchio",
-            "Nell'algoritmo di sostituzione basato su frequenza a 3 segmenti della page cache, i settori che possono essere sostituiti sono solo quelli del segmento vecchio",
-            "Nell'algoritmo di sostituzione basato su frequenza a 3 segmenti della page cache, l'unico segmento in cui i contatori non vengono incrementati e i settori non possono essere sostituti \u00e8 quello nuovo",
-            "L'algoritmo di sostituzione basato su frequenza a 3 segmenti della page cache pu\u00f2 avere buone performance anche quando dei settori vengono acceduti spesso, ma tra il primo accesso e quelli successivi ci sono molti altri accessi ad altri settori"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quali delle seguenti affermazioni sulla efficienza di un sistema operativo \u00e8 falsa?",
-        "answers": [
-            "Deve minimizzare il tempo di risposta, tenendo presenti eventuali priorit\u00e0",
-            "Deve servire il maggior numero di utenti possibile, tenendo presenti eventuali livelli di accesso",
-            "Deve dare accesso alle risorse in modo equo ed egualitario tra tutti i processi",
-            "Deve massimizzare l'uso delle risorse per unit\u00e0 di tempo, tenendo presenti eventuali priorit\u00e0"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Si consideri una unit\u00e0 disco con una velocit\u00e0 di rotazione di R rivoluzioni al minuto (rpm). La testina, per spostarsi da una traccia alla successiva, impiega un tempo trascurabile. Ogni traccia del disco contiene T kB. Si assuma che una porzione di dimensione P kB di un file sia memorizzata sul disco in settori contigui. Stimare il tempo totale, in secondi, necessario per il trasferimento di questi P kB di dati dal disco in memoria principale, nel caso in cui la testina sia gi\u00e0 posizionata sul settore di partenza.",
-        "answers": [
-            "P\/(T*R\/60)",
-            "T*(R\/60)\/P",
-            "T\/(P*R\/60)",
-            "P*R\/60"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Un sistema con gestione paginata semplice della memoria ha indirizzi di B bit e pagine di dimensione P kB. Se tutta la memoria \u00e8 paginabile, qual \u00e8 il numero massimo di elementi contenuti nella tabella delle pagine di un processo?",
-        "answers": [
-            "P\/B",
-            "P*1024\/2B",
-            "2^B\/(P*1024)",
-            "B\/P"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Si consideri la seguente soluzione (sbagliata) al problema della mutua esclusione tra processi: ",
-        "answers": [
-            "Assumendo che il dispatcher, prima o poi, dia l'opportunità di andare in esecuzione a tutti i processi coinvolti, è comunque possibile la starvation (rispetto all'entrata nella sezione critica)",
-            "Nessuna delle altre opzioni è vera",
-            "Supponendo che ci siano 2 processi, se lo scheduler permette a P(0) di arrivare fino ad assegnare 1 a bolt, allora il requisito base della mutua esclusione (sul numero massimo di processi nella sezione critica) è rispettato",
-            "Sono possibili deadlock"
+            "1*10^3",
+            "Decido di NON rispondere a questa domanda",
+            "25*10^3",
+            "25*10^6",
+            "1*10^6"
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "code": "int bolt = 0;\r\nvoid P(int i)\r\n    while (bolt == 1) \/* do nothing *\/;\r\n    bolt = 1;\r\n    \/* critical section *\/;\r\n    bolt = 0;\r\n    \/* remainder *\/;"
+        "code": ""
     },
     {
-        "question": "Si consideri il seguente modo di implementare la mutua esclusione:",
+        "question": "Data una CPU multicore con 𝑚unità(cores), il numero di processi/thread che ad un certo istante si trovano nella “coda” di esecuzione(running):",
         "answers": [
-            "La soluzione implementa correttamente la mutua esclusione solo se si disabilitano le interruzioni prima di chiamare P",
-            "Nessuna delle altre opzioni è vera",
-            "La soluzione non implementa correttamente la mutua esclusione perché bisogna chiamare exchange invece di compare_and_swap",
-            "La soluzione non implementa correttamente la mutua esclusione"
+            "Può essere superiore a 𝑚",
+            "E’ esattamente pari a 𝑚",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "E' al massimo pari a 𝑚"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La creazione di un nuovo processo da parte di un processo avviene tramite:",
+        "answers": [
+            "Una chiamata di sistema",
+            "Una chiamata di funzione",
+            "L'invio di un interruzione",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il sistema operativo tiene traccia dello stato di un processo tramite:",
+        "answers": [
+            "Un'apposita area dedicata e protetta della memoria principale",
+            "Un apposito registro interno della CPU",
+            "Un'apposita area dedicata e protetta della memoria cache",
+            "Un apposito campo all'interno del process control block (PCB)"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato ready quando:",
+        "answers": [
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O",
+            "Fa richiesta di input da parte dell’utente",
+            "Fa richiesta di una pagina che non è presente in memoria principale",
+            "Esegue una chiamata di funzione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Riceve un segnale da parte di un dispositivo di I/O",
+            "Termina il quanto di tempo ad esso assegnato",
+            "Apre una connessione di rete (ad es., un socket TCP)",
+            "Esegue una chiamata di funzione"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Fa richiesta di input da parte dell'utente",
+            "Esegue una chiamata di funzione",
+            "Termina il quanto di tempo ad esso assegnato",
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Termina il quanto di tempo ad esso assegnato",
+            "L'utente trascina il dispositivo di puntamento(e.g. mouse)",
+            "Esegue una chiamata di funzione",
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O"
         ],
         "correct": "b",
         "answers_have_code": 0,
-        "code": "int bolt = 1;\r\nvoid P(int i)\r\n    while(true)\r\n      while (compare_and_swap(bolt, 1, 0) == 0) ;\r\n      critical_section();\r\n      bolt = 1;"
+        "code": ""
     },
     {
-        "question": "Si consideri la seguente soluzione al problema della mutua esclusione tra processi: ",
+        "question": "Quanti processi saranno presenti nel sistema a seguito di queste chiamata: pid_1 = fork(); pid_2 = fork(); pid_3 = fork();?",
         "answers": [
-            "Il requisito base della mutua esclusione (sul numero massimo di processi nella sezione critica) è rispettato",
-            "È certo il deadlock",
-            "Se si scambiano le chiamate semWait e semSignal, il requisito base della mutua esclusione (sul numero massimo di processi in sezione critica) non è rispettato",
-            "Se si elimina la chiamata a semWait, il requisito base della mutua esclusione (sul numero massimo di processi nella sezione critica) è rispettato"
+            "8",
+            "7",
+            "4",
+            "3"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "I processi CPU-bound che non eseguono richieste di I/O:",
+        "answers": [
+            "Hanno una priorità alta",
+            "Hanno una priorità bassa",
+            "Sono processi mediamente brevi",
+            "Possono non rilasciare mai la CPU volontariamente"
         ],
         "correct": "d",
         "answers_have_code": 0,
-        "code": "semaphore s = 0;\r\nvoid P(int i)\r\n    semWait(s);\r\n    \/* critical section *\/;\r\n    semSignal(s);\r\n    \/* remainder *\/;"
+        "code": ""
     },
     {
-        "question": "I seguenti due processi concorrenti condividono una variabile: ",
+        "question": "Lo scheduler della CPU si attiva:",
         "answers": [
-            "N*2 + 1, 2*(N + 1), N + 1",
-            "N*2 + 1, 2*(N + 1), N*2",
-            "N*2 + 1, 2*(N + 1)",
-            "N*2 + 1, 2*(N + 1), N + 1, N*2"
+            "Quando un processo tenta di eseguire una scrittura su discord",
+            "Quando il codice di un programma esegue una divisione per zero",
+            "Quando scade il quanto di tempo",
+            "Tutte le risposte precedenti sono corrette"
         ],
-        "correct": "c",
+        "correct": "d",
         "answers_have_code": 0,
-        "code": "semaphore S = 1;\r\nint X = N;\r\n\r\n[Process 1]             [Process 2]\r\n    int Y;                       int Z;\r\n    semWait(S);          semWait(S);    \r\n    Y = X*2;                  Z = X+1;\r\n    X = Y;                      X = Z;\r\n    semSignal(S);       semSignal(S); "
+        "code": ""
     },
     {
-        "question": "I seguenti tre processi concorrenti condividono due semafori: ",
+        "question": "Lo scheduling preemptive(basato su time slice o quanto temporale):",
         "answers": [
-            "0",
+            "Da la priorità ai processi CPU-bound",
+            "Si attiva solamenta alla scadenza del quanto temporale(time slice)",
+            "Si attiva solamente a fronte di una chiamata di sistema",
+            "Fornisce un limite superiore al tempo di CPU assegnato a ciascun processo"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question":"In un sistema uniprocessore (single core) time-sharing in cui i processi in esecuzione sono tutti puramente CPU-bound:",
+        "answers": [
+            "L'impiego dei multi-threading consente di migliorare la latenza del sistema",
+            "L'impiego del multi-threading consente di diminuire il tempo di completamente di ciascun processo",
+            "L'impiego del multi-threading consente di migliorare il throughput del sistema",
+            "L'impiego dei multi-threading non costituisce alcun vantaggio"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In caso di scheduling preemptive, lo scheduler interviene:",
+        "answers": [
+            "Quando un processo passa dallo stato running allo stato waiting",
+            "Quando un processo passa dallo stato running allo stato ready",
+            "Quando un processo passa dallo stato waiting allo stato ready",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Se un processo arriva nella coda dei pronti all'istante t.0 = 2e termina all'istante t.f = 15, il suo tempo di turnaround equivale a",
+        "answers": [
+            "13",
+            "2",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "15"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Se un processo arriva nella coda dei pronti all’istante 𝑡0 = 3 e termina all’istante 𝑡𝑓 = 25, il tempo di attesa equivale a",
+        "answers": [
             "3",
-            "Infinito",
-            "Nessuna delle altre opzioni è corretta"
-        ],
-        "correct": "d",
-        "answers_have_code": 0,
-        "code": "semaphore U = 3; \r\nsemaphore V = 0;\r\n\r\n[Process 1]                      [Process 2]                        [Process 3]\r\n  while(1)                           while(1)                              while(1)  \r\n        semWait(U);                     semWait(V);                       semWait(V);\r\n        print(\"A\");                          print(\"B\");                             print(\"C\");\r\n        semSignal(V);                  semSignal(V);\r\n"
-    },
-    {
-        "question": "Si consideri la seguente soluzione al problema della mutua esclusione tra processi: ",
-        "answers": [
-            "Se n = 1, non c'è deadlock ",
-            "Se n > 1, non c'è deadlock ",
-            "Il requisito base della mutua esclusione (sul numero massimo di processi nella sezione critica) è rispettato ",
-            "Almeno un requisito della mutua esclusione non è rispettato "
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": "const message null = \/* null message *\/; \r\nmailbox box;\r\nvoid P(int i) { \r\n     message msg;\r\n     while (true) {\r\n          receive(box, msg);\r\n          \/* critical section *\/;  \r\n          send(box, msg);\r\n          \/* remainder *\/;  } }\r\n\r\nvoid main() {\r\n     box = create_mailbox();\r\n     nbsend(box, null);\r\n     parbegin (P(1), P(2), . . ., P(n));  }"
-    },
-    {
-        "question": "Si consideri la soluzione al problema del produttore/consumatore che usa lo scambio messaggi vista a lezione. Quale delle seguenti affermazioni è vera?",
-        "answers": [
-            "Assumendo che non ci siano errori in precedenza, è possibile che 2 produttori tentino di immettere contemporaneamente 2 diversi prodotti nello stesso slot del buffer",
-            "Assumendo che non ci siano errori in precedenza, è possibile che un consumatore tenti di prelevare un prodotto dal buffer quando quest'ultimo è vuoto",
-            "Assumendo che non ci siano errori in precedenza, è possibile che un produttore tenti di immettere un prodotto nel buffer quando quest'ultimo è pieno",
-            "Nessuna delle altre opzioni è corretta"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": "const int capacity = \/* buffering capacity *\/ ;\r\n           mailbox mayproduce, mayconsume;\r\n    \r\n     void main() {\r\n         mayproduce = create_mailbox(),\r\n         mayconsume = create_mailbox();\r\n         for (int i = 1; i <= capacity; i++)\r\n              nbsend (mayproduce,null);\r\n         parbegin (producer,consumer); }\r\n    \r\n    void producer() {\r\n         message pmsg;\r\n         while (true) {\r\n           receive (mayproduce,pmsg);\r\n           pmsg = produce(); \/* fa anche append *\/\r\n           nbsend (mayconsume,pmsg);  } }\r\n    \r\n    void consumer() {\r\n         message cmsg;\r\n         while (true) {\r\n           receive (mayconsume,cmsg);\r\n           consume (cmsg); \/* fa anche take *\/\r\n           nbsend (mayproduce,null);  } }"
-    },
-    {
-        "question": "Considerare un insieme di cinque processi P1, P2, P3, P4, P5 con i seguenti tempi di arrivo e tempi di esecuzione in millisecondi. Quale delle seguenti affermazioni è falsa?",
-        "answers": [
-            "Non ci sono sufficienti informazioni per determinare come si comporterebbe l'algoritmo di scheduling a feedback classico di Unix",
-            "Non ci sono sufficienti informazioni per determinare come si comporterebbe l'algoritmo di scheduling Virtual Round-Robin",
-            "Non ci sono sufficienti informazioni per determinare come si comporterebbe l'algoritmo di scheduling Round-Robin",
-            "Non ci sono sufficienti informazioni per determinare come si comporterebbe l'algoritmo di scheduling SRT"
-        ],
-        "correct": "d",
-        "answers_have_code": 0,
-        "code": "Processo    Tempo di Arrivo Tempo di Esecuzione\r\nP1  0   14\r\nP2  8   16\r\nP3  5   3\r\nP4  11  7\r\nP5  17  9\r\n"
-    },
-    {
-        "question": "Considerare un insieme di cinque processi P1, P2, P3, P4, P5 con i seguenti tempi di arrivo e tempi di esecuzione in millisecondi. Quale delle seguenti affermazioni è falsa?",
-        "answers": [
-            "Gli unici 2 processi che non sono serviti subito (ovvero, appena arrivati) sono P3 e P5",
-            "Il tempo medio di attesa è tra 10 ed 11 ms",
-            "Il processo con il più lungo tempo di attesa è P1",
-            "Il tempo medio di turnaround è tra 2 e 3 ms "
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": "Processo    Tempo di Arrivo Tempo di Esecuzione\r\nP1  0   14\r\nP2  8   16\r\nP3  5   3\r\nP4  11  7\r\nP5  17  9\r\n"
-    },
-    {
-        "question": "Quale delle seguenti affermazioni, riguardanti il joint progress diagram di 2 processi, è vera? ",
-        "answers": [
-            "Nessuna delle altre opzioni è vera",
-            "Può essere usato per visualizzare le possibilità di deadlock, ma solo se i processi richiedono al massimo 2 risorse",
-            "Può essere usato per determinare quando uno dei due processi va in esecuzione a discapito dell'altro",
-            "Può essere usato per determinare quando uno dei due processi sperimenta un page fault"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui dispositivi di I/O è vera? ",
-        "answers": [
-            "Il data rate confronta le velocità di trasferimento dati tra 2 diversi dispositivi di I/O",
-            "Ciascun dispositivo di I/O può essere usato solo da un ben determinato tipo di applicazioni",
-            "Nessuna delle altre opzioni è corretta",
-            "Tutti i dispositivi di I/O scambiano informazioni con la CPU in blocchi, per motivi di efficienza"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla traduzione di un indirizzo virtuale in fisico, in un sistema con memoria virtuale con paginazione (avente tabella delle pagine ad 1 livello), è falsa?",
-        "answers": [
-            "L'hardware deve anche estrarre dall'indirizzo virtuale il numero di pagina virtuale; tale operazione è equivalente ad una divisione intera",
-            "L'hardware deve anche usare il numero di pagina per accedere alla tabella delle pagine del processo in esecuzione. A tal proposito, deve conoscere l'inizio di tale tabella, che viene definito dal software (sistema operativo). Tale indirizzo può cambiare durante l'esecuzione del processo: sta al sistema operativo mantenerlo aggiornato",
-            "L'hardware deve anche usare il numero di frame ottenuto dalla tabella delle pagine per comporre, insieme con l'offset originale, l'indirizzo fisico. Tale operazione è equivalente ad uno shift seguito da una somma",
-            "L'hardware deve anche cercare il numero di pagina nelle entries della tabella delle pagine del processo in esecuzione."
+            "22",
+            "25",
+            "I dati sono insufficienti per rispondere alla domanda"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sui file system è vera? ",
+        "question": "I thread di uno stesso processo condividono:",
         "answers": [
-            "I file system, che adottano il metodo journaling, mantengono un log per le operazioni di sola scrittura da effettuare, e le realizzano solo in un secondo momento",
-            "Un volume coincide sempre con un disco, quindi se un computer ha 2 dischi avrà 2 volumi",
-            "I dati possono essere ricavati dai metadati",
-            "I metadati possono essere ricavati dai dati"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sui meccanismi per la gestione della concorrenza è vera? ",
-        "answers": [
-            "Usando i semafori di qualsiasi tipo, è possibile scrivere processi che non soffrano di starvation",
-            "Disabilitando gli interrupt, è possibile scrivere processi che non soffrano di starvation",
-            "Senza usare né semafori, né scambio messaggi, né istruzioni macchina atomiche, è possibile scrivere processi che non soffrano di starvation per garantire la mutua esclusione tra 2 processi",
-            "Usando le istruzioni macchina exchange e compare_and_swap, è possibile scrivere processi che non soffrano di starvation"
-        ],
-        "correct": "c",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale dei seguenti elementi non è una delle parti che definiscono un processo? ",
-        "answers": [
-            "Informazioni sullo stato delle risorse",
-            "La priorità",
-            "Il contatore di programma",
-            "I dati contenuti nella porzione di memoria a lui dedicata"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Un computer esegue 20 istruzioni ogni microsecondo. Ricordando che 1 millisecondo = 1000 microsecondi = 1000000 nanosecondi, per eseguire una singola istruzione impiega",
-        "answers": [
-            "0.05 microsecondi",
-            "0.05 millisecondi",
-            "0.05 nanosecondi",
-            "Nessuna delle altre opzioni è corretta"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni è falsa?",
-        "answers": [
-            "Diversi thread di uno stesso processo condividono lo stesso thread identifier[1]",
-            "Tra le funzioni di sistema per i thread, è tipicamente prevista una funzione per bloccare e sbloccare esplicitamente i thread stessi",
-            "Diversi thread di uno stesso processo condividono lo stesso process identifier",
-            "Diversi thread di uno stesso processo condividono i file aperti"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni è vera?",
-        "answers": [
-            "Nessuna delle altre opzioni è corretta",
-            "Nell'algoritmo di sostituzione basato su frequenza a 2 segmenti della page cache, un blocco passa da un segmento ad un altro esclusivamente per scorrimento",
-            "L'algoritmo di LFU della page cache ha buone performance quando un settore viene acceduto molto spesso in poco tempo, per poi non essere più usato",
-            "L'algoritmo di sostituzione basato su frequenza a 2 segmenti della page cache può non avere buone performance quando un settore viene acceduto spesso, ma tra il primo accesso..."
+            "Lo stack",
+            "Le variabili globali",
+            "I valori dei registri della CPU",
+            "Nessuna delle informazioni elencate sopra"
         ],
         "correct": "b",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sugli i-node di UNIX è falsa?",
+        "question": "Lo user thread:",
         "answers": [
-            "Ogni directory può contenere molti i-node",
-            "Per modificare una directory un utente deve aprire il file speciale corrispondente e poi modifcarlo opportunamente",
-            "ogni directory è un file speciale, organizzato come una lista di entry, ciascuna delle quali contiene il nome del file ed il relativo i-node number",
-            "Ogni directory è identificata da un i-node"
+            "Necessita del supporto di una opportuna thread table a livello kernel",
+            "E' la più piccola unità schedulabile sulla CPU dal sistema operativo",
+            "E' gestito in spazio utente tramite un'apposita libreria",
+            "Coincide sempre con uno ed un solo kernel thread"
         ],
-        "correct": "b",
+        "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni è vera sulla memoria virtuale con paginazione a segmentazione?",
+        "question": "Nel modello di thread mapping cosiddetto one-to-one:",
         "answers": [
-            "Sia la tabella dei segmenti che quella delle pagine di un processo contengono, in ciascuna entry, un bit per indicare se la pagina o il segmento sono stati modificati",
-            "Un indirizzo virtuale contiene anche un bit per indicare se la pagina corrispondente è o no in memoria principale",
-            "La tabella delle pagine di un processo contiene una pagina speciale dove è memorizzato il process control block del processo stesso",
-            "Ogni entry di una tabella delle pagine contiene un numero di pagina ed un offset"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione è vera?",
-        "answers": [
-            "Per avere un overhead accettabile, occorre demandare la traduzione degli indirizzi all'hardware, mentre al software resta da gestire prelievo, posizionamento e sostituzione delle pagine",
-            "Per avere un overhead accettabile, occorre demandare la traduzione degli indirizzi e la politica di sostituzione delle pagine all'hardware, mentre al software resta da gestire prelievo e posizionamento delle pagine",
-            "Per avere un overhead accettabile, occorre demandare all'hardware la traduzione degli indirizzi ed il prelievo, il posizionamento e la sostituzione delle pagine",
-            "Per avere un overhead accettabile, occorre demandare al software anche la traduzione degli indirizzi"
+            "Consente di gestire i thread tramite un'apposita libreria a livello utente",
+            "Può essere implementato solo su sistemi multiprocessore",
+            "Causa il blocco di tutti i thread di un processo se anche uno solo di questi thread esegue una chiamata di sistema bloccante",
+            "Consente di gestire i thread a livello del kernel del sistema operativo"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla concorrenza tra processi o thread è vera?",
+        "question": "Nel modello di thread mapping cosiddetto many-to-one:",
         "answers": [
-            "L'istruzione exchange non può ricevere costanti in input su nessun suo argomento, mentre per l'istruzione compare_and_swap questo non vale",
-            "Per realizzare opportunamente l'istruzione compare_and_swap è sufficiente disabilitare le interruzioni",
-            "Le istruzioni speciali exchange e compare_and_swap sono garantite atomiche dal sistema operativo",
-            "Nessuna delle altre opzioni è vera"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sugli algoritmi di scheduling è vera?",
-        "answers": [
-            "L'exponential averaging permette di stimare la dimensione dell'immagine di un processo, a partire dalle precedenti immagini di quello stesso processo",
-            "La funzione di decisione dello scheduler Highest Response Ratio Next considera tanto il tempo di esecuzione stimato quanto il tempo trascorso in attesa",
-            "L'exponential averaging è una tecnica applicabile dal solo scheduler Short Process Next",
-            "La funzione di decisione dello scheduler Shortest Remaining Time considera tanto il tempo di esecuzione richiesto quanto il tempo trascorso in attesa"
-        ],
-        "correct": "a",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti azioni non viene necessariamente eseguita al momento della creazione di un processo in un sistema operativo moderno?",
-        "answers": [
-            "Inizializzazione del process control block",
-            "Allocazione di spazio di memoria RAM e di swap",
-            "Esecuzione del processo",
-            "Creazione di un PID unico"
+            "Molti user thread possono essere distribuiti su più CPU (se presenti)",
+            "L'effetto di una chiamata bloccante da parte di uno user thread non blocca gli altri thread da cui è composto il processo",
+            "Molti user thread sono mappati su un singolo kernel thread",
+            "Molti kernel thread sono mappati su un singolo user thread"
         ],
         "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul file system FAT è vera?",
+        "question": "Il modello di thread mapping considerato many-to-many",
         "answers": [
-            "Usa il metodo di allocazione contiguo",
-            "La tabella di allocazione dei file contiene tante righe quanti sono i file memorizzati sul disco, più una riga speciale per i blocchi liberi",
-            "Ogni cluster del disco contiene sia dati del disco che l'indirizzo del prossimo cluster (o l'indicazione che si tratta dell'ultimo cluster)",
-            "Nessuna delle altre opzioni è vera"
+            "Non prevede alcun limite al numero di kernel thread",
+            "Può essere implementato solo su sistemi multiprocessore",
+            "Causa il blocco di tutti i thread di un processo se anche uno solo di questi thread esegue una chiamata di sistema bloccante",
+            "E' il compromesso tra un'implementazione dei thread puramente user level e una puramente kernel level"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul requisito di rilocazione nella gestione della memoria è vera?",
+        "question": "Si parla di parallelismo quando:(uscita già 3 volte)",
         "answers": [
-            "Nessuna delle altre opzioni è corretta",
-            "Prevede che un processo possa essere allocato in memoria principale, in fase di avvio o al rientro da uno swap, in una tra diverse posizioni possibili",
-            "Prevede che chi programma un processo utente possa richiedere, tramite system call, la posizione del processo in memoria principale",
-            "Per poterlo soddisfare senza creare overhead inaccettabile, è sempre stato necessario dell'hardware aggiuntivo"
+            "Vengono eseguiti processi single-threaded su CPU multicore",
+            "Vengono eseguiti processi multi-threaded su CPU single core",
+            "Vengono eseguiti processi multi-threaded su CPU multicore",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si parla di concorrenza quando:",
+        "answers": [
+            "Vengono eseguiti processi multi-threaded su CPU single core",
+            "Vengono eseguiti processi single-threaded su CPU single core",
+            "Vengono eseguiti processi single-threaded su CPU multicore",
+            "Vengono eseguiti processi multi-threaded su CPU multicore"
         ],
         "correct": "a",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sul modello dei processi a 7 stati è vera?",
+        "question": "La comunicazione tra thread dello stesso processo rispetto a quella tra processi diversi:",
         "answers": [
-            "Nessuna delle altre opzioni è vera",
-            "Gli stati Ready, New e Blocked del modello a 5 stati vengono sdoppiati, e ne viene creata una versione Suspend",
-            "Un processo è Suspend quando scade il timeout del dispatcher",
-            "È possibile la transizione Ready/Suspend ==> Blocked/Suspend"
+            "È più lenta poiché i thread sono gestiti da librerie di alto livello",
+            "È più veloce poiché i thread non eseguono context switch",
+            "È più veloce poiché i thread condividono lo stesso spazio di indirizzamento",
+            "Non c'è alcuna differenza sostanziale in termini di performance"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il kernel thread:",
+        "answers": [
+            "Coincide sempre con uno ed un solo user thread",
+            "È gestito in spazio utente tramite un'apposita libreria",
+            "È la più piccola unità schedulabile sulla CPU dal sistema operativo",
+            "È il termine con cui si identificano i processi propri del sistemaoperativo (i.e., non i processi utente)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'uso di una primitiva di sincronizzazione lock prevede che:",
+        "answers": [
+            "La lock sia inizialmente libera",
+            "La lock venga acquisita prima dell'ingresso nella sezione critica",
+            "La lock venga rilasciata dopo l'uscita dalla sezione critica",
+            "Tutte le condizioni precedenti devono essere verificate"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'acquisizione di una lock:",
+        "answers": [
+            "Deve avvenire in modo atomico, evitando che lo scheduler interrompa l'acquisizione",
+            "Necessita obbligatoriamente del supporto di istruzioni hardware atomiche",
+            "Necessita obbligatoriamente che il sistema operativo disabiliti le interruzioni",
+            "Nessuna delle risposte precedenti è corretta"
         ],
         "correct": "a",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sugli i-node di Unix è vera?",
+        "question": "Un semaforo può essere utilizzato per:",
         "answers": [
-            "Per ogni file-system su disco organizzato con i-node, tutti gli i-node di tutti i file su tale file-system sono memorizzati esclusivamente su disco",
-            "I puntatori a tripla indirezione di un i-node vengono usati solo se la dimensione del file lo richiede",
-            "Nessuna delle altre opzioni è vera",
-            "Ad ogni file effettivamente memorizzato su disco può essere associato un solo numero di i-node"
+            "Forzare le politiche di scheduling tra processi/thread",
+            "Accedere al codice del kernel",
+            "Lo scambio di messaggi tra processi/thread",
+            "Gestire le interruzioni che giungono alla CPU"
         ],
-        "correct": "b",
+        "correct": "a",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni sul dispatcher è falsa?",
+        "question": "L'invocazione del metodo wait() su un semaforo il cui valore è pari a 2:",
         "answers": [
-            "Il throughput \u00e8 definito come il numero di processi completati per unità di tempo",
-            "Il turnaround time è definito, per un dato processo, come il tempo che intercorre tra la sua prima esecuzione sul processore e il suo completamento",
-            "Un dispatcher con buone prestazioni sul response time deve tipicamente sia minimizzare il valore medio di sistema del response time, sia massimizzare il numero di utenti con un basso valore per il response time",
-            "Il processor utilization è definito come il rapporto tra il tempo in cui il processore viene usato ed il tempo totoale del sistema"
-        ],
-        "correct": "b",
-        "answers_have_code": 0,
-        "code": ""
-    },
-    {
-        "question": "Quale delle seguenti affermazioni sull'algoritmo del banchiere per evitare il deadlock visto a lezione è falsa?",
-        "answers": [
-            "Se si procede da uno stato ad un altro, necessariamente è stata fatta almeno una richiesta ad almeno una risorsa da parte di almeno un processo",
-            "Richiede in input, per ogni processo p e per ogni risorsa r, il numero massimo di istanze di r che p chiederà nel corso della sua esecuzione",
-            "All'inizio e alla fine di ogni invocazione dell'algoritmo, Vi = Ri - ∑j = 1, ..., nAi, j",
-            "La matrice C - A può contenere elementi negativi, ma le matrici C ed A contengono solo elementi non negativi"
+            "Lascia invariato il valore del semaforo a 2 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)",
+            "Decrementa il valore del semaforo a 1 e blocca il processo che ha eseguito l'invocazione",
+            "Incrementa il valore del semaforo a 3 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)",
+            "Decrementa il valore del semaforo a 1 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sugli scheduler per architetture multiprocessore è vera?",
+        "question": "L'istruzione test-and-set:",
         "answers": [
-            "Con l'assegnamento statico, si dà un processore a caso tra quelli liberi ai processi che mantengono un uso della RAM pressoché costante",
-            "Uno svantaggio dell'assegnamento statico è il suo overhead maggiore rispetto a quello dinamico",
-            "Nessuna delle altre opzioni è vera",
-            "Assegnando i processi del sistema operativo con l'assegnamento dinamico, si rischia di creare un bottleneck su un solo processore"
+            "È un'istruzione atomica che consente di implementare le primitive di sincronizzazione",
+            "È un'istruzione atomica che consente di disabilitare le interruzioni",
+            "È un'istruzione atomica che consente di aggiornare i valori di più registri simultaneamente",
+            "È un'istruzione atomica che consente di resettare il valore di un semaforo"
         ],
-        "correct": "c",
+        "correct": "a",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Assumendo un sistema monoprocessore, quale delle seguenti affermazioni \u00e8 falsa? ",
+        "question": "La differenza tra deadlock e starvation risiede nel fatto che:",
         "answers": [
-            "Lo scheduler ha, tra i suoi obiettivi, quello dell'equità tra i processi, a meno che non siano definite delle priorità",
-            "Lo scheduler va scritto in modo che il suo overhead sia basso",
-            "Lo scheduler ha, tra i suoi obiettivi, quello di massimizzare il volume di lavoro dei processi nel tempo",
-            "Lo scheduler ha, tra i suoi obiettivi, quello di evitare il deadlock"
+            "Si riferiscono a codice utente e codice di sistema (rispettivamente)",
+            "Nel caso di starvation tutto il sistema è completamente bloccato",
+            "Non vi è alcuna differenza",
+            "Nel caso di deadlock tutto il sistema è completamente bloccato"
         ],
         "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sui metodi di gestione del deadlock è vera?",
+        "question": "Con il termine address binding si intende:",
         "answers": [
-            "Nessuna delle altre opzioni è vera",
-            "L'unico metodo, che richiede di conoscere in anticipo il massimo numero di risorse che un processo dovrà chiedere, è quello per rilevare il deadlock",
-            "L'unico metodo che non prevede mai la preemption delle risorse è quello che evita il deadlock",
-            "Il metodo più permissivo nei confronti delle richieste di risorse è quello che consiste nel prevenire il deadlock"
+            "Il processo di traduzione da indirizzi logici a indirizzi fisici",
+            "Il processo di inizializzazione delle variabili globali di un programma",
+            "Il processo di collegamento tra il codice compilato ed eventuali librerie esterne",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Lo swapping consente di:",
+        "answers": [
+            "Implementare la rilocazione dinamica del codice di un processo",
+            "Risolvere il problema della frammentazione esterna",
+            "Trasferire temporaneamente su disco i processi che non sono attualmente in esecuzione",
+            "Scambiare le aree di memoria occupate da due o più processi"
         ],
         "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sulla memoria virtuale con paginazione è vera?",
+        "question": "La gestione 'paginata' della memoria (paging):",
         "answers": [
-            "Il thrashing si verifica quando l'overhead dovuto alla gestione della paginazione è molto basso",
-            "La paginazione con memoria virtuale funziona bene nonostante il principio di località",
-            "Nessuna delle altre opzioni è corretta",
-            "Il principio di località afferma che poche pagine saranno sempre sufficienti per eseguire ogni processo senza thrashing"
+            "Prevede che lo spazio di indirizzamento logico di un processo sia non-contiguo e suddiviso in blocchi di dimensioni fissate (pages)",
+            "Non richiede alcun supporto hardware per essere implementata in modo efficiente",
+            "Prevede che lo spazio di indirizzamento fisico di un processo sia non-contiguo e suddiviso in blocchi di dimensioni fissate (frames)",
+            "Risolve il problema della frammentazione interna"
         ],
         "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti affermazioni sui metodi di gestione dello spazio libero su disco è vera?",
+        "question": "La cache TLB (Translation Look-aside Buffer)",
         "answers": [
-            "Uno dei possibili metodi è quello di scorrere la tabella di allocazione dei file e ricavare per esclusione i blocchi liberi",
-            "Nessuna delle altre opzioni è vera",
-            "Nel caso si usi un metodo di allocazione dinamica, non è necessario aggiornare le informazioni sullo spazio libero quando vengono aggiunti dati ad un file",
-            "Se viene usata una tabella di bit, allora il metodo di allocazione non può essere la preallocazione"
+            "E' condivisa tra tutti i processi del sistema",
+            "Consente una traduzione mediamente più rapida degli indirizzi logici",
+            "Contiene un sottoinsieme delle entry della page table",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La dimensione (i.e., il numero di entry) della page table:",
+        "answers": [
+            "È direttamente proporzionale alla dimensione (fissata) delle pagine",
+            "Si adatta a seconda delle richieste di accesso alla memoria di ciascun processo",
+            "Dipende dalla dimensione (fissata) delle pagine",
+            "Varia dinamicamente a seconda del processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La dimensione (i.e., il numero di entry) della page table:",
+        "answers": [
+            "Varia dinamicamente a seconda del processo",
+            "E' direttamente proporzionale alla dimensione (fissata)",
+            "E' inversamente proporzionale alla dimensione (fissata) delle pagine",
+            "Si adatta a seconda delle richieste di accesso alla memoria di ciascun processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un compilatore genera l'indirizzo logico 576 per riferirsi ad una certa locazione di memoria fisica. Assumendo che la traduzione degli indirizzi avvenga tramite rilocazione statica con indirizzo fisico base = 24, quale sarà l'indirizzo fisico corrispondente?",
+        "answers": [
+            "576",
+            "552",
+            "600",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 2,488 bytes e un blocco di memoria libero di dimensione pari a 2,699 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Allocare l'intero blocco al processo, sprecando 211 bytes(frammentazione interna)",
+            " Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 211 bytes rimanente(frammentazione esterna)",
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella del processo",
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 4,996 e un blocco di memoria libero di dimensione pari a 5,016 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo",
+            "Allocare l'intero blocco al processo, sprecando 20 bytes(frammentazione interna)",
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella dei processi",
+            "Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 20 bytes rimanenti(frammentazione esterna)"
         ],
         "correct": "b",
         "answers_have_code": 0,
         "code": ""
     },
     {
-        "question": "Quale delle seguenti operazioni non è tipicamente effettuata su un file?",
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 99 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 102 KiB, 99 KiB, 256 KiB e 128 KiB, quale blocco verrà allocato per P assumendo una politica Worst-Fit?",
         "answers": [
-            "Apertura",
-            "Connessione",
-            "Posizionamento (seek)",
-            "Lock / Unlock"
+            "blocco A",
+            "blocco C",
+            "blocco B",
+            "blocco D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": " Si supponga che un processo P necessiti di un'area di memoria libera pari a 99 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D, E, F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB, 750 KiB e 125 KiB, quale blocco verrà allocato per P assumendo una politica Worst-Fit?",
+        "answers": [
+            "blocco B",
+            "Non è possibile soddisfare la richiesta, pertanto P dovrà attendere",
+            "C e i restati 25 KiB vengono allocati su A",
+            "blocco E"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 128 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 105 KiB, 916 KiB, 129 KiB e 80 KiB, quale blocco verrà allocato per P assumendo una politica First-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco D",
+            "blocco B",
+            "blocco C"
         ],
         "correct": "c",
         "answers_have_code": 0,
         "code": ""
-    }
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 115 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D,E,F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB,750 KiB e 125 KiB quale blocco verrà allocato per P assumendo una politica First-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco F",
+            "blocco E",
+            "blocco D"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 375 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D,E,F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB,750 KiB e 125 KiB quale blocco verrà allocato per P assumendo una politica Best-Fit?",
+        "answers": [
+            "blocco B",
+            "blocco C e i restanti 25 Kib vengono allocati su A",
+            "blocco E",
+            "Non è possibile soddisfare la richiesta, pertanto P dovrà attendere"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 34 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 36 KiB, 90 KiB, 42 KiB e 35 KiB, quale blocco verrà allocato per P assumendo una politica Best-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco B",
+            "blocco C",
+            "blocco D"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 4 KiB, ossia 4,096 bytes. Assumendo che l'indirizzamento avvenga con lunghezza di parola (word size) pari 2 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 128 bytes, quanti bit sono necessari per identificare l'indice di pagina (p) e l'offset (interno alla pagina), rispettivamente?",
+        "answers": [
+            "p=6; offset=5",
+            "b.p=7; offset=5",
+            "p=5; offset=7",
+            "p=5; offset=6"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri una memoria M di capacità pari a 512 bytes con frame di dimensione pari a 16 bytes. Dato l'indirizzo del byte 197, quale sarà l'indirizzo di pagina (p) e l'offset (interno alla pagina):",
+        "answers": [
+            "p=5; offset=12",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "p=13; offset=0",
+            "p=12; offset=5"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri una memoria M di capacità pari a 100 bytes con frame di dimensione pari a 10 bytes. Dato l’indirizzo del byte 37, quale sarà l’indirizzo di pagina (p) e l’offset (interno alla pagina).",
+        "answers": [
+            "p=3; offset=7",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "p=7; offset=3",
+            "p=0; offset=37"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 2,097 bytes e un blocco di memoria libero di dimensione pari a 2,104 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella del processo",
+            "Allocare l'intero blocco al processo, sprecando 7 bytes (frammentazione interna)",
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo",
+            "Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 7 bytes rimanenti (frammentazione esterna)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 2 KiB, ossia 2,048 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes, quanti bit sono necessari ad indirizzare le parole contenute in M?",
+        "answers": [
+            "2",
+            "9",
+            "11",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 4 KiB ossia 4,096 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 2 bytes, quanti bit sono necessari ad indirizzare le parole contenute in M?",
+        "answers": [
+            "10",
+            "11",
+            "12",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 8 KiB, ossia 8,192 bytes. Assumendo che l'indirizzamento avvenga con lunghezza di parola (word size) pari al singolo byte e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 128 bytes, quale dimensione (intesa come numero di entry) ha la corrispondente page table T?",
+        "answers": [
+            "I dati sono insufficienti per rispondere al problema",
+            "13",
+            "64",
+            "7"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 8 KiB, ossia 8,192 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 256 bytes, quale sarà il numero di entry della corrispondente page table T?",
+        "answers": [
+            "32",
+            "2048",
+            "8",
+            "5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 16 KiB, ossia 16,384 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 64 bytes, quale sarà il numero di entry della corrispondente page table T?",
+        "answers": [
+            "a",
+            "b",
+            "c",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    }, 
+    {
+        "question": "Si consideri un sistema operativo che utilizza indirizzi logici da 21 bit, indirizzo fisico da 16 bit e memoria paginata in cui ciascuna pagina ha dimensione 2 KiB(2048 bytes). Qual è la dimensione massima di memoria fisica supportata dal sistema?",
+        "answers": [
+            "32 KiB",
+            "64 KiB",
+            "2 MiB",
+            "Non esiste un limite fisico alla memoria supportata dal sistema"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "La memoria virtuale consente di:",
+        "answers": [
+            "Aumentare l'efficienza delle operazioni di I/O",
+            "Mantenere allocate in memoria fisica solo alcune pagine dello spazio di indirizzamento logico di un processo",
+            "Diminuire il grado di multiprogrammazione del sistema",
+            "Eseguire un processo direttamente dai dispositivi di memoria secondaria (e.g., disco)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Se un'istruzione idempotente genera un page fault:",
+        "answers": [
+            "Il processo di cui fa parte l'istruzione termina",
+            "Le istruzioni idempotenti non possono generare page fault",
+            "L'istruzione non verrà più eseguita una volta effettuato il ritorno dalla gestione del page fault",
+            "L'istruzione verrà nuovamente eseguita al ritorno dalla gestione del page fault"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": ".Il problema della frammentazione esterna:",
+        "answers": [
+            "Necessita di un supporto hardware per essere risolto",
+            "Non è risolvibile a meno di un riavvio del sistema",
+            "E’ una conseguenza del vincolo di allocazione contigua della memoria",
+            "Causa un’interruzione hardware"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Il problema della frammentazione esterna",
+        "answers": [
+            "Non è risolvibile a meno di un riavvio del sistema",
+            "Causa un’interruzione hardware",
+            "Necessita di un supporto hardware per essere risolto",
+            "E’ dovuto all’ allocazione/deallocazione di blocchi contigui di memoria"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Il working set è:",
+        "answers": [
+            "Fissato per ogni quanto di tempo",
+            "Relativamente grande rispetto all’intero spazio di indirizzamento di un processo",
+            "Relativamente piccolo rispetto all’intero spazio di indirizzamento di un processo",
+            "Fissato per l’intera esecuzione di un processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Si consideri un sistema che implementa la politica LRU per la sostituzione dei frame mediante l’uso di un timestamp. Ad ogni richiesta di accesso ad un determinato frame occorre:",
+        "answers": [
+            "Incrementare una variabile di tipo contatore",
+            "Aggiornare il valore del timestamp con quello corrente",
+            "Impostare un bit di validità",
+            "Nessuna delle precedenti risposte è corretta"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: B, C, C, B, A, E, B, A, E, D, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: D, B, A, C, C, E, A, D, B, E, D, A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "10",
+            "7",
+            "9",
+            "6"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: C,B,C,B,A,E,B,A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "2",
+            "4",
+            "5",
+            "1"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria fisica composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: A, B, E, C, E, D, D, A, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle",
+        "answers": [
+            "6",
+            "7",
+            "4",
+            "8"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: D, A, C, B, B, A, C, B, D, E, A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle pagine.",
+        "answers": [
+            "6",
+            "7",
+            "5",
+            "4"
+        ],
+        "correct": "",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: E, B, E, C, D, E, A, B, E. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle pagine.",
+        "answers": [
+            "7",
+            "8",
+            "6",
+            "5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'allocazione contigua di un file su disco:",
+        "answers": [
+            "È ottima sia per l'accesso diretto (random) che per quello sequenziale",
+            "Presenta il problema della frammentazione",
+            "Necessita il mantenimento dei blocchi liberi all'interno di una opportuna struttura dati",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L’allocazione contigua di un file su un disco è la scelta preferibile quando il disco è:",
+        "answers": [
+            "Un CD/DVD-ROM in sola lettura",
+            "Un disco magnetico",
+            "Un disco a stato solido",
+            "In nessuno dei casi precedenti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un disco magnetico, il seek time:",
+        "answers": [
+            "È il tempo necessario al disco per posizionare le proprie testine su uno specifico settore",
+            "Include il tempo di trasferimento alla memoria principale",
+            "È il tempo necessario al disco per posizionare le proprie testine su uno specifico cilindro",
+            "È trascurabile rispetto all'intero tempo necessario al trasferimento dei dati"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un disco è composto da 15 cilindri, ciascuno di capacità pari a 500 MB. Qual è la capacità totale del disco?",
+        "answers": [
+            "7.5 GB",
+            "75 GB",
+            "750 MB",
+            "I dati sono insufficienti per rispondere al problema4"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 50 nsec. e che il tempo per la gestione di un page fault tFAULT  sia pari a 15 msec. Assumendo che la probabilità che si verifichi un page fault sia p = 0.0002, qual è il tempo complessivo atteso di accesso alla memoria?",
+        "answers": [
+            "~30.5 nsec",
+            "~30.5 microsec",
+            "~3.05 microsec",
+            "~305 nsec"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 25 nsec. e che il tempo per la gestione di un page fault  tFAULT sia pari a 30 msec. Assumendo che la probabilità che si verifichi un page fault sia p = 0.005, qual è il tempo complessivo atteso di accesso alla memoria?",
+        "answers": [
+            "~150.025 microsec",
+            "~15.025 nsec",
+            "~150.025 nsec",
+            "~15.025 microsec"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 50 nsec. e che il tempo per la gestione di un page fault tFAULT sia pari a 25 msec. Assumendo che il tempo medio di accesso alla memoria sia pari a 0.5 microsec, qual è la probabilità p che si verifichi un page fault?",
+        "answers": [
+            "~0.02%",
+            "~0.2%",
+            "~0.002%",
+            "~0.0002%"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA  = 60 nsec. e che il tempo per la gestione di un page fault tFAULT  sia pari a 5 msec. Quale dovrà essere il valore della probabilità che si verifichi un fault () se si vuole garantire che il tempo atteso di accesso alla memoria sia al più il 20% più lento di tMA ? (Si ricordi che 1 msec = 10^3 microsec = 10^6 nsec)",
+        "answers": [
+            "I dati sono insufficienti per rispondere alla domanda",
+            "~0,00024%",
+            " ~0,000024%",
+            " ~0,0000024%"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 128 cilindri/tracce, numerati da 0 a 127 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 42. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 74, 50, 32, 55, 81 venga gestita da un algoritmo di scheduling SSTF (Shortest Seek Time First) e trascurando il tempo di rotazione.",
+        "answers": [
+            "86",
+            "49",
+            "123",
+            "88"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 128 cilindri/tracce, numerati da 0 a 127 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 87. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 43, 81, 36, 25, 127 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "290",
+            "240",
+            "238",
+            "265"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 30 msec. Sapendo che: il seek time complessivo è pari a 18 msec, il rotational delay complessivo è pari a 7 msec e che il transfer rate è pari a 1.5 Gbit/sec, qual è la quantità totale di dati trasferita? (Si ricordi che 1 B = 1 byte = 8 bit e 1 MB = 10^3 KB = 10^6 B)",
+        "answers": [
+            "9.375 MB",
+            "7.5 MB",
+            "937.5 KB",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 40 msec. Sapendo che: il seek time complessivo è pari a 18 msec, il rotational delay complessivo è pari a 7 msec e che il transfer rate è pari a 5 Gbit/sec, qual è la quantità totale di dati trasferita? (Si ricordi che 1 B = 1 byte = 8 bit e 1 MB = 10^3 KB = 10^6 B)",
+        "answers": [
+            "9375 MB",
+            "70 MB",
+            "70 KB",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 36 msec. Sapendo che il seek time complessivo è pari a 13 msec e che sono stati trasferiti 2MB ad una velocità pari a 1 Gbit/sec qual è il rotational delay del disco?(Si ricordi che 1 B = 1 byte = 8 bit)",
+        "answers": [
+            "7 msec",
+            "2 msec",
+            "16 msec",
+            "I dati sono insufficiente per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La tabella globale dei file aperti (global open file table):",
+        "answers": [
+            "È condivisa tra tutti i processi",
+            "Contiene una entry per ciascun file in uso",
+            "Mantiene un contatore per ciascun file in uso",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La tabella locale dei file aperti (local open file table):",
+        "answers": [
+            "Contiene informazioni di protezione di ciascun file riferita da un processo",
+            "Contiene un puntatore alla locazione sul disco di ciascun file riferito da un processo",
+            "Contiene un puntatore alla tabella globale dei file aperti per ciascun file riferito da un processo",
+            "E’ condivisa tra più processi"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un possibile esempio di applicazione che necessita accesso sequenziale ad un file è:",
+        "answers": [
+            "Un compilatore",
+            "Un sistema di ricerca all'interno di una base di dati",
+            "Un sistema di ricerca di contatti telefonici",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L’allocazione di un file indicizzata è preferibile quando il file in questione:",
+        "answers": [
+            "E’ di piccole dimensioni,indipendentemente dal modo in cui viene acceduto",
+            "E’ di grandi dimensioni, indipendentemente dal modo in cui viene acceduto",
+            "E’ di grandi dimensioni ed è tipicamente acceduto in modo sequenziale",
+            "E’ di grandi dimensioni ed è tipicamente acceduto in modo casuale(diretto)"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L’allocazione di un file basata su linked list(liste puntate) è preferibile quando il file in questione",
+        "answers": [
+            "E’ di piccolo dimensioni, indipendentemente dal modo in cui viene acceduto",
+            "E’ di grandi dimensioni ed è tipicamente acceduto in modo casuale(diretto)",
+            "E’ di grandi dimensioni, indipendentemente dal modo in cui viene acceduto",
+            "E’ di grandi dimensioni ed è tipicamente acceduto in modo sequenziale"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema UNIX-like, un file che ha i seguenti privilegi: 101000000 ",
+        "answers": [
+            "Consente al solo proprietario del file di esercitare diritti di lettura e un sistema UNIX-like, un file che ha i seguenti privilegi: 101000000:",
+            "Consente al solo proprietario del file di esercitare diritti di lettura ed esecuzione (sul file)",
+            "Consente al solo proprietario del file di esercitare diritti di scrittura ed esecuzione (sul file)",
+            "Non dà alcun diritto al proprietario del file"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema UNIX-like, un file che ha i seguenti privilegi: 011000000 ",
+        "answers": [
+            "Consente al solo proprietario del file di esercitare diritti di lettura e scrittura (sul file)",
+            "Consente al solo proprietario del file di esercitare diritti di lettura ed esecuzione (sul file)",
+            "Non dà alcun diritto al proprietario del file",
+            "Consente al solo proprietario del file di esercitare diritti di scrittura ed esecuzione (sul file)"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema UNIX-like, un file che ha i seguenti privilegi: 111101101",
+        "answers": [
+            "Consente al proprietario del file di esercitare tutti i diritti(sul file) e fornisce agli altri utenti solo diritti di scrittura ed esecuzione",
+            "Consente al proprietario del file di esercitare tutti i diritti(sul file) e fornisce agli altri utenti solo diritti di lettura ed scrittura",
+            "Consente al proprietario del file di esercitare tutti i diritti(sul file) e fornisce agli altri utenti solo diritti di lettura ed esecuzione",
+            "Consente a chiunque di esercitare tutti i diritti (sul file)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il comando UNIX ln file_1 file_2",
+        "answers": [
+            "Crea un hard link con il file file_2(sorgente) in cui nome è file_1(destinazione)",
+            "Crea un hard link con il file file_1(sorgente) il cui nome è file_2(destinazione)",
+            "Crea un soft link con il file file_1(sorgente) il cui nome è file_2(destinazione)",
+            "Crea un soft link con il file file_2(sorgente) il cui nome è file_1(destinazione)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il comando UNIX ln -s file_1 file2:",
+        "answers": [
+            "Crea un hard link con il file file_2(sorgente) in cui nome è file_1(destinazione)",
+            "Crea un hard link con il file file_1(sorgente) il cui nome è file_2(destinazione)",
+            "Crea un soft link con il file file_1(sorgente) il cui nome è file_2(destinazione)",
+            "Crea un soft link con il file file_2(sorgente) il cui nome è file_1(destinazione)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un file system organizzato con file descriptor indicizzati multi-livello (multi-level indexed files), contenente i riferimenti diretti a 10 blocchi a cui si aggiunge un livello di riferimento indiretto a 100 blocchi e un ulteriore doppio livello di riferimento indiretto, sempre da 100 blocchi ciascuno. Assumendo che ciascun blocco abbia dimensione pari a 2 KiB, qual è la dimensione massima del file supportata?",
+        "answers": [
+            "~20.2 KB",
+            "~20.2 MB",
+            "~20.7 KB",
+            "~20.7 KB"
+        ],
+        "correct": "D",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 200 cilindri/tracce, numerati da 0 a 199(0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 53. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 98,183,37,122,14,85,67 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "595",
+            "558",
+            "650",
+            "638"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 200 cilindri/tracce, numerati da 0 a 199(0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 53. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 98,183,37,122,14,65,67 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "650",
+            "522",
+            "638",
+            "595"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 100 cilindri/tracce, numerati da 0 a 99 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 11. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 24, 16, 77, 49, 82 venga gestita da un algoritmo di scheduling SCAN (non-ottimizzato), che la testina si stia muovendo verso l'esterno (i.e., verso i cilindri con numeri più bassi) e trascurando il tempo di rotazione.",
+        "answers": [
+            "76",
+            "87",
+            "46",
+            "93"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare quale sarà il valore della variabile value che verrà stampato alla line 18:",
+        "answers": [
+            "5",
+            "20",
+            "15",
+            "I dati sono insufficiente per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "25"
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei processi generati:",
+        "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "26"
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei, indicare il corrispondente albero dei processi generati:",
+        "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "27"
+    },
+    {
+        "question": "Si considerino i 5 processo della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
+        "answers": [
+            "FCFS",
+            "RR",
+            "SJF",
+            "Tutte e tre le politiche garantiscono al processo C lo stesso tempo di attesa"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "35"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling round robin con time slice = 3, nessuna attività di I/O e context switch trascurabile:",
+        "answers": [
+            "6.5",
+            "6.75",
+            "7.15",
+            "5,85"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "36"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling Round Robin con time slice q= 4. Nel calcolo, si consideri il tempo necessario ad eseguire il context switch trascurabile:",
+        "answers": [
+            "4.85",
+            "4.25",
+            "4.5",
+            "4.75"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "37"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling Shortest Job First preemptive (SJF). Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "6",
+            "5.75",
+            "4.5",
+            "5"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "38"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo A esegua all'istante t=2 una chiamata di I/O che si completerà dopo 4 unità di tempo, ossia all'istante t=6. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "4.5",
+            "5.5",
+            "7.5",
+            "6.5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "39"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo B esegua all'istante t=6 una chiamata di I/O che si completerà dopo 3 unità di tempo, ossia all'istante t=9. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:(uscita 2 volte)",
+        "answers": [
+            "4.5",
+            "5.25",
+            "4",
+            "4.25"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "40"
+    },
+    {
+        "question": "",
+        "answers": [
+            "A",
+            "B",
+            "C",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "56"
+    },
+    {
+        "question": "",
+        "answers": [
+            "23",
+            "24",
+            "25",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "57"
+    }, 
+    {
+        "question": "",
+        "answers": [
+            "18",
+            "19",
+            "20",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "58"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Dipende dalle scelte dello scheduler del sistema operativo",
+            "Presenta deadlock",
+            "Non presenta deadlock",
+            "È impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "59"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Dipende dalle scelte dello scheduler del sistema operativo",
+            "Presente deadlock",
+            "Non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "60"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Sicuramente presenta deadlock",
+            "Potrebbe presentare deadlock",
+            "Sicuramente non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "61"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph(RAG) mostra un sistema che:",
+        "answers": [
+            "Sicuramente presenta deadlock",
+            "Potrebbe presentare deadlock",
+            "Sicuramente non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "62"
+    }, 
+    {
+        "question": "Si consideri un disco magnetico composto da 100 cilindri/tracce, numerati da 0 a 99 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 11. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 24, 16, 77, 49, 82 venga gestita da un algoritmo di scheduling SCAN (non-ottimizzato), che la testina si stia muovendo verso l'esterno (i.e., verso i cilindri con numeri più bassi) e trascurando il tempo di rotazione.",
+        "answers": [
+            "76",
+            "87",
+            "46",
+            "93"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "112"
+    } 
 ]
