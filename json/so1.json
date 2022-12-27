@@ -433,7 +433,7 @@
         "code": ""
     },
     {
-        "question": "Si parla di parallelismo quando:(uscita già 3 volte)",
+        "question": "Si parla di parallelismo quando:",
         "answers": [
             "Vengono eseguiti processi single-threaded su CPU multicore",
             "Vengono eseguiti processi multi-threaded su CPU single core",
@@ -980,7 +980,7 @@
             "5",
             "4"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": ""
     },  
@@ -1280,7 +1280,7 @@
             "~20.7 KB",
             "~20.7 KB"
         ],
-        "correct": "D",
+        "correct": "d",
         "answers_have_code": 0,
         "code": ""
     },
@@ -1425,7 +1425,7 @@
         "img": "39"
     },
     {
-        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo B esegua all'istante t=6 una chiamata di I/O che si completerà dopo 3 unità di tempo, ossia all'istante t=9. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:(uscita 2 volte)",
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo B esegua all'istante t=6 una chiamata di I/O che si completerà dopo 3 unità di tempo, ossia all'istante t=9. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
         "answers": [
             "4.5",
             "5.25",
@@ -1440,9 +1440,9 @@
     {
         "question": "",
         "answers": [
-            "A",
-            "B",
-            "C",
+            "72",
+            "73",
+            "74",
             "I dati sono insufficienti per rispondere alla domanda"
         ],
         "correct": "b",
@@ -1538,6 +1538,7 @@
         ],
         "correct": "c",
         "answers_have_code": 0,
-        "code": ""
+        "code": "",
+        "img": ""
     } 
 ]
