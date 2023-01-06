@@ -25,5 +25,6 @@ var jsonFolder = "json" // json folder where to load your json files
 var jsonFiles = { // load other quizzes
     "so1.json": "SO1",
     "so2.json": "SO2",
-    "swInedite.json": "SW - Inedite"
+    "swInedite.json": "SW - Inedite",
+    "OLD_so1.json": "Archivio SO1"
 };
