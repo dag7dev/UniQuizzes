@@ -154,7 +154,7 @@
         "answer_explanation": ""
     },
     {
-        "question": "R2 is a measure of:",
+        "question": "R^2 is a measure of:",
         "answers": [
             "Reliability of predictions",
             "Goodness of fit",
@@ -560,7 +560,7 @@
         "answer_explanation": ""
     },
     {
-        "question": "The R2 and the p-values of a regression:",
+        "question": "The R^2 and the p-values of a regression:",
         "answers": [
             "are always equivalent",
             "cannot be both positive",
@@ -801,7 +801,7 @@
         "question": "How do you measure the significance of an estimate?",
         "answers": [
             "with its magnitude",
-            "with R2",
+            "with R^2",
             "with its p-value",
             "with its sign"
         ],
@@ -966,7 +966,7 @@
         "answer_explanation": ""
     },
     {
-        "question": "A regression model (M1) on a training set gives R2 = 0.5 while a second model (M2) gives R2 = 0.9. What can we say about predictions on a test set?",
+        "question": "A regression model (M1) on a training set gives R^2 = 0.5 while a second model (M2) gives R^2 = 0.9. What can we say about predictions on a test set?",
         "answers": [
             "M2 will have error smaller than M1",
             "M2 will have error larger than M1",
@@ -1120,7 +1120,7 @@
         "answer_explanation": ""
     },
     {
-        "question": "Your boss calls you to tell your new regression model seems completely useless for prediction, in spite of the high R2 of the t. You realize that probably there is:",
+        "question": "Your boss calls you to tell your new regression model seems completely useless for prediction, in spite of the high R^2 of the t. You realize that probably there is:",
         "answers": [
             "underfitting",
             "overfitting",
@@ -1136,7 +1136,7 @@
     {
         "question": "From the confusion matrix below, what can we say?",
         "answers": [
-            "R2 = 0:67",
+            "R^2 = 0:67",
             "accuracy = 80%",
             "all good things must come to an end",
             "sensitivity < 80%"
@@ -1232,7 +1232,7 @@
         "answer_explanation": ""
     },
     {
-        "question": "In least squares, R2 can be seen as:",
+        "question": "In least squares, R^2 can be seen as:",
         "answers": [
             "the norm of the parameter vector",
             "none of the others",
