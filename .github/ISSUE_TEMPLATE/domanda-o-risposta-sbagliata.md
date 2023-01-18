@@ -13,6 +13,10 @@ assignees: ''
 **Domanda**:
 <testo della domanda>
 
+**Domanda da correggere**:
+- la vecchia domanda è: <testo domanda vecchia>
+- invece dovrebbe essere: <testo domanda nuova>
+
 **Risposta da correggere**:
 - la vecchia risposta è: <testo risposta vecchia>
 - invece dovrebbe essere: <testo risposta nuova>
