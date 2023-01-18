@@ -469,7 +469,7 @@ function loadElements(questions) {
         uglyTable.border = 1;
 
         // let's calculate the right answer
-        var rightAnswerText = questions[i]['correct'].charCodeAt(0) - 97 // number from letter
+        var rightAnswerText = questions[i]['correct'].toLowerCase().charCodeAt(0) - 97 // number from letter
         rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
 
         // if question has source code, then renderize it into a table
