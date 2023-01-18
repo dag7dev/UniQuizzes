@@ -441,7 +441,7 @@ function loadElements(questions) {
         containingDiv.appendChild(bigTable)
 
         // image to show, if any
-        if (questions[i]['img'] !== "" && questions[i]['img'] !== undefined) {
+        if (questions[i]['img'].length > 0 && questions[i]['img'] !== undefined) {
             var img = document.createElement("img")
             img.src = "img/" + questions[i]['img'].toString() + ".png";
             containingDiv.appendChild(img)
