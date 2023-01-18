@@ -441,7 +441,7 @@ function loadElements(questions) {
         containingDiv.appendChild(bigTable)
 
         // image to show, if any
-        if (questions[i]['img'].length > 0 && questions[i]['img'] !== undefined) {
+        if (questions[i]['img'] !== undefined && questions[i]['img'].length > 0) {
             var img = document.createElement("img")
             img.src = "img/" + questions[i]['img'].toString() + ".png";
             containingDiv.appendChild(img)
@@ -465,7 +465,7 @@ function loadElements(questions) {
         rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
 
         // if question has source code, then renderize it into a table
-        if (questions[i]['code'].length > 0 && questions[i]['code'] !== undefined) {
+        if (questions[i]['code'] !== undefined && questions[i]['code'].length > 0) {
             tablePre = document.createElement('table')
             tablePre.border = 2;
             preBlock = document.createElement('pre')
