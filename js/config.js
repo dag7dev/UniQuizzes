@@ -18,7 +18,7 @@ var showShuffleAnswers = true
 
 // additional URL and description shown in header
 var customLink = "https://github.com/dag7dev/UniQuizzes"
-var customDescription = "GITHUB PAGE OF THIS PROJECT!!"
+var customDescription = "Visit the GitHub repository and leave a ⭐"
 
 // FILES
 var jsonFolder = "json" // json folder where to load your json files
@@ -26,5 +26,6 @@ var jsonFiles = { // load other quizzes
     "so1.json": "SO1",
     "so2.json": "SO2",
     "swInedite.json": "SW - Inedite",
-    "OLD_so1.json": "Archivio SO1"
+    "OLD_so1.json": "Archivio SO1",
+    "2022_FDS.json": "FDS 2022",
 };
