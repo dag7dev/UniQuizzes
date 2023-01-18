@@ -443,7 +443,15 @@ function loadElements(questions) {
         // image to show, if any
         if (questions[i]['img'] !== undefined && questions[i]['img'].length > 0) {
             var img = document.createElement("img")
-            img.src = "img/" + questions[i]['img'].toString() + ".png";
+
+            // TODO: this wont work for JPG
+            // if a file already have png extension dont add png
+            if (!questions[i]['img'].includes(".png")) {
+                questions[i]['img'] = questions[i]['img'] + ".png"
+            }
+
+            img.src = "img/" + questions[i]['img'].toString();
+
             containingDiv.appendChild(img)
         }
 
