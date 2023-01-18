@@ -262,7 +262,7 @@
         "correct": "D",
         "answer_have_code": "0",
         "code": "",
-        "img": "",
+        "img": "FDS/matrixwhatcanwesay.png",
         "answer_explanation": ""
     },
     {
@@ -1046,7 +1046,7 @@
         "correct": "A",
         "answer_have_code": "0",
         "code": "",
-        "img": "",
+        "img": "FDS/1positive0negative.png",
         "answer_explanation": ""
     },
     {
@@ -1144,7 +1144,7 @@
         "correct": "B",
         "answer_have_code": "0",
         "code": "",
-        "img": "",
+        "img": "FDS/accuracy80.png",
         "answer_explanation": ""
     },
     {
