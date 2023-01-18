@@ -13,6 +13,19 @@
         "code": ""
     },
     {
+        "img": "",
+        "question": "What's the favorite letter of the author?",
+        "answers": [
+            "The letter A",
+            "The letter B",
+            "The letter C",
+            "The letter D"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
         "question": "What does this program prints?",
         "answers": [
             "No World",
