@@ -24,7 +24,7 @@
         "code": ""
     },
     {
-        "question": "Non sono previsti meccanismi di protezione  ",
+        "question": "In un sistema operativo strutturato secondo un approccio microkernel",
         "answers": [
             "Non necessita di avere due modalità di utilizzo della CPU (user vs.kernel mode)",
             "Non necessita di meccanismi di comunicazione tra porzioni diverse del sistema operativo",
@@ -185,8 +185,8 @@
             "1*10^3",
             "Decido di NON rispondere a questa domanda",
             "25*10^3",
-            "25*10^6",
-            "1*10^6"
+            "1*10^6",
+            "25*10^6"
         ],
         "correct": "d",
         "answers_have_code": 0,
