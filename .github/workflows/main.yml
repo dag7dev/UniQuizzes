@@ -7,6 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+    paths:
+      - '$HOME/UniQuizzesFinal/json/**.json'
   pull_request:
     branches: [ master ]
   workflow_dispatch:
@@ -29,6 +31,12 @@ jobs:
       - name: Move
         run: mv $HOME/UniQuizzesFinal .
 
+      - uses: actions/checkout@v2
+      - name: json-syntax-check
+        uses: limitusus/json-syntax-check@v1
+        with:
+          pattern: "\\.json$"
+          
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
       - uses: cpina/github-action-push-to-another-repository@main
