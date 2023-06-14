@@ -43,7 +43,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: '/home/runner/UniQuizzesFinal'
+          source-directory: '${{ github.workspace }}/UniQuizzesFinal'
           destination-github-username: 'dag7dev'
           destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
