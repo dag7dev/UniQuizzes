@@ -7,8 +7,6 @@ build() {
     cp -r $FOLDER_PATH/UniQuizzes/* $FOLDER_PATH
     cp -r $FOLDER_PATH/JSQuizee/index.html $FOLDER_PATH
     cp -r $FOLDER_PATH/JSQuizee/js/main.js $FOLDER_PATH/js
-    rm -rf $FOLDER_PATH/UniQuizzes
-    rm -rf $FOLDER_PATH/JSQuizee
     
     touch $FOLDER_PATH/.gitignore
     echo "*" > .gitignore 
@@ -29,6 +27,22 @@ pre_script() {
         rm -rf $FOLDER_PATH
     fi
 }
+
+git() {
+    $FOLDER_PATH="${{ github.workspace }}/UniQuizzesFinal"
+    mkdir $FOLDER_PATH
+
+    # clone jsquizee, base engine
+    git clone https://github.com/dag7dev/JSQuizee $FOLDER_PATH/JSQuizee
+
+    # this local folder
+    mkdir $FOLDER_PATH/UniQuizzes
+    cp -r . $FOLDER_PATH/UniQuizzes
+
+    build
+}
+
+
 
 from_local() {
     # LOCAL
@@ -79,6 +93,11 @@ for arg in "$@"; do
     '--from-online' | '--online')
         pre_script
         from_online
+        ;;
+
+    '--git' | '--git')
+        pre_script
+        git
         ;;
 
     '--help')
