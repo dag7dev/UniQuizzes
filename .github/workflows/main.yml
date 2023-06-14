@@ -18,12 +18,12 @@ jobs:
         run: ./start.sh --from-local
 
       - name: Move
-        run: mv UniQuizzesFinal ${{ github.workspace }}
+        run: mv UniQuizzesFinal /home/runner/UniQuizzesFinal
 
       - name: json-syntax-check
         uses: limitusus/json-syntax-check@v1
         with:
-          pattern: "${{ github.workspace }}/UniQuizzesFinal/json/**/*.json"
+          pattern: "/home/runner/UniQuizzesFinal/json/**/*.json"
 
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
