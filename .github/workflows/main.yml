@@ -1,4 +1,4 @@
-name: CI
+name: Build and Push UniQuizzes
 
 on:
   push:
@@ -8,30 +8,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_and_push:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Run start script from local
+      - name: Run start.sh
         run: |
+          chmod +x ./start.sh
           ./start.sh --from-local
-          mv UniQuizzesFinal /home/runner/UniQuizzesFinal
 
-      - name: json-syntax-check
-        uses: limitusus/json-syntax-check@v1
-        with:
-          pattern: "/home/runner/UniQuizzesFinal/json/**/*.json"
+      - name: Move UniQuizzesFinal
+        run: mv UniQuizzesFinal /home/runner/UniQuizzesFinal
 
-      - name: Pushes to another repository
-        run: echo "Pushes to another repo"
-      - uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source-directory: UniQuizzesFinal
-          destination-github-username: 'dag7dev'
-          destination-repository-name: 'UniQuizzes'
-          user-email: dag7@protonmail.com
-          target-branch: gh-pages
+      - name: Syntax Check
+        run: |
+          find /home/runner/UniQuizzesFinal -name "*.json" -type f -exec jsonlint -q {} \;
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "dag7@protonmail.com"
+          git config --global user.name "dag7dev"
+
+      - name: Push to UniQuizzes Repository
+        run: |
+          cd /home/runner/UniQuizzesFinal
+          git init
+          git add .
+          git commit -m "Update UniQuizzes"
+          git push https://dag7dev:${{ secrets.API_TOKEN_GITHUB }}@github.com/dag7dev/UniQuizzes.git master:gh-pages
