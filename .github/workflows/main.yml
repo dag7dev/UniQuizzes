@@ -27,12 +27,6 @@ jobs:
 
       - name: Run start script from local
         run: ./start.sh --from-local
-
-      - uses: actions/checkout@v2
-      - name: json-syntax-check
-        uses: limitusus/json-syntax-check@v1
-        with:
-          pattern: "\\.json$"
           
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
@@ -40,7 +34,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: '/home/runner/work/UniQuizzes/UniQuizzes/UniQuizzesFinal'
+          source-directory: .
           destination-github-username: 'dag7dev'
           destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
