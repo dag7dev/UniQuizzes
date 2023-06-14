@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ master ]
-    paths:
-      - '${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal/json/**.json'
   pull_request:
     branches: [ master ]
   workflow_dispatch:
@@ -20,13 +18,12 @@ jobs:
         run: ./start.sh --from-local
 
       - name: Move
-        run: mv ${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal .
+        run: mv UniQuizzesFinal $GITHUB_WORKSPACE
 
-      - uses: actions/checkout@v2
       - name: json-syntax-check
         uses: limitusus/json-syntax-check@v1
         with:
-          pattern: "\\.json$"
+          pattern: "${{ github.workspace }}/UniQuizzesFinal/json/**/*.json"
 
       - name: Pushes to another repository
         run: echo "Pushes to another repo"
@@ -34,7 +31,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: '${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal'
+          source-directory: UniQuizzesFinal
           destination-github-username: 'dag7dev'
           destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
