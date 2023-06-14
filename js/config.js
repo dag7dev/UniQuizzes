@@ -28,4 +28,5 @@ var jsonFiles = { // load other quizzes
     "swInedite.json": "SW - Inedite",
     "OLD_so1.json": "Archivio SO1",
     "2022_FDS.json": "FDS 2022",
+    "so2mz.json": "SO2 MZ"
 };
