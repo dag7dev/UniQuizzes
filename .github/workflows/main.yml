@@ -1,41 +1,50 @@
-name: Build and Push UniQuizzes
+# This is a basic workflow to help you get started with Actions
 
+name: CI
+
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+    paths:
+      - '$HOME/UniQuizzesFinal/json/**.json'
   pull_request:
     branches: [ master ]
   workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_and_push:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-      - name: Run start.sh
-        run: |
-          chmod +x ./start.sh
-          ./start.sh --from-local
+      - name: Run start script from local
+        run: ./start.sh --from-local
 
-      - name: Move UniQuizzesFinal
-        run: mv UniQuizzesFinal /home/runner/UniQuizzesFinal
+      - name: Move
+        run: mv $HOME/UniQuizzesFinal .
 
-      - name: Syntax Check
-        run: |
-          find /home/runner/UniQuizzesFinal -name "*.json" -type f -exec jsonlint -q {} \;
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "dag7@protonmail.com"
-          git config --global user.name "dag7dev"
-
-      - name: Push to UniQuizzes Repository
-        run: |
-          cd /home/runner/UniQuizzesFinal
-          git init
-          git add .
-          git commit -m "Update UniQuizzes"
-          git push https://dag7dev:${{ secrets.API_TOKEN_GITHUB }}@github.com/dag7dev/UniQuizzes.git master:gh-pages
+      - uses: actions/checkout@v2
+      - name: json-syntax-check
+        uses: limitusus/json-syntax-check@v1
+        with:
+          pattern: "\\.json$"
+          
+      - name: Pushes to another repository
+        run: echo "Pushes to another repo"
+      - uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: '$HOME/UniQuizzesFinal'
+          destination-github-username: 'dag7dev'
+          destination-repository-name: 'UniQuizzes'
+          user-email: dag7@protonmail.com
+          target-branch: gh-pages
