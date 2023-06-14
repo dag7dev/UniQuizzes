@@ -18,7 +18,7 @@ jobs:
         run: ./start.sh --from-local
 
       - name: Move
-        run: mv UniQuizzesFinal $GITHUB_WORKSPACE
+        run: mv UniQuizzesFinal ${{ github.workspace }}
 
       - name: json-syntax-check
         uses: limitusus/json-syntax-check@v1
