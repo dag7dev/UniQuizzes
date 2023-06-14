@@ -28,22 +28,6 @@ pre_script() {
     fi
 }
 
-git() {
-    $FOLDER_PATH="${{ github.workspace }}/UniQuizzesFinal"
-    mkdir $FOLDER_PATH
-
-    # clone jsquizee, base engine
-    git clone https://github.com/dag7dev/JSQuizee $FOLDER_PATH/JSQuizee
-
-    # this local folder
-    mkdir $FOLDER_PATH/UniQuizzes
-    cp -r . $FOLDER_PATH/UniQuizzes
-
-    build
-}
-
-
-
 from_local() {
     # LOCAL
     mkdir $FOLDER_PATH
@@ -93,11 +77,6 @@ for arg in "$@"; do
     '--from-online' | '--online')
         pre_script
         from_online
-        ;;
-
-    '--git' | '--git')
-        pre_script
-        git
         ;;
 
     '--help')
