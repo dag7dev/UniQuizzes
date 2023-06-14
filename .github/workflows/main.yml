@@ -15,10 +15,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run start script from local
-        run: ./start.sh --from-local
-
-      - name: Move
-        run: mv UniQuizzesFinal /home/runner/UniQuizzesFinal
+        run: |
+          ./start.sh --from-local
+          mv UniQuizzesFinal /home/runner/UniQuizzesFinal
 
       - name: json-syntax-check
         uses: limitusus/json-syntax-check@v1
