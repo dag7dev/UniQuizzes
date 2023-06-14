@@ -1,0 +1,1878 @@
+[
+    {
+        "question": "[C] A quanti gruppi può appartenere un utente nel SO Linux?",
+        "answers": [
+            "Ad almeno un gruppo",
+            "Ad un solo gruppo",
+            "A zero o più gruppi"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga che nel sistema esiste un gruppo “studente” ed anche l'utente “utente1”. Si supponga quindi di eseguire il comando seguente. Quale delle seguenti affermazioni è sbagliata?",
+        "answers": [
+            "Il comando genera un errore perchè per aggiungere un utente ad un gruppo si puo' utilizzare solo il comando addgroup",
+            "Se \"utente1\" non appartiene al gruppo \"studente\" lo aggiunge a tale gruppo altrimenti non lo aggiunge",
+            "Aggiunge utente1 al gruppo studente oppure genera un messaggio del tipo L'utente «utente1» fa già parte del gruppo «studente»"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "adduser utente1 studente"
+    },
+    {
+        "question": "[C] Si supponga che nel sistema esiste un gruppo “studente” e non esista ancora l'utente “utente1”. Si supponga quindi di eseguire il seguente comando. Quale sarà il risultato?",
+        "answers": [
+            "Da errore perchè utente1 non esiste",
+            "Crea utente1 e, oltre a creare il gruppo utente1 lo aggiunge al gruppo studente",
+            "Crea utente1, lo aggiunge al gruppo studente e non crea il gruppo utente1"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "sudo adduser utente1 studente"
+    },
+    {
+        "question": "[C] Supponga di eseguire, come utente sudoer, i seguenti comandi. Quale affermazione è corretta?",
+        "answers": [
+            "C2 da errore “comando non trovato”",
+            "C1 e C2 sono equivalenti ",
+            "C2 esegue una setUID mentre C1 no"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "C1) sudo ls  /home\r\nC2) sudo su --command=’ls /home’"
+    },
+    {
+        "question": "[C] Quale  e’ la differenza tra i comandi sudo e su",
+        "answers": [
+            "sudo e’  un comando che permette di  eseguire altri comandi come root; su e’ una scorciatoia per invocare  il comando sudo",
+            "su e’ un comando che permette di cambiare utente. sudo e’ un comando che permette di eseguire altri comandi come super-utente",
+            "sudo si riferisce  ad  un gruppo  di utenti. su e' invece  un  comando che permette di cambiare utente"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Di quante sezioni e’ composto il man di Linux?",
+        "answers": [
+            "5",
+            "7",
+            "9"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponga di voler creare un file vuoto e di voler settare il tempo di ultimo  accesso  al  \"2  giugno 2020 ore 12:00\". Quale dei  seguenti comandi e’ corretto?",
+        "answers": [
+            "touch -at202006021200  filename",
+            "touch -cat202006021200 filename",
+            "touch -ct202006021200  filename"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale e' il risultato del comando seguente?",
+        "answers": [
+            "Crea un file  vuoto con nome nomefile",
+            "Aggiorna, al tempo corrente, gli atttributi atime e mtime di nomefile",
+            "Crea un file  vuoto con nome nomefile e ctime uguale al tempo corrente. Se si usa l'opzione -t o -d si puo' specificare un altro tempo di creazione"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "touch nomefile"
+    },
+    {
+        "question": "[C] I premessi di accesso della  directory /tmp  sono 1777/drwxrwxrwt.Cosa significa",
+        "answers": [
+            "Il bit SetGid e' settato",
+            "Lo sticky bit non e' settato",
+            "Lo sticky bit e' settato"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponga di voler mostrare l’albero delle directory con radice dir1 e con profondità 3. Quale tra i seguenti comandi e’ il piu’ appropriato usare?",
+        "answers": [
+            "tree -d 3 dir1",
+            "tree -L 3 dir1",
+            "tree --max-depth=3 dir1"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponiamo vogliate visualizzare l’albero delle directory con radice nella vostra home. In particolare volete visualizzare solo le directory e non i file in esse contenuti. Quali tra i seguenti comandi e’ il piu’ appropriato?",
+        "answers": [
+            "tree -d ~",
+            "tree -d -L 3 /home/myhomedir",
+            "tree -a ~"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere un file di testo (filein) e di voler copiare in un altro file (fileout) i primi 100 caratteri.  Quale di questi comandi e’ corretto?",
+        "answers": [
+            "dd if=filein of=fileout bs=100 count=1",
+            "dd if=filein of=fileout bs=1 skip=1 count=100",
+            "dd if=filein of=fileout bs=10 skip=10 count=10"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere un file di testo (filein) contenente 1000 caratteri e di voler copiare in un altro file (fileout) 100 caratteri a partire dal decimo. Quale di questi comandi non produce il risultato atteso?",
+        "answers": [
+            "dd if=filein of=fileout bs=1 skip=10 count=100",
+            "dd if=filein of=fileout bs=100 seek=10 count=1",
+            "dd if=filein of=fileout bs=10 skip=1 count=10"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quanti job in background crea il comando seguente?",
+        "answers": [
+                "1",
+                "Nessuno, da errore",
+                "3"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "sleep 30 | sleep 15 | sleep 10 &"
+    },
+    {
+        "question": "[C] Quanti file system principali ha linux?",
+        "answers": [
+            "dipende dal numero di filesystem montati al boot",
+            "1",
+            "dipende dal numero di dischi installati"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] In che file e' contenuta la lista dei filesystem montati al boot?",
+        "answers": [
+            "/etc/mdev",
+            "/etc/mtab",
+            "/etc/fstab"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Perche’ il comando passwd (ovvero il file eseguibile /usr/bin/passwd) ha il SetUID bit settato?",
+        "answers": [
+            "Per consentire a qualsiasi utente di modificare la propria password",
+            "Per evitare che un utente possa cancellare il file eseguibile passwd",
+            "Per evitare che un utente possa modificare le password degli altri utenti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponiamo di avere il seguente makefile (memorizzato in un file di nome \"makefile\"). Supponendo che non esistono entrambi i file \"merge_sorted_lists\" e \"sort_file_int\" e lanciando il comando \"make\", quale target viene eseguito?",
+        "answers": [
+            "merge_sorted_list",
+            "entrambi",
+            "nessuno dei due. Va specificato quale vogliamo eseguire con il comando make <nome_target>"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "merge_sorted_lists: merge_sorted_lists.c\r\ngcc -Wall -Wextra -O3 merge_sorted_lists.c\r\n-o merge_sorted_lists\r\nsort_file_int: sort_file_int.c\r\ngcc -Wall -Wextra -O3 sort_file_int.c\r\n-o sort_file_int\r\n.PHONY: clean\r\nclean:\r\nrm -f *.o merge_sorted_lists"
+    },
+    {
+        "question": "[C] Assumiamo di compilare un file .c nei seguenti modi. Perche' le dimensioni di file2.o sono diverse da quelle di file1.o?",
+        "answers": [
+            "perche' file2.o e' stato ottimizzato, per occupare meno spazio in memoria, rispetto a file1.o",
+            "perche' file2.o contiene informazioni aggiuntive rispetto a file1.o utili per il debug",
+            "non e' vero che i due comandi di compilazione producono file di dimensioni diverse"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "gcc file.c -o file1.o\r\ngcc -g file.c -o file2.o"
+    },
+    {
+        "question": "[C] Assuma di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e supponga di eseguire la sequenza di comandi che segue (\"shell_i\": cmd indica che cmd e’ eseguitto nella shell_i, i=1,2). Quale e’ il loro effetto sul processo xterm?"
+        "answers": [
+            "Il processo xterm viene prima mandato in esecuzione in background e poi riportato in foreground",
+            "Il processo xterm viene mandato in esecuzione in background",
+            "Il processo xterm viene prima portato nello stato stopped (T) e poi mandato in esecuzione in foreground"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "shell_1: xterm\r\nshell_2: ps -C xterm\r\n#restituisce xtermPID\r\nshell_2: kill -s SIGSTOP xtermPID\r\nshell_2: kill -s SIGCONT xtermPID"
+    },
+    {
+        "question": "[C] Si assuma  di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e si consideri la seguente  sequenza di comandi (\"shell_i\":cmd indica che cmd e’ eseguitto nella  shell i, i=1,2). Quale e’ il loro effetto?",
+        "answers": [
+            "Il processo xterm viene terminato con segnale SIGSTOP",
+            "Il processo xterm viene mandato  in esecuzione in background",
+            "Il processo xterm viene messo in stato stopped (T)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "shell_1: xterm\r\nshell_2: ps -C xterm\r\n#restituisce xtermPID\r\nshell_2: kill -s SIGSTOP xtermPID"
+    },
+    {
+        "question": "[C] Supponga di avere 2 file hw1.c e hw2.c contenenti il seguente codice. Quale dei seguenti comandi di compilazione genera errore?",
+        "answers": [
+            "gcc -Wall hw1.c -o hw.out",
+            "gcc -Wall hw1.c hw2.c -o hw.out",
+            "gcc hw1.c"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": "hw1.c:\r\n#include <stdio.h>\r\n#include \"hw2.c\"\r\nint f(int argc, char *args[])  {\r\n  printf(\"Hello World!\");\r\n  return 256;\r\n}\r\nhw2.c:\r\nint f(int argc, char *args[]);\r\nint main(int argc, char *args[]){\r\n  return f(argc, args);\r\n}"
+    },
+    {
+        "question": "[C] Supponga di avere 2 file hw1.c e hw2.c contenenti il seguente codice. Quale dei seguenti comandi di compilazione non genera errore?",
+        "answers": [
+            "gcc -Wall hw1.c hw2.c -o hw.out",
+            "gcc -Wall hw1.c -o hw.out",
+            "gcc -Wall hw2.c -o h2.out"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": "hw1.c:\r\n#include <stdio.h>\r\n#include \"hw2.c\"\r\nint f(int argc, char *args[])  {\r\n  printf(\"Hello World!\");\r\n  return 256;\r\n}\r\nhw2.c:\r\nint f(int argc, char *args[]);\r\nint main(int argc, char *args[]){\r\n  return f(argc, args);\r\n}"
+    },
+    {
+        "question": "[C] Supponiamo di avere il file eseguibile (ottenuto dalla compilazione di una programma C) \"mioprogramma\". Questi due modi di invocare il programma sono equivalenti?",
+        "answers": [
+            "no, nel primo caso A B C vengono caricati in argv, nel secondo caso vengono inviati sullo stdin",
+            "dipende dalla logica del codice",
+            "si sono equivalenti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "$ ./mioprogramma A B C\r\n$ ./mioprogramma < input.txt\r\n# dove input.txt contiene A B C"
+    },
+    {
+        "question": "[C] Quale e’ la differenza tra thread posix e processo linux?",
+        "answers": [
+            "Thread concorrenti condividono codice, segmento dati e file; i processi concorrenti pure",
+            "Thread concorrenti condividono lo stack; i processi concorrenti anche",
+            "Thread concorrenti condividono codice, segmento dati e file; i processi concorrenti no"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Per mostrare il pid dei job in esecuzione in background quali di questi comandi e’ corretto?",
+        "answers": [
+            "jobs -p",
+            "ps -p -u",
+            "jobs"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale di queste stringhe non e’ valida come identificatore in C?",
+        "answers": [
+            "_voltage",
+            "rerun",
+            "x-axis"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale di queste stringe e’ valida come identificatore in C?",
+        "answers": [
+            "_voltage",
+            "x-ray",
+            "return"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri la seguente funzione f. Cosa produce come risultato quando eseguita?",
+        "answers": [
+            "Copia esattamente n caratteri della stringa b nella stringa a e restituisce a",
+            "Concatena al piu' n caratteri della   stringa  b alla stringa a  e restituisce a",
+            "Copia al piu' n caratteri della stringa b nella stringa a e restituisce a"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "char *f(char *a, const char *b, size_t n) {\r\n        size_t i;\r\n        for (i = 0; i < n && b[i] != '\\0'; i++)\r\n                a[i] = b[i];\r\n        for ( ; i < n; i++)\r\n        a[i] = '\\0';\r\n        return a;\r\n}"
+    },
+    {
+        "question": "[C] Si consideri la seguente funzione f. Cosa produce come risultato quando eseguita?",
+        "answers": [
+            "Copia al piu' n caratteri della stringa b in a e restituisce a",
+            "Copia esattamente n caratteri della stringa b nella stringa a e restituisce a",
+            "Concatena i primi n caratteri della stringa b alla stringa  a  e restituisce a"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "char *f(char *a, const char *b, size_t n) {\r\n        size_t l = strlen(a);\r\n        size_t i;\r\n             for (i = 0 ; i < n && b[i] != '\\0' ; i++)\r\n                     a[l + i] = b[i];\r\n      a[l + i] = '\\0';\r\nreturn a;\r\n}"
+    },
+    {
+        "question": "[C] Si consideri la seguente dichiarazione di struttura. Quale delle seguenti assegnazioni e’ corretta?",
+        "answers": [
+            "pA -> x = pB -> x;\r\npA -> y = pB -> y;",
+            "pA = &pB",
+            "pA = pB;"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": "struct point2D {\r\n      double x; // coordinata x\r\n     ndouble y; // coordinata y\r\n}  pA={0, 0}, pB={1, 5};"
+    },
+        "question": "[C] Si consideri il seguente ciclo for. Cosa produrebbe come risultato, se eseguito?",
+        "answers": [
+            "Legge una sola volta da stdin e poi termina",
+            "Legge da stdin senza mai terminare",
+            "Legge ripetutamente numeri interi da stdin"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "int scoreCount, a;\r\nfor(scoreCount=0; scanf(\"%d\",&a)==1; scoreCount++);"
+    },
+    {
+        "question": "[C] Consideri  il seguentte frammento  di codice; assumendo la malloc assegni a ptr la locazione di memoria 0x55c2b1268420, cosa contiene ptr dopo l’incremento?",
+        "answers": [
+            "0x55c2b1268421",
+            "l'incremento della variabile prt genera un errore di segmentazione in fase di esecuzione",
+            "0x55c2b1268424"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "int *ptr = malloc(sizeof(int));\r\nptr = ptr+1;"
+    },
+    {
+        "question": "[C] Cosa  stampa su stdout la seguente chiamata a printf?",
+        "answers": [
+            "aaaaa\r\nbbbbb\r\nccccc\r\neeeee",
+            "aaaaa\r\nbbbbb\r\nccccc\r\nddddd",
+            "aaaaa\r\nbbbbb\r\nccccc\r\nddddd\r\neeeee"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "printf(\"aaaaa\\r\nbbbbb\\f\\rccccc\\r\\fddddd\\reeeee\\r\\n\");"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Per de-allocare tutta la memoria allocata, quale delle seguenti opzioni e’ coretta?",
+        "answers": [
+            "for(i=0;i<10;i++) free(mptr1[i]);",
+            "for(i=0;i<10;i++)  free(mptr1[i]); free(mptr1);",
+            "free(mptr1);"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": "char **mptr, **mptr1, *ptr1;\r\nint i;\r\nmptr = calloc(10,sizeof(char *));\r\nmptr1 = mptr;\r\nfor(i=0;i<10;i++){\r\n   mptr[i]=(char *)malloc(10);\r\n}"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Quale delle seguenti strategie di de-allocazione crea un memory leakage?",
+        "answers": [
+            "free(mptr);",
+            "for(i=0;i<10;i++) free(mptr[i]);",
+            "entrambe, ovvero sia (a) che (b)"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": "char **mptr, *ptr1;\r\nint i;\r\nmptr = calloc(10,sizeof(char *));\r\nfor(i=0;i<10;i++){\r\n   mptr[i]=(char *)malloc(10);\r\n}"
+    },
+    {
+        "question": "[C] Si consideri un file contenente un programma in linguaggio C. Si assuma che e' stata inserita la direttiva #include \"stdio.h\" . Perche' la compilazione potrebbe generare errori?",
+        "answers": [
+            "Perche' cerca il file \"stdio.h\" nella directory corrente",
+            "La compilazione non genera errori a meno che il file non esista nel filesystem",
+            "Perche' il file stdio.h potrebbe non esistere"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti dichiarazioni di variabile inizializza una stringa?",
+        "answers": [
+            "char r[10] = {`L´,`9´,` ´,`4´,`a´,`p`,`r´};",
+            "char r[] = ``L9 4apr´´;",
+            "char r[] = {`L´,`9´,` ´,`4´,`a´,`p`,`r´}; "
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale e' il modo corretto per controllare che due stringhe str1 e str2 sono uguali?",
+        "answers": [
+            "if strcmp(s1,s2)==0 {printf(\"stringhe uguali\")}",
+            "if (s1==s2) {printf(\"stringhe uguali\")}",
+            "if strcmp(s1,s2) {printf(\"stringhe uguali\")} "
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Assumendo che myfile.txt non esiste, quale delle seguenti affermazioni e’ vera?",
+        "answers": [
+            "Il programma genera un errore in fase di esecuzione",
+            "Il programma genera errore in fase di compilazione",
+            "Il programma scrive sul file myfile.txt la stringa 3.1416 PI"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "FILE * pFile;\r\npFile = open(\"myfile.txt\",\"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\");"
+    },
+    {
+        "question": "[C] Cosa fa il seguente segmento di codice se eseguito?",
+        "answers": [
+            "Stampa il valore di num almeno una  volta",
+            "Cicla infinitamente se num e’ diverso da 0",
+            "Genera errore  in fase di  compilazione"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "scanf(“%d”,&num); \r\ndo; {\r\nprintf(“%d\r\n”,num);\r\nscanf(“%d”,&num);\r\n}  while(num!=0);"
+    },
+        "question": "[C] Si consideri il frammento di codice; che valore conterra' p al termine dell'esecuzione del frammento di codice?",
+        "answers": [
+            "0",
+            "-10",
+            "-9"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "i=0; c=0; p=1;\r\nwhile (i++ < 10)\r\nc=c+1;\r\np--;"
+    },
+    {
+        "question": "[C] Supponiamo di eseguire  separatamente i seguenti frammenti di codice. Quale delle seguenti affermazioni e’ falsa?",
+        "answers": [
+            "Il frammento_1 non produce alcun output sul terminale",
+            "La loro esecuzione produce sul terminale due stringhe identiche",
+            "Il frammento_2 produce un output sullo stdout"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "Frammento_1\r\n   close(2);if (fopen(\".\",\"r\")) {\r\n                perror(\"main\");\r\n}\r\nFrammento_2\r\n                               close(2);\r\nif (fopen(\".\",\"r\")) {\r\n                                              printf(\"main:%s\\n\", strerror(errno));\r\n}"
+    },
+    {
+        "question": "[C] Consideriamo queste due line di codice. Quali delle seguenti affermazioni e' corretta?",
+        "answers": [
+            "Producono stringhe diverse e la prima la invia su stdout mentre la seconda su stderr",
+            "Inviano la stessa stringa su stdout",
+            "producono la stessa stringa ma la 1 la invia su stdout, mentre la 2 su stderr"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "1. printf(”main:%s\\n”,strerror(errno));\r\n2. perror(\"main\");"
+    },
+    {
+        "question": "[C] Quale delle seguenti funzioni  di libreria alloca memoria nello stack?",
+        "answers": [
+            "void *calloc( size_t nmemb, size_t size );",
+            "void *alloca( size_t size );",
+            "void *malloc( size_t size );"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Un processo puo' allocare memoria nello stack?",
+        "answers": [
+            "no un processo puo' allocare memoria sono nell'heap",
+            "si mediante la funziona di libreria malloc(3)",
+            "si mediante la funzione di libreria alloca(3)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale e’ la differenza  tra  la system call _exit(2)  e la funzione di libreria exit(3)?",
+        "answers": [
+            "_exit(2) chiude tutti i file descriptor mentre exit(3) no",
+            "_exit(2) non invoca gli handler registrati con  atexit e on_exit mentre exit(3) li invoca",
+            "_exit(2) invoca gli handler registrati con  atexit e on_exit mentre exit(3) non li invoca"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale attributi di un processo sono ereditati dal processo figlio?",
+        "answers": [
+            "parent pid, timer, contatori risorse",
+            "working directory, descrittori dei file, memoria condivisa",
+            "timer, lock, coda dei segnali"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Quale blocco di codice (tra Bloccco_1,  Blocco_2 e  Blocco_3) verra' eseguito dal processo figlio?",
+        "answers": [
+            "Blocco_3",
+            "Blocco_1",
+            "Blocco_2"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "pid_t pID = fork();\r\nif (pID == 0) { Blocco_1;\r\n} else if (pID < 0) { Blocco_2;\r\n} else { Blocco_3; }"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Quale blocco di codice (tra Bloccco_1,  Blocco_2 e  Blocco_3) verra' eseguito dal processo padre?",
+        "answers": [
+            "Blocco_3",
+            "Blocco_1",
+            "Blocco_2"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "pid_t pID = fork();\r\nif (pID == 0) { Blocco_1;\r\n} else if (pID < 0) { Blocco_2;\r\n} else { Blocco_3; }"
+    },
+    {
+        "question": "[C] Supponiamo che la seguente system call sia invocata con valore di pid uguale a 0. Quale e' il suo comportamento?",
+        "answers": [
+            "attende la terminazione di qualunque processo figlio il cui gruppo ID del processo sia diverso da quello del processo chiamante",
+            "attende la terminazione di qualunque processo figlio il cui gruppo ID  sia uguale a quello del processo chiamante (ovvero il processo padre)",
+            "attende la terminazione di qualunque processo figlio"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "pid_t waitpid(pid_t pid, int *status, int options);"
+    },
+    {
+        "question": "[C] Si consideri  il seguente frammento  di codice  (i numeri a lato sono i numeri di riga delle istruzioni); quale  delle seguenti affermazioni e’ falsa?",
+        "answers": [
+            "la stringa “joined”  e’ inviata su stdout solo quando  il thread creato a riga 3.  e’ terminato",
+            "la stringa “joined”  e’ inviata su stdout quando entrambi i thread sono terminati",
+            "la chiamata pthread_join(...) attende la terminazione del thread con identificatore  tid"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "1.	Pthread_t tid;\r\n2.	pthread_create(&tid, ... )\r\n3.	pthread_create(&tid, ...)\r\n4.	pthread_join(tid, ...);\r\n5.	printf(“joined”);"
+    },
+    {
+        "question": "[C] Si consideri  il seguente frammento  di codice  (i numeri a lato sono i numeri di riga delle istruzioni); quale  delle seguenti affermazioni e’ vera?",
+        "answers": [
+            "la stringa “joined”  e’ inviata su stdout solo quando  il thread creato a riga 3.  e’ terminato",
+            "la stringa “joined”  e’ inviata su stdout quando entrambi i thread sono terminati",
+            "la stringa “joined” è inviata su stdout quando uno dei due thread (non importa quale) è terminato"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "1.	Pthread_t tid;\r\n2.	pthread_create(&tid, ... )\r\n3.	pthread_create(&tid, ...)\r\n4.	pthread_join(tid, ...);\r\n5.	printf(“joined”);"
+    },
+    {
+        "question": "[C] Si considerino i seguenti frammenti di codice  (R1 e R2). Quale di queste affermazioni è vera?",
+        "answers": [
+            "R1 e  R2 producono lo stesso risultato",
+            "R2 dopo aver allocato la memoria la inizializza, mentre R1 no",
+            "R1 alloca nell’heap, e quindi dopo e’ consigliabile “pulire” la memoria; mentre R2 alloca nello stack e  quindi non c’e’ bisogno di “pulire” la memoria."
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "R1: strPtr=(char *) calloc(SIZE_OF_ARRAY, sizeof(char) );\r\nR2: strPtr=(char *) malloc(SIZE_OF_ARRAY); memset(strPtr, ´\\0´, SIZE_OF_ARRAY);"
+    },
+    {
+        "question": "[C] Consideriamo la seguente invocazione della funzione realloc; strptr1 puo' essere diverso da strptr?",
+        "answers": [
+            "si, la realloc modifica sempre l'indirizzo di partenza dell'area di memoria ridimensionata",
+            "no, strptr1 e' sempre uguale a strptr",
+            "si se a seguito del ridimensionamento della memoria allocata non e' possibile trovare un numero sufficiente di locazioni contigue a partire dal strptr"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "strptr1=(char *) realloc(strptr,10*SIZE_OF_ARRAY);"
+    },
+    {
+        "question": "[C] Supponiamo di voler modificare il comportamento di default di un processo quando esso riceve un segnale. Ovvero  vogliamo modificare il gestore (handler) di un segnale. Quale, tra  le system call, o combinazione di system call di seguito riportate e’ possibile utilizzare?",
+        "answers": [
+            "sigaction(2)",
+            "sigaction(2) seguita da una fork(2) che esegue l’handler del segnale",
+            "signal(2) seguita da una fork(2) che esegue l’handler del segnale"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Assumiamo di voler settare i permessi di accesso 0600 al file \"filename\" mediante  l'uso  della system call open(2). Quale delle seguenti chiamate e' corretta?",
+        "answers": [
+            "open(”filename”, O_RDWR | O_CREAT | S_IRUSR | S_IWUSR);",
+            "open(”filename”, O_RDWR | O_CREAT, S_IRUSR & S_IWUSR);",
+            "open(”filename”, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri la system call seguente; nel caso venga invocata con il flag impostato a \"O_CREAT | O_EXCL | O_RDONLY\" quale e' il comportamento atteso?",
+        "answers": [
+            "Se il file non esiste viene creato ed aperto in lettura, se invece esiste ritorna errore",
+            "Se il file non esiste lo crea e lo apre in lettura, altrimenti lo apre in lettura",
+            "Se il file non esiste viene creato con i permessi di esecuzione (x) ed aperto in lettura. Se esiste vengono aggiunti i permessi di esecuzione se gia' non settati ed il file e' aperto in lettura"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "int open(const char *pathname, int flags);"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Quale e' il suo comportamento?",
+        "answers": [
+            "mette un lock mandatory in scrittura sul file file",
+            "mette un lock advisory in scrittura sul file file",
+            "mette un lock bloccante in scrittura sul file file"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "char* file = argv[1];\r\nint fd;\r\nstruct flock lock;\r\nfd = open (file, O_WRONLY);\r\nmemset (&lock, 0, sizeof(lock));\r\nlock.l_type = F_WRLCK;\r\nfcntl (fd, F_SETLKW, &lock);\r\n...."
+    },
+    {
+        "question": "[C] Quale e’  la  differenza tra i seguenti frammenti di codice?",
+        "answers": [
+            "Dopo l’esecuzione di C1 e C2  fd1  contiene lo stesso valore",
+            "Dopo  l’esecuzione di C1  i due  file descriptor puntano allo stesso file, mentre dopo l’esecuzione di  C2 il file filename viene duplicato",
+            "Dopo l’esecuzione di C1 fd1 contiene lo stesso valore di  fd; mentre  dopo l’esecuzione di  C2  fd1 contiene il valore del piu’ piccolo file descriptor disponibile"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "C1: 	int fd, fd1;\r\n      fd=open(“filename”, O_RDWR);\r\n      fd1=fd;\r\nC2:	int fd,fd1;\r\n	fd=open(“filename”, O_RDWR);\r\n	fd1=dup(fd);"
+    },
+    {
+        "question": "[C] Si consideri  il  seguente frammento di codice. Quale tra le seguenti affermazioni è vera?",
+        "answers": [
+            "buf.st_ino e' uguale a buf1.st_ino",
+            "buf.st_ino e’ diverso da buf1.st_ino",
+            "st_ino non e’ membro della struttura stat"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "int fd,fd1;\r\nstruct stat buf,\r\nbuf1;\r\nfd=open(“filename”, O_RDWR);\r\nfd1=dup(fd); \r\nfstat(fd,&buf);\r\nfstat(fd1,&buf1);"
+    },
+    {
+        "question": "[C] Supponiamo di avere il seguente  frammento di codice. Quale delle seguenti istruzioni deve  essere  posta all’interno  del  ciclo while per  memorizzare in filename  il nome dei file  contenuti all’interno della directory mydir ?",
+        "answers": [
+            "filename = dentry --> dname;",
+            "filename = dentry.filename;",
+            "filename = dentry --> filename;"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "struct dirent *dentry; //directory stream\r\nchar *filename;\r\nDIR *dstr=opendir(“mydir”);\r\nwhile ((dentry=readdir(dstr)) != NULL) {\r\n/* Memorizzai nome file nella  directory  in filename  */\r\n}"
+    },
+    {
+        "question": "[C] Quali attributi di processo sono preservati dalla system call  execve(2)?",
+        "answers": [
+            "Memory locks",
+            "Timer",
+            "Umask"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri la system call execve(2). Quale delle seguenti affermazioni e' corretta?",
+        "answers": [
+            "la execve(2) permette di generare un proccesso figlio del processo chiamante senza utilizzare una fork ma semplicemente eseguendo un immagine contenuta in un file (execve esegue implicitamente la fork)",
+            "la execve(2) permette di sostituire l'immagine di un processo con quella di un file eseguibile o di uno script di shell eseguibile",
+            "la execve(2) e' una estensione della funzione system(3). Infatti, execve(2) puo' eseguire un qualsiasi programma, incluso uno script di shell"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Cosa produce come  risultato una volta eseguito?",
+        "answers": [
+            "Prepara una sezione critica (ovvero dopo la sigprocmask puo’ inizare la sezione critica)",
+            "Termina una sezione critica precedentemente iniziata",
+            "Disabilita tutti i segnali tranne SIGINT e SIGUSR1"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "sigset_t set, oset, pset;\r\n...\r\nsigemptyset( &set ); \r\nsigaddset( &set, SIGINT ); \r\nsigaddset( &set, SIGUSR1 );\r\nsigprocmask( SIG_BLOCK, &set, &oset );\r\n…"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Cosa produce come  risultato una volta eseguito?",
+        "answers": [
+            "Disabilita tutti i segnali tranne SIGINT e SIGUSR1",
+            "Disabilita i segnali SIGINT e SIGUSR1",
+            "Termina una sezione critica precedentemente iniziata"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "sigset_t set, oset, pset;\r\n...\r\nsigemptyset( &set ); \r\nsigaddset( &set, SIGINT ); \r\nsigaddset( &set, SIGUSR1 );\r\nsigprocmask( SIG_BLOCK, &set, &oset );\r\n…"
+    },
+    {
+        "question": "[C] Supponiamo di aver mappato un file in memoria con la system call mmap(2). A cosa serve invocare la msync(2)?",
+        "answers": [
+            "Impostando il tipo di mapping a MAP_SHARED la msync(2) permette di scrivere le modifiche su disco prima dell' invocazione di una unmap(2) o prima della chiusura del file descriptor",
+            "E' necessario invocare sempre la msync(2) se non si vogliono perdere le modifiche fatte in memoria",
+            "non serve invocare la mysinc perche' quando si chiude il file descriptor tutte le modifiche fatte in memoria vengono scritte su disco"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "In un determinato istante, non possono esserci 2 processi distinti con lo stesso PID",
+            "Per creare i PID dei processi si usano dei numeri interi che crescono sempre",
+            "In istanti diversi, possono esserci 2 processi distinti con lo stesso PID",
+            "Ogni processo può conoscere il suo PID"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Normalmente, il processo figlio, una volta terminata la sua computazione, attende, con una chiamata alla syscall wait, che il padre termini e gli restituisca il suo exit status",
+            "Un processo diventa zombie se termina prima di almeno uno dei processi che abbia eventualmente creato",
+            "Ogni processo può conoscere il proprio PID, ma non quello del processo che l'ha creato",
+            "Con l'eccezione del primo processo, tutti i processi sono creati con una fork"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "Digitare un comando sulla shell genera sempre un nuovo processo",
+            "Esistono file che non possono essere eseguiti per diventare processi",
+            "Affinché un file possa diventare un processo è necessario che abbia i permessi di esecuzione",
+            "Qualsiasi computazione eseguita dal sistema operativo è contenuta dentro un qualche processo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Eseguendo k volte un file eseguibile, si generano k diversi processi",
+            "Per poter lanciare un file eseguibile, è prima necessario aspettare che il comando precedente sia terminato",
+            "Tutti i processi sono sempre in stato di RUNNING",
+            "Un processo è sempre un'istanza di uno script bash"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Un programma scritto in linguaggio C:",
+        "answers": [
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘\r\n’",
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘^M’",
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘0’",
+            "Rappresenta le stringhe come array di caratteri terminate dal carattere ‘\\0’"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU",
+            "Tutte le opzioni sono false",
+            "Linus Torvalds ha scritto il primo kernel di Linux all'inizio degli anni '80",
+            "Richard Stallman ha descritto per primo la licenza GPL"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quali delle seguenti affermazioni è vera?",
+        "answers": [
+            "Nessuna delle opzioni è vera",
+            "È possibile montare un filesystem solo se è dichiarato nel file /etc/fstab",
+            "È possibile montare un filesystem solo se è dichiarato nel file /etc/mtab",
+            "Ad ogni filesystem corrisponde un disco fisico o parte di esso (partizione)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto?",
+        "answers": [
+            "int fd = open(NOMEFILE, O_WRONLY | O_CREAT, 0666);",
+            "int fd = open(NOMEFILE, O_WRONLY | O_TRUNC);",
+            "int fd = open(NOMEFILE, O_WRONLY);",
+            "int fd = open(NOMEFILE, O_WRONLY | O_CREAT | O_TRUNC, 0666);"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": "FILE *stream = fopen(NOMEFILE, \"w\");"
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "Chiamando la syscall select, è possibile monitorare un insieme di file descriptor, ed essere notificati non appena ce n'è uno che è diventato disponibile per un'operazione di lettura o scrittura",
+            "Per richiedere un lock su un file (o su una porzione di esso), occorre chiamare la syscall ioctl",
+            "È possibile usare la syscall select sia in modo bloccante che in modo non bloccante",
+            "Le syscall ioctl e fcntl ammettono 2 o 3 argomenti, a seconda dell'operazione"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui segnali Linux è vera?",
+        "answers": [
+            "Tutti i segnali, se non opportunamente catturati, provocano la terminazione del processo, con l'eccezione del segnale STOP",
+            "Per un processo è sempre possibile ridefinire il comportamento di un qualsiasi segnale",
+            "È possibile per un qualunque processo inviare un segnale ad un qualsiasi altro processo dello stesso utente",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sugli errori delle syscall di Linux è vera?",
+        "answers": [
+            "Per stampare su stderr la spiegazione di un errore verificatosi in una syscall, il cui nome sia contenuto nella variabile syscall_name (di tipo char *), si può effettuare la seguente chiamata: perror(\"Si e' verificato il seguente errore nella chiamata a %s\", syscall_name);",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall si può effettuare la seguente chiamata: printf(\"%s\\n\", strerror(errno));",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è sufficiente chiamare perror",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è necessario scrivere uno switch sulla variabile globale errno"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto?",
+        "answers": [
+            "int fd = open(\"file_esistente.txt\", O_RDONLY)\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = lseek(fd, 0, SEEK_END);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = lseek(fd, 0, SEEK_CUR);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = lseek(fd, -100, SEEK_END);"
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = ltell(fd);"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\", \"r\");\r\nfseek(stream, -100, SEEK_END);\r\nlong pos = ftell(stream);"
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui comandi della bash è vera?",
+        "answers": [
+            "Il comando cat stringa può essere usato per scrivere stringa su stdout",
+            "Eseguendo il comando echo `date` viene stampata la data e l'ora corrente (secondo l'orologio di sistema)",
+            "Il comando man cmd restituisce in sequenza tutte le pagine di manuale per il comando cmd contenute nelle varie sezioni del manuale",
+            "Il comando clear può essere usato per pulire completamente lo schermo: dopo l'esecuzione, il terminale non conterrà alcuna scritta"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Il linguaggio C:",
+        "answers": [
+            "Richiede che i programmi siano sempre scritti in file con estensione .c",
+            "Nasce per risolvere le ambiguità e i problemi di portabilità su architetture diverse di cui soffrono gli altri linguaggi di programmazione finora noti",
+            "È stato definito come linguaggio Open Source da Dennis Ritchie",
+            "È stato definito presso i laboratori di ricerca di una compagnia telefonica americana"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle funzioni malloc, calloc, realloc e free è falsa?",
+        "answers": [
+            "Le due chiamate calloc(N, sizeof(int)) e realloc(NULL, N*sizeof(int)) hanno sempre lo stesso effetto",
+            "Le due chiamate malloc(N*sizeof(int)) e realloc(NULL, N*sizeof(int)) hanno sempre lo stesso effetto",
+            "Il primo argomento di realloc, quando non NULL, deve contenere il risultato di una precedente chiamata a malloc, calloc o realloc",
+            "I risultati di malloc, calloc e realloc possono essere passati alla funzione free per poter essere riallocati da future malloc, calloc e/o realloc. Calloc oltre ad allocare memoria la inizializza a 0, realloc(NULL,size) ha l’effetto di una malloc ma non inizializza."
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti sistemi operativi non è un antenato di Linux?",
+        "answers": [
+            "Unix",
+            "Le altre risposte contengono tutte degli antenati di Linux",
+            "MacOSX",
+            "MULTICS"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il comando. Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "L'azione non è specificata correttamente, quindi la bash restituirà un messaggio d'errore",
+            "Il comando stampa su schermo tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente della directory Documenti",
+            "Il comando modifica tutti i tempi (atime, mtime e ctime) di tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente della directory Documenti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "find Doc* \\( -name 'Doc*' -a -type d \\) -o -newer Documenti -exec touch '{}' \\;"
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulla syscall fork è falsa?",
+        "answers": [
+            "Ritorna 2 valori diversi a seconda che si tratti del processo padre o del processo figlio",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è lo stack delle chiamate",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è il PID",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è il PPID"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui comandi cmp, diff e patch è vera?",
+        "answers": [
+            "L'opzione -b ha lo stesso significato sia per diff che per cmp",
+            "È possibile usare il comando patch solo se si ha l'output del comando diff",
+            "È possibile usare il comando patch solo se si ha, indifferentemente, l'output del comando diff o del comando cmp",
+            "L'opzione -i di cmp permette di considerare come uguali le differenze sul solo minuscolo/maiuscolo"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall link(oldpath, newpath) ha lo stesso effetto del comando bash \"ln oldpath newpath\"",
+            "La syscall unlink(nomefile) ha lo stesso effetto del comando bash \"rm nomefile\"",
+            "La syscall unlink(nomefile) rimuove sempre il contenuto di nomefile dal disco, se nomefile è un file regolare",
+            "La syscall symlink(oldpath, newpath) ha lo stesso effetto del comando bash ln -s oldpath newpath"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Ciascun job è composto al massimo da un processo",
+            "Per vedere i jobs in foreground, è sufficiente usare il comando jobs",
+            "Quando un processo in foreground termina, la bash stampa il job id del processo e la ragione della terminazione"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulla syscall sigaction è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Permette di definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Chiamandola ripetutamente, e passandole al primo argomento via via tutti i segnali disponibili, è possibile definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Permette di definire quali segnali vanno ignorati finché l'handler del segnale è in esecuzione"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulla syscall sigaction è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Permette di definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Permette, tramite il campo sa_mask della struttura struct sigaction, di definire quali segnali vanno ignorati finché l'handler del segnale è in esecuzione",
+            "Chiamandola ripetutamente, e passandole al primo argomento via via tutti i segnali disponibili, è possibile definire una funzione che viene eseguita qualsiasi segnale arrivi al processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di voler lanciare in background i comandi cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "cmd1 & cmd2;",
+            "( cmd1; cmd2 ) &",
+            "cmd1; cmd2 &"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di voler lanciare in background i comandi cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "cmd1 & cmd2 &",
+            "Nessuna delle altre opzioni è corretta",
+            "cmd1 & cmd2;",
+            "( cmd1; cmd2 ) &"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando \"time\" è falsa?",
+        "answers": [
+            "Il comando /usr/bin/time cmd ha anche l'effetto di eseguire il comando cmd",
+            "Il comando /usr/bin/time cmd può solo mostrare il tempo (di CPU, di sistema, e reale)",
+            "Esistono 2 comandi time: uno è una keyword della bash e l'altro corrisponde ad un file eseguibile (solitamente /usr/bin/time)",
+            "Il comando time cmd, eseguito dalla bash, può solo mostrare il tempo (di CPU, disistema, e reale)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall wait e waitpid è falsa?",
+        "answers": [
+            "Se una chiamata wait(&status); ha successo, il valore di status coincide con l'exit status del processo figlio appena terminato",
+            "Ogni chiamata wait(&status); è equivalente alla chiamata waitpid(-1, &status, 0)",
+            "Le chiamate alla wait sono sempre bloccanti",
+            "Le chiamate alla waitpid possono non essere bloccanti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Sia mylink un hard link al file myfile (ln myfile mylink). Quale di queste affermazioni è vera?",
+        "answers": [
+            "myfile e mylink hanno dimensione diversa",
+            "myfile e mylink hanno lo stesso numero inode",
+            "myfile e mylink hanno un diverso numero di inode"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponendo di essere “loggato” in una shell come utente1. Quali dei seguenti e’ un path assoluto? (2 giuste)",
+        "answers": [
+            "dir1/dir11/dir112/filename",
+            "~/utente1/dir1/dir11/dir112/filename",
+            "~/dir1/dir11/dir112/filename"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Supponendo di essere “loggato” in una shell come utente1. Quali dei seguenti e’ un path assoluto? (2 giuste)",
+        "answers": [
+            "dir1/dir11/dir112/filename",
+            "~/utente1/dir1/dir11/dir112/filename",
+            "~/dir1/dir11/dir112/filename"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga che nel sistema esiste un gruppo \"studente\". Si supponga di voler creare \"utente1\", e di volerlo aggiungere al gruppo \"studente\". Quale dei seguenti comandi è corretto?"
+        "answers": [
+            "adduser utente1; adduser utente1 studente",
+            "adduser utente1 utente1 studente",
+            "adduser utente1 studente"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si considerino le seguenti dichiarazioni di variabili. Quale delle seguenti assegnazioni è corretta per far si che \"ptr\" contenga il puntatore al vettore \"vect\"?",
+        "answers": [
+            "ptr = vect",
+            "ptr = &vect",
+            "ptr = vect[1]"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "int vect[10];\r\nint *ptr = NULL"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice. Quale blocco di codice (tra Bloccco_1,  Blocco_2 e  Blocco_3) verra' eseguito nel caso in cui la fork non vada a buon fine?",
+        "answers": [
+            "Blocco_1",
+            "Blocco_3",
+            "Blocco_2"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "pid_t pID = fork();\r\nif (pID == 0) { Blocco_1;\r\n} else if (pID < 0) { Blocco_2;\r\n} else { Blocco_3; }"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice; quando termina il ciclo for?",
+        "answers": [
+            "Termina solo se n1 è uguale a n2",
+            "Quando i raggiunge il più grande tra n1 e n2",
+            "Quando i raggiunge il più piccolo tra n1 e n2"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "for (i=0;((i<n1)&&(i<n2));i++)\r\n       m2[i]=m1[i];"
+    },
+    {
+        "question": "[C] A seguito di una chiamata a fork(2), quale dei seguenti attributi del processo padre non è ereditato dal processo figlio?",
+        "answers": [
+            "groups id",
+            "coda dei segnali",
+            "descrittori dei file"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice; per visualizzare su stdout i permessi di accesso a \"filename\", quale tra le seguenti opzioni è la più appropriata?",
+        "answers": [
+            "printf(\"New File mode %x\\n\",s.st_mode);",
+            "printf(\"New File mode %o\\n\",s.st_mode);",
+            "printf(\"New File mode %s\\n\",s.st_mode);"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": "strct stat *s;\r\nfd=open(\"filename\");\r\nfchmod(fd,00744);\r\nfstat(fd,s);"
+    },
+    {
+        "question": "[C] Si consideri il seguente frammento di codice; quali valori assumeranno le variabili r ed r1 dopo l'esecuzione?",
+        "answers": [
+            "r = r1 = 4",
+            "r = 6 e r1 = 4",
+            "r = 4 e r1 = 6"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "int n=2;\r\nint r=2 * (n++);\r\nn=2;\r\nint r1=2 * (++n);"
+    },
+    {
+        "question": "[C] Supponiamo di avere le seguenti variabili; quale delle seguenti espressioni è falsa?",
+        "answers": [
+            "x & y == 7",
+            "x | y == 7",
+            "x || y == x & y",
+            "nessuna delle precedenti"
+        ],
+        "correct": "d",
+        "answers_have_code": 1,
+        "code": "int x = 1, y = 7;"
+    },
+    {
+        "question": "[C] Per visualizzare l'atime di un file, quale dei seguenti comandi è corretto?",
+        "answers": [
+            "ls -lc nomefile",
+            "ls -lu nomefile",
+            "ls -la nomefile"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] I premessi di accesso del file eseguibile /usr/bin/passwd sono 4755/-rwsr-xr-x. Cosa significa?",
+        "answers": [
+            "Il bit SetUid non e' settato",
+            "Lo sticky bit e' settato",
+            "Il bit SetUid e' settato"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si assuma di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e supponga di eseguire la sequenza di comandi che segue (\"shell_i\": cmd indica che cmd e’ eseguitto nella shell_i, i=1,2). Quale e’ il loro effetto?"
+        "answers": [
+            "Il processo xterm viene messo nello stato stopped (T)",
+            "Il processo xterm viene terminato con segnale SIGINT",
+            "Il processo xterm viene messo in background"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "shell_1: xterm\r\nshell_2: ps -C xterm\r\n#restituisce xtermPID\r\nshell_2: kill -s SIGINT xtermPID"
+    },
+    {
+        "question": "[C] Si supponga di avere un file di testo (filein) contenente 1000 caratteri e di voler copiare in un altro file (fileout) 100 caratteri a partire dal decimo. Quale di questi comandi è corretto?",
+        "answers": [
+            "cp -n10 -i100 filein fileout",
+            "dd if=filein of=fileout bs=1 skip=10 count=100",
+            "dd if=filein of=fileout bs=100 skip=10 count=1"
+        ],
+        "correct": "b",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Sia mylink un soft link al file myfile (ln -s myfile mylink). Quale di queste affermazioni è vera?",
+        "answers": [
+            "myfile e mylink hanno un diverso numero di inode",
+            "myfile e mylink hanno lo stesso numero inode",
+            "myfile e mylink hanno la stessa dimensione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si consideri il seguente codice. Come faccio a sapere se il file \"filename\" è un link?",
+        "answers": [
+            "S_ISLINK(s) == 1",
+            "s.st_size == 0",
+            "s.st_nlink == 1"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "struct stat *s;\r\nfd=open(\"filename\");\r\nfstat(fd, s);"
+    },
+    {
+        "question": "[C] Quale tra i seguenti comandi è il modo più corretto di verificare a quali gruppi appartiene un utente?",
+        "answers": [
+            "nessuno dei due",
+            "C2",
+            "C1"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "C1) groups nomeutente\r\nC2) cat /etc/groups | grep nomeutente"
+    },
+    {
+        "question": "[C?] Dato il codice seguente, qual è l'output?",
+        "answers": [
+            "BazingaBazingaBazingaBazingaBazingaBazingaBazingaBazinga",
+            "BazingaBazingaBazingaBazingaBazingaBazinga",
+            "BazingaBazingaBazingaBazingaBazinga",
+            "BazingaBazingaBazingaBazingaBazingaBazingaBazinga"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "#include<stdio.h>\r\n\r\nvoid knock_knock(char* s) {\r\n       while (*s++ != '\\0')\r\n               printf(\"Bazinga\");\r\n}\r\n\r\nint main() {\r\n    int data[5] = { -1, -3, 256, -4, 0 };\r\n    knock_knock((char *) data);\r\n    return 0;\r\n}"
+    },
+    {
+        "question": "[C] Si consideri la seguente funzione f. Cosa produce come risultato quando eseguita?",
+        "answers": [
+            "Genera sempre errore in fase di esecuzione perché non c'è alcun controllo sulla dimensione delle stringhe",
+            "Concatena la stringa src a dest e restituisce dest",
+            "Copia la stringa src in dest e restituisce dest"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "char *f(char* dest, const char* src, size_t n) {\r\n    size_t i;\r\n    for (i = 0; i < n && src[i] != '\\0'; i++) dest[i] = src[i];\r\n    for (; i < n; i++) dest[i] = '\\0';\r\n    return dest;\r\n}"
+    },
+    {
+        "question": "[C] Si consideri la seguente funzione f. Cosa produce come risultato quando eseguita?",
+        "answers": [
+            "Genera sempre errore in fase di esecuzione perché non c'è alcun controllo sulla dimensione delle stringhe",
+            "Concatena la stringa src a dest e restituisce dest",
+            "Copia la stringa src in dest e restituisce dest"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "char *f(char* dest, const char* src, size_t n) {\r\n    size_t i; size_t dest_len = strlen(dest);\r\n    for (i = 0; i < n && src[i] != '\\0'; i++) dest[dest_len + i] = src[i];\r\n    for (; i < n; i++) dest[dest_len + i] = '\\0';\r\n    return dest;\r\n}"
+    },
+    {
+        "question": "[C] Per visualizzare contemporaneamente l'access time e status change time di un file, quale dei seguenti comandi è corretto?",
+        "answers": [
+            "stat nomefile",
+            "ls -la nomefile",
+            "ls -lac nomefile"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Cosa produce il seguente comando come risultato?",
+        "answers": [
+            "Visualizza su stdout tutti i gruppi a cui appartiene l'utente \"nomeutente\", incluso il gruppo \"nomeutente\" (se esiste)",
+            "Visualizza su stdout la lista dei gruppi a cui appartiene il gruppo \"nomeutente\" (se esiste)",
+            "Genera un errore in quanto il file /etc/group non esiste"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "cat /etc/group | grep nomeutente"
+    },
+    {
+        "question": "[C] Se una directory ha i permessi di accesso settati come 0222, quali operazioni e’ possibile fare su di essa?",
+        "answers": [
+            "nessuna operazione",
+            "operazioni di scrittura, ed è possibile visualizzarne il contenuto senza vederne gli attributi dei file",
+            "operazioni di scrittura"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulla comunicazione tra processi in Linux è vera?",
+        "answers": [
+            "Per far comunicare qualunque coppia di processi è necessario metterli in pipeling da shell",
+            "Usando la syscall pipe, è possibile far comunicare qualunque coppia di processi",
+            "Nessuna delle opzioni è vera",
+            "Usando le named pipes, è possibile far comunicare solo processi parenti (ad es., padre con figlio)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti linguaggi non è mai stato usato per implementare Unix?",
+        "answers": [
+            "L'assembler del PDP7",
+            "Il B",
+            "Il C",
+            "Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si vuole scrivere un programma equivalente al seguente script. Quale dei seguenti frammenti di codice realizza quanto mostrato?",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "printf(\"Esecuzione in corso...\");\r\nexecl(\"/bin/ls\", \"/bin/ls\", \"-la\", \"/\", NULL);\r\nprintf(\"fatto\\n\");\r\nchar **argv = {\"-la\", \"/\", 0};",
+            "printf(\"Esecuzione in corso...\");\r\nexecv(\"/bin/ls\", \"-la\", \"/\", NULL);\r\nprintf(\"fatto\\n\");",
+            "printf(\"Esecuzione in corso...\");\r\nexecl(\"/bin/ls\", \"/bin/ls\", \"-la\", \"/\");\r\nprintf(\"fatto\\n\")"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "echo -n \"Esecuzione in corso...\"\r\n/bin/ls -la /\r\necho \"fatto\""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui comandi less e more è falsa?",
+        "answers": [
+            "Sono specialmente utili quando si vuole visualizzare un output molto lungo (che non è possibile visualizzare in un'intera schermata di terminale)",
+            "Entrambi permettono di ricercare espressioni regolari",
+            "Per terminarli occorre premere CTRL+C",
+            "Sono entrambi interattivi"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Una directory di un filesystem:",
+        "answers": [
+            "Può contenere solo file regolari e altre directory",
+            "Non può mai contenere degli hard link",
+            "Nessuna delle opzioni è vera",
+            "Ha sempre una directory padre, eventualmente corrisponde a se stessa "
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files e che si trovano nella sezione 2 del manuale è falsa?",
+        "answers": [
+            "Mentre le funzioni della libreria standard possono solo agire solo su file regolari, le syscall di Linux possono agire su tutti i tipi di file (regolari, directory, pipe, ...)",
+            "Le funzioni della libreria standard agiscono su una struttura di tipo FILE *, mentre le syscall agiscono su un file descriptor intero",
+            "Nessuna delle syscall di Linux accetta come argomento input o output formattato stile printf",
+            "Le syscall Linux permettono solamente le seguenti operazioni: apertura, chiusura, scrittura, lettura, posizionamento"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano le directory è falsa?",
+        "answers": [
+            "La syscall readdir, con argomento uguale a quanto ritornato da una precedente opendir avvenuta con successo, ritorna un puntatore ad una struttura struct dirent, che contiene il nome di un file o di una directory contenuta nella directory passata a opendir",
+            "Chiamare la syscall open su una directory può avere successo",
+            "Per poter cambiare il contenuto di una directory occorre aprirla con la syscall opendir",
+            "Per poter leggere il contenuto di una directory occorre aprirla con la syscall opendir"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando kill è falsa?",
+        "answers": [
+            "Per mandare il segnale 9 al processo in background con job id 3, è sufficiente scrivere il comando kill -KILL %3",
+            "Per mandare il segnale SIGTERM al processo con PID 19330, è sufficiente scrivere il comando kill -SIGTERM 19330",
+            "Per mandare il segnale SIGINT al processo in background con job id 3, è sufficiente scrivere il comando kill -`kill -l SIGINT` %3",
+            "Per mandare il segnale 9 al processo con PID 10, è sufficiente scrivere il comando kill -KILL %10"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Per eliminare tutte le linee duplicate in un file di testo (senza preoccuparsi dell'ordinamento delle righe) occorre:",
+        "answers": [
+            "utilizzare congiuntamente i comandi sort e uniq",
+            "utilizzare congiuntamente i comandi cat e grep",
+            "utilizzare il comando uniq con opzione -u",
+            "utilizzare il comando uniq"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle pipe di Linux è vera?",
+        "answers": [
+            "Usando la syscall pipe, vengono automaticamente aperti 2 file descriptor",
+            "Nessuna delle altre opzioni è vera",
+            "Per usare le named pipes, è sempre necessario chiamare la syscall mkfifo",
+            "usando la syscall mkfifo, viene aperto un solo file descriptor"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall chown(nomefile, -1, gid) ha lo stesso effetto del comando bash chgrp gid nomefile",
+            "La syscall mkdir(nomedir, mode) ha lo stesso effetto del comando bash mkdir -m mode nomedir",
+            "La syscall dup2(2, 1) ha l'effetto di ridirigere lo stdout nello stderr",
+            "La syscall stat(nomefile, buf) ha lo stesso effetto del comando bash stat nomefile"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Relativamente alla programmazione bash, quale delle seguenti affermazioni sul carattere # è vera?",
+        "answers": [
+            "Rappresenta sempre l’inizio di un commento, con un'unica eccezione: quando è preceduto dal carattere $",
+            "Se è seguito dal carattere !, non rappresenta mai l’inizio di un commento",
+            "Nessuna delle opzioni è vera",
+            "Se presente in uno script, tutto quello che lo segue è sempre considerato commento."
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall dei processi in Linux è falsa?",
+        "answers": [
+            "La syscall setuid() permette a qualsiasi processo di cambiare il suo real user ID",
+            "La syscall getuid() permette a qualsiasi processo di conoscere il suo real user ID",
+            "La syscall getppid() ritorna il PID del processo che ha generato quello chiamante (o che lo ha adottato)",
+            "La syscall getpid() ritorna il PID del processo chiamante"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando ps è vera?",
+        "answers": [
+            "Senza nessun argomento, mostra tutti i processi lanciati dall'utente attuale nel terminale attuale",
+            "Per ogni processo, mostra sempre il suo PID, indipendentemente dagli argomenti con cui viene lanciato",
+            "Non è possibile usarlo per vedere i processi lanciati dall'utente root",
+            "È possibile usarlo per vedere solo i processi che superano un certo uso della RAM"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Per ogni terminale aperto, ci può essere al massimo un job in background",
+            "Per lanciare un processo in modo tale che non scriva su stdout, lasciando così modo di scrivere altri comandi sulla bash, è sufficiente lanciarlo in background",
+            "Se si vuole dare input da stdin senza redirezioni ad un processo, è necessario lanciarlo in foreground"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Il text segment contiene le istruzioni da eseguire, e non può essere condiviso con altri processi",
+            "Lo stack contiene i dati statici inizializzati ed alcune costanti d'ambiente",
+            "Il process control block (PCB) mantiene le informazioni essenziali di ogni processo, e uno stesso PCB può essere condiviso tra processi diversi"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "I comandi builtin della bash generano sempre nuovi processi",
+            "Per capire se un comando della bash è o no builtin, è sufficiente usare il comando type",
+            "Il comando cd è builtin della bash",
+            "Un comando builtin della bash non corrisponde ad alcun file eseguibile dedicato"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti campi non è presente nel process control block?",
+        "answers": [
+            "Change time",
+            "GID reale ed effettivo",
+            "Nice",
+            "Current working directory"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui comandi della bash è falsa?",
+        "answers": [
+            "Il comando type file mostra il tipo del file file (regolare, directory, etc)",
+            "Il comando whoami mostra lo username dell'utente attualmente loggato nel terminale in cui viene digitato il comando (potrebbe non coincidere con l'utente che ha effettuato il login grafico)",
+            "Il comando id può essere usato per visualizzare i gruppi cui un utente appartiene",
+            "Il comando which cmd mostra qual è il file eseguibile che viene eseguito quando si lancia il comando cmd, ma solo per i comandi che non sono builtin"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall dei processi in Linux è vera?",
+        "answers": [
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere var con la chiamata a getenv(\"valore\");",
+            "Per qualsiasi processo è possibile conoscere il suo ambiente di esecuzione senza effettuare alcuna syscall",
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere valore con la chiamata a setenv(\"var\", \"valore\", 1);"
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere valore con la chiamata a putenv(\"var=valore\");"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Linux è multiutente, perché definisce più utenti, di cui però uno solo può essere loggato su una data macchina",
+            "Linux è multiutente, perché permette a più utenti contemporaneamente di essere loggati sulla stessa macchina",
+            "Linux è multiprocesso, perché permette a più utenti contemporaneamente di essere loggati sulla stessa macchina",
+            "Linux è multiprocesso, perché può essere usato su una macchina con più processori"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Il linguaggio C:",
+        "answers": [
+            "È incompatibile con i Sistemi Operativi della famiglia Windows",
+            "Nessuna delle altre opzioni è vera",
+            "È un linguaggio strutturato e compilato",
+            "È un linguaggio non strutturato e compilato"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti non è un possibile stato di un processo Linux?",
+        "answers": [
+            "Uninterruptible sleep",
+            "Stopped",
+            "Running",
+            "Continued"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti non è un possibile stato di un processo Linux?",
+        "answers": [
+            "Uninterruptible sleep",
+            "Stopped",
+            "Running",
+            "Orphaned"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando top è vera?",
+        "answers": [
+            "Se lanciato con il comando top, per terminarlo è necessario premere CTRL+C",
+            "Il suo output è uguale a quello di ps, ma le opzioni sono diverse",
+            "Se lanciato con il comando top -b, per terminarlo è sufficiente premere il tasto Q",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Per visualizzare i processi attualmente in esecuzione su una determinata bash, è sufficiente usare il comando jobs",
+            "Tutti i processi in background sono in stato Stopped",
+            "Per riportare in foreground un determinato job in background, è sufficiente dare il comando fg sulla bash dove il job è in background, ma solo se tale job è l’attuale “current job” in background",
+            "Per stoppare un processo in foreground, su può sia mandare un segnale SIGTSTP"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di voler vedere, per tutti i processi dell'utente utente, il suo PID, il suo PPID, il comando usato per lanciare il processo (con tutti gli argomenti), la usa occupazione totale di memoria in kB e la sua attuale occupazione di memoria in RAM (senza considerare quindi la parte eventualmente swappata su disco), sempre in kB. Quale dei seguenti comandi è quello corretto?",
+        "answers": [
+            "ps -uutente -o pid,ppid,cmd,rss,vsz",
+            "ps -uutente -o pid,ppid,cmd,rss,sz",
+            "ps -e -o pid,ppid,cmd,vsz,rss",
+            "ps -uutente -o pid,ppid,cmd,vsz,rss"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Ogni risorsa di un sistema Unix, ad eccezione dei processi e periferiche hardware, è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione delle connessioni di rete (socket), è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione dei processi, è rappresentato da un file",
+            "In un sistema Unix tutte le risorse sono rappresentati da un file"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando kill è vera?",
+        "answers": [
+            "È obbligatorio specificare il segnale da inviare, come numero intero",
+            "Lanciato senza nessun argomento, manda SIGKILL all'ultimo processo lanciato",
+            "Può essere usato per ottenere lo stesso risultato tanto del CTRL+C quanto del CTRL+Z",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Ogni processo è identificato da un PID e da un job id, che devono coincidere",
+            "Un job è un comando della bash che prende sempre il controllo dello stdin",
+            "Nessuna delle altre opzioni è vera",
+            "Fissato un istante nell'esecuzione del sistema operativo, ci sarà sempre al massimo un job in foreground, mentre quelli in background possono essere più d'uno"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga che sia appena stata eseguita la seguente riga di codice di un processo. Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Nel processo padre, la variabile pid vale assume 1 solo valore, corrispondente al suo stesso PID",
+            "Nel processo figlio, la variabile pid vale assume 1 solo valore, corrispondente al PID del padre",
+            "C'è un nuovo processo pronto per andare in esecuzione, a meno che la variabile pid non valga -1",
+            "Nel processo padre, la variabile pid assume 2 diversi valori"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "int pid = fork();"
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Il process control block mantiene le informazioni essenziali di ogni processo, è mantenuto su disco e viene swappato in RAM quando il processo va in esecuzione",
+            "Lo heap contiene i dati statici inizializzati ed alcune costanti d'ambiente",
+            "Il text segment contiene le istruzioni da eseguire, e viene sempre mantenuto interamente in RAM",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale dei seguenti linguaggi non è mai stato usato per implementare Unix?",
+        "answers": [
+            "L'assembler del PDP7",
+            "Il B",
+            "Il C",
+            "Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Il file system di Linux è una foresta, ovvero un albero con più radici (una per ogni dispositivo fisico di memoria di massa collegato alla macchina, per esempio hard disk, chiave USB, CD, DVD, ...)",
+            "Nel file system di Linux, ogni nodo interno è un file o una directory, mentre le foglie sono sempre directory",
+            "Nel file system di Linux esistono anche directory (denominate virtuali) che non si trovano su nessun dispositivo fisico di memoria di massa",
+            "Il file system di Linux è gerarchico, perchè per accedere ad un file occorre effettuare una chiamata di sistema al kernel"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Il linguaggio C:",
+        "answers": [
+            "Viene definito per la creazione del primo Sistema Operativo Unix",
+            "Nasce negli anni 70 per sviluppare programmi portabili su diverse architetture hardware",
+            "Nasce come linguaggio di programmazione proprietario per l'implementazione dei programmi sui sistemi DEC PDP-11",
+            "Nasce negli anni 70 come evoluzione del linguaggio B"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quali tra le seguenti affermazioni è vera?",
+        "answers": [
+            "cat -N -6 filename stampa le ultime 6 righe del file filename",
+            "tail -c n filename stampa le ultime n righe del file filename",
+            "cut consente di tagliare un file in gruppi di righe contigue in base a un carattere di spaziatura",
+            "nessuna delle altre risposte è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle applicazioni client-server realizzate tramite socket è vera?",
+        "answers": [
+            "Il client deve sempre chiamare la syscall bind",
+            "Il server deve chiamare la syscall connect",
+            "Il client deve sempre chiamare la syscall listen",
+            "Sia il server che il client devono sempre chiamare la syscall socket"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di voler scrivere un programma immune al CTRL+C. Quali dei seguenti frammenti di codice realizza quanto detto sopra?",
+        "answers": [
+            "signal( SIGTERM, SIG_DFL);",
+            "signal( SIGINT, SIG_DFL);",
+            "signal( SIGINT, SIG_IGN);",
+            "Non è possibile essere immuni al CTRL+C"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": ""
+    },
+        "question": "[C] Quale dei seguenti frammenti di codice è corretto?",
+        "answers": [
+            "int pid = fork();\r\nif (pid == 0) { /* fai qualcosa, sei il figlio */}\r\nelse if (pid > 0) { /* fai qualcosa, sei il padre */}\r\nelse {\r\nperror(\"fork failed\");\r\n}",
+            "int pid = fork();\r\nif (pid == 0) { /* fai qualcosa, sei il padre */}\r\nelse if (pid > 0) { /* fai qualcosa, sei il figlio */}\r\nelse {\r\nperror(\"fork failed\");\r\n}",
+            "int pid = fork();\r\nif (pid < 0) { /* fai qualcosa, sei il figlio */}\r\nelse if (pid > 0) { /* fai qualcosa, sei il padre */}\r\nelse {\r\nperror(\"fork failed\");\r\n}",
+        "Tutte le altre opzioni sono sbagliate"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di voler avere in esecuzione in background i comandi cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "cmd1\r\n#premere Ctrl+Z\r\nbg\r\ncmd2\r\n#premere Ctrl+Z\r\nbg",
+            "cmd1\r\n#premere Ctrl+Z\r\nfg\r\ncmd2\r\n#premere Ctrl+Z\r\nfg",
+            "cmd1\r\n#premere Ctrl+Z\r\nbg\r\ncmd2\r\n#premere Ctrl+Z",
+            "cmd1\r\n#premere Ctrl+Z\r\ncmd2\r\n#premere Ctrl+Z\r\nfg"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Ignorando eventuali memory leaks, quale dei seguenti frammenti di codice può portare ad un segmentation fault?",
+        "answers": [
+            "char *p = malloc(10*sizeof(char));\r\np[1] = 'a';\r\nfree(p);",
+            "char *p = malloc(10*sizeof(char));\r\np[9] = 'a';\r\np = NULL;\r\np = realloc(p, 10*sizeof(char));\r\nfree(p);",
+            "char *p = calloc(10, sizeof(char));\r\np[9] = 'a';\r\np = realloc(p, 10*sizeof(char));\r\nfree(p);",
+            "char *p = calloc(10, sizeof(char));\r\np[9] = 'a';\r\nfree(p);\r\np = realloc(p, 10*sizeof(char));\r\nfree(p);"
+        ],
+        "correct": "d",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere il seguente frammento di codice ed il seguente file. Quale dei seguenti frammenti di codice ha lo stesso effetto? (immagina fare questa domanda in 45 secondi)",
+        "answers": [
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var),\r\nsizeof(char));\r\nread(fd, buf, sizeof(var));\r\nvar = atoi(buf);\r\nread(fd, buf, sizeof(var2));\r\nvar2 = atof(buf);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nread(fd, &var, sizeof(var));\r\nread(fd, &var2, sizeof(var2));",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar buf[4];\r\nread(fd, buf, sizeof(var));\r\nvar = atoi(buf);\r\nread(fd, buf, sizeof(var2));\r\nvar2 = atof(buf);"
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nfscanf(fd, \"%d\\n%lf\\n\", &var, &var2);"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "frammento:\r\nFILE *stream = fopen(\"file_esistente.txt\", \"r\");\r\nint var;\r\ndouble var2;\r\nfscanf(stream, \"%d\\n%lf\\n\", &var, &var2);\r\n\r\nfile_esistente.txt:\r\n4567\r\n34.56"
+    },
+    {
+        "question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto? (immagina fare questa domanda in 45 secondi)",
+        "answers": [
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var) ? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\\n\", var);\r\nwrite(1, buf, sizeof(var) + 1);sprintf(buf, \"%lf\\n\", var2);\r\nwrite(1, buf, sizeof(var2) + 1);",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar buf[4];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));"
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall chdir ha l'effetto di cambiare l'esecuzione delle sole chiamate ad open che usano path relativi come primo argomento",
+            "La syscall chdir(path) ha lo stesso effetto del comando bash cd path lanciato in una sottoshell",
+            "La syscall rename(oldpath, newpath) ha lo stesso effetto del comando bash cp oldpath newpath",
+            "La syscall chroot ha l'effetto di cambiare l'esecuzione delle sole chiamate ad open che usano path assoluti come primo argomento"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Quale delle seguenti affermazioni sul comando find è falsa?",
+        "answers": [
+            "È possibile restringere la ricerca ai soli file che sono link simbolici",
+            "È obbligatorio che gli starting point siano delle directory",
+            "È possibile cercare nomi di file che rispettino un dato pattern o una data regular expression",
+            "È possibile cercare anche directory, e non solo file"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "[C] Si supponga di avere il seguente frammento di codice, dove somefunction ritorna un intero. Quale dei seguenti frammenti di codice scrive gli stessi caratteri sullo stdout, senza errori? (immagina fare questa domanda in 45 secondi)",
+        "arrows": [
+            "int var = somefunction()%100;\r\nchar *buf = (char *)calloc(sizeof(int), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%.2lf\", (double)var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nfree(buf);",
+            "int var = somefunction()%100;\r\ndouble var2 = (double)var;\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));",
+            "int var = somefunction()%100;\r\nchar buf[7];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%.2lf\", (double)var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);",
+            "int var = somefunction()%100;\r\nchar *buf;\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%.2lf\", (double)var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);"
+        ],
+        "correct": "c",
+        "answers_have_code": 1,
+        "code": "int var = somefunction()%100;\r\nprintf(\"%d\\n%.2lf\\n\", var, (double)var);"
+    }
+]
