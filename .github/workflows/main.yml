@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '${{ github.workspace }}/UniQuizzesFinal/json/**.json'
+      - '${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal/json/**.json'
   pull_request:
     branches: [ master ]
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
         run: ./start.sh --from-local
 
       - name: Move
-        run: mv ${{ github.workspace }}/UniQuizzesFinal .
+        run: mv ${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal .
 
       - uses: actions/checkout@v2
       - name: json-syntax-check
@@ -34,8 +34,8 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: "${{ github.workspace }}/UniQuizzesFinal"
-          destination-github-username: "dag7dev"
-          destination-repository-name: "UniQuizzes"
+          source-directory: '${{ env.GITHUB_WORKSPACE }}/UniQuizzesFinal'
+          destination-github-username: 'dag7dev'
+          destination-repository-name: 'UniQuizzes'
           user-email: dag7@protonmail.com
           target-branch: gh-pages
