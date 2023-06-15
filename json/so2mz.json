@@ -457,7 +457,7 @@
 		],
 		"correct": "b",
 		"answers_have_code": 0,
-		"code": "Frammento_1\r\n   close(2);if (fopen(\".\",\"r\")) {\r\n                perror(\"main\");\r\n}\r\nFrammento_2\r\n                               close(2);\r\nif (fopen(\".\",\"r\")) {\r\n                                              printf(\"main:%s\\n\", strerror(errno));\r\n}"
+		"code": "Frammento_1\r\nclose(2);\r\nif (fopen(\".\",\"r\")) {\r\n    perror(\"main\");\r\n}\r\n\r\nFrammento_2\r\nclose(2);\r\nif (fopen(\".\",\"r\")) {\r\n    printf(\"main:%s\\n\", strerror(errno));\r\n}"
 	}, {
 		"question": "[C] Consideriamo queste due line di codice. Quali delle seguenti affermazioni e' corretta?",
 		"answers": [
@@ -1251,17 +1251,6 @@
 		"answers_have_code": 0,
 		"code": ""
 	}, {
-		"question": "[C] Quale dei seguenti linguaggi non è mai stato usato per implementare Unix?",
-		"answers": [
-			"L'assembler del PDP7",
-			"Il B",
-			"Il C",
-			"Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
-		],
-		"correct": "d",
-		"answers_have_code": 0,
-		"code": ""
-	}, {
 		"question": "[C] Si vuole scrivere un programma equivalente al seguente script. Quale dei seguenti frammenti di codice realizza quanto mostrato?",
 		"answers": [
 			"Nessuna delle altre opzioni è corretta",
@@ -1412,7 +1401,7 @@
 			"Lo stack contiene i dati statici inizializzati ed alcune costanti d'ambiente",
 			"Il process control block (PCB) mantiene le informazioni essenziali di ogni processo, e uno stesso PCB può essere condiviso tra processi diversi"
 		],
-		"correct": "b",
+		"correct": "a",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -1520,7 +1509,7 @@
 			"Per visualizzare i processi attualmente in esecuzione su una determinata bash, è sufficiente usare il comando jobs",
 			"Tutti i processi in background sono in stato Stopped",
 			"Per riportare in foreground un determinato job in background, è sufficiente dare il comando fg sulla bash dove il job è in background, ma solo se tale job è l'attuale \"current job\" in background",
-			"Per stoppare un processo in foreground, su può sia mandare un segnale SIGTSTP"
+			"Per stoppare un processo in foreground, si può sia mandare un segnale SIGTSTP che premere CTRL+Z in una qualsiasi shell"
 		],
 		"correct": "c",
 		"answers_have_code": 0,
@@ -1705,13 +1694,13 @@
 	"question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto? (immagina fare questa domanda in 45 secondi)",
 	"answers": [
 		"int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));",
-		"int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var) ? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\\n\", var);\r\nwrite(1, buf, sizeof(var) + 1);sprintf(buf, \"%lf\\n\", var2);\r\nwrite(1, buf, sizeof(var2) + 1);",
+		"int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var) ? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\\n\", var);\r\nwrite(1, buf, sizeof(var) + 1);\r\nsprintf(buf, \"%lf\\n\", var2);\r\nwrite(1, buf, sizeof(var2) + 1);",
 		"int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);",
 		"int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar buf[4];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);"
 	],
 	"correct": "c",
 	"answers_have_code": 1,
-	"code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));"
+	"code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nfprintf(stdout, \"%d\\n%lf\\n\", var, var2);"
 }, {
 	"question": "[C] Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
 	"answers": [
@@ -1736,7 +1725,7 @@
 	"code": ""
 }, {
 	"question": "[C] Si supponga di avere il seguente frammento di codice, dove somefunction ritorna un intero. Quale dei seguenti frammenti di codice scrive gli stessi caratteri sullo stdout, senza errori? (immagina fare questa domanda in 45 secondi)",
-	"arrows": [
+	"answers": [
 		"int var = somefunction()%100;\r\nchar *buf = (char *)calloc(sizeof(int), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%.2lf\", (double)var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nfree(buf);",
 		"int var = somefunction()%100;\r\ndouble var2 = (double)var;\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));",
 		"int var = somefunction()%100;\r\nchar buf[7];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%.2lf\", (double)var);\r\nwrite(1, buf, strlen(buf));\r\nwrite(1, \"\\n\", 1);",
