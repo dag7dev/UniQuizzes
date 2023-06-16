@@ -1734,4 +1734,71 @@
 	"correct": "c",
 	"answers_have_code": 1,
 	"code": "int var = somefunction()%100;\r\nprintf(\"%d\\n%.2lf\\n\", var, (double)var);"
-}]
+},
+ {
+    "question": "Quali sono i permessi MINIMI che devono essere assegnati ad una directory affinché sia possibile: 1) leggere il contenuto della directory inclusi gli attributi dei file; 2) impostare la directory come cwd; 3) attraversare la directory?",
+    "answers": [
+        "r w x",
+        "r - x",
+        "r w -"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Assumete di voler visualizzare il numero di inode di un file, quale dei seguenti comandi non produce l'output desiderato?",
+    "answers": [
+        "ls -l -i nomefile",
+        "stat -f nomefile",
+        "stat nomefile"
+    ],
+    "correct": "b",
+    "answers_have_code": 1,
+    "code": ""
+},
+{
+    "question": "Supponiamo di eseguire il comando seguente; quali permessi di accesso vengono impostati al file \"nomefile\"?",
+    "answers": [
+        "da errore e non nmodifica i permessi di accesso di \"nomefile\"",
+        "- r w S r w S r - -",
+        "- r w s r w s r - -"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": "chmod 6774 nomefile"
+},
+{
+    "question": "Si consideri il seguente frammento di codice; quando termina il ciclo for?",
+    "answers": [
+        "quando il valore di i è uguale ad n2",
+        "quando il valore di i è uguale ad n1",
+        "non termina perche n1 è diverso da n2"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "int i, n1=10,n2=100;\r\n\r\nfor (i=0;((i<n1)&&(i<n2));i++)\r\n    m2[i]=m1[i];"
+},
+{
+    "question": "Quale delle seguenti dichiarazioni di variabile è non valida, generando quindi un errore di compilazione?",
+    "answers": [
+        "int goto=1;",
+        "int goTo=1;",
+        "int go_to=1;"
+    ],
+    "correct": "a",
+    "answers_have_code": 1,
+    "code": ""
+},
+{
+    "question": "Dopo aver eseguito il comando seguente, cosa conterrà il file \"hw\"?",
+    "answers": [
+        "L'input per il debugger relativo al file helloworld.c",
+        "Il precompilato di helloworld.c",
+        "Un file identico ad helloworld.c"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "cpp helloworld.c > hw"
+}
+]
