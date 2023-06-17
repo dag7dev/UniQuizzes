@@ -928,7 +928,7 @@
 			"Per vedere i jobs in foreground, è sufficiente usare il comando jobs",
 			"Quando un processo in foreground termina, la bash stampa il job id del processo e la ragione della terminazione"
 		],
-		"correct": "c",
+		"correct": "a",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -1581,7 +1581,7 @@
 		"answers_have_code": 0,
 		"code": ""
 	}, {
-		"question": "[C] Quale dei seguenti linguaggi non è mai stato usato per implementare Unix?",
+		"question": "[C] Quale dei seguenti linguaggi non è mai stato usato per implementare Unix? (DUBBIO)",
 		"answers": [
 			"L'assembler del PDP7",
 			"Il B",
@@ -1800,5 +1800,290 @@
     "correct": "b",
     "answers_have_code": 0,
     "code": "cpp helloworld.c > hw"
+},{
+    "question": "Supponiamo di aver dichiarato ed inizializzato le seguenti variabili; quali delle seguenti espressioni è vera?",
+    "answers": [
+        "(x & y) == (x && y)",
+        "(x && y) == 7",
+        "(x & y) == (x | y)"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "int x = 1, y = 7;"
+},
+{
+    "question": "Che cosa si intende per sudoer, nel gergo Linux?",
+    "answers": [
+        "Un comando per essere aggiunti al gruppo sudo",
+        "Un gruppo che permette ai suoi membri di eseguire comandi come super-utente",
+        "Un utente che appartiene al gruppo di utenti sudo"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Assumiamo che quando viene creata una directory i suoi permessi di accesso sono 0644. Quale sara la umask?",
+    "answers": [
+        "0644",
+        "0022",
+        "0133"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Quando si esegue il comando ls -l viene mostrato, come prima informazione, il totale. Quale è il significato di questo campo?",
+    "answers": [
+        "Dimensione della directory espressa in numero di blocchi su disco",
+        "Dimensione della directory espressa in numero di file contenuti in essa e in tutte le sotto-directory",
+        "Numero totale di sotto directory"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Dopo la sua esecuzione, quale sarà il valore contenuto in num?",
+    "answers": [
+        "5",
+        "10",
+        "0x123AF345 (indirizzo di memoria)"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "int num = 5;\r\nint *numPtr;\r\nnumPtr = &num;\r\n*numPtr = 10;"
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Quale delle seguenti espressioni sarà vera una volta eseguito il codice?",
+    "answers": [
+        "r < r1",
+        "r > r1",
+        "r == r1"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "int n= 2;\r\nint r= 2 * (n++);\r\nint r1 = 2 * (++n)"
+},
+{
+    "question": "Si consideri il comando seguente. Quali delle seguenti affermazioni è falsa?",
+    "answers": [
+        "Il comando produce un file oggetto a partire da un file precompilato",
+        "Il comando produce un file oggetto",
+        "Il comando produce un file eseguibile"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "gcc -c file.c -o file.o"
+},
+{
+    "question": "Cosa produce il seguente comando?",
+    "answers": [
+        "Un file eseguibile a.out",
+        "Nulla, la sintassi è sbagliata",
+        "Fa il linking dei file oggetto ma non produce nessun risultato finché non si specifica l'output"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "gcc file.o file2.o file3.o"
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Cosa fa una volta eseguito?",
+    "answers": [
+        "stampa il valore di num almeno una volta",
+        "cicla infinitamente se num != 0",
+        "stampa il valore di num se num != 0"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "scanf(\"%d\", &num);\r\nwhile(num != 0){\r\n printf(\"%d\\n\", num);\r\nscanf(\"%d\", &num);\r\n}"
+},
+{
+    "question": "Cosa produce il seguente comando come risultato?",
+    "answers": [
+        "Visualizza su stdout tutti i gruppi a cui appartiene l'utente \"nomeutente\", incluso il gruppo \"nomeutente\" (se esiste)",
+        "Visualizza su stdout la lista dei gruppi a cui appartiene il gruppo \"nomeutente\" (se esiste)",
+        "Genera un errore in quanto il file /etc/group non esiste"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "cat /etc/group | grep nomeutente"
+},
+{
+    "question": "Nel caso in cui la seguente system call sia invocata con valore di pid uguale a -1, qual è il suo comportamento?",
+    "answers": [
+        "Attende la terminazione di qualunque processo figlio il cui gruppo ID del processo sia diverso da quello del processo chiamante",
+        "Attende la terminazione di un qualunque processo figlio",
+        "Attende la terminazione di qualunque processo figlio il cui gruppo ID del processo sia uguale a quello del processo chiamante"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "pid_t waitpid(pid_t pid, int *status, int options);"
+},
+{
+    "question": "Quali dei seguenti comandi permette di creare un intero path di directory?",
+    "answers": [
+        "mkdir /dir1/dir2/dir3",
+        "mkdir -p /dir1/dir2/dir3",
+        "mkdir -m /dir1/dir2/dir3"
+    ],
+    "correct": "b",
+    "answers_have_code": 1,
+    "code": ""
+},
+{
+    "question": "Supponiamo di avere un file di nome filenmae, e di creare un link a filename con il comando seguente. Quale delle seguenti affermazioni è vera?",
+    "answers": [
+        "filename e link1 hanno lo stesso inode",
+        "link1 occupa zero blocchi su disco anche se filename ne occupa un numero diverso da 0",
+        "filename e link1 hanno inode diverso"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "ln filename link1"
+},
+{
+    "question": "Quali dei seguenti comandi change dir usa un path assoluto?",
+    "answers": [
+        "cd ../studente/download",
+        "cd Immagini/../Immagini/faces",
+        "cd ~/Lezione1/esempi/filesystem"
+    ],
+    "correct": "c",
+    "answers_have_code": 1,
+    "code": ""
+},
+{
+    "question": "Supponiamo di avere il seguente makefile (memorizzato in un file di nome makefile). In quali condizioni viene eseguito il target sort_file_int?",
+    "answers": [
+        "Sempre, se invochiamo il comando \"make sort_file_int\"",
+        "Se invochiamo il comando \"make sort_file_int\". e se sort_file_int.c perché stato modificato dopo la data di creazione di sort_file_int.o",
+        "Il target sort_file_int non verrà mai eseguito"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "merge_sorted_lists: merge_sorted_lists.c\r\n    gcc -Wall -Wextra -O3 merge_sorted_lists.c -o merge_sorted_lists\r\nsort_file_int: sort_file_int.c\r\n    gcc -Wall -Wextra -O3 sort_file_int.c -o sort_file_int\r\n.PHONY: clean\r\nclean:\r\n    rm -f *.o merge_sorted_lists"
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Assumiamo che, in fase di esecuzione, la prima scanf legge su stdin la sequenza \"1 w\". Quale sarà il valore di nread, dopo l'esecuzione della seconda scanf?",
+    "answers": [
+        "0",
+        "2",
+        "dipende dall'input letto su stdin dalla seconda scanf"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "int x, y, nread;\r\nfloat xx, yy;\r\nnread=scanf(\"%d %d\",&x, &y);\r\nprintf(\"x=%d, y=%d, nread=%d \\n\",x,y,nread);\r\nprintf(\"xx=%f, yy=%f, nread=%d \\n\",xx,yy,nread);\r\nnread=scanf(\"%f %f\",&xx, &yy);"
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Le chiamate di funzione a riga 10, 11, 12 e 13 vengono eseguite tutte?",
+    "answers": [
+        "Si",
+        "Viene eseguita solo la riga 10, poi genera errore ed il programma termina",
+        "No, nessuna"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": "1: #include <stdio.h>\r\n2:  ....\r\n3: \r\n4:  char str [80];\r\n5:  float f;\r\n6:  FILE * pFile;\r\n7:\r\n8:  pFile = fopen (\"myfile.txt\",\"w+\");\r\n9:  fprintf (pFile, \"%f %s\\n\", 3.1416, \"PI\");\r\n10: close(pFile);\r\n11: rewind (pFile);\r\n12: fscanf (pFile, \"%f\", &f);\r\n13: fscanf (pFile, \"%s\", str);"
+},
+{
+    "question": "Cosa fa il seguente segmento di codice?",
+    "answers": [
+        "stampa il valore di num se num è diverso da 0",
+        "Il ciclo do-while entra in un loop infinito",
+        "stampa il valore di num almeno una volta"
+    ],
+    "correct": "",
+    "answers_have_code": 0,
+    "code": "scanf(“%d”,&num);\r\ndo {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n} while(num!=0);"
+},
+{
+    "question": "Supponiamo di aver inizializzato un puntatore ad una variabile intera in questo modo. Quale delle seguenti istruzioni assegna il valore 10 a num?",
+    "answers": [
+        "ptrnum = (int *) 10;",
+        "ptrnum = 10;",
+        "*ptrnum = 10;"
+    ],
+    "correct": "c",
+    "answers_have_code": 1,
+    "code": "int num=5, *ptrnum;\r\nptrnum=&num;"
+},
+{
+    "question": "Si consideri il seguente frammento di codice. Se la sequenza letta in input dalla scanf è \"1 3 7 2 12 w\" Quale valore assumerà scoreCount al termine del ciclo?",
+    "answers": [
+        "Il ciclo non termina. La scanf va in errore quando viene letta la w",
+        "5",
+        "6"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "int scoreCount, a;\r\nfor(scoreCount=0; scanf(\"%d\",&a)==1; scoreCount++);"
+},
+{
+    "question": "Si consideri il seguente frammento di codice; che valore conterrà la variabile K, al termine dell'esecuzione del frammento di codice?",
+    "answers": [
+        "11",
+        "L'esecuziuone del frammento di codice non termina perché Il ciclo entra in un loop infinito",
+        "10"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": "int K=10, c=0, p=1;\r\nwhile (++K > 10)\r\n c++;p--;"
+},
+{
+    "question": "In quale situazione le system call dup(2) e dup2(2) hanno lo stesso comportamento?",
+    "answers": [
+        "Nel caso in cui gli passiamo gli stessi parametri",
+        "Nel caso in cui invochiamo la dup2(2) settando a NULL il valore del nuovo file descriptor",
+        "Nel caso in cui la dup2(2) venga invocata specificando che il nuovo file descriptor deve essere il file descriptor disponibile con il numero più piccolo"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Quali attributi di un processo non sono ereditati dal processo figlio?",
+    "answers": [
+        "Descrittori dei file; terminale di controllo; memoria condivisa",
+        "I timer, i record lock e i memory lock; i contatori delle risorse",
+        "Real ed effective user e group ID; working directory; ambiente del processo"
+    ],
+    "correct": "b",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Quali dei seguenti attributi di un processo non è preservato a seguito di una chiamata alla funzione di libreria execve()?",
+    "answers": [
+        "Groups id",
+        "Memory mappings",
+        "File locks"
+    ],
+    "correct": "b", 
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Supponiamo di aver utilizzato, nella nostra funzione C, la funzione di libreria alloca(3) per allocare un'area di memoria. È necessario liberare tale area di memoria mediante una free(3) prima della terminazione della funzione?",
+    "answers": [
+        "No. l'area di memoria allocata nello stack viene liberata automaticamente",
+        "Sì, ma mediante la chiamata di funzione dealloca(3) e non mediante la free(3)",
+        "Sì, bisogna sempre liberare la memoria per evitare dei memory leak"
+    ],
+    "correct": "a",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Si consideri la variabile globale errno. Se una system call termina con successo, e immediatamente dopo la sua terminazione ispezioniamo il contenuto di errno, cosa otteniamo?",
+    "answers": [
+        "Il valore zero essendo la system call terminata con successo",
+        "Il codice di terminazione (con successo) in quanto non c'è una effettiva differenza tra codice di errore o di terminazione con successo",
+        "Il codice di errore generato dall'ultima system call o funzione di libreria la cui esecuzione è terminata con errore"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
 }
 ]
