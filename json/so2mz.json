@@ -1873,7 +1873,7 @@
         "Il comando produce un file oggetto",
         "Il comando produce un file eseguibile"
     ],
-    "correct": "b",
+    "correct": "c",
     "answers_have_code": 0,
     "code": "gcc -c file.c -o file.o"
 },
@@ -1898,17 +1898,6 @@
     "correct": "b",
     "answers_have_code": 0,
     "code": "scanf(\"%d\", &num);\r\nwhile(num != 0){\r\n printf(\"%d\\n\", num);\r\nscanf(\"%d\", &num);\r\n}"
-},
-{
-    "question": "Cosa produce il seguente comando come risultato?",
-    "answers": [
-        "Visualizza su stdout tutti i gruppi a cui appartiene l'utente \"nomeutente\", incluso il gruppo \"nomeutente\" (se esiste)",
-        "Visualizza su stdout la lista dei gruppi a cui appartiene il gruppo \"nomeutente\" (se esiste)",
-        "Genera un errore in quanto il file /etc/group non esiste"
-    ],
-    "correct": "a",
-    "answers_have_code": 0,
-    "code": "cat /etc/group | grep nomeutente"
 },
 {
     "question": "Nel caso in cui la seguente system call sia invocata con valore di pid uguale a -1, qual è il suo comportamento?",
@@ -1983,7 +1972,7 @@
         "Viene eseguita solo la riga 10, poi genera errore ed il programma termina",
         "No, nessuna"
     ],
-    "correct": "a",
+    "correct": "c",
     "answers_have_code": 0,
     "code": "1: #include <stdio.h>\r\n2:  ....\r\n3: \r\n4:  char str [80];\r\n5:  float f;\r\n6:  FILE * pFile;\r\n7:\r\n8:  pFile = fopen (\"myfile.txt\",\"w+\");\r\n9:  fprintf (pFile, \"%f %s\\n\", 3.1416, \"PI\");\r\n10: close(pFile);\r\n11: rewind (pFile);\r\n12: fscanf (pFile, \"%f\", &f);\r\n13: fscanf (pFile, \"%s\", str);"
 },
@@ -1994,9 +1983,9 @@
         "Il ciclo do-while entra in un loop infinito",
         "stampa il valore di num almeno una volta"
     ],
-    "correct": "",
+    "correct": "c",
     "answers_have_code": 0,
-    "code": "scanf(“%d”,&num);\r\ndo {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n} while(num!=0);"
+    "code": "scanf(\"%d\",&num);\r\ndo {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n} while(num!=0);"
 },
 {
     "question": "Supponiamo di aver inizializzato un puntatore ad una variabile intera in questo modo. Quale delle seguenti istruzioni assegna il valore 10 a num?",
