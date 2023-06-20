@@ -194,7 +194,7 @@
 		],
 		"correct": "a",
 		"answers_have_code": 0,
-		"code": "merge_sorted_lists: merge_sorted_lists.c\r\ngcc -Wall -Wextra -O3 merge_sorted_lists.c\r\n-o merge_sorted_lists\r\nsort_file_int: sort_file_int.c\r\ngcc -Wall -Wextra -O3 sort_file_int.c\r\n-o sort_file_int\r\n.PHONY: clean\r\nclean:\r\nrm -f *.o merge_sorted_lists"
+		"code": "merge_sorted_lists: merge_sorted_lists.c\r\n    gcc -Wall -Wextra -O3 merge_sorted_lists.c -o merge_sorted_lists\r\nsort_file_int: sort_file_int.c\r\n    gcc -Wall -Wextra -O3 sort_file_int.c-o sort_file_int\r\n.PHONY: clean\r\nclean:\r\n    rm -f *.o merge_sorted_lists"
 	},
 	{
 		"question": "[C] Assumiamo di compilare un file .c nei seguenti modi. Perche' le dimensioni di file2.o sono diverse da quelle di file1.o?",
@@ -367,7 +367,7 @@
 		],
 		"correct": "a",
 		"answers_have_code": 1,
-		"code": "printf(\"aaaaa\\r\nbbbbb\\f\\rccccc\\r\\fddddd\\reeeee\\r\\n\");"
+		"code": "printf(\"aaaaa\\nbbbbb\\f\\rccccc\\r\\fddddd\\reeeee\\r\\n\");"
 	}, {
 		"question": "[C] Si consideri il seguente frammento di codice. Per de-allocare tutta la memoria allocata, quale delle seguenti opzioni e' coretta?",
 		"answers": [
@@ -437,7 +437,7 @@
 		],
 		"correct": "c",
 		"answers_have_code": 0,
-		"code": "scanf(\"%d\",&num); \r\ndo; {\r\nprintf(\"%d\r\n\",num);\r\nscanf(\"%d\",&num);\r\n}  while(num!=0);"
+		"code": "scanf(\"%d\",&num); \r\ndo; {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n}  while(num!=0);"
 	}, {
 		"question": "[C] Si consideri il frammento di codice; che valore conterra' p al termine dell'esecuzione del frammento di codice?",
 		"answers": [
@@ -774,7 +774,7 @@
 			"È possibile montare un filesystem solo se è dichiarato nel file /etc/mtab",
 			"Ad ogni filesystem corrisponde un disco fisico o parte di esso (partizione)"
 		],
-		"correct": "c",
+		"correct": "a",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -822,7 +822,7 @@
 		"answers_have_code": 0,
 		"code": ""
 	}, {
-		"question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto?",
+		"question": "[C] Si supponga di avere il seguente frammento di codice. Quale dei seguenti frammenti di codice ha lo stesso effetto? (2 giuste)",
 		"answers": [
 			"int fd = open(\"file_esistente.txt\", O_RDONLY)\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = lseek(fd, 0, SEEK_END);",
 			"int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nlseek(fd, -100, SEEK_END);\r\nlong pos = lseek(fd, 0, SEEK_CUR);",
@@ -840,7 +840,7 @@
 			"Il comando man cmd restituisce in sequenza tutte le pagine di manuale per il comando cmd contenute nelle varie sezioni del manuale",
 			"Il comando clear può essere usato per pulire completamente lo schermo: dopo l'esecuzione, il terminale non conterrà alcuna scritta"
 		],
-		"correct": "c",
+		"correct": "b",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -950,7 +950,7 @@
 			"Permette, tramite il campo sa_mask della struttura struct sigaction, di definire quali segnali vanno ignorati finché l'handler del segnale è in esecuzione",
 			"Chiamandola ripetutamente, e passandole al primo argomento via via tutti i segnali disponibili, è possibile definire una funzione che viene eseguita qualsiasi segnale arrivi al processo"
 		],
-		"correct": "c",
+		"correct": "a",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -1015,16 +1015,6 @@
 			"~/dir1/dir11/dir112/filename"
 		],
 		"correct": "b",
-		"answers_have_code": 1,
-		"code": ""
-	}, {
-		"question": "[C] Supponendo di essere \"loggato\" in una shell come utente1. Quali dei seguenti e' un path assoluto? (2 giuste)",
-		"answers": [
-			"dir1/dir11/dir112/filename",
-			"~/utente1/dir1/dir11/dir112/filename",
-			"~/dir1/dir11/dir112/filename"
-		],
-		"correct": "c",
 		"answers_have_code": 1,
 		"code": ""
 	}, {
@@ -1533,7 +1523,7 @@
 			"Ogni risorsa di un sistema Unix, ad eccezione dei processi, è rappresentato da un file",
 			"In un sistema Unix tutte le risorse sono rappresentati da un file"
 		],
-		"correct": "d",
+		"correct": "c",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -1588,7 +1578,7 @@
 			"Il C",
 			"Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
 		],
-		"correct": "b",
+		"correct": "d",
 		"answers_have_code": 0,
 		"code": ""
 	}, {
@@ -2074,5 +2064,60 @@
     "correct": "c",
     "answers_have_code": 0,
     "code": ""
+},
+{
+    "question": "Si consideri il seguente grammento di codice. Assumendo che myfile.txt non esista, quale delle seguenti affermazioni è vera?",
+    "answers": [
+        "Il programma genera un errore in fase di compilazione.",
+        "Il programma genera errore di segmentazione",
+        "Il programma scrive sul file myfile.txt la stringa \"3.1416 PI\"."
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": "FILE * pFile;\r\npFile = fopen(\"myfile.txt\", \"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\")"
+},
+{
+    "question": "Assumiamo di avere un file eseguibile il cui proprietario è l'utente root, ad esempio il seguente. Affinché l'effective UID del processo cambi quando eseguito da un utente senza privilegi di root, cosa bisogna fare?",
+    "answers": [
+        "Impostare il permesso speciale sticky bit",
+        "Non occorre fare nulla perché quello descritto è il comportamento standard, ovvero l'effective UID cambia sempre in uqello dell'utente che segue il file.",
+        "Impostare il permesso speciale Setuid bit"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": "-rwxr-xr-x 1 root root 60296 feb 22 2017 /bin/chmod"
+},
+{
+    "question": "In cosa differisce il contenuto dei file /etc/mtab e /etc/fstab?",
+    "answers": [
+        "/etc/mtab contiene i filesystem disponibili; /etc/fstab contiene i filesystem che vengono montati al boot",
+        "/etc/fstab contiene i filesystem montati attualmente; /etc/mtab invece contiene i filesystem che vengono montati al boot",
+        "/etc/mtab contiene i filesystem montati attualmente; /etc/fstab contiene i filesystem che vengono montati al boot"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Supponiamo di avere una directory /home/dir creata da root con diritti 1777/drwxrwxrwt ed azl suo interno il file filename, creato da root, con diritti di accesso 0770/-rwxrwx---. Supponiamo quindi di eseguire il comando rm /home/dir/filename eseguito come utente normale (non root). Quale delle seguenti affermazioni è corretta?",
+    "answers": [
+        "Il file verrà cancellato perché lo sticky bit non è settato",
+        "Il file non verrà cancellato perché il proprietario del file è root ed i diritti per il gruppo others sono tutti resettati",
+        "Il file non verrà cancellato perché lo sticky bit è settato"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": ""
+},
+{
+    "question": "Si supponga di esguire la sequenza di comandi. Quale sarà il risultato?",
+    "answers": [
+        "IL primo comando crea l'utente utente1, ed il gruppo utente1; il secondo comando da errore",
+        "Il primo comando crea l'utente ed il gruppo utente1; il secondo comando aggiunge l'utente utente1 al gruppo studente. Se il gruppo studente non esiste lo crea",
+        "Il primo comando crea l'utente ed il gruppo utente1; il secondo comando aggiunge l'utente utente1 al gruppo studente solo se il gruppo studente già esiste"
+    ],
+    "correct": "c",
+    "answers_have_code": 0,
+    "code": "sudo adduser utente1\r\nsudo adduser utente1 studente"
 }
 ]
