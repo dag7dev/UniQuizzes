@@ -2072,7 +2072,7 @@
         "Il programma genera errore di segmentazione",
         "Il programma scrive sul file myfile.txt la stringa \"3.1416 PI\"."
     ],
-    "correct": "c",
+    "correct": "b",
     "answers_have_code": 0,
     "code": "FILE * pFile;\r\npFile = fopen(\"myfile.txt\", \"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\")"
 },
