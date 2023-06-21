@@ -425,7 +425,7 @@
 			"Il programma genera errore in fase di compilazione",
 			"Il programma scrive sul file myfile.txt la stringa 3.1416 PI"
 		],
-		"correct": "b",
+		"correct": "a",
 		"answers_have_code": 0,
 		"code": "FILE * pFile;\r\npFile = open(\"myfile.txt\",\"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\");"
 	}, {
@@ -1962,7 +1962,7 @@
         "Viene eseguita solo la riga 10, poi genera errore ed il programma termina",
         "No, nessuna"
     ],
-    "correct": "c",
+    "correct": "a",
     "answers_have_code": 0,
     "code": "1: #include <stdio.h>\r\n2:  ....\r\n3: \r\n4:  char str [80];\r\n5:  float f;\r\n6:  FILE * pFile;\r\n7:\r\n8:  pFile = fopen (\"myfile.txt\",\"w+\");\r\n9:  fprintf (pFile, \"%f %s\\n\", 3.1416, \"PI\");\r\n10: close(pFile);\r\n11: rewind (pFile);\r\n12: fscanf (pFile, \"%f\", &f);\r\n13: fscanf (pFile, \"%s\", str);"
 },
@@ -2072,7 +2072,7 @@
         "Il programma genera errore di segmentazione",
         "Il programma scrive sul file myfile.txt la stringa \"3.1416 PI\"."
     ],
-    "correct": "c",
+    "correct": "b",
     "answers_have_code": 0,
     "code": "FILE * pFile;\r\npFile = fopen(\"myfile.txt\", \"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\")"
 },
