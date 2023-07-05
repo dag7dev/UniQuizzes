@@ -214,7 +214,7 @@
 			"Il processo xterm viene mandato in esecuzione in background",
 			"Il processo xterm viene prima portato nello stato stopped (T) e poi mandato in esecuzione in foreground"
 		],
-		"correct": "c",
+		"correct": "b",
 		"answers_have_code": 0,
 		"code": "shell_1: xterm\r\nshell_2: ps -C xterm\r\n#restituisce xtermPID\r\nshell_2: kill -s SIGSTOP xtermPID\r\nshell_2: kill -s SIGCONT xtermPID"
 	},
