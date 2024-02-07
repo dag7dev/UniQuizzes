@@ -1,0 +1,1388 @@
+[
+    {
+        "question": "Il sistema operativo",
+        "answers": [
+            "Coincide con il kernel",
+            "Costituisce l'interfaccia tra la macchina fisica (hardware) e le applicazioni utente",
+            "È soggetto alle politiche di scheduling",
+            "Risiede in memoria principale anche in seguito allo shutdown della macchina"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema operativo microkernel",
+        "answers": [
+            "Alcune delle funzionalità sono implementate in spazio utente anziché all'interno del kernel",
+            "I processi utente possono interagire direttamente con il sistema,evitando l'uso di system call",
+            "La comunicazione tra le varie componenti del sistema è più efficiente",
+            "Non sono previsti meccanismi di protezione  "
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un sistema operativo strutturato secondo un approccio microkernel",
+        "answers": [
+            "Non necessita di avere due modalità di utilizzo della CPU (user vs.kernel mode)",
+            "Non necessita di meccanismi di comunicazione tra porzioni diverse del sistema operativo",
+            "E' più efficiente di un sistema monolitico",
+            "Ad eccezione delle funzionalità fondamentali, implementa tutto il resto in spazio utente"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'insieme di istruzioni del livello macchina:",
+        "answers": [
+            "Sono composte da un codice operativo e da zero o più operandi",
+            "Sono definite da uno specifico linguaggio macchina",
+            "Sono un'astrazione dell'architettura hardware",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "I registri interni della CPU e la cache sono unità di memoria:",
+        "answers": [
+            "Non volatili",
+            "Gestite interamente dall'architettura a livello hardware",
+            "Gestite interamente dal sistema operativo",
+            "Molto economiche e altamente performanti"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La transizione da user a kernel mode avviene quando:",
+        "answers": [
+            "Un programma esegue una chiamata di funzione",
+            "Si avvia il computer (bootstrap)",
+            "Si esegue la prima istruzione di un programma",
+            "Scade il quanto di tempo assegnato al processo in esecuzione"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il device controller di un dispositivo di I/O:",
+        "answers": [
+            "Contiene dei registri che ne indicano lo stato",
+            "Contiene dei registri che ne consentono il controllo da parte della CPU",
+            "Contiene dei registri per lo scambio di dati con la CPU",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Le chiamate di sistema:",
+        "answers": [
+            "Sono sempre bloccanti",
+            "Causano la terminazione del processo in corso e l'avvio di un nuovo processo",
+            "Devono essere implementate in spazio utente",
+            "Devono essere implementate in spazio kernel"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Una chiamata di sistema bloccante",
+        "answers": [
+            "Sposta in coda pronti (ready) il processo che la esegue",
+            "Interrompe definitivamente il processo che la esegue",
+            "Interrompe temporaneamente il processo che la esegue",
+            "Necessità che il processo che la esegue ne verifichi periodicamente l'esito (polling)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il system call handler:",
+        "answers": [
+            "È invocato dallo scheduler del sistema operativo",
+            "Viene invocato alla scadenza del quanto temporale",
+            "Viene eseguito in spazio utente",
+            "Gestisce le chiamate di sistema tramite la system call table"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": " Il codice generico del system call handler:",
+        "answers": [
+            "Viene eseguito in spazio utente",
+            "È indicizzato tramite la interrupt vector table (IVT)",
+            "Viene invocato alla scadenza del quanto temporale",
+            "Viene invocato dallo scheduler del sistema operativo"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'interrupt vector table(IVT):",
+        "answers": [
+            "Si aggiorna dinamicamente ad ogni interruzione",
+            "E' una struttura dati che contiene puntatori ai vari gestori(handler) delle interruzioni",
+            "E' una struttura dati che è associata a ciascun processo",
+            "E' una struttura dati che contiene puntatori a codici di errori"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La system-call table:",
+        "answers": [
+            "Contiene tante entry quanto sono le chiamate di sistema supportare",
+            "Contiene tante entry quante sono le interruzioni supportare",
+            "Contiene tante entry quanti sono i dispositivi di I/O presenti nel sistema",
+            "Contiene tante entry quanti sono i processi in esecuzione"
+        ],    
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La system-call table è una struttura dati gestita:",
+        "answers": [
+            "Dai dispositivi di I/O",
+            "Dal processo utente",
+            "Sia dal kernel del sistema operativo che dal processo utente",
+            "Dal kernel del sistema operativo"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Se si cambia l'implementazione di una chiamata di sistema esistente:",
+        "answers": [
+            "E' sempre necessario modificare il codice utente che ne fa uso",
+            "Non è mai necessario modificare il codice utente che ne fa uso",
+            "Non è necessario modificare il codice utente che ne fa uso, a patto che cambi anche l'interfaccia (API) della chiamata di sistema",
+            "Non è necessario modificare il codice utente che ne fa uso, a patto che non cambi anche l’interfaccia (API) della chiamata di sistema"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processore impiega 5 cicli di clock per eseguire un'istruzione (CPI = 5), ossia per completare l'intero ciclo fetch-decode-execute. Assumendo che la frequenza di clock del processore sia pari a 5 MHz, quante istruzioni è in grado di eseguire in un secondo? (Si ricordi che 1 MHz = 1*10^6 cicli al secondo)",
+        "answers": [
+            "1*10^3",
+            "Decido di NON rispondere a questa domanda",
+            "25*10^3",
+            "1*10^6",
+            "25*10^6"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Data una CPU multicore con 𝑚unità(cores), il numero di processi/thread che ad un certo istante si trovano nella “coda” di esecuzione(running):",
+        "answers": [
+            "Può essere superiore a 𝑚",
+            "E’ esattamente pari a 𝑚",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "E' al massimo pari a 𝑚"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La creazione di un nuovo processo da parte di un processo avviene tramite:",
+        "answers": [
+            "Una chiamata di sistema",
+            "Una chiamata di funzione",
+            "L'invio di un interruzione",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il sistema operativo tiene traccia dello stato di un processo tramite:",
+        "answers": [
+            "Un'apposita area dedicata e protetta della memoria principale",
+            "Un apposito registro interno della CPU",
+            "Un'apposita area dedicata e protetta della memoria cache",
+            "Un apposito campo all'interno del process control block (PCB)"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato ready quando:",
+        "answers": [
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O",
+            "Fa richiesta di input da parte dell’utente",
+            "Fa richiesta di una pagina che non è presente in memoria principale",
+            "Esegue una chiamata di funzione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Riceve un segnale da parte di un dispositivo di I/O",
+            "Termina il quanto di tempo ad esso assegnato",
+            "Apre una connessione di rete (ad es., un socket TCP)",
+            "Esegue una chiamata di funzione"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Fa richiesta di input da parte dell'utente",
+            "Esegue una chiamata di funzione",
+            "Termina il quanto di tempo ad esso assegnato",
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato waiting quando:",
+        "answers": [
+            "Termina il quanto di tempo ad esso assegnato",
+            "L'utente trascina il dispositivo di puntamento(e.g. mouse)",
+            "Esegue una chiamata di funzione",
+            "Riceve un segnale di interruzione da parte di un dispositivo di I/O"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quanti processi saranno presenti nel sistema a seguito di queste chiamata: pid_1 = fork(); pid_2 = fork(); pid_3 = fork();?",
+        "answers": [
+            "8",
+            "7",
+            "4",
+            "3"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "I processi CPU-bound che non eseguono richieste di I/O:",
+        "answers": [
+            "Hanno una priorità alta",
+            "Hanno una priorità bassa",
+            "Sono processi mediamente brevi",
+            "Possono non rilasciare mai la CPU volontariamente"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Lo scheduler della CPU si attiva:",
+        "answers": [
+            "Quando un processo tenta di eseguire una scrittura su discord",
+            "Quando il codice di un programma esegue una divisione per zero",
+            "Quando scade il quanto di tempo",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Lo scheduling preemptive(basato su time slice o quanto temporale):",
+        "answers": [
+            "Da la priorità ai processi CPU-bound",
+            "Si attiva solamenta alla scadenza del quanto temporale(time slice)",
+            "Si attiva solamente a fronte di una chiamata di sistema",
+            "Fornisce un limite superiore al tempo di CPU assegnato a ciascun processo"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question":"In un sistema uniprocessore (single core) time-sharing in cui i processi in esecuzione sono tutti puramente CPU-bound:",
+        "answers": [
+            "L'impiego dei multi-threading consente di migliorare la latenza del sistema",
+            "L'impiego del multi-threading consente di diminuire il tempo di completamente di ciascun processo",
+            "L'impiego del multi-threading consente di migliorare il throughput del sistema",
+            "L'impiego dei multi-threading non costituisce alcun vantaggio"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In caso di scheduling preemptive, lo scheduler interviene:",
+        "answers": [
+            "Quando un processo passa dallo stato running allo stato waiting",
+            "Quando un processo passa dallo stato running allo stato ready",
+            "Quando un processo passa dallo stato waiting allo stato ready",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Se un processo arriva nella coda dei pronti all'istante t.0 = 2e termina all'istante t.f = 15, il suo tempo di turnaround equivale a",
+        "answers": [
+            "13",
+            "2",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "15"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Se un processo arriva nella coda dei pronti all’istante 𝑡0 = 3 e termina all’istante 𝑡𝑓 = 25, il tempo di attesa equivale a",
+        "answers": [
+            "3",
+            "22",
+            "25",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "I thread di uno stesso processo condividono:",
+        "answers": [
+            "Lo stack",
+            "Le variabili globali",
+            "I valori dei registri della CPU",
+            "Nessuna delle informazioni elencate sopra"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Lo user thread:",
+        "answers": [
+            "Necessita del supporto di una opportuna thread table a livello kernel",
+            "E' la più piccola unità schedulabile sulla CPU dal sistema operativo",
+            "E' gestito in spazio utente tramite un'apposita libreria",
+            "Coincide sempre con uno ed un solo kernel thread"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Nel modello di thread mapping cosiddetto one-to-one:",
+        "answers": [
+            "Consente di gestire i thread tramite un'apposita libreria a livello utente",
+            "Può essere implementato solo su sistemi multiprocessore",
+            "Causa il blocco di tutti i thread di un processo se anche uno solo di questi thread esegue una chiamata di sistema bloccante",
+            "Consente di gestire i thread a livello del kernel del sistema operativo"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Nel modello di thread mapping cosiddetto many-to-one:",
+        "answers": [
+            "Molti user thread possono essere distribuiti su più CPU (se presenti)",
+            "L'effetto di una chiamata bloccante da parte di uno user thread non blocca gli altri thread da cui è composto il processo",
+            "Molti user thread sono mappati su un singolo kernel thread",
+            "Molti kernel thread sono mappati su un singolo user thread"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il modello di thread mapping considerato many-to-many",
+        "answers": [
+            "Non prevede alcun limite al numero di kernel thread",
+            "Può essere implementato solo su sistemi multiprocessore",
+            "Causa il blocco di tutti i thread di un processo se anche uno solo di questi thread esegue una chiamata di sistema bloccante",
+            "E' il compromesso tra un'implementazione dei thread puramente user level e una puramente kernel level"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si parla di parallelismo quando:",
+        "answers": [
+            "Vengono eseguiti processi single-threaded su CPU multicore",
+            "Vengono eseguiti processi multi-threaded su CPU single core",
+            "Vengono eseguiti processi multi-threaded su CPU multicore",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si parla di concorrenza quando:",
+        "answers": [
+            "Vengono eseguiti processi multi-threaded su CPU single core",
+            "Vengono eseguiti processi single-threaded su CPU single core",
+            "Vengono eseguiti processi single-threaded su CPU multicore",
+            "Vengono eseguiti processi multi-threaded su CPU multicore"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La comunicazione tra thread dello stesso processo rispetto a quella tra processi diversi:",
+        "answers": [
+            "È più lenta poiché i thread sono gestiti da librerie di alto livello",
+            "È più veloce poiché i thread non eseguono context switch",
+            "È più veloce poiché i thread condividono lo stesso spazio di indirizzamento",
+            "Non c'è alcuna differenza sostanziale in termini di performance"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il kernel thread:",
+        "answers": [
+            "Coincide sempre con uno ed un solo user thread",
+            "È gestito in spazio utente tramite un'apposita libreria",
+            "È la più piccola unità schedulabile sulla CPU dal sistema operativo",
+            "È il termine con cui si identificano i processi propri del sistemaoperativo (i.e., non i processi utente)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'uso di una primitiva di sincronizzazione lock prevede che:",
+        "answers": [
+            "La lock sia inizialmente libera",
+            "La lock venga acquisita prima dell'ingresso nella sezione critica",
+            "La lock venga rilasciata dopo l'uscita dalla sezione critica",
+            "Tutte le condizioni precedenti devono essere verificate"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'acquisizione di una lock:",
+        "answers": [
+            "Deve avvenire in modo atomico, evitando che lo scheduler interrompa l'acquisizione",
+            "Necessita obbligatoriamente del supporto di istruzioni hardware atomiche",
+            "Necessita obbligatoriamente che il sistema operativo disabiliti le interruzioni",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un semaforo può essere utilizzato per:",
+        "answers": [
+            "Forzare le politiche di scheduling tra processi/thread",
+            "Accedere al codice del kernel",
+            "Lo scambio di messaggi tra processi/thread",
+            "Gestire le interruzioni che giungono alla CPU"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'invocazione del metodo wait() su un semaforo il cui valore è pari a 2:",
+        "answers": [
+            "Lascia invariato il valore del semaforo a 2 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)",
+            "Decrementa il valore del semaforo a 1 e blocca il processo che ha eseguito l'invocazione",
+            "Incrementa il valore del semaforo a 3 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)",
+            "Decrementa il valore del semaforo a 1 e fa proseguire il processo che ha eseguito l'invocazione (al netto delle politiche di scheduling)"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "L'istruzione test-and-set:",
+        "answers": [
+            "È un'istruzione atomica che consente di implementare le primitive di sincronizzazione",
+            "È un'istruzione atomica che consente di disabilitare le interruzioni",
+            "È un'istruzione atomica che consente di aggiornare i valori di più registri simultaneamente",
+            "È un'istruzione atomica che consente di resettare il valore di un semaforo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La differenza tra deadlock e starvation risiede nel fatto che:",
+        "answers": [
+            "Si riferiscono a codice utente e codice di sistema (rispettivamente)",
+            "Nel caso di starvation tutto il sistema è completamente bloccato",
+            "Non vi è alcuna differenza",
+            "Nel caso di deadlock tutto il sistema è completamente bloccato"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Con il termine address binding si intende:",
+        "answers": [
+            "Il processo di traduzione da indirizzi logici a indirizzi fisici",
+            "Il processo di inizializzazione delle variabili globali di un programma",
+            "Il processo di collegamento tra il codice compilato ed eventuali librerie esterne",
+            "Nessuna delle risposte precedenti è corretta"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Lo swapping consente di:",
+        "answers": [
+            "Implementare la rilocazione dinamica del codice di un processo",
+            "Risolvere il problema della frammentazione esterna",
+            "Trasferire temporaneamente su disco i processi che non sono attualmente in esecuzione",
+            "Scambiare le aree di memoria occupate da due o più processi"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La gestione 'paginata' della memoria (paging):",
+        "answers": [
+            "Prevede che lo spazio di indirizzamento logico di un processo sia non-contiguo e suddiviso in blocchi di dimensioni fissate (pages)",
+            "Non richiede alcun supporto hardware per essere implementata in modo efficiente",
+            "Prevede che lo spazio di indirizzamento fisico di un processo sia non-contiguo e suddiviso in blocchi di dimensioni fissate (frames)",
+            "Risolve il problema della frammentazione interna"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La cache TLB (Translation Look-aside Buffer)",
+        "answers": [
+            "E' condivisa tra tutti i processi del sistema",
+            "Consente una traduzione mediamente più rapida degli indirizzi logici",
+            "Contiene un sottoinsieme delle entry della page table",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La dimensione (i.e., il numero di entry) della page table:",
+        "answers": [
+            "È direttamente proporzionale alla dimensione (fissata) delle pagine",
+            "Si adatta a seconda delle richieste di accesso alla memoria di ciascun processo",
+            "Dipende dalla dimensione (fissata) delle pagine",
+            "Varia dinamicamente a seconda del processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La dimensione (i.e., il numero di entry) della page table:",
+        "answers": [
+            "Varia dinamicamente a seconda del processo",
+            "E' direttamente proporzionale alla dimensione (fissata)",
+            "E' inversamente proporzionale alla dimensione (fissata) delle pagine",
+            "Si adatta a seconda delle richieste di accesso alla memoria di ciascun processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un compilatore genera l'indirizzo logico 576 per riferirsi ad una certa locazione di memoria fisica. Assumendo che la traduzione degli indirizzi avvenga tramite rilocazione statica con indirizzo fisico base = 24, quale sarà l'indirizzo fisico corrispondente?",
+        "answers": [
+            "576",
+            "552",
+            "600",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 2,488 bytes e un blocco di memoria libero di dimensione pari a 2,699 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Allocare l'intero blocco al processo, sprecando 211 bytes(frammentazione interna)",
+            " Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 211 bytes rimanente(frammentazione esterna)",
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella del processo",
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 4,996 e un blocco di memoria libero di dimensione pari a 5,016 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo",
+            "Allocare l'intero blocco al processo, sprecando 20 bytes(frammentazione interna)",
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella dei processi",
+            "Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 20 bytes rimanenti(frammentazione esterna)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 99 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 102 KiB, 99 KiB, 256 KiB e 128 KiB, quale blocco verrà allocato per P assumendo una politica Worst-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco C",
+            "blocco B",
+            "blocco D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": " Si supponga che un processo P necessiti di un'area di memoria libera pari a 99 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D, E, F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB, 750 KiB e 125 KiB, quale blocco verrà allocato per P assumendo una politica Worst-Fit?",
+        "answers": [
+            "blocco B",
+            "Non è possibile soddisfare la richiesta, pertanto P dovrà attendere",
+            "C e i restati 25 KiB vengono allocati su A",
+            "blocco E"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 128 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 105 KiB, 916 KiB, 129 KiB e 80 KiB, quale blocco verrà allocato per P assumendo una politica First-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco D",
+            "blocco B",
+            "blocco C"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 115 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D,E,F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB,750 KiB e 125 KiB quale blocco verrà allocato per P assumendo una politica First-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco F",
+            "blocco E",
+            "blocco D"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 375 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D,E,F le cui dimensioni sono rispettivamente 300 KiB, 600 KiB, 350 KiB, 200 KiB,750 KiB e 125 KiB quale blocco verrà allocato per P assumendo una politica Best-Fit?",
+        "answers": [
+            "blocco B",
+            "blocco C e i restanti 25 Kib vengono allocati su A",
+            "blocco E",
+            "Non è possibile soddisfare la richiesta, pertanto P dovrà attendere"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che un processo P necessiti di un'area di memoria libera pari a 34 KiB per essere allocato in modo contiguo in memoria principale. Se la lista dei blocchi di memoria libera contiene i seguenti elementi: A, B, C, D le cui dimensioni sono rispettivamente 36 KiB, 90 KiB, 42 KiB e 35 KiB, quale blocco verrà allocato per P assumendo una politica Best-Fit?",
+        "answers": [
+            "blocco A",
+            "blocco B",
+            "blocco C",
+            "blocco D"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 4 KiB, ossia 4,096 bytes. Assumendo che l'indirizzamento avvenga con lunghezza di parola (word size) pari 2 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 128 bytes, quanti bit sono necessari per identificare l'indice di pagina (p) e l'offset (interno alla pagina), rispettivamente?",
+        "answers": [
+            "p=6; offset=5",
+            "b.p=7; offset=5",
+            "p=5; offset=7",
+            "p=5; offset=6"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri una memoria M di capacità pari a 512 bytes con frame di dimensione pari a 16 bytes. Dato l'indirizzo del byte 197, quale sarà l'indirizzo di pagina (p) e l'offset (interno alla pagina):",
+        "answers": [
+            "p=5; offset=12",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "p=13; offset=0",
+            "p=12; offset=5"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri una memoria M di capacità pari a 100 bytes con frame di dimensione pari a 10 bytes. Dato l’indirizzo del byte 37, quale sarà l’indirizzo di pagina (p) e l’offset (interno alla pagina).",
+        "answers": [
+            "p=3; offset=7",
+            "I dati sono insufficienti per rispondere alla domanda",
+            "p=7; offset=3",
+            "p=0; offset=37"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un processo di dimensione pari a 2,097 bytes e un blocco di memoria libero di dimensione pari a 2,104 bytes. In questo caso, assumendo il vincolo di allocazione contigua della memoria, la scelta più conveniente è:",
+        "answers": [
+            "Attendere che vi sia un blocco di dimensione multipla rispetto a quella del processo",
+            "Allocare l'intero blocco al processo, sprecando 7 bytes (frammentazione interna)",
+            "Attendere che vi sia un blocco di dimensione inferiore adatto a contenere il processo",
+            "Allocare la porzione del blocco necessaria al processo e aggiungere alla lista dei blocchi liberi i 7 bytes rimanenti (frammentazione esterna)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 2 KiB, ossia 2,048 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes, quanti bit sono necessari ad indirizzare le parole contenute in M?",
+        "answers": [
+            "2",
+            "9",
+            "11",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 4 KiB ossia 4,096 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 2 bytes, quanti bit sono necessari ad indirizzare le parole contenute in M?",
+        "answers": [
+            "10",
+            "11",
+            "12",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 8 KiB, ossia 8,192 bytes. Assumendo che l'indirizzamento avvenga con lunghezza di parola (word size) pari al singolo byte e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 128 bytes, quale dimensione (intesa come numero di entry) ha la corrispondente page table T?",
+        "answers": [
+            "I dati sono insufficienti per rispondere al problema",
+            "13",
+            "64",
+            "7"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 8 KiB, ossia 8,192 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 256 bytes, quale sarà il numero di entry della corrispondente page table T?",
+        "answers": [
+            "32",
+            "2048",
+            "8",
+            "5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere una memoria M di capacità pari a 16 KiB, ossia 16,384 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 64 bytes, quale sarà il numero di entry della corrispondente page table T?",
+        "answers": [
+            "a",
+            "b",
+            "c",
+            "I dati sono insufficienti per rispondere al problema"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    }, 
+    {
+        "question": "Si consideri un sistema operativo che utilizza indirizzi logici da 21 bit, indirizzo fisico da 16 bit e memoria paginata in cui ciascuna pagina ha dimensione 2 KiB(2048 bytes). Qual è la dimensione massima di memoria fisica supportata dal sistema?",
+        "answers": [
+            "32 KiB",
+            "64 KiB",
+            "2 MiB",
+            "Non esiste un limite fisico alla memoria supportata dal sistema"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "La memoria virtuale consente di:",
+        "answers": [
+            "Aumentare l'efficienza delle operazioni di I/O",
+            "Mantenere allocate in memoria fisica solo alcune pagine dello spazio di indirizzamento logico di un processo",
+            "Diminuire il grado di multiprogrammazione del sistema",
+            "Eseguire un processo direttamente dai dispositivi di memoria secondaria (e.g., disco)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Se un'istruzione idempotente genera un page fault:",
+        "answers": [
+            "Il processo di cui fa parte l'istruzione termina",
+            "Le istruzioni idempotenti non possono generare page fault",
+            "L'istruzione non verrà più eseguita una volta effettuato il ritorno dalla gestione del page fault",
+            "L'istruzione verrà nuovamente eseguita al ritorno dalla gestione del page fault"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": ".Il problema della frammentazione esterna:",
+        "answers": [
+            "Necessita di un supporto hardware per essere risolto",
+            "Non è risolvibile a meno di un riavvio del sistema",
+            "E’ una conseguenza del vincolo di allocazione contigua della memoria",
+            "Causa un’interruzione hardware"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Il problema della frammentazione esterna",
+        "answers": [
+            "Non è risolvibile a meno di un riavvio del sistema",
+            "Causa un’interruzione hardware",
+            "Necessita di un supporto hardware per essere risolto",
+            "E’ dovuto all’ allocazione/deallocazione di blocchi contigui di memoria"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Il working set è:",
+        "answers": [
+            "Fissato per ogni quanto di tempo",
+            "Relativamente grande rispetto all’intero spazio di indirizzamento di un processo",
+            "Relativamente piccolo rispetto all’intero spazio di indirizzamento di un processo",
+            "Fissato per l’intera esecuzione di un processo"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Si consideri un sistema che implementa la politica LRU per la sostituzione dei frame mediante l’uso di un timestamp. Ad ogni richiesta di accesso ad un determinato frame occorre:",
+        "answers": [
+            "Incrementare una variabile di tipo contatore",
+            "Aggiornare il valore del timestamp con quello corrente",
+            "Impostare un bit di validità",
+            "Nessuna delle precedenti risposte è corretta"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: B, C, C, B, A, E, B, A, E, D, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: D, B, A, C, C, E, A, D, B, E, D, A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "10",
+            "7",
+            "9",
+            "6"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: C,B,C,B,A,E,B,A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo LRU di sostituzione delle pagine.",
+        "answers": [
+            "2",
+            "4",
+            "5",
+            "1"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria fisica composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: A, B, E, C, E, D, D, A, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle",
+        "answers": [
+            "6",
+            "7",
+            "4",
+            "8"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: D, A, C, B, B, A, C, B, D, E, A. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle pagine.",
+        "answers": [
+            "6",
+            "7",
+            "5",
+            "4"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },  
+    {
+        "question": "Data una memoria composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: E, B, E, C, D, E, A, B, E. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle pagine.",
+        "answers": [
+            "7",
+            "8",
+            "6",
+            "5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "In un disco magnetico, il seek time:",
+        "answers": [
+            "È il tempo necessario al disco per posizionare le proprie testine su uno specifico settore",
+            "Include il tempo di trasferimento alla memoria principale",
+            "È il tempo necessario al disco per posizionare le proprie testine su uno specifico cilindro",
+            "È trascurabile rispetto all'intero tempo necessario al trasferimento dei dati"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un disco è composto da 15 cilindri, ciascuno di capacità pari a 500 MB. Qual è la capacità totale del disco?",
+        "answers": [
+            "7.5 GB",
+            "75 GB",
+            "750 MB",
+            "I dati sono insufficienti per rispondere al problema4"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 50 nsec. e che il tempo per la gestione di un page fault tFAULT  sia pari a 15 msec. Assumendo che la probabilità che si verifichi un page fault sia p = 0.0002, qual è il tempo complessivo atteso di accesso alla memoria?",
+        "answers": [
+            "~30.5 nsec",
+            "~30.5 microsec",
+            "~3.05 microsec",
+            "~305 nsec"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 25 nsec. e che il tempo per la gestione di un page fault  tFAULT sia pari a 30 msec. Assumendo che la probabilità che si verifichi un page fault sia p = 0.005, qual è il tempo complessivo atteso di accesso alla memoria?",
+        "answers": [
+            "~150.025 microsec",
+            "~15.025 nsec",
+            "~150.025 nsec",
+            "~15.025 microsec"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA = 50 nsec. e che il tempo per la gestione di un page fault tFAULT sia pari a 25 msec. Assumendo che il tempo medio di accesso alla memoria sia pari a 0.5 microsec, qual è la probabilità p che si verifichi un page fault?",
+        "answers": [
+            "~0.02%",
+            "~0.2%",
+            "~0.002%",
+            "~0.0002%"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che il tempo di accesso alla memoria fisica sia tMA  = 60 nsec. e che il tempo per la gestione di un page fault tFAULT  sia pari a 5 msec. Quale dovrà essere il valore della probabilità che si verifichi un fault () se si vuole garantire che il tempo atteso di accesso alla memoria sia al più il 20% più lento di tMA ? (Si ricordi che 1 msec = 10^3 microsec = 10^6 nsec)",
+        "answers": [
+            "I dati sono insufficienti per rispondere alla domanda",
+            "~0,00024%",
+            " ~0,000024%",
+            " ~0,0000024%"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 128 cilindri/tracce, numerati da 0 a 127 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 42. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 74, 50, 32, 55, 81 venga gestita da un algoritmo di scheduling SSTF (Shortest Seek Time First) e trascurando il tempo di rotazione.",
+        "answers": [
+            "86",
+            "49",
+            "123",
+            "88"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 128 cilindri/tracce, numerati da 0 a 127 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 87. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 43, 81, 36, 25, 127 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "290",
+            "240",
+            "238",
+            "265"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 30 msec. Sapendo che: il seek time complessivo è pari a 18 msec, il rotational delay complessivo è pari a 7 msec e che il transfer rate è pari a 1.5 Gbit/sec, qual è la quantità totale di dati trasferita? (Si ricordi che 1 B = 1 byte = 8 bit e 1 MB = 10^3 KB = 10^6 B)",
+        "answers": [
+            "9.375 MB",
+            "7.5 MB",
+            "937.5 KB",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 40 msec. Sapendo che: il seek time complessivo è pari a 18 msec, il rotational delay complessivo è pari a 7 msec e che il transfer rate è pari a 5 Gbit/sec, qual è la quantità totale di dati trasferita? (Si ricordi che 1 B = 1 byte = 8 bit e 1 MB = 10^3 KB = 10^6 B)",
+        "answers": [
+            "9375 MB",
+            "70 MB",
+            "70 KB",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 36 msec. Sapendo che il seek time complessivo è pari a 13 msec e che sono stati trasferiti 2MB ad una velocità pari a 1 Gbit/sec qual è il rotational delay del disco?(Si ricordi che 1 B = 1 byte = 8 bit)",
+        "answers": [
+            "7 msec",
+            "2 msec",
+            "16 msec",
+            "I dati sono insufficiente per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 200 cilindri/tracce, numerati da 0 a 199(0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 53. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 98,183,37,122,14,85,67 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "595",
+            "558",
+            "650",
+            "638"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 200 cilindri/tracce, numerati da 0 a 199(0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 53. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 98,183,37,122,14,65,67 venga gestita da un algoritmo di scheduling FCFS (First Come First Served) e trascurando il tempo di rotazione.",
+        "answers": [
+            "650",
+            "522",
+            "638",
+            "595"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri un disco magnetico composto da 100 cilindri/tracce, numerati da 0 a 99 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 11. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 24, 16, 77, 49, 82 venga gestita da un algoritmo di scheduling SCAN (non-ottimizzato), che la testina si stia muovendo verso l'esterno (i.e., verso i cilindri con numeri più bassi) e trascurando il tempo di rotazione.",
+        "answers": [
+            "76",
+            "87",
+            "46",
+            "93"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare quale sarà il valore della variabile value che verrà stampato alla line 18:",
+        "answers": [
+            "5",
+            "20",
+            "15",
+            "I dati sono insufficiente per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "25"
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei processi generati:",
+        "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "26"
+    },
+    {
+        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei, indicare il corrispondente albero dei processi generati:",
+        "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "27"
+    },
+    {
+        "question": "Si considerino i 5 processo della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
+        "answers": [
+            "FCFS",
+            "RR",
+            "SJF",
+            "Tutte e tre le politiche garantiscono al processo C lo stesso tempo di attesa"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "35"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling round robin con time slice = 3, nessuna attività di I/O e context switch trascurabile:",
+        "answers": [
+            "6.5",
+            "6.75",
+            "7.15",
+            "5,85"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "36"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling Round Robin con time slice q= 4. Nel calcolo, si consideri il tempo necessario ad eseguire il context switch trascurabile:",
+        "answers": [
+            "4.85",
+            "4.25",
+            "4.5",
+            "4.75"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "37"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling Shortest Job First preemptive (SJF). Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "6",
+            "5.75",
+            "4.5",
+            "5"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "38"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo A esegua all'istante t=2 una chiamata di I/O che si completerà dopo 4 unità di tempo, ossia all'istante t=6. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "4.5",
+            "5.5",
+            "7.5",
+            "6.5"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "39"
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo B esegua all'istante t=6 una chiamata di I/O che si completerà dopo 3 unità di tempo, ossia all'istante t=9. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "4.5",
+            "5.25",
+            "4",
+            "4.25"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "40"
+    },
+    {
+        "question": "",
+        "answers": [
+            "72",
+            "73",
+            "74",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "56"
+    },
+    {
+        "question": "",
+        "answers": [
+            "23",
+            "24",
+            "25",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "57"
+    }, 
+    {
+        "question": "",
+        "answers": [
+            "18",
+            "19",
+            "20",
+            "I dati sono insufficienti per rispondere alla domanda"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "58"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Dipende dalle scelte dello scheduler del sistema operativo",
+            "Presenta deadlock",
+            "Non presenta deadlock",
+            "È impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "59"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Dipende dalle scelte dello scheduler del sistema operativo",
+            "Presente deadlock",
+            "Non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "60"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph (RAG) mostra un sistema il cui stato:",
+        "answers": [
+            "Sicuramente presenta deadlock",
+            "Potrebbe presentare deadlock",
+            "Sicuramente non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "61"
+    }, 
+    {
+        "question": "Il seguente Resource Allocation Graph(RAG) mostra un sistema che:",
+        "answers": [
+            "Sicuramente presenta deadlock",
+            "Potrebbe presentare deadlock",
+            "Sicuramente non presenta deadlock",
+            "E’ impossibile rispondere"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "62"
+    }, 
+    {
+        "question": "Si consideri un disco magnetico composto da 100 cilindri/tracce, numerati da 0 a 99 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 11. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 24, 16, 77, 49, 82 venga gestita da un algoritmo di scheduling SCAN (non-ottimizzato), che la testina si stia muovendo verso l'esterno (i.e., verso i cilindri con numeri più bassi) e trascurando il tempo di rotazione.",
+        "answers": [
+            "76",
+            "87",
+            "46",
+            "93"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    } 
+]
