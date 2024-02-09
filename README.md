@@ -1,7 +1,6 @@
 # JSQuizee
 JSQuizee (JS Simple Quiz Engine) is a simple JS engine for your quizzes.
-
-![image](https://github.com/dag7dev/JSQuizee/assets/44711271/7db83788-8162-4ffc-91b6-71dd098db3c9)
+![image](https://github.com/dag7dev/JSQuizee/assets/44711271/089ac938-aa54-4536-974c-5f26bad7c0b0)
 
 
 ## Disclaimer
@@ -125,4 +124,5 @@ If you like this project, remember to leave a star or consider the idea to [make
 
 ## Historical purposes
 This is the old GUI. If you miss it, you can press one single button on the homepage.
-![image](https://github.com/dag7dev/JSQuizee/assets/44711271/3051f003-e289-4c9d-b8cf-880e36b28a6c)
+![image](https://github.com/dag7dev/JSQuizee/assets/44711271/0a1f1f2d-3fe9-45e2-87f2-470d818243f4)
+
