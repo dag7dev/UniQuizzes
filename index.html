@@ -28,12 +28,12 @@
     </h2>
 
     <hr class="my-4">
+   
+    <a href="https://github.com/dag7dev/UniQuizzes" class="btn btn-sm btn-secondary ms-2" target="_blank">        <script>document.write(customDescription)</script><span id="starsCount" class="ms-2"></span></a>
 
-    <a class="btn btn-primary" href="javascript:document.location.href=getCustomLink();">
-        <script>document.write(customDescription)</script>
-    </a>
+    <a href="https://paypal.me/therealdag7" class="btn btn-sm btn-success ms-2" target="_blank">Support the
+        author</a>
 
-    <a class="btn btn-secondary" href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a>
     <p>If you like this project, consider to star this repo on Github, thanks!</p>
     
     <hr class="my-4">
@@ -142,6 +142,33 @@
         } else {
             document.getElementById("btn-send").hidden = true
         }
+    </script>
+
+    <script>
+        async function fetchStarsCount() {
+            try {
+                const response = await fetch('https://api.github.com/repos/dag7dev/UniQuizzes');
+                const data = await response.json();
+                return data.stargazers_count;
+            } catch (error) {
+                console.error('Error fetching stars count:', error);
+                return null;
+            }
+        }
+
+        // Update the stars count on the banner
+        async function updateStarsCount() {
+            const starsCount = await fetchStarsCount();
+            if (starsCount !== null) {
+                const starsCountElement = document.getElementById('starsCount');
+                starsCountElement.textContent = `⭐ ${starsCount}`;
+            }
+        }
+        // Call updateStarsCount when the page loads
+        updateStarsCount();
+
+        // Execute updateStarsCount every 3 seconds
+        setInterval(updateStarsCount, 3000); // 3000 milliseconds = 3 seconds
     </script>
 </body>
 
