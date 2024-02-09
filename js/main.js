@@ -425,21 +425,24 @@ function buildFromJSON(path) {
 
     return 0
 }
-
 // func: load elements in the webpage
 function loadElements(questions) {
+    var container = document.getElementById('container');
+
     for (i = 0; i < numberOfQuestions; i++) {
-        var container = document.getElementById('container')
-        var containingDiv = document.createElement("div")
-        containingDiv.id = i;
-        container.appendChild(containingDiv)
+        var card = document.createElement('div');
+        card.classList.add('my-4', 'p-4', 'card', 'rounded');
+        container.appendChild(card);
 
-        var bigTable = document.createElement("table")
-        bigTable.border = 1;
-
-        bigTable.innerHTML = "<b><font color='blue'>" + (i + 1) + ". " + questions[i]['question'] + "</font></b><br>";
-        containingDiv.appendChild(bigTable)
-
+        const questionHeader = document.createElement('div');
+        const boldText = document.createElement('b');
+        const questionText = document.createTextNode(`${i + 1}. ${questions[i].question}`);
+        boldText.style.color = 'blue';
+        boldText.appendChild(questionText);
+        questionHeader.appendChild(boldText);
+        questionHeader.id = 'question';
+        card.appendChild(questionHeader);
+        
         // image to show, if any
         if (questions[i]['img'] !== undefined && questions[i]['img'].length > 0) {
             var img = document.createElement("img")
@@ -451,8 +454,8 @@ function loadElements(questions) {
             }
 
             img.src = "img/" + questions[i]['img'].toString();
-
-            containingDiv.appendChild(img)
+            img.style.maxWidth = "50%";
+            card.appendChild(img)
         }
 
         // let's shuffle arrays together
@@ -464,89 +467,89 @@ function loadElements(questions) {
             shuffle(answers, replyNumber)
         }
 
-        // let's create our ugly table for the answer
-        var uglyTable = document.createElement("table")
-        uglyTable.border = 1;
-
         // let's calculate the right answer
         var rightAnswerText = questions[i]['correct'].toLowerCase().charCodeAt(0) - 97 // number from letter
         rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
 
-        // if question has source code, then renderize it into a table
+        // if question has source code, then renderize it into a div
         if (questions[i]['code'] !== undefined && questions[i]['code'].length > 0) {
-            tablePre = document.createElement('table')
-            tablePre.border = 2;
-            preBlock = document.createElement('pre')
-            preBlock.textContent = questions[i]['code'];
-            tablePre.append(preBlock)
-            uglyTable.append(tablePre)
+            var codeDiv = document.createElement('div');
+            codeDiv.innerHTML = "<pre>" + questions[i]['code'] + "</pre>";
+            card.appendChild(codeDiv);
         }
 
         // for each answer in the JSON file
         for (j = 0; j < answers.length; j++) {
-            var radiobox = document.createElement('input')
+            var answerContainer = document.createElement('div');
+            answerContainer.classList.add('form-check');
+
+            var radiobox = document.createElement('input');
+            radiobox.classList.add('form-check-input');
             radiobox.id = 'answer' + i + "." + j;
             radiobox.type = 'radio';
             radiobox.name = 'radioBtns' + i;
-            radiobox.value = replyNumber[j]
+            radiobox.value = replyNumber[j];
 
-            var lblAnswer = document.createElement('label')
+            var lblAnswer = document.createElement('label');
+            lblAnswer.classList.add('form-check-label');
             lblAnswer.htmlFor = 'answer' + i + "." + j;
 
             // if answers_have_code == 1 *in json* then let's render our answers as code in a pre block
             if (questions[i]['answers_have_code']) {
-                description = document.createElement('textarea')
+                var description = document.createElement('textarea')
                 description.name = "taAnswerCode"
                 description.textContent = " " + answers[j];
                 description.readOnly = true;
                 description.cols = 100;
-                description.rows = 10
+                description.rows = 10;
+
+                // Textarea must fits into the parent
+                description.style.width = "100%";
+
             } else {
                 var description = document.createTextNode(" " + answers[j])
             }
-            lblAnswer.appendChild(description)
+            lblAnswer.appendChild(description);
 
-            var newline = document.createElement('br')
-
-            uglyTable.appendChild(radiobox)
-            uglyTable.appendChild(lblAnswer)
-            uglyTable.appendChild(newline)
+            answerContainer.appendChild(radiobox);
+            answerContainer.appendChild(lblAnswer);
+            card.appendChild(answerContainer);
         };
 
         // define radiobutton for "no answer" option
-        var radiobox = document.createElement('input')
-        radiobox.id = 'answer' + i + "." + j;
+        var noAnswerContainer = document.createElement('div');
+        noAnswerContainer.classList.add('form-check');
+
+        var radiobox = document.createElement('input');
+        radiobox.classList.add('form-check-input');
+        radiobox.id = 'answer' + i + ".noAnswer";
         radiobox.type = 'radio';
         radiobox.name = 'radioBtns' + i;
         radiobox.value = "s";
         radiobox.checked = true; // settato a true di default
 
-        var lblAnswer = document.createElement('label')
-        lblAnswer.htmlFor = 'answer' + i + "." + j;
+        var lblAnswer = document.createElement('label');
+        lblAnswer.classList.add('form-check-label');
+        lblAnswer.htmlFor = 'answer' + i + ".noAnswer";
 
-        var description = document.createTextNode(" No answer")
-        lblAnswer.appendChild(description)
+        var description = document.createTextNode(" No answer");
+        lblAnswer.appendChild(description);
 
-        var newline = document.createElement('br')
-
-        uglyTable.appendChild(radiobox)
-        uglyTable.appendChild(lblAnswer)
-        uglyTable.appendChild(newline)
-
-        // let's add that table to our bigdiv
-        containingDiv.appendChild(uglyTable)
+        noAnswerContainer.appendChild(radiobox);
+        noAnswerContainer.appendChild(lblAnswer);
+        card.appendChild(noAnswerContainer);
 
         // let's add our hidden span containing the right answer
-        var answer = document.createElement("span")
-        answer.textContent = rightAnswerText
-        answer.hidden = "true";
-        answer.id = "span" + i;
-        uglyTable.appendChild(answer)
+        var answer = document.createElement('span');
+        answer.textContent = rightAnswerText;
+        answer.hidden = true;
+        answer.id = 'span' + i;
+        card.appendChild(answer);
 
-        var newline2 = document.createElement('br')
+        var newline = document.createElement('br');
 
-        containingDiv.appendChild(newline2)
-        container.appendChild(containingDiv)
+        card.appendChild(newline);
+        container.appendChild(card);
     }
 }
 
@@ -565,7 +568,9 @@ function validate() {
 
         // disable all radiobuttons to prevent user enters more data
         for (j = 0; j < buttons.length; j++) {
-            buttons[j].disabled = true;
+            buttons[j].onclick = function() {
+                return false; // prevent further changes
+            };
         }
 
         // let's cycle our buttons
@@ -580,6 +585,10 @@ function validate() {
             var inputElement = buttons[rightNumber];
             var lblElement = inputElement.nextElementSibling
             lblElement.style.backgroundColor = "#FFFF66";
+            if(lblElement.firstChild.nodeName === "TEXTAREA") {
+                lblElement.firstChild.style.backgroundColor = "#FFFF66";
+            }
+
         } else {
             // if one of the buttons contains the right answer, let's set the boolean to true
             for (j = 0; j < (buttons.length - 1); j++) { // -1 because skipped answer has already been analyzed before
@@ -599,12 +608,18 @@ function validate() {
             if (result != -1) {
                 // if it's the right answer, then color the label in green
                 lblElement.style.backgroundColor = "#00FF00";
-
+                if(lblElement.firstChild.nodeName === "TEXTAREA") {
+                    lblElement.firstChild.style.backgroundColor = "#00FF00";
+                }
                 score += rightAnswerPoints;
                 contRight++;
             } else {
                 // it's the wrong answer, then, color the label will be red
                 lblElement.style.backgroundColor = "#FF0000";
+                if(lblElement.firstChild.nodeName === "TEXTAREA") {
+                    lblElement.firstChild.style.backgroundColor = "#FF0000";
+                }
+
 
                 // the right answer was...
                 var rightNumber = rightAnswer.textContent
@@ -612,6 +627,9 @@ function validate() {
                 var inputElement = buttons[rightNumber]; // the right one is saved in "num" variable
                 var lblElement = inputElement.nextElementSibling
                 lblElement.style.backgroundColor = "#00FF00";
+                if(lblElement.firstChild.nodeName === "TEXTAREA") {
+                    lblElement.firstChild.style.backgroundColor = "#00FF00";
+                }
 
                 score -= wrongAnswerPoints;
                 contWrong++;

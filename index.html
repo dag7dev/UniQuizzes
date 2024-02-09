@@ -3,29 +3,23 @@
 
 <head>
     <title>JSQuizee - JS Simple Quiz Engine</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body style="max-width: 100%;">
-    <style>
-        img {
-            max-width: 600px;
-            max-height: 400px;
-        }
-    </style>
-
+<body class="container">
     <script src="js/main.js"></script>
     <script src="js/config.js"></script>
 
-    <h1>
+    <h1 class="display-3">
         <script>document.write(title)</script>
     </h1>
 
     <h3 id="h3Explaination"></h3>
 
-    <h2 style="color:red">
+    <h2 class="text-danger">
         <script>
             if (disclaimerText !== "") {
                 document.write("Warning: " + disclaimerText)
@@ -33,74 +27,110 @@
         </script>
     </h2>
 
-    <hr>
+    <hr class="my-4">
 
-    <a href="javascript:document.location.href=getCustomLink();">
+    <a class="btn btn-primary" href="javascript:document.location.href=getCustomLink();">
         <script>document.write(customDescription)</script>
     </a>
 
-    <a href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a> - If you like this project, consider to
-    star this repo on Github, thanks!
-    <hr>
+    <a class="btn btn-secondary" href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a>
+    <p>If you like this project, consider to star this repo on Github, thanks!</p>
+    
+    <hr class="my-4">
 
+    <h2>Settings</h2>
+    <div class="form-group">
+        <label for="quiz-version">Choose a quiz:</label>
+        <select class="form-control" name="quiz-version" id="quiz-version">
+            <script>
+                if (typeof jsonFiles !== 'undefined' && jsonFiles.constructor == Object) {
+                    let i = 0;
+                    // create select elements
+                    for (var key in jsonFiles) {
+                        var value = jsonFiles[key];
 
-    <h3>Settings</h3>
-    <label for="quiz-version">Choose a quiz:</label>
-    <select name="quiz-version" id="quiz-version">
-        <script>
-            if (typeof jsonFiles !== 'undefined' && jsonFiles.constructor == Object) {
-                i = 0
-                // create select elements
-                for (var key in jsonFiles) {
-                    var value = jsonFiles[key];
-
-                    i == 0 ? createSelectBox("quiz-version", value, key, true) : createSelectBox("quiz-version", value, key)
-                    i++
+                        i == 0 ? createSelectBox("quiz-version", value, key, true) : createSelectBox("quiz-version", value, key)
+                        i++
+                    }
                 }
-            }
-        </script>
-    </select>
+            </script>
+        </select>
+    </div>
 
-    <button name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
+    <button class="btn btn-info" name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
 
-    <div id="div-chk-shuffle-questions">
-        <input type="checkbox" id="chk-shuffle-questions" name="chk-shuffle-questions" title="Shuffle Questions"
+    <h3>Graphics</h3>
+
+    <!-- Toggle switch -->
+    <div class="form-check form-switch">
+        <input type="checkbox" class="form-check-input" id="chk-toggle-bootstrap" onchange="toggleBootstrap()" checked>
+        <label class="form-check-label" for="chk-toggle-bootstrap">Switch to Modern Interface</label>
+    </div>
+
+    <h3>Options</h3>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="chk-shuffle-questions" name="chk-shuffle-questions"
+            title="Shuffle Questions" checked />
+        <label class="form-check-label" for="chk-shuffle-questions">Shuffle Questions</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="chk-shuffle-answers" name="chk-shuffle-answers"
+            title="Shuffle Answers" checked />
+        <label class="form-check-label" for="chk-shuffle-answers">Shuffle Answers</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="chk-timer" name="chk-timer" title="Enable / Disable Time"
             checked />
-        <label for="chk-shuffle-questions">Shuffle Questions</label>
+        <label class="form-check-label" for="chk-timer">Enable / Disable Time</label>
     </div>
 
-    <div id="div-chk-shuffle-answers">
-        <input type="checkbox" id="chk-shuffle-answers" name="chk-shuffle-answers" title="Shuffle Answers" checked />
-        <label for="chk-shuffle-answers">Shuffle Answers</label>
-    </div>
-
-    <div id="div-chk-timer">
-        <input type="checkbox" id="chk-timer" name="chk-timer" title="Enable / Disable Time" checked />
-        <label for="chk-timer">Enable / Disable Time</label>
-    </div>
-
-    <div id="div-slider" class="slidecontainer">
-        <input type="range" autocomplete="off" min="0" step="1" max="200" value="40" class="slider"
+    <div class="form-group">
+        <input type="range" autocomplete="off" min="0" step="1" max="200" value="40" class="form-control-range"
             id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
-
-        <span id="sliderText"></span>
+        <label for="sliderQuestionsNumber">Number of Questions: <span id="sliderText"></span></label>
     </div>
-
-    <hr>
 
     <div>
         <p id="timeleft"></p>
         <h2 id="end"></h2>
     </div>
 
-
-    <div id="container"></div>
+    <hr class="my-4">
+    
+    <div id="container" class="form-check"></div>
 
     <div id="btn-send" name="btn-send">
-        <button onclick="validate()">Send</button>
+        <button class="btn btn-success" onclick="validate()">Send</button>
     </div>
 
+    <p id="results" hidden=""></p>
     <script>
+        function toggleBootstrap() {
+            var isChecked = document.getElementById("chk-toggle-bootstrap").checked;
+
+            if (isChecked) {
+                // Reload the page with no cache
+                location.reload(true);
+            } else {
+                // Reset styles of every element
+                var allElements = document.querySelectorAll('*');
+                [].forEach.call(allElements, function (element) {
+                    // if element is a div add rounded border
+                    element.removeAttribute("class");
+                    if (element.tagName == "DIV") {
+                        element.setAttribute("class", "rounded border");
+                    }
+
+                    if (element.tagName == "IMG") {
+                        // max-width: 50px;
+                        element.setAttribute("style", "max-width: 400px;");
+                    }
+                });
+            }
+        }
+
         if (init() == 0) {
             outslider.innerHTML = slider.value;
 
@@ -113,10 +143,6 @@
             document.getElementById("btn-send").hidden = true
         }
     </script>
-
-    <br>
-
-    <p id="results" hidden=""></p>
 </body>
 
 </html>
