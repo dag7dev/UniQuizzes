@@ -146,7 +146,7 @@
     {
         "question": "La system-call table:",
         "answers": [
-            "Contiene tante entry quanto sono le chiamate di sistema supportare",
+            "Contiene tante entry quanto sono le chiamate di sistema supportate",
             "Contiene tante entry quante sono le interruzioni supportare",
             "Contiene tante entry quanti sono i dispositivi di I/O presenti nel sistema",
             "Contiene tante entry quanti sono i processi in esecuzione"
@@ -303,7 +303,7 @@
     {
         "question": "Lo scheduler della CPU si attiva:",
         "answers": [
-            "Quando un processo tenta di eseguire una scrittura su discord",
+            "Quando un processo tenta di eseguire una scrittura su disco",
             "Quando il codice di un programma esegue una divisione per zero",
             "Quando scade il quanto di tempo",
             "Tutte le risposte precedenti sono corrette"
@@ -632,7 +632,7 @@
             "600",
             "I dati sono insufficienti per rispondere al problema"
         ],
-        "correct": "d",
+        "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
@@ -831,9 +831,9 @@
     {
         "question": "Si supponga di avere una memoria M di capacità pari a 16 KiB, ossia 16,384 bytes. Assumendo che l’indirizzamento avvenga con lunghezza di parola (word size) pari a 4 bytes e che M utilizzi una gestione paginata con blocchi di dimensione pari a S = 64 bytes, quale sarà il numero di entry della corrispondente page table T?",
         "answers": [
-            "a",
-            "b",
-            "c",
+            "4096",
+            "16",
+            "256",
             "I dati sono insufficienti per rispondere al problema"
         ],
         "correct": "c",
@@ -1107,7 +1107,7 @@
     {
         "question": "Il tempo di trasferimento totale per un'operazione di I/O da disco magnetico è pari a 40 msec. Sapendo che: il seek time complessivo è pari a 18 msec, il rotational delay complessivo è pari a 7 msec e che il transfer rate è pari a 5 Gbit/sec, qual è la quantità totale di dati trasferita? (Si ricordi che 1 B = 1 byte = 8 bit e 1 MB = 10^3 KB = 10^6 B)",
         "answers": [
-            "9375 MB",
+            "9.375 MB",
             "70 MB",
             "70 KB",
             "I dati sono insufficienti per rispondere alla domanda"
@@ -1373,14 +1373,14 @@
         "img": "62"
     }, 
     {
-        "question": "Si consideri un disco magnetico composto da 100 cilindri/tracce, numerati da 0 a 99 (0 indice del cilindro/traccia più esterno/a rispetto al centro del disco), la cui testina si trova inizialmente sul cilindro 11. Si calcoli il numero di cilindri/tracce attraversate dalla testina del disco, assumendo che la sequenza di richieste: 24, 16, 77, 49, 82 venga gestita da un algoritmo di scheduling SCAN (non-ottimizzato), che la testina si stia muovendo verso l'esterno (i.e., verso i cilindri con numeri più bassi) e trascurando il tempo di rotazione.",
+        "question": "Si consideri un sistema che implementa la politica LRU (approssimato) per la sostituzione dei frame mediante l'algoritmo second chance (clock). A fronte di un page fault, l'algoritmo scandisce la lista dei frame; se un frame ha il reference bit impostato al valore 1:",
         "answers": [
-            "76",
-            "87",
-            "46",
-            "93"
+            "Il reference bit viene lasciato a 1 e il frame è rimpiazzato con la pagina che ha causato il page fault",
+            "Il reference bit viene impostato a 0 e il frame è rimpiazzato con la pagina che ha causato il page fault",
+            "Il reference bit viene lasciato a 1 e l'algoritmo prosegue ad esaminare il frame successivo nella lista",
+            "Il reference bit viene impostato a 0 e l'algoritmo prosegue ad esaminare il frame successivo nella lista"
         ],
-        "correct": "c",
+        "correct": "d",
         "answers_have_code": 0,
         "code": "",
         "img": ""
