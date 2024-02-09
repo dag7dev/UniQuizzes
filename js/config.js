@@ -18,7 +18,7 @@ var showShuffleAnswers = true
 
 // additional URL and description shown in header
 var customLink = "https://github.com/dag7dev/UniQuizzes"
-var customDescription = "Visit the GitHub repository and leave a ⭐"
+var customDescription = "Stars the repo"
 
 // FILES
 var jsonFolder = "json" // json folder where to load your json files
