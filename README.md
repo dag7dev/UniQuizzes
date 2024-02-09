@@ -1,5 +1,7 @@
 # JSQuizee
 JSQuizee (JS Simple Quiz Engine) is a simple JS engine for your quizzes.
+![image](https://github.com/dag7dev/JSQuizee/assets/44711271/089ac938-aa54-4536-974c-5f26bad7c0b0)
+
 
 ## Disclaimer
 > The author and contributors assume no liability and no warranty for misuse of this tool.
@@ -111,11 +113,16 @@ If you don't know how to enable Github Pages for your webpage, [click here](http
 
 - [ ] **JSON editor**: it will allow you to easily create a JSON file with all your questions
 - [ ] implement a **server-side mode**: in this way, people can use it in a real scenario (with students for example)
-- [ ] **style** this website with an awesome CSS: it was poorly designed (on purpose), some stylish css would be nice!
-- [X] **Clean source code**: since the source code was developed in a few hours, it would be nice to clean it up a bit or optimize things
+- [X] **style** this website with an awesome CSS: it was poorly designed (on purpose), some stylish css would be nice! _MIlestone achieved in 2024_
+- [X] **Clean source code**: since the source code was developed in a few hours, it would be nice to clean it up a bit or optimize things _Milestone achieved in 2024_
 - [X] Guidelines and **documents**
 - [X] implement an **image display feature**
 
 For anything, open a PR or issue.
 
 If you like this project, remember to leave a star or consider the idea to [make a donation](https://www.paypal.com/paypalme/therealdag7).
+
+## Historical purposes
+This is the old GUI. If you miss it, you can press one single button on the homepage.
+![image](https://github.com/dag7dev/JSQuizee/assets/44711271/0a1f1f2d-3fe9-45e2-87f2-470d818243f4)
+
