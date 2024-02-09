@@ -1,0 +1,1455 @@
+[
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "In un determinato istante, non possono esserci 2 processi distinti con lo stesso PID",
+            "Per creare i PID dei processi si usano dei numeri interi che crescono sempre",
+            "In istanti diversi, possono esserci 2 processi distinti con lo stesso PID",
+            "Ogni processo può conoscere il suo PID"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sugli errori delle syscall è vera?",
+        "answers": [
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall si può effettuare la seguente chiamata: printf(\"%s\\n\", strerror(errno));",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è sufficiente chiamare perror",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è necessario scrivere uno switch sulla variabile globale errno",
+            "Per stampare su stderr la spiegazione di un errore verificatosi in una syscall, il cui nome sia contenuto nella variabile syscall_name (di tipo char *), si può effettuare la seguente chiamata: perror(\"Si e' verificato il seguente errore nella chiamata a %s\", syscall_name);"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Normalmente, il processo figlio, una volta terminata la sua computazione, attende, con una chiamata alla syscall wait, che il padre termini e gli restituisca il suo exit status",
+            "Un processo diventa zombie se termina prima di almeno uno dei processi che abbia eventualmente creato",
+            "Ogni processo può conoscere il proprio PID, ma non quello del processo che l’ha creato",
+            "Con l’eccezione del primo processo, tutti i processi sono creati con una fork effettuata da un altro processo in esecuzione"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "Digitare un comando sulla shell genera sempre un nuovo processo",
+            "Esistono file che non possono essere eseguiti per diventare processi",
+            "Affinchè un file possa diventare un processo è necessario che abbia i permessi di esecuzione",
+            "Qualsiasi computazione eseguita dal sistema operativo è contenuta dentro un qualche processo"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Eseguendo (con successo) k volte un file eseguibile, si generano k diversi processi",
+            "Per poter lanciare un file eseguibile, è prima necessario aspettare che il comando precedente sia terminato",
+            "Tutti i processi sono sempre in stato di RUNNING",
+            "Un processo è sempre un’istanza di uno script bash"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Un programma scritto in linguaggio C:",
+        "answers": [
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘\\n’",
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘^M’",
+            "Rappresenta le stringhe ESCLUSIVAMENTE come array di caratteri terminate dal carattere ‘0’",
+            "Rappresenta le stringhe come array di caratteri terminate dal carattere ‘\\0’"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Linus Torvalds ha riscritto i pacchetti di Unix, creando i pacchetti GNU",
+            "Tutte le opzioni sono false",
+            "Linus Torvalds ha scritto il primo kernel di Linux all’inizio degli anni ‘80",
+            "Richard Stallman ha descritto per primo la licenza GPL"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Nessuna delle opzioni è vera",
+            "È possibile montare un filesystem solo se è dichiarato nel file /etc/fstab",
+            "È possibile montare un filesystem solo se è dichiarato nel file /etc/mtab",
+            "Ad ogni filesystem corrisponde un disco fisico o parte di esso(partizione)"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla comunicazione tra processi in Linux è vera?",
+        "answers": [
+            "Per far comunicare qualunque coppia di processi è necessario metterli in pipeling da shell",
+            "Usando la syscall pipe, è possibile far comunicare qualunque coppia di processi",
+            "Nessuna delle opzioni è vera",
+            "Usando le named pipes, è possibile far comunicare solo processi parenti(ad es., padre con figlio)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla comunicazione tra processi in Linux è vera?",
+        "answers": [
+            "Per far comunicare qualunque coppia di processi è necessario metterli in pipeling da shell",
+            "Usando la syscall pipe, è possibile far comunicare qualunque coppia di processi",
+            "Usando le socket si può far comunicare qualsiasi coppia di processi",
+            "Usando le named pipes, è possibile far comunicare solo processi parenti(ad es., padre con figlio)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice: FILE *stream = fopen(NOMEFILE, \"w\"); Dire quale frammento di codice ha lo stesso effetto.",
+        "answers": [
+            "int fd = open(NOMEFILE, O_WRONLY | O_CREAT, 0666);",
+            "int fd = open(NOMEFILE, O_WRONLY | O_TRUNC);",
+            "int fd = open(NOMEFILE, O_WRONLY);",
+            "int fd = open(NOMEFILE, O_WRONLY | O_CREAT | O_TRUNC, 0666);"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "Chiamando la syscall select, è possibile monitorare un insieme di file descriptor, ed essere notificati non appena ce n’è uno che è diventato disponibile per un’operazione di lettura o scrittura",
+            "Per richiedere un lock su un file (o su una porzione di esso), occorre chiamare la syscall ioctl",
+            "È possibile usare la syscall select sia in modo bloccante che in modo non bloccante",
+            "Le syscall ioctl e fcntl ammettono 2 o 3 argomenti, a seconda dell’operazione richiesta"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui segnali Linux è vera?",
+        "answers": [
+            "Tutti i segnali, se non opportunamente catturati, provocano la terminazione del processo, con l’eccezione del segnale STOP",
+            "Per un processo è sempre possibile ridefinire il comportamento di un qualsiasi segnale",
+            "È possibile per un qualunque processo inviare un segnale ad un qualsiasi altro processo dello stesso utente",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sugli errori delle syscall di Linux è vera?",
+        "answers": [
+            "Per stampare su stderr la spiegazione di un errore verificatosi in una syscall, il cui nome sia contenuto nella variabile syscall_name (di tipo char *), si può effettuare la seguente chiamata: perror(\"Si è verificato il seguente errore nella chiamata a %s\", syscall_name);",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall si può effettuare la seguente chiamata: prinf(\"%s\\n\", strerror(errno));",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è sufficiente chiamare perror",
+            "Per stampare su stdout la spiegazione di un errore verificatosi in una syscall è necessario scrivere uno switch sulla variabile globale errno"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "La stringa Informatica9000 ha un match con la seguente REGEX:",
+        "answers": [
+            "Informatica9000$",
+            "^Informatica900$",
+            "Informatica9[0^3]",
+            "[^IKU]nformatica"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quali delle seguenti affermazioni sui comandi della bash è vera?",
+        "answers": [
+            "Il comando cat stringa può essere usato per scrivere una stringa su stdout",
+            "Eseguendo il comando echo 'date' viene stampata la data e l’ora corrente (secondo l’orologio di sistema)",
+            "Il comando man cmd restituisce in sequenza tutte le pagine di manuale per il comando cmd contenute nelle varie sezioni del manuale",
+            "Il comando clear può essere usato per pulire completamente lo schermo: dopo l’esecuzione, il terminale non conterrà alcuna scritta"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, la variabile IFS:",
+        "answers": [
+            "Nessuna delle opzioni è vera",
+            "È l’acronimo di Internal Field Splitting",
+            "Rappresenta una variabile contenente la sequenza di tutti i caratteri utilizzati per la separazione in parole (word splitting)",
+            "Rappresenta il carattere utilizzato per la separazione in parole (word splitting)"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul Linguaggio C è vera? ",
+        "answers": [
+            "Richiede che i programmi siano sempre scritti in file con estensione .c",
+            "Richiede che ogni modulo sia scritto in un file separato, come nel Java",
+            "È stato definito come linguaggio Open Source da Dennis Ritchie",
+            "È stato definito presso i laboratori di ricerca di una compagnia telefonica americana"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle funzioni malloc, calloc, realloc e free è falsa?",
+        "answers": [
+            "Le due chiamate calloc(N, sizeof(int)) e realloc(NULL, N*sizeof(int)) hanno sempre lo stesso effetto",
+            "Le due chiamate malloc(N*sizeof(int)) e realloc(NULL, N*sizeof(int)) hanno sempre lo stesso effetto",
+            "Il primo argomento di realloc, quando non NULL, deve contenere il risultato di una precedente chiamata a malloc, calloc o realloc",
+            "I risultati di malloc, calloc e realloc possono essere passati alla funzione free per poter essere riallocati da future malloc, calloc e/o realloc"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle funzioni malloc, calloc, realloc e free è falsa?",
+        "answers": [
+            "I risultati di malloc e calloc possono essere passati alla funzione free per poter essere riallocati da future malloc e/o calloc",
+            "Le due chiamate malloc(N*sizeof(int)) e calloc(N, sizeof(int)) hanno sempre lo stesso effetto",
+            "La memoria allocata con malloc e/o calloc viene comunque liberata quando il processo termina, indipendentemente dal fatto di aver o no chiamato la free su ogni zona di memoria allocata",
+            "La memoria allocata da malloc e/o calloc si trova sullo heap"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale dei seguenti sistemi operativi non è un antenato di Linux?",
+        "answers": [
+            "Unix",
+            "Le altre risposte contengono tutte degli antenati di Linux",
+            "MacOSX",
+            "MULTICS"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri il comando: find Doc* \\( -name ‘Doc*’ -a -type d \\) -o -newer Documenti -exec touch ‘{}’ \\;",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "L’azione non è specificata correttamente, quindi la bash restituirà un messaggio d’errore",
+            "Il comando stampa su schermo tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente della directory Documenti",
+            "Il comando modifica tutti i tempi(atime, mtime e ctime) di tutte le directory il cui nome comincia con Doc e che siano state modificate più recentemente dalla directory Documenti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla syscall fork è falsa?",
+        "answers": [
+            "Ritorna 2 valori diversi a seconda che si tratti del processo padre o del processo figlio",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è lo stack delle chiamate (che quindi non è copiato)",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è il PID (che quindi non è copiato)",
+            "Genera una copia esatta del processo chiamante, con alcune eccezioni; tra queste ultime vi è il PPID (che quindi non è copiato)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui comando cmp, diff e patch è vera?",
+        "answers": [
+            "L’opzione -b ha lo stesso significato sia per diff che per cmp",
+            "È possibile usare il comando patch solo se si ha l’output del comando diff",
+            "È possibile usare il comando patch solo se si ha, indifferentemente, l’output del comando diff o del comando cmp",
+            "L’opzione -i di cmp permette di considerare come uguali le differenze sul solo minuscolo/maiuscolo"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler avere in esecuzione in background i comando cmd1 e cmd2 (si supponga anche che tali comandi non terminino, a meno che non gli si mandi un opportuno segnale). Quale dei seguenti modi è corretto?",
+        "answers": [
+            "cmd1 #premere Ctrl+C bg cmd2 #premere Ctrl+C bg",
+            "cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z fg",
+            "cmd1 #premere Ctrl+Z cmd2 bg #premere Ctrl+Z bg",
+            "cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z bg bg"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler avere in esecuzione in background i comando cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "cmd1 #premere Ctrl+Z bg cmd2 #premere Ctrl+Z bg",
+            "cmd1 #premere Ctrl+Z fg cmd2 #premere Ctrl+Z fg",
+            "cmd1 #premere Ctrl+Z bg cmd2 #premere Ctrl+Z",
+            "cmd1 #premere Ctrl+Z cmd2 #premere Ctrl+Z fg"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall link(oldpath, newpath) ha lo stesso effetto del comando bash ln oldpath newpath",
+            "La syscall unlink(nomefile) ha lo stesso effetto del comando bash rm nomefile",
+            "La syscall unlink(nomefile) rimuove sempre il contenuto di nomefile dal disco, se nomefile è un file regolare",
+            "La syscall symlink(oldpath, newpath) ha lo stesso effetto del comando bash ln -s oldpath newpath"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Ciascun job è composto al massimo da un processo",
+            "Per vedere i jobs in foreground, è sufficiente usare il comando jobs",
+            "Quando un processo in foreground termina, la bash stampa il job id del processo e la ragione della terminazione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla syscall sigaction è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Permette di definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Chiamandola ripetutamente, e passandole al primo argomento via via tutti i segnali disponibili, è possibile definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Permette di definire quali segnali vanno ignorati finché l’handler del segnale è in esecuzione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulla syscall sigaction è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Permette di definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Chiamandola ripetutamente, e passandole al primo argomento via via tutti i segnali disponibili, è possibile definire una funzione che viene eseguita qualsiasi segnale arrivi al processo",
+            "Permette tramite il campo sa_mask della struttura struct sigaction, di definire quali segnali vanno ignorati finché l’handler del segnale è in esecuzione"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler lanciare in background i comandi cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "cmd1 & cmd2",
+            "( cmd1; cmd2 ) &",
+            "cmd1; cmd2 &"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler lanciare in background i comandi cmd1 e cmd2 (si supponga anche che tali comandi non terminino, a meno che non gli si mandi un opportuno segnale). Quale dei seguenti modi è corretto?",
+        "answers": [
+            "cmd1; cmd2 &",
+            "cmd1 && cmd2",
+            "cmd1 & cmd2",
+            "Nessuna delle altre opzioni è corretta"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler lanciare in background i comandi cmd1 e cmd2. Quale dei seguenti modi è corretto?",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "cmd1 & cmd2 &",
+            "( cmd1; cmd2 ) &",
+            "cmd1; cmd2 &"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando time è falsa?",
+        "answers": [
+            "Il comando /usr/bin/time cmd ha anche l’effetto di eseguire il comando cmd",
+            "Il comando /usr/bin/time cmd può solo mostrare il tempo (di CPU, di sistema e reale)",
+            "Esistono 2 comandi time: uno è una keyword della bash e l’latro corrisponde ad un file eseguibile (solitamente /usr/bin/time)",
+            "Il comando time cmd, eseguito dalla bash, può solo mostrare il tempo (di CPU, di sistema e reale)"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui comandi less e more è falsa?",
+        "answers": [
+            "Sono specialmente utili quando si vuole visualizzare un output molto lungo (che non è possibile visualizzare in un’intera schermata di terminale",
+            "Entrambi permettono di ricercare espressioni regolari",
+            "Per terminarli occorre premere CTRL+C",
+            "Sono entrambi interattivi"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall wait e waitpid è falsa?",
+        "answers": [
+            "Se una chiamata wait(&status); ha successo, il valore di status coincide con l’exit status del processo figlio appena terminato",
+            "Ogni chiamata wait(&status); è equivalente alla chiamata waitpid(-1, &status, 0)",
+            "Le chiamate alla wait sono sempre bloccanti",
+            "Le chiamate alla waitpid possono non essere bloccanti"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "L’acronimo BASH sta per Bourne Advanced Shell",
+            "Nessuna delle altre opzioni è vera",
+            "È possibile definire array associativi, con la seguente sintassi: declare -A myArray={‘key1’=’value1’, ‘key2’=’value2’}",
+            "Non è possibile definire array associativi"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Una directory di un filesystem:",
+        "answers": [
+            "Può contenere solo file regolari e altre directory",
+            "Non può mai contenere degli hard disk",
+            "Nessuna delle opzioni è vera",
+            "Ha sempre una directory padre, eventualmente corrisponde a se stessa"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall chdir ha l’effetto di cambiare l’esecuzione delle sole chiamate ad open che usano path relativi come primo argomento",
+            "La syscall chdir(path) ha lo stesso effetto del comando bash cd path lanciato in una sottoshell",
+            "La syscall rename(oldpath, newpath) ha lo stesso effetto del comando bash cp oldpath newpath",
+            "La syscall chroot ha l’effetto di cambiare l’esecuzione delle sole chiamate ad open che usano path assoluti come primo argomento"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files e che si trovano nella sezione 2 del manuale è falsa?",
+        "answers": [
+            "Mentre le funzioni della libreria standard possono solo agire solo su file regolari, le syscall di Linux possono agire su tutti i tipi di file(regolari, directory, pipe, …)",
+            "Le funzioni della libreria standard agiscono su una struttura di tipo FILE *, mentre le syscall agiscono su un file descriptor interno",
+            "Nessuna delle syscall di Linux accetta come argomento input o output formattato stile printf",
+            "Le syscall Linux permettono solamente le seguenti operazioni: apertura, chiusura, scrittura, lettura, posizionamento"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano le directory è falsa?",
+        "answers": [
+            "La syscall readdir, con argomento uguale a quanto ritornato da una precedente opendir avvenuta con successo, ritorna un puntatore ad una struttura struct dirent, che contiene il nome di un file o di una directory contenuta nella directory passata a opendir",
+            "Chiamare la syscall open su una directory può avere successo",
+            "Per poter cambiare il contenuto di una directory occorre aprirla con la syscall opendir",
+            "Per poter leggere il contenuto di una directory occorre aprirla con la syscall opendir"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando kill è falsa?",
+        "answers": [
+            "Per mandare il segnale 9 al processo in background con job id 3, è sufficiente scrivere il comando kill -KILL %3",
+            "Per mandare il segnale SIGTERM al processo con PID 19330, è sufficiente scrivere il comando kill -SIGTERM 19330",
+            "Per mandare il segnale SIGINT al processo in background con job id 3, è sufficiente scrivere il comando kill –‘kill -l SIGINT’ %3",
+            "Per mandare il segnale 9 al processo con PID 10, è sufficiente scrivere il comando kill -KILL %10"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Per eliminare tutte le linee duplicate in un file di testo (senza preoccuparsi dell’ordinamento delle righe) occorre:",
+        "answers": [
+            "utilizzare congiuntamente i comandi sort e uniq",
+            "utilizzare congiuntamente i comandi cat e grep",
+            "utilizzare il comando uniq con opzione -u",
+            "utilizzare il comando uniq"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle pipe di Linux è vera?",
+        "answers": [
+            "Usando la syscall pipe, vengono automaticamente aperti 2 file descriptor",
+            "Nessuna delle altre opzioni è vera",
+            "Per usare le named pipes, è sempre necessario chiamare la syscall mkfifo",
+            "usando la syscall mkfifo, viene aperto un solo file descriptor"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall di Linux che riguardano i files è falsa?",
+        "answers": [
+            "La syscall chown(nomefile, -1, gid) ha lo stesso effetto del comando bash chgrp nomefile",
+            "La syscall mkdir(nomedir, mode) ha lo stesso effetto del comando bash mkdir -m mode nomedir",
+            "La syscall dup2(2, 1) ha l’effetto di ridigere lo stdout nello stderr",
+            "La syscall stat(nomefile, buf) ha lo stesso effetto del comando bash stat nomefile"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Gli script sed:",
+        "answers": [
+            "Sono file di testo composti da sequenze di linee che possono essere del tipo N azione, dove N è il numero di linea del file di ingresso che sed sta processando ed azione è un comando Unix da eseguire sulla linea N",
+            "Nessuna delle altre opzioni è vera",
+            "Sono script (es: bash) al cui interno viene allocato il comando sed",
+            "Sono file di testo composti da sequenze di linee del tipo condizione azione, dove la condizione può essere, ad esempio, un numero di linea o una espressione regolare"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui comandi cat e od è falsa?",
+        "answers": [
+            "I comandi od file e cat file non possono mai dare lo stesso risultato",
+            "I comandi od file e cat file danno lo stesso risultato se file è un file di testo ASCII",
+            "Il comando cat interpreta ogni sequenza di byte letta come un carattere (tipicamente UTF8), e lo stampa",
+            "Il comando od scrive ogni singolo byte letto usando il suo valore numerico"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, quale delle seguenti affermazioni sul carattere # è vera?",
+        "answers": [
+            "Rappresenta sempre l’inizio di un commento, con un’unica eccezione: quando è preceduto dal carattere $",
+            "Se è seguito dal carattere !, non rappresenta mai l’inizio di un commento",
+            "Nessuna delle opzioni è vera",
+            "Se presente in uno script, tutto quello che lo segue è sempre considerato commento"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "comment": "La​​ B ​​può ​​trarre​​ in​​ inganno:​​ lo ​​shabang ​​si ​​applica ​​solo​​ alla​​ prima​​ riga ​​dello​​ script"
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall dei processi Linux è falsa?",
+        "answers": [
+            "La syscall setuid() permette a qualsiasi processo di cambiare il suo real user ID",
+            "La syscall getuid() permette a qualsiasi processo di conoscere il suo real user ID",
+            "La syscall getppid() ritorna il PID del processo che ha generato quello chiamante (o che lo ha adottato)",
+            "La syscall getpid() ritorna il PID del processo chiamante"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Si può dichiarare esplicitamente il tipo di una variabile, anteponendolo al nome della variabile stessa (es: int count)",
+            "Ad una variabile di tipo intero non è possibile assegnare un valore di tipo diverso, altrimenti il programma termina con un errore",
+            "Nessuna delle altre opzioni è vera",
+            "Non è possibile dichiarare una variabile in sola lettura: una variabile definita in uno script bash è sempre modificabile"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Si può dichiarare esplicitamente il tipo di una variabile, anteponendolo al nome della variabile stessa (es: int count)",
+            "Ad una variabile di tipo intero non è possibile assegnare un valore di tipo diverso, altrimenti il programma termina con un errore",
+            "Una volta dichiarato il tipo di una variabile, lo si può cambiare solo dopo aver invocato il comando unset",
+            "Non è possibile dichiarare una variabile in sola lettura: una variabile definita in uno script bash è sempre modificabile"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando ps è vera?",
+        "answers": [
+            "Senza nessun argomento, mostra tutti i processi lanciati dall’utente attuale nel terminale attuale",
+            "Per ogni processo, mostra sempre il suo PID, indipendentemente dagli argomenti con cui viene lanciato",
+            "Non è possibile usarlo per vedere i processi lanciati dall’utente root",
+            "È possibile usarlo per vedere solo i processi che superano un certo uso della RAM"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Per ogni terminale aperto, ci può essere al massimo un job in background",
+            "Per lanciare un processo in modo tale che non scriva su stdout, lasciando così modo di scrivere altri comandi sulla bash, è sufficiente lanciarlo in background",
+            "Se si vuole dare input da stdin senza redirezioni ad un processo, è necessario lanciarlo in foreground"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Nessuna delle altre opzioni è vera",
+            "Il text segment contiene le istruzioni da eseguire, e non può essere condiviso con altri processi",
+            "Lo stack contiene i dati statici inizializzati ed alcune costanti d’ambiente",
+            "Il processo control block (PCB) mantiene le informazioni essenziali di ogni processo, e uno stesso PCB può essere condiviso tra processi diversi"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è falsa?",
+        "answers": [
+            "I comandi builtin della bash generano sempre nuovi processi",
+            "Per capire se un comando della bash è o no builtin, è sufficiente usare il comando type",
+            "Il comando cd è builtin della bash",
+            "Un comando builtin della bash non corrisponde ad alcun file eseguibile dedicato"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale dei seguenti campi non è presente nel process control block?",
+        "answers": [
+            "Change time",
+            "GID reale ed effettivo",
+            "Nice",
+            "Current working directory"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui comandi della bash è falsa?",
+        "answers": [
+            "Il comando type file mostra il tipo del file (regolare, directory, etc)",
+            "Il comando whoami mostra lo username dell’utente attualmente loggato nel terminale in cui viene digitato il comando (potrebbe non coincidere con l’utente che ha effettuato il login grafico)",
+            "Il comando id può essere usato per visualizzare i gruppi cui un utente appartiene",
+            "Il comando which cmd mostra qual è il file eseguibile che viene eseguito quando si lancia il comando cmd, ma solo per i comando che non sono builtin"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall dei processi in Linux è vera?",
+        "answers": [
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere var con la chiamata a getenv(\"valore\");",
+            "Per qualsiasi processo è possibile conoscere il suo ambiente di esecuzione senza effettuare alcuna syscall",
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere valore con la chiamata a setenv(\"var\",\"valore\", 1);",
+            "Se un processo viene lanciato nel seguente modo: var=valore ./a.out, allora esso può ottenere valore con la chiamata a putenv(\"var=valore\");"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Linux è multiutente, perché definisce più utenti, di cui però uno solo può essere loggato su una data macchina",
+            "Linux è multiutente, perché definisce più utenti; in un dato istante, possono esistere 2 o più processi appartenenti ad utenti diversi",
+            "Linux è multiprocesso, perché permette a più utenti contemporaneamente di essere loggati sulla stessa macchina",
+            "Linux è multiprocesso, perché puù essere usato su una macchina con più processi"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Linux è multiutente, perché definisce più utenti, di cui però uno solo può essere loggato su una data macchina",
+            "Nessuna delle altre opzioni è vera",
+            "Linux è multiprocesso, perché permette a più utenti contemporaneamente di essere loggati sulla stessa macchina",
+            "Linux è multiprocesso, perché puù essere usato su una macchina con più processi"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il linguaggio C:",
+        "answers": [
+            "È incompatibile con i Sistemi Operativi della famiglia Windows",
+            "Nessuna delle altre opzioni è vera",
+            "È un linguaggio strutturato e compilato",
+            "E un linguaggio non strutturato e compilato"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti non è un possibile stato di un processo Linux?",
+        "answers": [
+            "Uninterruptible sleep",
+            "Stopped",
+            "Running",
+            "Continued"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti non è un possibile stato di un processo Linux?",
+        "answers": [
+            "Uninterruptible sleep",
+            "Stopped",
+            "Running",
+            "Orphaned"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando top è vera?",
+        "answers": [
+            "Se lanciato con il comando top, per terminarlo è necessario premere CTRL+C",
+            "Il suo output è uguale a quello di ps, ma le opzioni sono diverse",
+            "Se lanciato con il comando top -b, per terminarlo è sufficiente premere il tasto Q",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Relativamente alla programmazione bash, quali delle seguenti affermazioni è esatta?",
+        "answers": [
+            "Il comando $count[3] stampa il quarto elemento dell’array count",
+            "Il comando $count[3] stampa l’elemento con indice 3 dell’array count. Gli array in bash sono sparsi quindi non c’è garanzia che si tratti del terzo o del quarto elemento dell’array",
+            "Il comando $count[3] stampa il terzo elemento dell’array count",
+            "Nessuna delle opzioni"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Per visualizzare i processi attualmente in esecuzione su una determinata bash, è sufficiente usare il comando jobs",
+            "Tutti i processi in background sono in stato Stopped",
+            "Per riportare in foreground un determinato job in background, è sufficiente dare il comando fg sulla bash dove il job è in background, ma solo se tale job è l’attuale \"current job\"in background",
+            "Per stoppare un processo in foreground, si può sia mandare un segnale SIGTSTP che premere CTRL+Z in una qualsiasi shell"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Per modificare tutte le occorrenze della lettera o ed i rispettivamente in O ed 1 di un file di testo, quale comando è più appropriato utilizzare?",
+        "answers": [
+            "awk",
+            "sed",
+            "grep",
+            "tr"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler vedere, per tutti i processi dell’utente utente, il suo PID, il suo PPID, il comando usato per lanciare il processo (con tutti gli argomenti), la sua occupazione totale di memoria in kB e la sua attuale occupazione di memoria in RAM (senza considerare quindi la parte eventualmente swappata su disco), sempre in kB. Quale dei seguenti comandi è quello corretto?",
+        "answers": [
+            "ps -uutente -o pid,ppid,cmd,rss,vsz",
+            "ps -uutente -o pid,ppid,cmd,rss,sz",
+            "ps -e -o pid,ppid,cmd,vsz,rss",
+            "ps -uutente -o pid,ppid,cmd,vsz,rss"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Una espressione regolare:",
+        "answers": [
+            "È composta da caratteri literal e caratteri di punteggiatura",
+            "Non può essere formata da soli caratteri non literal",
+            "Descrive implicitamente un insieme di stringhe che hanno almeno un match con se stessa",
+            "Non può essere formata da soli caratteri literal"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Ogni risorsa di un sistema Unix, ad eccezione dei processi e periferiche hardware, è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione delle connessioni di rete (socket), è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione dei processi, è rappresentato da un file",
+            "In un sistema Unix tutte le risorse sono rappresentate da un file"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Ogni risorsa di un sistema Unix, ad eccezione dei processi e periferiche hardware, è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione delle connessioni di rete (socket), è rappresentato da un file",
+            "Ogni risorsa di un sistema Unix, ad eccezione dei stampanti, è rappresentato da un file",
+            "Nessuna delle opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando kill è vera?",
+        "answers": [
+            "È obbligatorio specificare il segnale da inviare, come numero intero",
+            "Lanciato senza nessun argomento, manda SIGKILL all’ultimo processo lanciato",
+            "Può essere usato per ottenere lo stesso risultato tanto del CTRL+C quanto del CTRL+Z",
+            "Nessuna delle altre affermazioni è vera"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Ogni processo è identificato da un PID e da un job id, che devono coincidere",
+            "Un job è un comando della bash che prende sempre il controllo dello stdin",
+            "Nessuna delle altre opzioni è vera",
+            "Fissato un istante nell’esecuzione del sistema operativo, ci sarà sempre al massimo un job in foreground, mentre quelli in background possono essere più d’uno"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che sia appena stata eseguita la seguente riga di codice di un processo: int pid = fork();. Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Nel processo padre, la variabile pid vale assume 1 solo valore, corrispondente al suo stesso PID",
+            "Nel processo figlio, la variabile pid vale assume 1 solo valore, corrispondente al PID del padre",
+            "C’è un nuovo processo pronto per andare in esecuzione, a meno che la variabile pid non valga -1",
+            "Nel processo padre, la variabile pid assume 2 diversi valori"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quali delle seguenti affermazioni sulla variabile IFS è vera?",
+        "answers": [
+            "Può essere usato per cambiare l’esecuzione di un ciclo for della bash",
+            "Contiene il carattere utilizzato per la separazione in token da awk",
+            "Nessuna delle opzioni è vera",
+            "Deve contenere, come valore, un solo carattere, da usare per la separazione in parole nella bash (word splitting)"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui processi Linux è vera?",
+        "answers": [
+            "Il process control block mantiene le informazioni essenziali di ogni processo, è mantenuto su disco e viene swappato in RAM quando il processo va in esecuzione",
+            "Lo heap contiene i dati statici inizializzati ed alcune costanti d’ambiente",
+            "Il text segment contiene le istruzioni da eseguire, e viene sempre mantenuto interamente in RAM",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale dei seguenti linguaggi non è mai stato usato per implementare Unix?",
+        "answers": [
+            "L’assembler del PDP7",
+            "Il B",
+            "Il C",
+            "Le altre risposte contengono tutte dei linguaggi usati per implementare Unix"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle espressioni regolari è vera?",
+        "answers": [
+            "Il metacarattere + consente di concatenare due regex",
+            "Non è mai stato possibile definire un match con il carattere .",
+            "Nessuna delle altre opzioni è vera",
+            "Un carattere literal ha un match con se stesso"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Il file system di Linux è una foresta ovvero un albero con più radici (una per ogni dispositivo fisico di memoria di massa collegato alla macchina, per esempio hard disk, chiave USB, CD, DVD, …)",
+            "Nel file system di Linux, ogni nodo interno è un file o una directory, mentre le foglie sono sempre directory",
+            "Nel file system di Linux esistono anche directory (denominate virtuali) che non si trovano su nessun dispositivo fisico di memoria di massa",
+            "Il file System di Linux è gerarchico, perché per accedere ad un file occorre effettuare una chiamata di sistema al kernel"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando find è falsa?",
+        "answers": [
+            "È possibile restringere la ricerca ai soli file che sono link simbolici",
+            "È obbligatorio che gli starting point siano delle directory",
+            "È possibile cercare nomi di file che rispettino un dato pattern o una data regular expression",
+            "È possibile cercare anche directory, e non solo file"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul filesystem Linux è vera?",
+        "answers": [
+            "Tutte le opzioni sono false",
+            "È logicamente unico ed ha come punto di inizio la root (radice) rappresentata dal simbolo /",
+            "Tutte le opzioni sono vere",
+            "È una struttura ad albero in cui le directory sono nodi intermedi e non possono mai essere nodi terminali"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Non è possibile definire una basic REGEX che abbia un match con una stringa formata da 3 o più occorrenze del carattere *",
+            "Il metacarattere ^ consente di dichiarare un match ad inizio stringa solo se compare come primo carattere della REGEX",
+            "@ è un metacarattere delle REGEX estese",
+            "Tutte le risposte sono vere"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui comandi cat e od è falsa?",
+        "answers": [
+            "L’opzione -A di od permette di scegliere la base (decimale, ottale od esadecimale) di tutti i bytes da stampare",
+            "L’opzione -n di cat fa precedere ogni riga stampata con il numero della riga stessa (a partire da 1)",
+            "L’opzione -E di cat stampa anche il carattere $ alla fine di ogni riga",
+            "L’opzione -j B di od permette di cominciare la visualizzazione a partire dal (B + 1)-esimo byte"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni è falsa?",
+        "answers": [
+            "Il carattere \\ ha un match con la regex ‘\\’",
+            ". è un metacarattere che ha un match con una occorrenza di qualsiasi carattere",
+            "I mecataratteri [] consentono di definire il match con un range di caratteri",
+            "La concatenazione di due o più regex è una regex"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il linguaggio C:",
+        "answers": [
+            "Viene definito per la creazione del primo Sistema Operativo Unix",
+            "Nasce negli anni 70 per sviluppare programmi portabili su diverse architetture hardware",
+            "Nasce come linguaggio di programmazione proprietario per l’implementazione dei programmi sui sistemi DEC PDP-11",
+            "Nasce negli anni 70 come evoluzione del linguaggio B"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Esiste in unix un comando che consente di stampare il numero di occorrenze di una riga di un file?",
+        "answers": [
+            "Nessuna delle altre opzioni è ver",
+            "No, occorre utilizzare congiuntamente i comandi uniq e wc",
+            "No, occorre utilizzare congiuntamente i comandi sort e wc",
+            "Si"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quali tra le seguenti affermazioni è vera?",
+        "answers": [
+            "cat -N -6 filename stampa le ultime 6 ighe del filename",
+            "tail -c n filename stampa le ultime n righe del filename",
+            "cut consente di tagliare un file in gruppi di righe contigue in base a un carattere di spaziatura",
+            "nessuna delle altre risposte è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quali tra le seguenti affermazioni è vera?",
+        "answers": [
+            "È possibile stampare esclusivamente le ultime N righe di un file di testo con il comando cat -N -6",
+            "Il comando tail -c /var/log/maillog stampa in maniera continua le ultime righe del file /var/log/maillog",
+            "Il comando cut consente di selezionare (scrivendole in output) singole righe di un file",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle applicazioni client-server realizzate tramite socket è vera?",
+        "answers": [
+            "Il client deve sempre chiamare la syscall bin",
+            "Il server deve chiamare la syscall connect",
+            "Il client deve sempre chiamare la syscall listen",
+            "Sia il server che il client devono sempre chiamare la syscall socket"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler scrivere un programma immune al CTRL+C. Quali dei seguenti frammenti di codice realizza quanto detto sopra?",
+        "answers": [
+            "signal(SIGTERM, SIG_DFL);",
+            "signal(SIGINT, SIG_DFL);",
+            "signal(SIGINT, SIG_IGN);",
+            "Non è possibile essere immuni al CTRL+C"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale dei seguenti comandi scrive una singola riga che consiste nel solo carattere '? ",
+        "answers": [
+            "echo \"'\"| awk '{print \"'\";}'",
+            "echo niente | awk '{print \"'\"'\"' \";}'",
+            "Nessuna delle altre opzioni è corretta",
+            "echo niente | awk '{print \"'\"'\"'\";}'"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Nell'albero di directory radicato nella directory corrente di una shell bash ci sono molteplici file di testo, ognuno dei quali contiene il log di una esecuzione di un comando. La prima riga di ogni log riporta esattamente il comando usato per ottenere il log stesso, opzioni ed argomenti compresi. Volendo sapere quali sono i diversi comandi (opzioni ed argomenti esclusi; il comando non contiene mai spazi ed è sempre all'inizio della riga) usati nei vari file di log, quale dei seguenti comandi bash è sbagliato? ",
+        "answers": [
+            "awk 'FNR == 1{print $1}' `find . -type f` | sort | uniq",
+            "for file in `find . -type f`; do awk 'FNR == 1{print $1}' $file; done | sort | uniq",
+            "for file in `find . -type f`; do head -1 $file | awk '{print $1}' | sort | uniq; done",
+            "for file in `find . -type f`; do head -1 $file | awk '{print $1}'; done | sort | uniq"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale dei seguenti comandi Bash permette di scrivere il numero di caratteri di ogni singola riga di un file di testo nomefile?",
+        "answers": [
+            "for riga in \"`cat nomefile`\"; do echo $riga | wc -c; done",
+            "var=$(cat nomefile); for riga in ${var}; do echo $riga | wc -c; done",
+            "for riga in `cat nomefile`; do echo $riga | wc -c; done",
+            "Nessuna delle altre opzioni è corretta"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul Linguaggio C è vera?",
+        "answers": [
+            "Richiede che i programmi siano sempre scritti in file con estensione .c",
+            "Richiede che ogni modulo sia scritto in un file separato, come nel Java",
+            "È un linguaggio interpretato",
+            "È un linguaggio compilato"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul Linguaggio C è vera?",
+        "answers": [
+            "Richiede che i programmi siano sempre scritti in file con estensione .c",
+            "È incompatibile con i Sistemi Operativi della famiglia Windows",
+            "È un linguaggio non strutturato e compilato",
+            "È un linguaggio strutturato e compilato"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler trovare tutti i link simbolici presenti nell'intero file system, che siano stati acceduti nell'ultimo giorno, e si supponga di volerli spostare nella directory /tmp. Quale dei seguenti comandi realizza tale specifica?",
+        "answers": [
+            "find/ -type l -atime 0 -exec mv '{}' /tmp/ \\;",
+            "find/ -type l -ctime 0 | aw k '{print \"mv\", $1, \"/tmp\";}'",
+            "find/ -type l -atime 0 -exec mv /tmp/ '{}'';'",
+            "find/ -type l -ctime 0 -exec mv '{}' /tmp/ \\;"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall dei processi in Linux è falsa?",
+        "answers": [
+            "La syscall getuid() ritorna il real user ID del processo chiamante",
+            "La syscall getpid() ritorna il PID del processo chiamante",
+            "La syscall getppid() ritorna il PID del processo che ha generato quello chiamante (o che lo ha adottato)",
+            "La syscall setuid() ritorna il real user ID del processo chiamante"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che l'utente nomeutente voglia terminare forzatamente tutti i processi attualmente in esecuzione che lui stesso abbia creato con il comando bash cmd (senza argomenti). Si supponga anche che la stringa cmd non contenga metacaratteri per regular expressions estese. Quale dei seguenti comandi bash deve usare l'utente nomeutente?",
+        "answers": [
+            "kill -9 `ps -unomeutente -opid,cmd | grep -E '^[0-9]+ cmd$' | awk '{print $1}'`",
+            "kill -9 `ps -unomeutente -opid,cmd | grep -E '^[0-9]+ cmd$'`",
+            "kill -9 `ps -unomeutente -opid,cmd | grep -E 'cmd' | awk '{print $1}'`",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sui programmi scritti in Linguaggio C è vera?",
+        "answers": [
+            "Il carattere di fine stringa è essenziale nel caso in cui si passi una stringa alla syscall write su una pipe",
+            "Il carattere di fine stringa è essenziale nel caso in cui si passi una stringa alla funzione printf con specificatore di conversione %s",
+            "Le variabili di tipo char *, se inizializzate a tempo di dichiarazione con una costante stringa, avranno un byte in più costituito dal carattere '0'",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Esiste in Linux un comando che consente, sfruttando opportunamente le sue opzioni, di stampare il numero di occorrenze consecutive di una riga in un file?",
+        "answers": [
+            "No, occorre utilizzare congiuntamente i comandi grep e wc (con opportune opzioni)",
+            "No, occorre utilizzare congiuntamente i comandi sort e wc (con opportune opzioni)",
+            "Si",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni su un file in un filesystem Linux è vera?",
+        "answers": [
+            "Può esistere un solo path, detto assoluto, che permette di richiedere l'accesso a tale file",
+            "Nessuna delle altre opzioni è vera",
+            "Può esistere un solo path relativo che permette di richiedere l'accesso a tale file",
+            "Possono esistere uno o più path assoluti che permettono di richiedere l'accesso a tale file"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri il seguente programma in codice C:",
+        "answers": [
+            "Se COPIA consiste nell'istruzione memcpy(p[1], p[0], sizeof(struct s));, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile",
+            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
+            "Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione scriverà  c0ao ciao ciao ciao",
+            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora le istruzioni seguenti (se eseguite) avranno un effetto non predicibile"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "#include <string.h>\n        #include <stdlib.h>\n        #include <stdio.h>\n        \n        int main() {\n          struct s {\n            char *a;\n            char b[20];\n          } *p[2];\n          char *a = strdup(\"ciao\");\n          p[0] = (struct s*)malloc(sizeof(struct s));\n          p[0]->a = a;\n          strcpy(p[0]->b, a);\n          COPIA\n          a[1] = '0';\n          printf(\"%s %s %s %s\\n\", p[0]->a, p[0]->b, p[1]->a, p[1]->b);\n        }\n"
+    },
+    {
+        "question": "Si consideri il seguente frammento di codice C, quali tra queste risposte è falsa?",
+        "answers": [
+            "Non è stata allocata la memoria per le 5 aree puntate dai 5 campi a",
+            "È stata allocata la memoria per 5 strutture di tipo struct s sullo heap",
+            "È stata allocata la memoria per 5 strutture di tipo struct s sullo stack delle chiamate",
+            "È stata allocata la memoria per i 100 caratteri dei 5 campi b sullo stack delle chiamate"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "int main() {\n    struct s {\n      char *a;\n      char b[20];\n    } p[5];\n  ...\n  }"
+    },
+    {
+        "question": "Si supponga di eseguire con successo i seguenti comandi da una shell sulla quale non ci sono job in background:",
+        "answers": [
+            "Entrambi i job lanciati saranno in stato di Stopped",
+            "Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            "Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            "Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "sudo cp -a `which cat` .\nsudo chmod u+s cat\n./cat &\ncat &\n"
+    },
+    {
+        "question": "Un file nomefile contiene il risultato della compilazione di un programma. Il compilatore in questione scrive righe che iniziano con la sola parola 'error' per gli errori veri e propri, e con 'error warning' per i semplici warning (è garantito che la stringa 'error warning' non sia mai all'inizio di una riga contenente un errore vero e proprio). Quale dei seguenti comandi restituisce le sole righe che si riferiscono ad errori veri e propri?",
+        "answers": [
+            "grep -E '^error ([^w]|w[^a]|wa[^r]|war[^n]|warn[^i]|warni[^n]|warnin[^g])'",
+            "Nessuna delle altre opzioni è corretta",
+            "grep -E '^error' nomefile | grep -v warning",
+            "grep -E '^error [^w][^a][^r][^n][^i][^n][^g]' nomefile"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sulle syscall wait e waitpid è falsa?",
+        "answers": [
+            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato Ã¨ terminato in modo normale",
+            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, l'exit status del processo figlio appena terminato",
+            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, il PID del processo figlio appena terminato",
+            "Se una chiamata wait(&status); ha successo, il valore di status contiene, tra le altre cose, un flag che indica se il processo figlio appena terminato è stato ucciso da un segnale"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri il seguente programma in codice C:",
+        "answers": [
+            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà  c0ao c0ao c0ao c0ao",
+            "Se COPIA consiste nell'istruzione memcpy(&p[1], &p[0], sizeof(struct s));, allora l'ultima istruzione scriverà  c0ao ciao c0ao ciao",
+            "Se COPIA consiste nell'assegnamento p[0] = p[1];, allora l'ultima istruzione avrà un effetto non predicibile",
+            "Se COPIA consiste nell'assegnamento p[1] = p[0];, allora l'ultima istruzione scriverà c0ao ciao c0ao ciao"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "#include <string.h>\n#include <stdlib.h>\n#include <stdio.h>\n\nint main() {\n  struct s {\n    char *a;\n    char b[20];\n  } p[2];\n  char *a = strdup(\"ciao\");\n  p[0].a = a;\n  strcpy(p[0].b, a);\n  COPIA\n  a[1] = '0';\n  printf(\"%s %s %s %s\\n\", p[0].a, p[0].b, p[1].a, p[1].b);\n}"
+    },
+    {
+        "question": "La directory corrente di una shell bash contiene N directory non nascoste. In ognuna di queste directory è contenuto un file di testo .txt contenente una sola riga con un numero M, potenzialmente diverso da directory a directory. Inoltre può essere presente un file dati.M.txt. Si vuole sapere quanti sono in totale, tra le varie directory, questi file dati.M.txt, senza scrivere nulla su standard error. Quale dei seguenti comandi bash è corretto?",
+        "answers": [
+            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt | wc -l; done",
+            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo si; done | wc -l",
+            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt || echo no; done | wc -l",
+            "for dir in ./*; do test -f $dir/dati.`cat $dir/.txt`.txt && echo no; done | wc -l"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di eseguire con successo i seguenti comandi da una shell sulla quale non ci sono job in background: sudo cp -a `which cat` . sudo chmod u+s cat ./cat & cat & Quale delle seguenti affermazioni è falsa?",
+        "answers": [
+            "Entrambi i job lanciati saranno in stato di Stopped",
+            "Eseguendo il comando ps h -oruid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            "Eseguendo il comando ps h -oeuid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi",
+            "Eseguendo il comando ps h -opid -p `jobs -l | awk '{print $2}'` si ottengono 2 numeri diversi"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice:",
+        "answers": [
+            "int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_CUR);",
+            "int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, 0, SEEK_END);",
+            "int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = lseek(fd, -100, SEEK_END);",
+            "int fd = open(\"file_esistente.txt\",\"O_RDONLY\");\nlseek(fd, -100, SEEK_END);\nlong pos = ltell(fd);"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\",\"r\");\nfseek(stream, -100, SEEK_END);\nlong pos = ftell(stream);"
+    },
+    {
+        "question": "Si vuole scrivere un programma equivalente a questo script ",
+        "answers": [
+            "Nessuna delle altre opzioni è corretta",
+            "printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n",
+            "printf(\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\");\nprintf(\"fatto\\n\");\n",
+            "printf(char **argv = {\"-la\", \"\/\", 0};\n\"Esecuzione in corso...\");\nexecl(\"\/bin\/ls\", \"\/bin\/ls\", \"-la\", \"\/\", NULL);\nprintf(\"fatto\\n\");\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "echo -n \"Esecuzione in corso...\"\r\n\/bin\/ls -la \/\r\necho \"fatto\"\r\n"
+    },
+    {
+        "question": "Quale dei seguenti frammenti di codice è corretto?",
+        "answers": [
+            "int pid = fork();\r\nif (pid == 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n",
+            "int pid = fork();\r\nif (pid == 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n",
+            "Tutte le altre opzioni sono sbagliate",
+            "int pid = fork();\r\nif (pid < 0) {\r\n    \/* fai qualcosa, sei il figlio *\/\r\n}else if (pid > 0) {\r\n    \/* fai qualcosa, sei il padre *\/\r\n}else {\r\n     perror(\"fork failed\");\r\n}\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice, quale dei seguenti frammenti di codice ha lo stesso effetto?",
+        "answers": [
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\\n\", var);\r\nwrite(1, buf, sizeof(var) + 1);\r\nsprintf(buf, \"%lf\\n\", var2);\r\nwrite(1, buf, sizeof(var2) + 1);\r\n",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar buf[4];\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));write(1, \"\\n\", 1);\r\n",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nwrite(1, (char *)&var, sizeof(var));\r\nwrite(1, (char *)&var2, sizeof(var2));\r\n",
+            "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nchar *buf = calloc(sizeof(var2) > sizeof(var)? sizeof(var2) : sizeof(var), sizeof(char));\r\nsprintf(buf, \"%d\", var);\r\nwrite(1, buf, sizeof(var));\r\nwrite(1, \"\\n\", 1);\r\nsprintf(buf, \"%lf\", var2);\r\nwrite(1, buf, sizeof(var2));\r\nwrite(1, \"\\n\", 1);\r\n"
+        ],
+        "correct": "d",
+        "answers_have_code": 1,
+        "code": "int var = somefunction1();\r\ndouble var2 = somefunction2();\r\nfprintf(stdout, \"%d\\n%lf\\n\", var, var2);\r\n"
+    },
+    {
+        "question": "Si consideri la riga di comando bash while condizione; do comando1 | comando2; done | comando3. Assumendo che condizione, comando1, comando2 e comando3 non contengano errori, quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "Se espressione risulta essere falsa, comando2 viene eseguito almeno una volta",
+            "Nessuna delle altre opzioni è vera",
+            "Se espressione risulta essere falsa, comando1 viene eseguito almeno una volta",
+            "Se espressione risulta essere falsa, comando3 viene eseguito almeno una volta "
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si consideri la riga di comando bash if condizione; then comando1; fi. Assumendo che comando1 non contenga errori di sintassi, quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "comando1 viene eseguito solo se condizione scrive 0 su standard output e nulla su standard error",
+            "comando1 viene eseguito solo se condizione scrive 1 su standard output e nulla su standard error",
+            "comando1 viene eseguito solo se condizione scrive 1 su standard error e nulla su standard output",
+            "Nessuna delle altre opzioni è vera"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga che le variabili bash a, b e c abbiano valori, rispettivamente, b, c e 1. Quale delle seguenti affermazioni è vera?",
+        "answers": [
+            "L'espansione aritmetica di a è 1",
+            "Nessuna delle altre opzioni è vera",
+            "L'espansione standard di a è 1",
+            "La variabile a viene sempre espansa ad 1"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Quale delle seguenti affermazioni sul comando top è vera?",
+        "answers": [
+            "Nessuna delle altre affermazioni è vera",
+            "Senza argomenti, il suo output è uguale a quello di ps senza argomenti",
+            "Se lanciato con la riga di comando top, per terminarlo è necessario premere CTRL + C",
+            "Se lanciato con la riga di comando top - b, per terminarlo è sufficiente premere il tasto Q"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di voler inizializzare una variabile var1 di una shell bash in modo tale che sia il contenuto del file filename.txt se tale file esiste, ed il valore della variabile var2 altrimenti. Quale dei seguenti comandi realizza correttamente quanto sopra ? ",
+        "answers": [
+            "var1=`echo filename.txt 2> /dev/null || cat $var2`",
+            "var1=`cat filename.txt 2> /dev/null || echo $var2`",
+            "var1=`cat filename.txt > /dev/null || echo $var2`",
+            "var1=`cat filename.txt 2> /dev/null && echo $var2`"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Il comando ssh hostname cmd esegue il comando cmd sulla bash della macchina remota hostname, dopo aver richiesto l'immissione della password per l'utente corrente. Supponendo che la fase di connessione e di immissione della password vada a buon fine, quale delle seguenti affermazioni è falsa?",
+        "answers": [
+            "Il comando ssh hostname 'ls '| wc -l esegue sia ls che wc su hostname",
+            "Il comando ssh hostname ls \\| wc -l esegue sia ls che wc su hostname",
+            "Il comando ssh hostname ls | wc -l esegue ls su hostname, e wc sulla macchina attuale",
+            "Il comando ssh hostname ls '|' wc -l esegue sia ls che wc su hostname"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": ""
+    },
+    {
+        "question": "Si supponga di avere il seguente frammento di codice, e che  il file file_esistente.txt abbia il seguente contenuto (comprensivo di 2 caratteri carriage return) 4567 34.56",
+        "answers": [
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar buf[4];\r\nread(fd, buf, sizeof(var));\r\nvar = atoi(buf);\r\nread(fd, buf, sizeof(var2));\r\nvar2 = atof(buf);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nread(fd, &var, sizeof(var));\r\nread(fd, &var2, sizeof(var2));\r\n",
+            "fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nchar buf[6];\r\nread(fd, buf, 5);\r\nvar = atoi(buf);\r\nread(fd, buf, 6);\r\nvar2 = atof(buf);",
+            "int fd = open(\"file_esistente.txt\", O_RDONLY);\r\nint var;\r\ndouble var2;\r\nfscanf(fd, \"%d\\n%lf\\n\", &var, &var2);\r\n"
+        ],
+        "correct": "a",
+        "answers_have_code": 1,
+        "code": "FILE *stream = fopen(\"file_esistente.txt\", \"r\");\r\nint var;\r\ndouble var2;\r\nfscanf(stream, \"%d\\n%lf\\n\", &var, &var2);"
+    },
+    {
+        "question": "Ignorando eventuali memory leaks, quale dei seguenti frammenti di codice può portare ad un segmentation fault?",
+        "answers": [
+            "char * p = malloc(10 * sizeof(char)); \r\np[1]='a';\r\nfree(p)",
+            "char * p = malloc(10 * sizeof(char)); \r\np[9]='a';\r\np = NULL;\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)",
+            "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)",
+            "char * p = calloc(10, sizeof(char)); \r\np[9]='a';\r\nfree(p)\r\np=realloc(p, 10*sizeof(char));\r\nfree(p)"
+        ],
+        "correct": "d",
+        "answers_have_code": 1,
+        "code": ""
+    }
+]

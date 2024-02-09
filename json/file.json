@@ -1,0 +1,1026 @@
+[{
+		"question": "Why the Google File System uses large chunk?",
+		"answers": [
+			"To maximize the read and write throughput",
+			"To optimize performance for large files and to reduce the amount of metadata maintained by the system",
+			"To avoid network disconnections during the file access",
+			"To minimize the seek time",
+			"To reduce the time needed to replicate the chunks",
+			"To reduce the number of access to the same chunk"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which is the key operation performed by the MapReduce framework (like Hadoop) that allow to properly execute the Reduce task(s) after the completion of Map tasks?",
+		"answers": [
+			"Combine",
+			"There is no need of any specific operation",
+			"Shuffle and sort",
+			"Shuffle and Combine",
+			"Combine and sort"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What is the key idea behind MapReduce?",
+		"answers": [
+			"Master - Slave algorithm design paradigm",
+			"Single Data Multiple Processing algorithm design paradigm",
+			"Batch parallel processing",
+			"Data Stream processing",
+			"Divide and conquer algorithm design paradigm"
+		],
+		"correct": "e"
+	},
+	{
+		"question": "Assume you setup a multi-threshold scale-out policy with two thresholds on the CPU utilization (Ucpu), namely Tcpu1=50% of max CPU utilization and Tcpu2=80% of max CPU utilization. A scaling action start if (see the figure): \n\n( Ucpu > Tcpu1 ) OR ( Ucpu > Tcpu2 ) AND (the threshold is exceeded for more than 300 seconds). \n\nWhy is important to wait a certain time interval before starting a scaling action?",
+		"figure": "alarms",
+		"answers": [
+			"Because 300 secs is the time required by a new instance to start and to join the scaling group",
+			"To limit the number of alarms generated in a given time interval, e.g. one hours.",
+			"To avoid ping-pong effects that make the scaling policy unstable",
+			"To guarantee that the added resources are warm-up"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which of the following are essential characteristics of cloud computing? (as defined by NIST)",
+		"answers": [
+			"Broad network access; Resource pooling; virtualization",
+			"On-demand self-service; Broad network access; and rapid elasticity ",
+			"Resource pooling; Measured Services; and Scalability"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following are essential characteristics of cloud computing? (as defined by NIST)",
+		"answers": [
+			"Resource pooling; Measured Services; and Scalability",
+			"On-demand self-service; scalability; and monitoring",
+			"Resource pooling; rapid elasticity; and measured services"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which, among the following definitions describe the MAPE-K cycle",
+		"answers": [
+			"The control loop for scaling, load balancing and VMs migration.",
+			"The control loop implemented by an autonomic manager",
+			"The control loop executed by a cloud monitor",
+			"The control loop executed to build the Knowledge about the system state",
+			"The monitoring, analytics, placement and execution control loop"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Suppose that you would like to deploy a web application composed by: a frontend server to receive http requests and produce http reply/; a business logic server to build the content of the web pages; a database server, used by the business logic to extract information. Suppose also that the business logic component should scale (horizontally). Which system architectural style/model could be used for the deployment?",
+		"answers": [
+			"Microservice architecture model",
+			"Multi-tier client-server architecture model",
+			"Service oriented architecture model",
+			"IaaS architecture model"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which type of scalability is facilitated by microservices",
+		"answers": [
+			"Scaling of single functions",
+			"Application cloning",
+			"Scaling of function's data"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Which are the business drivers for cloud computing?",
+		"answers": [
+			"Capacity Planning, Increase of business revenue, Agility",
+			"Capacity Planning, Cost Reduction, Business Agility",
+			"DevOp, Capacity Planning, Increased Security"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Assume that you are setting up a scalable web server with AWS and that for your autoscaling group you have configure a step scaling policy. You have decided to set the alarm to start the scale-out with a threshold on the incoming traffic. Which of the following assertions is true?",
+		"answers": [
+			"The alarm occurs if for the majority of the instances in the scaling group the value of the incoming traffic exceeds the threshold (e.g. for 3 out of 5).",
+			"The alarm occurs if the average value of the incoming traffic computed over all the instances in the scaling group exceed the threshold.",
+			"The alarm occurs if there is at least an instance in the scaling group with the value of the incoming traffic exceeding the threshold.",
+			"The alarm occurs if for a user configured number of the instances in the scaling group the value of the incoming traffic exceeds the threshold.",
+			"The alarm occurs if for all the instances in the scaling group the value of the incoming traffic exceeds the threshold."
+		],
+		"correct": "b"
+	},
+	{
+		"question": "In what differ microservices and the SOA?",
+		"answers": [
+			"Communication mechanisms, Data handling, and Size of the services",
+			"Communication protocols, data storage solutions, complexity of the service",
+			"Communication mechanisms, Data partitioning, Coupling of the services"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Assume that you are deploying a set of containers and that the network stack of the containers should not be isolated from the Docker host. Which of the following network drivers will you use?",
+		"answers": [
+			"Macvlan networks",
+			"User-defined bridge networks",
+			"Host Networks",
+			"Overlay networks"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What is the difference between hypervisor of type I and hypervisor of type II?",
+		"answers": [
+			"Type I hypervisors run directly on top of the hardware of the host server and Type II hypervisors run on top of the operating system of the host server.",
+			"Type I hypervisors use hardware assisted virtualization and type II hypervisors use software assisted virtualization",
+			"Type I hypervisors use para-virtualization and type II hypervisors use full virtualization",
+			"Type I hypervisors use binary translation and type II hypervisors use hypercalls"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the live migration process and in the specific the “iterative pre-copy” step. Why the memory is copied iteratively?",
+		"answers": [
+			"To preserve continuity in the migration process",
+			"To make, step-by-step, the dirty portion of the memory, on the VM to be migrated, small enough to handle the final copy ",
+			"Because usually the memory of a VMs is too large to be transferred in one shot.",
+			"Because to transfer the memory of a VM in one shout consume too much bandwidth",
+			"To avoid overload on the virtual machine to be migrated"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Why system level virtualization (a.k.a. Hypervisor) increase security?",
+		"answers": [
+			"Because the hypervisor run in user mode ",
+			"Because the hypervisor control and filters the execution of privileged instructions invoked by the guest operating system",
+			"Because the guest operating systems cannot access the physical resources and then cannot do harmful operations",
+			"Because the hypervisor run in privileged mode",
+			"Because the guest operating system use hyper-call and hardware assisted virtualization"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Consider the Kubernetes architecture in the figure. Assume you configure the container autoscaling mechanisms. What is the missing component in the figure?",
+		"figure": "kubernetes",
+		"answers": [
+			"A resource usage monitor module",
+			"The pod module",
+			"The planner module",
+			"The analyzer module"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the Kubernetes architecture in the figure. What is the component that takes scaling decisions?",
+		"figure": "kubernetes",
+		"answers": [
+			"The kube-apiserver",
+			"The kube-scheduler",
+			"The kube-controller-manager",
+			"The cloud-controller manager"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider the Kubernetes architecture in the figure. What is the component that decides on which Kubernetes node to start a new container?",
+		"figure": "kubernetes",
+		"answers": [
+			"The kube-scheduler ",
+			"The cloud-controller manager",
+			"The kube-controller manager",
+			"The kube-apiserver"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the MAPE-K cycle in the figure. What are the AWS components that implement the Monitor, Analysis and Plan phases?",
+		"figure": "mapek",
+		"answers": [
+			"Monitor=CloudWatch, Analysis=Alarms, Plan=Dynamic Scaling",
+			"Monitor=CloudWatch, Analysis=Metrics, Plan=Dynamic Scaling ",
+			"Monitor=CloudWatch, Analysis=CloudWatch, Plan=Elastic Load Balancer",
+			"Monitor=Metrics, Analysis=Thresholds, Plan=Scale-in/out policy",
+			"Monitor=Metrics, Analysis=Alarms, Plan=Thresholds"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the BigTable datastore architecture in the figure. Which among the followings are duties of the Tablet server?",
+		"figure": "bigtable",
+		"answers": [
+			"To split tablets that have grown too large; to assign tablets to tablet servers; to detect the addition and expiration of tablet servers",
+			"To manage a set of tablets; to handle read and write requests to the tablets that it has loaded; to split tablets that have grown too large",
+			"To balance tablet-server load, and garbage collection of files in GFS; to handle schema changes such as table and column family creations; to handle read and write requests"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Consider the architecture of the HDFS in the figure. Which among the following actions are performed by the NameNode?",
+		"figure": "hdfs",
+		"answers": [
+			"To manages the File System Namespace; to controls access to files; to store metadata",
+			"To manages the File System Namespace; to write in the journal log; to handle the communication with the data nodes",
+			"To record changes in a log; to check DataNode liveness; to write in a file",
+			"To write in a file; to manage the cryptographic keys; to handle the communication with the data nodes",
+			"To write in a file; to write in the journal log; to restart/replace failing DataNode"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the Google File System architecture in the figure. What components (or component) are responsible to handle the file access?",
+		"figure": "gfs",
+		"answers": [
+			"Application and chunk server",
+			"Application, master and chunk server",
+			"Master and chunk server",
+			"The linux file system"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Researchers and engineers at Google designed the Google File System taking into account the file access model. What is the most frequent type of file access?",
+		"answers": [
+			"Random write",
+			"Random read",
+			"Sequential read"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Researchers and engineers at Google designed the Google File System taking into account the file access model. What is the most frequent type of file access?",
+		"answers": [
+			"Random write",
+			"Random read",
+			"Append write"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What among the following is an RDD transformation?",
+		"answers": [
+			"collect",
+			"reduce",
+			"reduceByKey"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What among the following is an RDD transformation?",
+		"answers": [
+			"collect",
+			"reduce",
+			"map"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What among the following is an RDD action?",
+		"answers": [
+			"collect",
+			"map",
+			"reduceByKey"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Hadoop MapReduce optimizes data locality when map tasks are deployed on the Hadoop cluster, that is Hadoop MapReduce try first to run Map tasks on a data local node to not use cluster bandwidth. In case local optimization is not possible, what alternative deployment policies are used?",
+		"answers": [
+			"Rack local deployment",
+			"Cluster local deployment",
+			"Round-robin deployment"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "A MapReduce computation is usually executed on a large cluster of commodity nodes. Hence, the failure probability of the master and worker nodes is very high. In case the master node fails, what action should be taken to preserve the result of the computation?",
+		"answers": [
+			"All the the reduce tasks need to be re-scheduled and executed also if some completed",
+			"All the the map tasks need to be re-scheduled and executed also if some completed",
+			"The entire MapReduce computation must be restarted"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "A MapReduce computation is usually executed on a large cluster of commodity nodes. Hence, the failure probability of the master and worker nodes is very high. In case a map worker node fail, what action should be taken to preserve the result of the computation?",
+		"answers": [
+			"All the the reduce tasks need to be re-scheduled and executed also if some completed",
+			"All the map tasks assigned to the worker will be re-scheduled and re-executed, also if some completed",
+			"The entire MapReduce computation must be restarted"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a cloud deployment model?",
+		"answers": [
+			"Cloud Service Broker",
+			"Public cloud",
+			"Software as a Service"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a cloud service model",
+		"answers": [
+			"Private Cloud",
+			"Docker as a Service",
+			"Infrastructure as a Service"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider the difference between SOA and microservices and specifically the communication mechanisms. What of the following assertion is correct?",
+		"answers": [
+			"Both microservices and SOA use a message broker. SOA message broker is a proprietary technology, while the micrroservices message broker is open source",
+			"Microservices uses lightweight and open-source communication mechanisms, while SOA uses heavyweight and often proprietary communication mechanisms.",
+			"SOA uses lightweight communication mechanisms and microservices uses open source communication mechanisms"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "What are the enabling technologies for containers?",
+		"answers": [
+			"Namespaces, cgroups, unionfs",
+			"Docker, Kubernetes, Linux",
+			"Namespace, access control groups, file union mechanisms"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Assume that you are deploying a set of containers on different Docker hosts, and such containers need to communicate each other. Which network drivers will you use?",
+		"answers": [
+			"User-defined bridge networks",
+			"Overlay Networks",
+			"Macvlan networks"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Considering the write protocol of the HDFS. Who is in charge of sending the “write successful” acknowledgement to the NameNode?",
+		"figure": "hdfs",
+		"answers": [
+			"The primary DataNode and all the secondary DataNode involved in the write operation",
+			"The client",
+			"The primary DataNode involved in the write operation"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. Which data could be accessed with the key (Row key, column key, timestamp)?",
+		"answers": [
+			"A specific version of a big table cell",
+			"A family cell",
+			"All the cell with the same Row and Column key stored from the time=0 (creation of the table) to time=timestemp"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "What is a Cloud Broker?",
+		"answers": [
+			"An entity that manages the use, performance and delivery of cloud services, and negotiates relationships between Cloud Providers and Cloud Consumers.",
+			"An intermediary that provides connectivity and transport of cloud services from Cloud Providers to Cloud Consumers.",
+			"A party that can conduct independent assessment of cloud services, information system operations, performance and security of the cloud implementation."
+		],
+		"correct": "a"
+	},
+	{
+		"question": "What is Rapid Elasticity?",
+		"answers": [
+			"Is the degree to which a system is able to add or remove virtual machines automatically, without any human in the loop",
+			"Is the degree of workload changes and performance trend changes by provisioning and deprovisioning resources in an automatic manner",
+			"Is the degree to which a system is able to adapt to workload changes by provisioning and deprovisioning resources in an automatic manner"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What is a namespace?",
+		"answers": [
+			"A namespace wraps a global system resource in an abstraction that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource.",
+			"A namespace is an abstraction that wraps containers running tightly coupled services. Namespaces are implemented as Pod in Kubernetes.",
+			"A namespace is a Linux kernel feature which allow processes to be organized into groups whose usage of various types of resources can then be limited and monitored"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the docker CLI command `docker run -i -t ubuntu /bin/bash`, which of the following actions is performed by the command?",
+		"answers": [
+			"Locate and eventually download the ubuntu image, if not locally stored",
+			"Create two containers: the first one running Ubuntu OS and the second one running the bash application",
+			"Run a temporary filesystem and the bash CLI on top of it."
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the Google File System architecture. What is/are the component/s responsible to create a file?",
+		"figure": "gfs",
+		"answers": [
+			"Application and chunk server",
+			"Master and chunk server",
+			"Chunk Server",
+			"The master",
+			"The linux file system"
+		],
+		"correct": "d"
+	},
+	{
+		"question": "Which of the following definition of capacity planning is correct?",
+		"answers": [
+			"Capacity planning is a methodology that allows to determine the right amount of capacity when needed to avoid Over-provisioning and Under-provisioning of resources.",
+			"Capacity planning is part of the elasticity essential characteristic of cloud computing enabling on demand self service.",
+			"Capacity planning is a set of technologies enabling cloud computing scalability to avoid over provisioning and under provisioning."
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Which of the following are benefits of the microservice architecture?",
+		"answers": [
+			"Simple to develop and easy to make radical changes of the whole application; Straightforward to test and deploy; Easy to scale",
+			"Better fault isolation; Cost reduction; Open source technology; Lightweight execution environment",
+			"Maintainability of the services; Independent deployability of services; Independent scalability of services"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which of the following are challenges in the microservice architecture?",
+		"answers": [
+			"Experimenting and adoption of new technologies; fault isolation;",
+			"Efficient resource management; orchestration; choreography",
+			"Finding the right set of services; to develop, test and deploy complex applications"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "What is a microservice architecture?",
+		"answers": [
+			"Is an architectural style that structures an application as a collection of services that are: Highly maintainable and testable;Loosely coupled; Independently deployable; Organized around business capabilities; Owned by a small team.",
+			"Is an architectural style that structures an application as a collection of components having their own life cycles and interacting each other by means of communicating processes or event systems.",
+			"Is an new architectural style merging the good of loosely coupled and Independently deployable event based systems in client server architecture"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. Which of the following keys does not allow to locate a cell?",
+		"answers": [
+			"Row key, column key and timestamp",
+			"Row key, family key and timestamp",
+			"Row key and column key"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Bigtable uses timestamp to maintain versioning of the data stored. What among the followings is a mechanism to garbage collect cell versions automatically?",
+		"answers": [
+			"Only new-enough versions be kept",
+			"The last n versions that are new-enough be kept",
+			"The last n versions modified in the last 7 days be kept"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "The NIST definition of Cloud computing mention that “Computing resources are pooled to serve multiple consumers using a multi-tenant model”. What does multi-tenancy means?",
+		"answers": [
+			"Multiple users (tenants) access the same application logic simultaneously",
+			"Multiple users (tenants) access the same virtual host simultaneously",
+			"Multiple users (tenants) access the same data and configurations simultaneously"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "What is a capacity planning match strategy?",
+		"answers": [
+			"A strategy for adding capacity when the IT resource reaches its full capacity",
+			"A strategy for adding capacity to an IT resource in anticipation of demand",
+			"A strategy for adding IT resource capacity in small increments, as demand increases"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Assume you are using a service offered via a web application and you do not pay for the use of the service. Which feature the service should have to be classified as a cloud service?",
+		"answers": [
+			"The service should provide the illusion of having infinite resources",
+			"The service should be capable to scale in or out",
+			"The service should allow  to control security and privacy"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "The Ansible automation tools is defined to be an “agentless tool that runs in a push model”. What a push model means?",
+		"answers": [
+			"It is required to install specific software component on the remote machines to make them receive instruction pushed by the Ansible server",
+			"It manages remote machines by passing instructions (Ansible modules) to remote management framework already existing on the platforms to be administered",
+			"The management tool does not create any overhead when administration tasks are not running"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Suppose you have two implementation and deployment of the same application, one based on the Service Oriented Architecture and the other based on the Microservice Architecture. What will be the main difference between the two implementation and deployment?",
+		"answers": [
+			"Scaling algorithms used; reusability of the services; level of coupling of the services",
+			"Scaling algorithms used; data storage technologies; level of coupling of the services",
+			"Communication mechanisms used; Data handling model adopted; and size of the services"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "An essential characteristic of cloud computing is measured service. How AWS implement this feature?",
+		"answers": [
+			"With CloudWatch",
+			"With EBS",
+			"With autoscaling groups"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "What is the difference between Horizontal duplication and Functional decomposition in microservices?",
+		"answers": [
+			"Horizontal duplication is about scaling horizontally by replicating the whole application. Functional decomposition is about organising the application in functionalities that could be scaled individually according to the function's workload",
+			"Horizontal duplication is about replicating the whole application to improve availability. Functional decomposition is about partitioning the workload among replicas of the same function",
+			"Horizontal duplication is about scaling horizontally. Functional decomposition is about to replicate a functionality and to assign a different data partition to each replica"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "The microservices architecture is defined as “an architectural style that structures an application as a collection of services that are: highly maintainable and testable; loosely coupled; Independently deployable; organized around business capabilities; owned by a small team.” Why services should be loosely coupled?",
+		"answers": [
+			"To facilitate the use of third party services",
+			"To facilitate interoperability",
+			"To minimize dependencies"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Let us consider an independent components event based system. What a subscriber component should provide?",
+		"answers": [
+			"A callback function that will be executed to generate events",
+			"An application programming interface to query for a specifi event",
+			"A callback function that will be executed when the event is activated"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Linux Namespace is an enabling technology for containers. What is exactly a Namespace?",
+		"answers": [
+			"A namespace is a Linux kernel feature that allow to identify a set of  local resource belonging (visible) to the processes within the namespace",
+			"A namespace is a Linux kernel feature which wraps a global system resource in an abstraction and allow to limit and monitor the usage of varius type of resources",
+			"A namespace wraps a global system resource in an abstraction that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider the docker CLI command `docker run -dp 3000:3000 getting-started`, which of the following actions is performed by the command?",
+		"answers": [
+			"Run and duplicate the getting-started container (-d) and create a mapping between the host's port 3000 to the container's port 3000 (-p)",
+			"Run and duplicate the getting-started container (-d) and create a mapping between the ports 3000 of the two containers (-p)",
+			"Run the getting-started container in the background (-d) and create a mapping between the host's port 3000 to the container's port 3000 (-p)"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. Which are the keys needed to locate a desired cell's version?",
+		"answers": [
+			"Row key, column key and timestamp",
+			"Row key, family key and timestamp",
+			"Only a row key",
+			"Row key and column key"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "A Bigtable uses timestamp to maintain versioning of the data stored. What of the followings is a mechanism to garbage collect cell versions automatically?",
+		"answers": [
+			"Only the last n versions of a cell be kept",
+			"Only last 3 versions of a cell be kept",
+			"Only the last 7 days versions be kept",
+			"Maximum the last n versions that are new-enough versions be kept"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Researchers and engineers at Google designed the Google File System taking into account the file characteristics. What is the typical range for file size?",
+		"answers": [
+			"Hundreds of Megabyte to few Terabytes",
+			"Few Megabyte to hundreds of Gigabytes",
+			"Kilobyte to few Gigabytes",
+			"Few Gigabyte to hundreds of Terabytes"
+		],
+		"correct": "d"
+	},
+	{
+		"question": "What is the chunk size in the Google File System?",
+		"answers": [
+			"64 MegaByte",
+			"128 MegaByte",
+			"1 GigaByte",
+			"Configurable from 64 Megabyte to 128 Megabyte"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the architecture of the HDFS in the figure. Which are the main responsibilities of the NameNode?",
+		"figure": "hdfs",
+		"answers": [
+			"Manages the File System Namespace; store metadata; check DataNode liveness",
+			"To write in a file; store metadata; check DataNode liveness",
+			"To manage the cryptographic keys; manages the File System Namespace; check datanode liveness",
+			"To handle the communication with the data nodes; manages the File System Namespace; store metadata"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider the Big Table datastore in the figure. Which among the followings are responsibility of the Master node?",
+		"figure": "bigtable",
+		"answers": [
+			"To assign tablets to tablet servers; to detect the addition and expiration of tablet servers; to balance tablet-server load, and garbage collection of files in GFS",
+			"To handle read and write requests to the tablet servers; to assign tablets to tablet server; to detect the addition and expiration of tablet servers",
+			"To identify tablet that have grown too large and that need to be split; to balance tablet-server load and garbage collection of files in GFS; to assign tablets to tablet servers",
+			"To manage the tables in the tablet servers; to detect the addition and expiration of tablet servers; to balance tablet-server load, and garbage collection of files in GFS"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "A Bigtable is a sparse, distributed, persistent multidimensional sorted map. Which are the keys needed to locate a desired cell?",
+		"answers": [
+			"Row key, column key and timestamp",
+			"Row key, family key and timestamp",
+			"Only a row key",
+			"Row key and column key"
+		],
+		"correct": "d"
+	},
+	{
+		"question": "Consider the docker CLI command `docker build -t getting-started` which of the following actions is performed by the command?",
+		"answers": [
+			"Build a container processing a Dockerfile stored in the current working directory and tag the new container with the name getting-started",
+			"Build a container processing a Dockerfile named getting-started",
+			"Build a container processing a Dockerfile named getting-started and store it in the current working directory rather then uploading it in the docker registry"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "How data are typically handled in a microservice architecture?",
+		"answers": [
+			"Services are stateless, and then do not maintain any data model",
+			"Each service has its own database and data model",
+			"Services share a global data model and a databases"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a challenges in the microservice architecture?",
+		"answers": [
+			"Experimenting and adoption of new technologies;",
+			"Fault isolation",
+			"Deploying features that span multiple services developed by different teams"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which of the following is a key difference between microservices and SOA?",
+		"answers": [
+			"Programming languages",
+			"Data security",
+			"Data handling"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which of the following is a benefit of microservice architecture?",
+		"answers": [
+			"The microservice architecture enables fault propagation",
+			"The microservice architecture enable small and easily maintained services.",
+			"The microservice architecture enables intensive collaboration among teams"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "_____________ is a global description of the participating services, which is defined by the exchange of",
+		"answers": [
+			"Service choreography",
+			"Service orchestration",
+			"Service automation"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Suppose you want to add a new record in a database using a REST web service. Are the following HTTP requests equivalent?",
+		"figure": "post",
+		"answers": [
+			"YES;",
+			"NO"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Suppose you must store the container's data on a remote host or a cloud provider rather than locally. Which Docker storage option is the most appropriate?",
+		"answers": [
+			"Tmpfs mount;",
+			"Bind mount",
+			"Volumes"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Assume you are setting up a scalable web server with AWS and configuring a step scaling policy for your autoscaling group. You have set the alarm to start the scale-out with a threshold on the average value of the incoming traffic. Which of the following assertions is true?",
+		"answers": [
+			"The alarm occurs if, for the majority of the instances in the scaling group, the value of the incoming traffic exceeds the threshold (e.g. for 3 out of 5).",
+			"The alarm occurs if there is at least an instance in the scaling group with the value of the incoming traffic exceeding the threshold.",
+			"The alarm occurs if the average value of the incoming traffic computed over all the instances in the scaling group exceed the threshold."
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider the Kubernetes architecture in the figure. Assume you configure the pod autoscaling mechanisms. What is the missing component in the figure?",
+		"figure": "kubernetes",
+		"answers": [
+			"The planner module",
+			"The analyzer module",
+			"A resource usage monitor module"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "An autoscaling algorithm is considered proactive when the number of needed resources is computed using an ML or mathematical model.",
+		"answers": [
+			"TRUE",
+			"FALSE"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "___________________ is the ability to constant monitoring for optimal operation",
+		"answers": [
+			"Self-optimization",
+			"Self-healing",
+			"Self-configuration"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Who is responsible for the Security IN the cloud?",
+		"answers": [
+			"The Cloud Service Provider",
+			"The Customer"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Consider you want to set up an Elastic Load Balancer for supporting HTTPS requests. Which type of ELB will you select?",
+		"answers": [
+			"Network load balancer",
+			"Application Load Balancer",
+			"Classic Load Balancer"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Data replication across Regions is controlled by ______________",
+		"answers": [
+			"AWS",
+			"Customer"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "When will the public IPv4 address and external DNS hostname of an AWS EC2 instance change?",
+		"answers": [
+			"When an instance is launched",
+			"When an instance is stopped and then started again",
+			"When an instance is rebooted"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Why scalability is related to performance in a cloud system?",
+		"answers": [
+			"Scalability measure how fast and efficiently a system can complete certain task",
+			"Scalability measure how fast is an elasticity mechanism in provisioning or deprovisioning resources",
+			"Scalability measure the trend of performance with increasing load"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which type of scalability is facilitated by microservices",
+		"answers": [
+			"Scale by cloning",
+			"Single functions scalability",
+			"Scaling of Application data"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a benefit of microservice architecture?",
+		"answers": [
+			"The microservice architecture increases the complexity of service maintenance",
+			"The microservice architecture enables intensive collaboration among teams",
+			"The microservice architecture enables fault isolation"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Suppose you must back up, restore, or migrate data from one Docker host to another. Which Docker storage option is the most appropriate?",
+		"answers": [
+			"Tmpfs mount",
+			"Volumes",
+			"Bind mount"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "___________________ is the ability to constant monitoring for optimal operation",
+		"answers": [
+			"Self-optimization",
+			"Self-healing",
+			"Self-configuration"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Suppose you want to add a new record in a database using a REST web service. Are the following HTTP requests equivalent?",
+		"figure": "put",
+		"answers": [
+			"YES;",
+			"NO"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "How can be classified a cloud mechanism that guarantees a given number of VMs or containers are always available (up & running)?",
+		"answers": [
+			"Self-protecting mechanism",
+			"Self-optimization mechanism",
+			"Self-healing mechanism"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "An AWS Region typically consists of two or more ___________________.",
+		"answers": [
+			"Storage replicas",
+			"Availability Zones",
+			"Datacenters"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Who is responsible for the Security OF the cloud?",
+		"answers": [
+			"The Cloud Service Provider",
+			"The Customer"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Which of the following is a benefit of microservice architecture?",
+		"answers": [
+			"The microservice architecture allows easy experimenting and adoption of new technologies",
+			"The microservice architecture enables intensive collaboration among teams",
+			"The microservice architecture enables fault propagation"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Suppose you must share configuration files from the host machine to containers . Which Docker storage option is the most appropriate?",
+		"answers": [
+			"Tmpfs mount",
+			"Volumes",
+			"Bind mount"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider setting up an Elastic Load Balancer to support traffic to a containerized application. Which type of ELB will you select?",
+		"answers": [
+			"Application Load Balancer",
+			"Network load balancer",
+			"Classic Load Balancer"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Consider setting up an Elastic Load Balancer for supporting a static or Elastic IP address, or an IP target outside a VPC. Which type of ELB will you select?",
+		"answers": [
+			"Network load balancer",
+			"Application Load Balancer",
+			"Classic Load Balancer"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Each ___________________ is a fully isolated partition of the AWS infrastructure.",
+		"answers": [
+			"Datacenter",
+			"Availability Zone",
+			"Region"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a challenges in the microservice architecture?",
+		"answers": [
+			"Experimenting and adoption of new technologies;",
+			"Fault isolation",
+			"Development, testing and deployment is challenging"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Suppose you must share source code or build artifacts between a development environment on the Docker host and a container. Which Docker storage option is most appropriate?",
+		"answers": [
+			"Tmpfs mount",
+			"Volumes",
+			"Bind mount"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "An autoscaling algorithm is considered proactive when the scaling decision is taken on the basis of a predicted value of the scaling metrics. E.g. predicted value of CPU utilization in the next 5 minutes.",
+		"answers": [
+			"TRUE",
+			"FALSE"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Each AWS Region provides ____________________ and connectivity to the network.",
+		"answers": [
+			"high availability ",
+			"traffic load balancing",
+			"full redundancy"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which among the following is the appropriate definition for capacity planning",
+		"answers": [
+			"Methods, models and algorithms to provide the right amount of capacity when needed",
+			"Methods models and algorithms for adding capacity to an IT resource in anticipation of demand  KO",
+			"Methods. models and algorithms to scale up/down or in/out"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "Which of the following is a key difference between microservices and SOA?",
+		"answers": [
+			"Communication mechanisms",
+			"Programming languages",
+			"Data security"
+		],
+		"correct": "a"
+	},
+	{
+		"question": "_____________ represents a single centralized executable business process that coordinates the interaction among different services.",
+		"answers": [
+			"Service automation",
+			"Service choreography",
+			"Service orchestration"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "___________________ is the ability to accommodate varying and possibly unpredictable conditions.",
+		"answers": [
+			"Self-healing",
+			"Self-configuration",
+			"Self-optimization"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Which of the following is a benefit of microservice architecture?",
+		"answers": [
+			"The microservice architecture enables fault propagation",
+			"The microservice architecture limits adoption of new technologies",
+			"The microservice architecture enables teams to be autonomous."
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Consider setting up an Elastic Load Balancer for handling extremely spiky and unpredictable TCP traffic. Which type of ELB will you select?",
+		"answers": [
+			"Classic Load Balancer",
+			"Application Load Balancer",
+			"Network load balancer"
+		],
+		"correct": "c"
+	},
+	{
+		"question": "Which of the following is a challenges in the microservice architecture?",
+		"answers": [
+			"Fault isolation",
+			"Finding the right set of services",
+			"Experimenting and adoption of new technologies;"
+		],
+		"correct": "b"
+	},
+	{
+		"question": "Assume you are setting up a scalable web server with AWS and configuring a step scaling policy for your autoscaling group. You have set the alarm to start the scale-out with a threshold on the maximum incoming traffic. Which of the following assertions is true?",
+		"answers": [
+			"The alarm occurs if for all the instances in the scaling group the value of the incoming traffic exceeds the threshold.",
+			"The alarm occurs if the average value of the incoming traffic computed over all the instances in the scaling group exceed the threshold.",
+			"The alarm occurs if for at least one instance the maximum observed incoming traffic exceeds the threshold."
+		],
+		"correct": "c"
+	}
+]
