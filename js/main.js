@@ -115,7 +115,7 @@ function checkForParams() {
     ////////////////////////
     if (
         undefinedBadTypeCheck(nMinutes, "number", true) == -1 ||
-        undefinedBadTypeCheck(rightAnswerPoints, "number", true) == -1 ||
+        undefinedBadTypeCheck(correctAnswerPoints, "number", true) == -1 ||
         undefinedBadTypeCheck(wrongAnswerPoints, "number", true) == -1 ||
         undefinedBadTypeCheck(noAnswerPoints, "number", true) == -1 ||
         undefinedBadTypeCheck(numberOfQuestions, "number", false) == -1) {
@@ -241,7 +241,7 @@ function init() {
         timerHandler(timer)
     }
 
-    h3Explaination.innerText = "+" + rightAnswerPoints + " for each right answer, +" + wrongAnswerPoints + " for each wrong answer, +" + noAnswerPoints + " for each no answer"
+    h3Explaination.innerText = "+" + correctAnswerPoints + " for each correct answer, +" + wrongAnswerPoints + " for each wrong answer, +" + noAnswerPoints + " for each no answer"
 
     // check: JSONFile exist => if not it will not load
     if (typeof jsonFiles === 'undefined' || jsonFiles.constructor != Object) {
@@ -467,9 +467,9 @@ function loadElements(questions) {
             shuffle(answers, replyNumber)
         }
 
-        // let's calculate the right answer
-        var rightAnswerText = questions[i]['correct'].toLowerCase().charCodeAt(0) - 97 // number from letter
-        rightAnswerText = replyNumber.findIndex((element) => element == rightAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
+        // let's calculate the correct answer
+        var correctAnswerText = questions[i]['correct'].toLowerCase().charCodeAt(0) - 97 // number from letter
+        correctAnswerText = replyNumber.findIndex((element) => element == correctAnswerText) // retrieve from shuffled array and save the new "correct answer" from shuffled indexes 
 
         // if question has source code, then renderize it into a div
         if (questions[i]['code'] !== undefined && questions[i]['code'].length > 0) {
@@ -539,9 +539,9 @@ function loadElements(questions) {
         noAnswerContainer.appendChild(lblAnswer);
         card.appendChild(noAnswerContainer);
 
-        // let's add our hidden span containing the right answer
+        // let's add our hidden span containing the correct answer
         var answer = document.createElement('span');
-        answer.textContent = rightAnswerText;
+        answer.textContent = correctAnswerText;
         answer.hidden = true;
         answer.id = 'span' + i;
         card.appendChild(answer);
@@ -553,16 +553,16 @@ function loadElements(questions) {
     }
 }
 
-// func: check and calculate right, wrong or skipped answers at the end of time or if send button is pressed
+// func: check and calculate correct, wrong or skipped answers at the end of time or if send button is pressed
 function validate() {
     contSkip = 0;
-    contRight = 0;
+    contCorrect = 0;
     contWrong = 0;
     score = 0;
 
     for (i = 0; i < numberOfQuestions; i++) {
         var buttons = document.getElementsByName("radioBtns" + i)
-        var rightAnswer = document.getElementById("span" + i)
+        var correctAnswer = document.getElementById("span" + i)
         var result = -1;
         var checked = -1;
 
@@ -579,10 +579,10 @@ function validate() {
             contSkip++
             noAnswerPoints++
 
-            // the right answer was...
-            var rightNumber = rightAnswer.textContent
+            // the correct answer was...
+            var correctNumber = correctAnswer.textContent
 
-            var inputElement = buttons[rightNumber];
+            var inputElement = buttons[correctNumber];
             var lblElement = inputElement.nextElementSibling
             lblElement.style.backgroundColor = "#FFFF66";
             if(lblElement.firstChild.nodeName === "TEXTAREA") {
@@ -590,13 +590,13 @@ function validate() {
             }
 
         } else {
-            // if one of the buttons contains the right answer, let's set the boolean to true
+            // if one of the buttons contains the correct answer, let's set the boolean to true
             for (j = 0; j < (buttons.length - 1); j++) { // -1 because skipped answer has already been analyzed before
                 if (buttons[j].checked) {
                     checked = j; // save what the user has checked
 
-                    if (("" + j) === rightAnswer.textContent) {
-                        result = j; // if it is the right answer breaks everything!
+                    if (("" + j) === correctAnswer.textContent) {
+                        result = j; // if it is the correct answer breaks everything!
                         break;
                     }
                 }
@@ -606,13 +606,13 @@ function validate() {
             var lblElement = inputElement.nextElementSibling; // get its label
 
             if (result != -1) {
-                // if it's the right answer, then color the label in green
+                // if it's the correct answer, then color the label in green
                 lblElement.style.backgroundColor = "#00FF00";
                 if(lblElement.firstChild.nodeName === "TEXTAREA") {
                     lblElement.firstChild.style.backgroundColor = "#00FF00";
                 }
-                score += rightAnswerPoints;
-                contRight++;
+                score += correctAnswerPoints;
+                contCorrect++;
             } else {
                 // it's the wrong answer, then, color the label will be red
                 lblElement.style.backgroundColor = "#FF0000";
@@ -621,10 +621,10 @@ function validate() {
                 }
 
 
-                // the right answer was...
-                var rightNumber = rightAnswer.textContent
+                // the correct answer was...
+                var correctNumber = correctAnswer.textContent
 
-                var inputElement = buttons[rightNumber]; // the right one is saved in "num" variable
+                var inputElement = buttons[correctNumber]; // the correct one is saved in "num" variable
                 var lblElement = inputElement.nextElementSibling
                 lblElement.style.backgroundColor = "#00FF00";
                 if(lblElement.firstChild.nodeName === "TEXTAREA") {
@@ -638,27 +638,34 @@ function validate() {
     }
 
     // results at the end of the page
-    pResults = document.getElementById("results")
+    pResults = document.getElementById("results");
     pResults.innerHTML =
-        "Right: <b>" + contRight + "</b>" + "<br>" +
+        "Correct: <b>" + contCorrect + "</b>" + "<br>" +
         "Wrong: <b>" + contWrong + "</b>" + "<br>" +
         "No answer: <b>" + contSkip + "</b>" + "<br>" +
-        "<b>Score: " + score + "/" + (numberOfQuestions * rightAnswerPoints) + "</b>" + "<br>";
+        "<b>Score: " + score + "/" + (numberOfQuestions * correctAnswerPoints) + "</b>" + "<br>";
 
     pResults.hidden = false;
 
-    // set the timer to zero
-    document.getElementById("timeleft").innerHTML = ""
-    clearInterval(timeUpd)
-
     // TODO: trovare un modo migliore per fare ciò rispeto a fare un copia-incolla
     // fa un popup contenente il testo "copia" dell'innerhtml
-    testoAlert = "Right:" + contRight + "\r\n" +
-        "Wrong: " + contWrong + "\r\n" +
-        "No answer: " + contSkip + "\r\n" +
-        "Score: " + score + "/" + (numberOfQuestions * rightAnswerPoints) + "\r\n";
-
     document.getElementById("btn-send").style.visibility = "hidden";
+        // Classic mode no bootstrap alert
+        if (document.getElementById('chk-toggle-bootstrap').checked) {
 
-    window.alert(testoAlert)
+        // Display results in the Bootstrap modal
+        var resultModalBody = document.getElementById("resultModalBody");
+        resultModalBody.innerHTML = pResults.innerHTML;
+
+        var resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+        resultModal.show();
+
+        // set the timer to zero
+        document.getElementById("timeleft").innerHTML = "";
+        clearInterval(timeUpd);
+    }
+    else {
+        // Display results in the classic modal
+        alert(pResults.innerText);
+    }
 }
