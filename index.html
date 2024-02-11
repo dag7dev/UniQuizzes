@@ -23,12 +23,21 @@
         <script>document.write(title)</script>
     </h1>
 
-    <a class="btn btn-secondary" href="javascript:document.location.href=getCustomLink();">
-        <script>document.write(customDescription)</script>
-        <span id="starsCount" class="ms-2"></span>
-    </a>
-
-    <a class="btn btn-success" href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a>
+    <div style="display: inline-block; vertical-align: top; margin-right: 5px;">
+        <div style="display: inline-block; overflow: hidden; border: 0.5px solid gray; border-radius: 50%;">
+            <img src='https://avatars.githubusercontent.com/u/44711271' alt="User Avatar" width="36px" style="width: 36px; height: auto; object-fit: cover;">
+        </div>
+    </div>
+    
+    <div style="display: inline-block; vertical-align: top;">
+        <a class="btn btn-secondary" href="javascript:document.location.href=getCustomLink();">
+            <script>document.write(customDescription)</script>
+            <span id="starsCount" class="ms-2"></span>
+        </a>
+    
+        <a class="btn btn-success" href="https://paypal.me/therealdag7">Support the author on Paypal</a>
+    </div>
+    
     <div class="alert alert-info info-dismissible fade show" role="alert" style="margin-top: 10px; margin-bottom: 10px;">
         <!-- icon of info -->
         <i class="bi bi-info-circle-fill"></i>
