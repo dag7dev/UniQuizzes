@@ -7,7 +7,7 @@ var wrongAnswerPoints = 1
 var noAnswerPoints = 0
 var numberOfQuestions = 40 // default number of questions that you want to show
 var title = "UniQuizzes"
-var disclaimerText = "Il simulatore non viene aggiornato in automatico. Dare un'occhiata al sorgente su Github, e in caso proporre nuove modifiche!"
+var disclaimerText = "The simulator is not updated automatically. Have a look at the source on Github, and if necessary propose new changes!"
 var infoText = "If you like this project, consider starring the repo on <a href='https://github.com/dag7dev/UniQuizzes'>Github</a>!"
 
 // CUSTOMIZABLE PART OF THE PAGE - SHOWS OR HIDES SOME PARTS
