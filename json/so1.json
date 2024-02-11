@@ -1360,7 +1360,7 @@
         "img": "27"
     },
     {
-        "question": "Si considerino i 5 processo della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
+        "question": "Si considerino i 5 processi della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
         "answers": [
             "FCFS",
             "RR",
