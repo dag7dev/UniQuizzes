@@ -6,7 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Bootstrap JavaScript (bootstrap.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="container">
@@ -17,28 +23,29 @@
         <script>document.write(title)</script>
     </h1>
 
-    <h3 id="h3Explaination"></h3>
+    <a class="btn btn-secondary" href="javascript:document.location.href=getCustomLink();">
+        <script>document.write(customDescription)</script>
+        <span id="starsCount" class="ms-2"></span>
+    </a>
 
-    <h2 class="text-danger">
-        <script>
-            if (disclaimerText !== "") {
-                document.write("Warning: " + disclaimerText)
-            }
-        </script>
-    </h2>
-
-    <hr class="my-4">
-   
-    <a href="https://github.com/dag7dev/UniQuizzes" class="btn btn-sm btn-primary" target="_blank">        <script>document.write(customDescription)</script><span id="starsCount" class="ms-2"></span></a>
-
-    <a href="https://paypal.me/therealdag7" class="btn btn-sm btn-success" target="_blank">Support the
-        author</a>
-
-    <p>If you like this project, consider to star this repo on Github, thanks!</p>
+    <a class="btn btn-success" href="https://github.com/dag7dev/JSQuizee">Original engine on Github</a>
     
-    <hr class="my-4">
+    <div class="alert alert-info info-dismissible fade show" role="alert" style="margin-top: 10px; margin-bottom: 10px;">
+        <!-- icon of info -->
+        <i class="bi bi-info-circle-fill"></i>
+        <script>document.write(infoText)</script>
+    </div>
 
-    <h2>Settings</h2>
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top: 10px; margin-bottom: 10px;">
+        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Warning! </strong><script>document.write(disclaimerText)</script>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <h3>Rules</h3>
+    <p id="h3Explaination"></p>
+
+    <h3>Settings</h3>
     <div class="form-group">
         <label for="quiz-version">Choose a quiz:</label>
         <select class="form-control" name="quiz-version" id="quiz-version">
@@ -57,7 +64,7 @@
         </select>
     </div>
 
-    <button class="btn btn-info" name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
+    <button class="btn btn-primary" name="btn-quiz-reload" id="btn-quiz-reload">Reload these questions</button>
 
     <h3>Graphics</h3>
 
@@ -86,11 +93,13 @@
         <label class="form-check-label" for="chk-timer">Enable / Disable Time</label>
     </div>
 
-    <div class="form-group">
-        <input type="range" autocomplete="off" min="0" step="1" max="200" value="40" class="form-control-range"
-            id="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
-        <label for="sliderQuestionsNumber">Number of Questions: <span id="sliderText"></span></label>
+
+    <div class="form-group"  style="margin-top: 10px;">
+        <!-- bootstrap slider -->
+        <label for="sliderQuestionsNumber">Number of questions:  </label> <span id="sliderText"></span>
+        <input type="range" autocomplete="off" min="0" step="5" class="form-range" min="5" max="200" value="40" id="sliderQuestionsNumber" name="sliderQuestionsNumber" onmouseup="changeAnswers()" ontouchend="changeAnswers()">
     </div>
+
 
     <div>
         <p id="timeleft"></p>
@@ -105,35 +114,54 @@
         <button class="btn btn-success" onclick="validate()">Send</button>
     </div>
 
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Quiz Results</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="resultModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <p id="results" hidden=""></p>
-    <script>
-        function toggleBootstrap() {
-            var isChecked = document.getElementById("chk-toggle-bootstrap").checked;
+</body>
+<script>
+    function toggleBootstrap() {
+        var isChecked = document.getElementById("chk-toggle-bootstrap").checked;
 
-            if (isChecked) {
-                // Reload the page with no cache
-                location.reload(true);
-            } else {
-                // Reset styles of every element
-                var allElements = document.querySelectorAll('*');
-                [].forEach.call(allElements, function (element) {
-                    // if element is a div add rounded border
-                    element.removeAttribute("class");
-                    if (element.tagName == "DIV") {
-                        element.setAttribute("class", "rounded border");
-                    }
+        if (isChecked) {
+            // Reload the page with no cache
+            location.reload(true);
+        } else {
+            // Reset styles of every element
+            var allElements = document.querySelectorAll('*');
+            // Hide resultModal
+            var resultModal = document.getElementById("resultModal");
+            resultModal.hidden = true;
+            [].forEach.call(allElements, function (element) {
+                // if element is a div add rounded border
+                element.removeAttribute("class");
+                if (element.tagName == "DIV") {
+                    element.setAttribute("class", "rounded border");
+                }
 
-                    if (element.tagName == "IMG") {
-                        // max-width: 50px;
-                        element.setAttribute("style", "max-width: 400px;");
-                    }
-                });
-            }
+                if (element.tagName == "IMG") {
+                    // max-width: 50px;
+                    element.setAttribute("style", "max-width: 400px;");
+                }
+            });
         }
+    }
 
-        if (init() == 0) {
-            outslider.innerHTML = slider.value;
-
+    if (init() == 0) {
+        outslider.innerHTML = slider.value;
             // checkbox at the original values after a refresh
             var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
             [].forEach.call(allCheckboxes, function (checkbox) {

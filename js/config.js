@@ -2,12 +2,13 @@
 // CONFIG //
 ////////////
 var nMinutes = 25; // 25, suggested
-var rightAnswerPoints = 2
+var correctAnswerPoints = 2
 var wrongAnswerPoints = 1
 var noAnswerPoints = 0
 var numberOfQuestions = 40 // default number of questions that you want to show
 var title = "UniQuizzes"
 var disclaimerText = "Il simulatore non viene aggiornato in automatico. Dare un'occhiata al sorgente su Github, e in caso proporre nuove modifiche!"
+var infoText = "If you like this project, consider starring the repo on <a href='https://github.com/dag7dev/UniQuizzes'>Github</a>!"
 
 // CUSTOMIZABLE PART OF THE PAGE - SHOWS OR HIDES SOME PARTS
 // if a part is disabled, then the related functionality will be disabled
