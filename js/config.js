@@ -2,12 +2,12 @@
 // CONFIG //
 ////////////
 var nMinutes = 25; // 25, suggested
-var rightAnswerPoints = 2
+var correctAnswerPoints = 2
 var wrongAnswerPoints = 1
 var noAnswerPoints = 0
 var numberOfQuestions = 40 // default number of questions that you want to show
 var title = "JSQuizee"
-var disclaimerText = ""
+var disclaimerText = "This is a demo! You can use this code to create your own quizzes. Check the code on GitHub!"
 
 // CUSTOMIZABLE PARTS OF THE PAGE - SHOWS OR HIDES SOME PARTS
 // if a part is disabled, then the related functionality will be disabled

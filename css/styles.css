@@ -15,6 +15,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 40px;
 }
 
 h1, h2, h3 {
@@ -60,4 +61,3 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Add additional styles here */
