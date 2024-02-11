@@ -8,6 +8,7 @@ var noAnswerPoints = 0
 var numberOfQuestions = 40 // default number of questions that you want to show
 var title = "JSQuizee"
 var disclaimerText = "This is a demo! You can use this code to create your own quizzes. Check the code on GitHub!"
+var infoText = "If you like this project, consider starring the repo on <a href='https://github.com/dag7dev/JSQuizee'>Github</a>!"
 
 // CUSTOMIZABLE PARTS OF THE PAGE - SHOWS OR HIDES SOME PARTS
 // if a part is disabled, then the related functionality will be disabled
