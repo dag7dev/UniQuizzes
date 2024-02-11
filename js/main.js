@@ -650,9 +650,9 @@ function validate() {
     // TODO: trovare un modo migliore per fare ciò rispeto a fare un copia-incolla
     // fa un popup contenente il testo "copia" dell'innerhtml
     document.getElementById("btn-send").style.visibility = "hidden";
-        // Classic mode no bootstrap alert
-        if (document.getElementById('chk-toggle-bootstrap').checked) {
-
+    
+    // Classic mode no bootstrap alert
+    if (document.getElementById('chk-toggle-bootstrap').checked) {
         // Display results in the Bootstrap modal
         var resultModalBody = document.getElementById("resultModalBody");
         resultModalBody.innerHTML = pResults.innerHTML;

@@ -32,18 +32,7 @@ a:hover {
     text-decoration: underline;
 }
 
-button {
-    background-color: transparent;
-    color: transparent;
-    padding: 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #45a049;
-}
 
 .btn-close {
     background-color: transparent;
