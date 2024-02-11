@@ -35,17 +35,14 @@
         <script>document.write(infoText)</script>
     </div>
 
-    
-    <!--
-        yellow bootstrap Disclaimer with x icon if clicked close warning 
-    -->
     <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-top: 10px; margin-bottom: 10px;">
-        <strong>Warning! </strong><script>document.write(disclaimerText)</script>
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <script>document.write(disclaimerText)</script>
+        <!-- hover button transparent -->
+        
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 
-    
-    
     <h3>Rules</h3>
     <p id="h3Explaination"></p>
 
@@ -112,7 +109,7 @@
 
     <hr class="my-4">
     
-    <div id="container" class="form-check"></div>
+    <div id="container"></div>
 
     <div id="btn-send" name="btn-send">
         <button class="btn btn-success" onclick="validate()">Send</button>

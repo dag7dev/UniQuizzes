@@ -1,8 +1,7 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, a, button, select {
-    margin: 0;
-    padding: 0;
-    border: 0;
+@media screen and (max-width: 767px) {
+    .btn {
+        margin-bottom: 10px;
+    }
 }
 
 body {
@@ -13,26 +12,11 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     padding-bottom: 40px;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 24px;
 }
 
 h3 {
     margin-top: 20px;
-    font-size: 20px;
 }
 
 hr {
@@ -49,9 +33,9 @@ a:hover {
 }
 
 button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
+    background-color: transparent;
+    color: transparent;
+    padding: 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -61,3 +45,15 @@ button:hover {
     background-color: #45a049;
 }
 
+.btn-close {
+    background-color: transparent;
+    border: none; 
+}
+
+.btn-close:hover {
+    background-color: transparent;
+}
+
+#btn-quiz-reload {
+    margin-top: 10px;
+}
