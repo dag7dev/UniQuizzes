@@ -193,7 +193,7 @@
         "code": ""
     },
     {
-        "question": "Data una CPU multicore con 𝑚unità(cores), il numero di processi/thread che ad un certo istante si trovano nella “coda” di esecuzione(running):",
+        "question": "Data una CPU multicore con 𝑚 unità(cores), il numero di processi/thread che ad un certo istante si trovano nella “coda” di esecuzione(running):",
         "answers": [
             "Può essere superiore a 𝑚",
             "E’ esattamente pari a 𝑚",
@@ -316,7 +316,7 @@
         "question": "Lo scheduling preemptive(basato su time slice o quanto temporale):",
         "answers": [
             "Da la priorità ai processi CPU-bound",
-            "Si attiva solamenta alla scadenza del quanto temporale(time slice)",
+            "Si attiva solamente alla scadenza del quanto temporale(time slice)",
             "Si attiva solamente a fronte di una chiamata di sistema",
             "Fornisce un limite superiore al tempo di CPU assegnato a ciascun processo"
         ],
@@ -349,7 +349,7 @@
         "code": ""
     },
     {
-        "question": "Se un processo arriva nella coda dei pronti all'istante t.0 = 2e termina all'istante t.f = 15, il suo tempo di turnaround equivale a",
+        "question": "Se un processo arriva nella coda dei pronti all'istante t.0 = 2 e termina all'istante t.f = 15, il suo tempo di turnaround equivale a",
         "answers": [
             "13",
             "2",
@@ -474,7 +474,7 @@
             "Coincide sempre con uno ed un solo user thread",
             "È gestito in spazio utente tramite un'apposita libreria",
             "È la più piccola unità schedulabile sulla CPU dal sistema operativo",
-            "È il termine con cui si identificano i processi propri del sistemaoperativo (i.e., non i processi utente)"
+            "È il termine con cui si identificano i processi propri del sistema operativo (i.e., non i processi utente)"
         ],
         "correct": "c",
         "answers_have_code": 0,
@@ -961,7 +961,7 @@
         "code": ""
     },  
     {
-        "question": "Data una memoria fisica composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: A, B, E, C, E, D, D, A, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle",
+        "question": "Data una memoria fisica composta da 3 frame fisici e un processo composto da 5 pagine virtuali: A, B, C, D, E, si calcoli il numero di page fault che si verificano a fronte delle seguenti richieste da parte del processo: A, B, E, C, E, D, D, A, B. Si assuma che nessuna pagina del processo sia inizialmente caricata in memoria e che si utilizzi un algoritmo FIFO di sostituzione delle pagine.",
         "answers": [
             "6",
             "7",
@@ -1014,7 +1014,7 @@
             "7.5 GB",
             "75 GB",
             "750 MB",
-            "I dati sono insufficienti per rispondere al problema4"
+            "I dati sono insufficienti per rispondere al problema"
         ],
         "correct": "a",
         "answers_have_code": 0,
@@ -1191,7 +1191,7 @@
         "img": "26"
     },
     {
-        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei, indicare il corrispondente albero dei processi generati:",
+        "question": "Data la porzione di codice in figura, indicare il corrispondente albero dei processi generati:",
         "answers": [
             "A",
             "B",
@@ -1204,7 +1204,7 @@
         "img": "27"
     },
     {
-        "question": "Si considerino i 5 processo della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
+        "question": "Si considerino i 5 processi della figura seguente e 3 politiche di scheduling: FCFS, SJF (non-preemptive) e RR con time slice pari a 2 unità di tempo. Qual è la politica che garantisce il minor tempo di attesa (in coda pronti) al processo C?",
         "answers": [
             "FCFS",
             "RR",
