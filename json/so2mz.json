@@ -46,7 +46,7 @@
 		"question": "Quale  e' la differenza tra i comandi sudo e su",
 		"answers": [
 			"sudo e'  un comando che permette di  eseguire altri comandi come root; su e' una scorciatoia per invocare  il comando sudo",
-			"su e' un comando che permette di cambiare utente. sudo e' un comando che permette di eseguire altri comandi come super-utente",
+			"su è un comando che permette di cambiare utente. sudo è un comando che permette di eseguire altri comandi come super-utente (root).",
 			"sudo si riferisce  ad  un gruppo  di utenti. su e' invece  un  comando che permette di cambiare utente"
 		],
 		"correct": "b",
@@ -76,15 +76,15 @@
 		"code": ""
 	},
 	{
-		"question": "Quale e' il risultato del comando seguente?",
+		"question": "Supponiamo di avere un file nomefile memorizzato nel nostro filesystem. Quale e' il risultato del comando touch nomefile?",
 		"answers": [
-			"Crea un file  vuoto con nome nomefile",
+			"Crea un file vuoto con nome nomefile in sostituzione dell'esistente",
 			"Aggiorna, al tempo corrente, gli atttributi atime e mtime di nomefile",
-			"Crea un file  vuoto con nome nomefile e ctime uguale al tempo corrente. Se si usa l'opzione -t o -d si puo' specificare un altro tempo di creazione"
+			"Crea un file vuoto con nome nomefile in sostituzione dell'esistente e valore del ctime aggiornato al tempo corrente"
 		],
 		"correct": "b",
 		"answers_have_code": 0,
-		"code": "touch nomefile"
+		"code": ""
 	},
 	{
 		"question": "I premessi di accesso della  directory /tmp  sono 1777/drwxrwxrwt.Cosa significa",
@@ -164,7 +164,7 @@
 		"code": ""
 	},
 	{
-		"question": "In che file e' contenuta la lista dei filesystem montati al boot?",
+		"question": "In che file e' contenuta la lista dei filesystem che verranno montati al boot?",
 		"answers": [
 			"/etc/mdev",
 			"/etc/mtab",
@@ -208,11 +208,11 @@
 		"code": "gcc file.c -o file1.o\r\ngcc -g file.c -o file2.o"
 	},
 	{
-		"question": "Assuma di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e supponga di eseguire la sequenza di comandi che segue (\"shell_i\": cmd indica che cmd e' eseguitto nella shell_i, i=1,2). Quale e' il loro effetto sul processo xterm?",
+		"question": "Assumiamo di avere due shell aperte, etichettate come shell_1 e shell_2 e supponiamo di eseguire la sequenza di comandi che segue (shell_i: cmd indica che cmd e’ eseguitto nella shell_i, i=1,2). Quale e’ il loro effetto sul processo xterm?",
 		"answers": [
 			"Il processo xterm viene prima mandato in esecuzione in background e poi riportato in foreground",
 			"Il processo xterm viene mandato in esecuzione in background",
-			"Il processo xterm viene prima portato nello stato stopped (T) e poi mandato in esecuzione in foreground"
+			"Il processo xterm viene prima portato nello stato stopped (T) e poi mandato nuovamente in esecuzione (esecuzione in foreground)"
 		],
 		"correct": "c",
 		"answers_have_code": 0,
@@ -331,13 +331,13 @@
 	{
 		"question": "Si consideri la seguente dichiarazione di struttura. Quale delle seguenti assegnazioni e' corretta?",
 		"answers": [
-			"pA -> x = pB -> x;\r\npA -> y = pB -> y;",
+			"*pA = *pB;\r\npA -> y = pB -> y;",
 			"pA = &pB",
 			"pA = pB;"
 		],
 		"correct": "c",
 		"answers_have_code": 1,
-		"code": "struct point2D {\r\n      double x; // coordinata x\r\n     ndouble y; // coordinata y\r\n}  pA={0, 0}, pB={1, 5};"
+		"code": "struct point2D {\r\n      double x; // coordinata x\r\n     double y; // coordinata y\r\n}  pA={0, 0}, pB={1, 5};"
 	}, {
 		"question": "Si consideri il seguente ciclo for. Cosa produrebbe come risultato, se eseguito?",
 		"answers": [
@@ -409,6 +409,16 @@
 		"answers_have_code": 1,
 		"code": ""
 	}, {
+		"question": "Quale dei seguenti dichiarazioni di variabile e' non valida, generando quindi un errore di compilazione?",
+		"answers": [
+			"float g_shock=9.89;",
+			"float g__shock=9.89;",
+			"float g-shock=9.89;"
+		],
+		"correct": "c",
+		"answers_have_code": 0,
+		"code": ""
+	},{
 		"question": "Quale e' il modo corretto per controllare che due stringhe str1 e str2 sono uguali?",
 		"answers": [
 			"if strcmp(s1,s2)==0 {printf(\"stringhe uguali\")}",
@@ -433,11 +443,11 @@
 		"answers": [
 			"Stampa il valore di num almeno una  volta",
 			"Cicla infinitamente se num e' diverso da 0",
-			"Genera errore  in fase di  compilazione"
+			"Genera errore in fase di compilazione"
 		],
 		"correct": "c",
-		"answers_have_code": 0,
-		"code": "scanf(\"%d\",&num); \r\ndo; {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n}  while(num!=0);"
+		"answers_have_code": 1,
+		"code": "int num;\r\nscanf(\"%d\",&num); \r\ndo; {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n}  while(num!=0);"
 	}, {
 		"question": "Si consideri il frammento di codice; che valore conterra' p al termine dell'esecuzione del frammento di codice?",
 		"answers": [
@@ -469,14 +479,14 @@
 		"answers_have_code": 0,
 		"code": "1. printf(\"main:%s\\n\",strerror(errno));\r\n2. perror(\"main\");"
 	}, {
-		"question": "Quale delle seguenti funzioni  di libreria alloca memoria nello stack?",
+		"question": "Quale delle seguenti funzioni di libreria non alloca nell’heap?",
 		"answers": [
 			"void *calloc( size_t nmemb, size_t size );",
 			"void *alloca( size_t size );",
 			"void *malloc( size_t size );"
 		],
 		"correct": "b",
-		"answers_have_code": 1,
+		"answers_have_code": 0,
 		"code": ""
 	}, {
 		"question": "Un processo puo' allocare memoria nello stack?",
@@ -541,9 +551,9 @@
 	}, {
 		"question": "Si consideri il seguente frammento di codice  (i numeri a lato sono i numeri di riga delle istruzioni); quale delle seguenti affermazioni e' falsa?",
 		"answers": [
-			"la stringa \"joined\"  e' inviata su stdout solo quando  il thread creato a riga 3.  e' terminato",
-			"la stringa \"joined\"  e' inviata su stdout quando entrambi i thread sono terminati",
-			"la chiamata pthread_join(...) attende la terminazione del thread con identificatore  tid"
+			"La stringa \"joined\" e' inviata su stdout solo quando  il thread creato a riga 3. e' terminato",
+			"La stringa \"joined\" e' inviata su stdout quando entrambi i thread sono terminati",
+			"La stringa “joined” e’ inviata su stdout quando uno dei due thread (non importa quale) e’ terminato"
 		],
 		"correct": "b",
 		"answers_have_code": 0,
@@ -639,7 +649,7 @@
 		],
 		"correct": "a",
 		"answers_have_code": 0,
-		"code": "int fd,fd1;\r\nstruct stat buf,\r\nbuf1;\r\nfd=open(\"filename\", O_RDWR);\r\nfd1=dup(fd); \r\nfstat(fd,&buf);\r\nfstat(fd1,&buf1);"
+		"code": "int fd,fd1;\r\nstruct stat buf, buf1;\r\nfd=open(\"filename\", O_RDWR);\r\nfd1=dup(fd); \r\nfstat(fd,&buf);\r\nfstat(fd1,&buf1);"
 	}, {
 		"question": "Supponiamo di avere il seguente  frammento di codice. Quale delle seguenti istruzioni deve  essere  posta all'interno  del  ciclo while per  memorizzare in filename  il nome dei file  contenuti all'interno della directory mydir ?",
 		"answers": [
@@ -649,9 +659,9 @@
 		],
 		"correct": "a",
 		"answers_have_code": 1,
-		"code": "struct dirent *dentry; //directory stream\r\nchar *filename;\r\nDIR *dstr=opendir(\"mydir\");\r\nwhile ((dentry=readdir(dstr)) != NULL) {\r\n/* Memorizzai nome file nella  directory  in filename  */\r\n}"
+		"code": "struct dirent *dentry; //directory stream\r\nchar *filename;\r\nDIR *dstr=opendir(\"mydir\");\r\nwhile ((dentry=readdir(dstr)) != NULL) {\r\n/* Memorizza i nome file nella  directory  in filename  */\r\n}"
 	}, {
-		"question": "Quali attributi di processo sono preservati dalla system call  execve(2)?",
+		"question": "Quale dei seguenti attributi di processo è preservato dalla system call execve(2)?",
 		"answers": [
 			"Memory locks",
 			"Timer",
@@ -1200,7 +1210,7 @@
 		"answers_have_code": 0,
 		"code": "char *f(char* dest, const char* src, size_t n) {\r\n    size_t i; size_t dest_len = strlen(dest);\r\n    for (i = 0; i < n && src[i] != '\\0'; i++) dest[dest_len + i] = src[i];\r\n    for (; i < n; i++) dest[dest_len + i] = '\\0';\r\n    return dest;\r\n}"
 	}, {
-		"question": "Per visualizzare contemporaneamente l'access time e status change time di un file, quale dei seguenti comandi è corretto?",
+		"question": "Quale dei seguenti comandi permette di visualizzare contemporaneamente l’access time e lo status change time di un file?",
 		"answers": [
 			"stat nomefile",
 			"ls -la nomefile",
@@ -1793,12 +1803,12 @@
 },{
     "question": "Supponiamo di aver dichiarato ed inizializzato le seguenti variabili; quali delle seguenti espressioni è vera?",
     "answers": [
-        "(x & y) == (x && y)",
-        "(x && y) == 7",
-        "(x & y) == (x | y)"
+        "x & y == x && y",
+        "x && y == 7",
+        "!(x & y == x | y)"
     ],
-    "correct": "a",
-    "answers_have_code": 0,
+    "correct": "b",
+    "answers_have_code": 1,
     "code": "int x = 1, y = 7;"
 },
 {
@@ -1876,7 +1886,7 @@
     ],
     "correct": "a",
     "answers_have_code": 0,
-    "code": "gcc file.o file2.o file3.o"
+    "code": "gcc file1.o file2.o file3.o"
 },
 {
     "question": "Si consideri il seguente frammento di codice. Cosa fa una volta eseguito?",
@@ -2000,7 +2010,7 @@
     "code": "int scoreCount, a;\r\nfor(scoreCount=0; scanf(\"%d\",&a)==1; scoreCount++);"
 },
 {
-    "question": "Si consideri il seguente frammento di codice; che valore conterrà la variabile K, al termine dell'esecuzione del frammento di codice?",
+    "question": "Si consideri il frammento di codice; che valore conterrà la variabile K, al termine dell'esecuzione del frammento di codice?",
     "answers": [
         "11",
         "L'esecuziuone del frammento di codice non termina perché Il ciclo entra in un loop infinito",
@@ -2008,7 +2018,7 @@
     ],
     "correct": "b",
     "answers_have_code": 0,
-    "code": "int K=10, c=0, p=1;\r\nwhile (++K > 10)\r\n c++;p--;"
+    "code": "int K=10, c=0, p=1;\r\nwhile (++K > 10)\r\n c=c+1;\r\np--;"
 },
 {
     "question": "In quale situazione le system call dup(2) e dup2(2) hanno lo stesso comportamento?",
@@ -2047,7 +2057,7 @@
     "question": "Supponiamo di aver utilizzato, nella nostra funzione C, la funzione di libreria alloca(3) per allocare un'area di memoria. È necessario liberare tale area di memoria mediante una free(3) prima della terminazione della funzione?",
     "answers": [
         "No. l'area di memoria allocata nello stack viene liberata automaticamente",
-        "Sì, ma mediante la chiamata di funzione dealloca(3) e non mediante la free(3)",
+        "No, deve essere invocata la funzione dealloca(3)",
         "Sì, bisogna sempre liberare la memoria per evitare dei memory leak"
     ],
     "correct": "a",
@@ -2099,7 +2109,7 @@
     "code": ""
 },
 {
-    "question": "Supponiamo di avere una directory /home/dir creata da root con diritti 1777/drwxrwxrwt ed azl suo interno il file filename, creato da root, con diritti di accesso 0770/-rwxrwx---. Supponiamo quindi di eseguire il comando rm /home/dir/filename eseguito come utente normale (non root). Quale delle seguenti affermazioni è corretta?",
+    "question": "Supponiamo di avere una directory /home/dir creata da root con diritti 1777/drwxrwxrwt ed al suo interno il file filename, creato da root, con diritti di accesso 0770/-rwxrwx---. Supponiamo quindi di eseguire il comando rm /home/dir/filename eseguito come utente normale (non root). Quale delle seguenti affermazioni è corretta?",
     "answers": [
         "Il file verrà cancellato perché lo sticky bit non è settato",
         "Il file non verrà cancellato perché il proprietario del file è root ed i diritti per il gruppo others sono tutti resettati",
@@ -2112,12 +2122,12 @@
 {
     "question": "Si supponga di esguire la sequenza di comandi. Quale sarà il risultato?",
     "answers": [
-        "IL primo comando crea l'utente utente1, ed il gruppo utente1; il secondo comando da errore",
+        "Il primo comando crea l'utente utente1, ed il gruppo utente1; il secondo comando da errore",
         "Il primo comando crea l'utente ed il gruppo utente1; il secondo comando aggiunge l'utente utente1 al gruppo studente. Se il gruppo studente non esiste lo crea",
         "Il primo comando crea l'utente ed il gruppo utente1; il secondo comando aggiunge l'utente utente1 al gruppo studente solo se il gruppo studente già esiste"
     ],
     "correct": "c",
-    "answers_have_code": 0,
+    "answers_have_code": 1,
     "code": "sudo adduser utente1\r\nsudo adduser utente1 studente"
 }
 ]
