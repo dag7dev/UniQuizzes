@@ -197,14 +197,14 @@
 		"code": "merge_sorted_lists: merge_sorted_lists.c\r\n    gcc -Wall -Wextra -O3 merge_sorted_lists.c -o merge_sorted_lists\r\nsort_file_int: sort_file_int.c\r\n    gcc -Wall -Wextra -O3 sort_file_int.c-o sort_file_int\r\n.PHONY: clean\r\nclean:\r\n    rm -f *.o merge_sorted_lists"
 	},
 	{
-		"question": "Assumiamo di compilare un file .c nei seguenti modi. Perche' le dimensioni di file2.o sono diverse da quelle di file1.o?",
+		"question": "Assumiamo di compilare un file .c nei seguenti modi. Perche' le dimensioni di file1.o e file2.o sono diverse?",
 		"answers": [
 			"perche' file2.o e' stato ottimizzato, per occupare meno spazio in memoria, rispetto a file1.o",
 			"perche' file2.o contiene informazioni aggiuntive rispetto a file1.o utili per il debug",
 			"non e' vero che i due comandi di compilazione producono file di dimensioni diverse"
 		],
 		"correct": "b",
-		"answers_have_code": 0,
+		"answers_have_code": 1,
 		"code": "gcc file.c -o file1.o\r\ngcc -g file.c -o file2.o"
 	},
 	{
@@ -219,7 +219,7 @@
 		"code": "shell_1: xterm\r\nshell_2: ps -C xterm\r\n#restituisce xtermPID\r\nshell_2: kill -s SIGSTOP xtermPID\r\nshell_2: kill -s SIGCONT xtermPID"
 	},
 	{
-		"question": "Si assuma  di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e si consideri la seguente  sequenza di comandi (\"shell_i\":cmd indica che cmd e' eseguitto nella  shell i, i=1,2). Quale e' il loro effetto?",
+		"question": "Si assuma  di avere due shell aperte, etichettate come \"shell_1\" e \"shell_2\", e si consideri la seguente sequenza di comandi (\"shell_i\":cmd indica che cmd e' eseguitto nella  shell i, i=1,2). Quale e' il loro effetto?",
 		"answers": [
 			"Il processo xterm viene terminato con segnale SIGSTOP",
 			"Il processo xterm viene mandato  in esecuzione in background",
@@ -435,8 +435,8 @@
 			"Il programma genera errore in fase di compilazione",
 			"Il programma scrive sul file myfile.txt la stringa 3.1416 PI"
 		],
-		"correct": "a",
-		"answers_have_code": 0,
+		"correct": "c",
+		"answers_have_code": 1,
 		"code": "FILE * pFile;\r\npFile = open(\"myfile.txt\",\"rw+\");\r\nfprintf(pFile, \"%f %s\", 3.1416, \"PI\");"
 	}, {
 		"question": "Cosa fa il seguente segmento di codice se eseguito?",
@@ -1988,7 +1988,7 @@
     "code": "scanf(\"%d\",&num);\r\ndo {\r\nprintf(\"%d\\n\",num);\r\nscanf(\"%d\",&num);\r\n} while(num!=0);"
 },
 {
-    "question": "Supponiamo di aver inizializzato un puntatore ad una variabile intera in questo modo. Quale delle seguenti istruzioni assegna il valore 10 a num?",
+    "question": "Supponiamo di aver inizializzato un puntatore ad una variabile intera in questo modo. Come possiamo assegnare 10 al valore indiretto di ptrnum dopo l'inizializzazione?",
     "answers": [
         "ptrnum = (int *) 10;",
         "ptrnum = 10;",
@@ -2010,15 +2010,15 @@
     "code": "int scoreCount, a;\r\nfor(scoreCount=0; scanf(\"%d\",&a)==1; scoreCount++);"
 },
 {
-    "question": "Si consideri il frammento di codice; che valore conterrà la variabile K, al termine dell'esecuzione del frammento di codice?",
+    "question": "Si consideri il frammento di codice. Che valore conterrà la variabile K al termine dell'esecuzione del frammento di codice?",
     "answers": [
         "11",
         "L'esecuziuone del frammento di codice non termina perché Il ciclo entra in un loop infinito",
         "10"
     ],
     "correct": "b",
-    "answers_have_code": 0,
-    "code": "int K=10, c=0, p=1;\r\nwhile (++K > 10)\r\n c=c+1;\r\np--;"
+    "answers_have_code": 1,
+    "code": "int K=10, c=0, p=1;\r\nwhile (++K > 10)\r\nc=c+1;\r\np--;"
 },
 {
     "question": "In quale situazione le system call dup(2) e dup2(2) hanno lo stesso comportamento?",
