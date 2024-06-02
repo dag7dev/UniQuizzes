@@ -495,22 +495,16 @@ function loadElements(questions) {
 
             var lblAnswer = document.createElement('label');
             lblAnswer.classList.add('form-check-label');
+            lblAnswer.classList.add('answer-label');
             lblAnswer.htmlFor = 'answer' + i + "." + j;
 
             // if answers_have_code == 1 *in json* then let's render our answers as code in a pre block
             if (questions[i]['answers_have_code']) {
-                var description = document.createElement('textarea')
-                description.name = "taAnswerCode"
-                description.textContent = " " + answers[j];
-                description.readOnly = true;
-                description.cols = 100;
-                description.rows = 10;
-
-                // Textarea must fits into the parent
-                description.style.width = "100%";
-
+                var description = document.createElement('pre');
+                description.classList.add('answer-code');
+                description.textContent = answers[j];
             } else {
-                var description = document.createTextNode(" " + answers[j])
+                var description = document.createTextNode(" " + answers[j]);
             }
             lblAnswer.appendChild(description);
 
