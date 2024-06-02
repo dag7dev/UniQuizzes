@@ -474,7 +474,10 @@ function loadElements(questions) {
         // if question has source code, then renderize it into a div
         if (questions[i]['code'] !== undefined && questions[i]['code'].length > 0) {
             var codeDiv = document.createElement('div');
-            codeDiv.innerHTML = "<pre>" + questions[i]['code'] + "</pre>";
+            var codeBlock = document.createElement('pre');
+            var codeText = document.createTextNode(questions[i]['code']);
+            codeBlock.appendChild(codeText);
+            codeDiv.appendChild(codeBlock);
             card.appendChild(codeDiv);
         }
 
