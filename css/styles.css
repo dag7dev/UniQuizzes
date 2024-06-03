@@ -46,3 +46,12 @@ a:hover {
 #btn-quiz-reload {
     margin-top: 10px;
 }
+
+.answer-code {
+    border: 1px solid rgba(127, 127, 127, 0.7);
+    white-space: break-spaces;
+}
+
+.answer-label {
+    width: 100%;
+}
