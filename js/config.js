@@ -24,12 +24,12 @@ var customDescription = "Give a star on Github"
 // FILES
 var jsonFolder = "json" // json folder where to load your json files
 var jsonFiles = { // load other quizzes
-    "so1 NOFILE.json": "SO1 2024",
+    "so12024.json": "SO1 2024",
     "so1.json": "SO1",
     "so2.json": "SO2",
     "swInedite.json": "SW - Inedite",
     "OLD_so1.json": "Archivio SO1",
     "2022_FDS.json": "FDS 2022",
     "so2mz.json": "SO2 2023",
-    "file.json": "Cloud Computing"
+    "cc.json": "Cloud Computing"
 };

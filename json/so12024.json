@@ -740,7 +740,7 @@
             "p=5; offset=7",
             "p=5; offset=6"
         ],
-        "correct": "d",
+        "correct": "c",
         "answers_have_code": 0,
         "code": ""
     },
