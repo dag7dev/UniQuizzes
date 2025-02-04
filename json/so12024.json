@@ -1384,5 +1384,148 @@
         "answers_have_code": 0,
         "code": "",
         "img": ""
-    } 
+    },
+    {
+        "question": "In un sistema che utilizza l'algoritmo SCAN, le richeste di accesso al disco sono: 12, 25, 55, 85, 120, 150. La testina si trova inizialmente sul cilindro 50 e si sta muovendo verso destra. Il disco ha 200 cilindri (numerati da 0 a 199). Qual è l'ordine in cui le richieste vengono servite?",
+        "answers": [
+            "25, 12, 55, 85, 120, 150",
+            "55, 85, 120, 150, 12, 25",
+            "55, 85, 120, 150, 25, 12",
+            "55, 25, 12, 150, 120, 85"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Un disco magnetico impiega complessivamente 35 msec per trasferire 8 MiB di dati. Sapendo che: il seek time complessivo è pari a 14 msec, il rotational delay è pari a 6 msec, qual è il valore del transfer rate del disco? (Si ricordi che 1 MiB = 2^20 bytes)",
+        "answers": [
+            "~4.47 GB/sec",
+            "~4.47 Gbit/sec",
+            "~4.47 MB/sec",
+            "~4.47 Mbit/sec"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Si consideri un sistema con memoria virtuale paginata che utilizza una cache TLB (Translation Look-aside Buffer). In caso di cache hit.",
+        "answers": [
+            "L'indirizzo della pagina richiesta può essere in memoria principale",
+            "L'indirizzo della pagina richiesta è sicuramente in memoria principale",
+            "L'indirizzo della pagina richiesta è sicuramente su disco",
+            "Non è possibile rispondere alla domanda"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Si consideri un sistema operativo che utilizza indirizzi logici da 21 bit e memoria paginata in cui ciascuna pagina ha dimensione 2 KiB (2048 bytes). Qual è la dimensione (numero di entry) della relativa page table?",
+        "answers": [
+            "1024",
+            "10",
+            "2048",
+            "1000"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "La memory management unit (MMU):",
+        "answers": [
+            "È il supporto hardware necessario per l'implementazione della rilocazione dinamica",
+            "Contiene almeno un registro base ed uno limite",
+            "Consente l'allocazione fisica non contigua dello spazio di indirizzamento di un processo",
+            "Tutte le risposte precedenti sono corrette"
+        ],
+        "correct": "d",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "L'uso di thread pool in un server web (multi-threaded):",
+        "answers": [
+            "È svantaggioso perché crea un numero di thread generalmente elevato",
+            "È svantaggioso perché crea un numero di thread generalmente basso",
+            "È vantaggioso perché il costo della creazione di nuovi thread viene ammortizzato dal fatto che un certo numero di essi vengono creati in anticipo",
+            "È vantaggioso perché il costo della creazione di nuovi thread viene ammortizzato dal fatto che un certo numero di essi vengono creati ad ogni richiesta"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "In un sistema uniprocessore con n processi in coda pronti (schedulabili), quante strategie di scheduling è possibile implementare (in funzione di n)?",
+        "answers": [
+            "n",
+            "n^2",
+            "n!",
+            "I dati sono insufficiente per rispondere alla domanda"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Quando un processo \"padre\" crea un nuovo processo \"figlio\" tramite la chiamata fork(), quale delle seguenti informazioni il \"padre\" condividerà con il \"figlio\"?",
+        "answers": [
+            "Stack",
+            "Heap",
+            "Segmenti di memoria condivisa",
+            "Nessuna delle precedenti"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Un processo in esecuzione sulla CPU passa in stato ready quando:",
+        "answers": [
+            "Esegue una chiamata di funzione",
+            "Termina il quanto di tempo ad esso assegnato",
+            "Apre una connessione di rete (a.g., un socket TCP)",
+            "Fa richiesta di input da parte dell'utente"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Il cosidetto stack frame (record di attivazione):",
+        "answers": [
+            "È un'area appositamente creata nella porzione stack della memoria di un processo per gestire le chiamate di sistema",
+            "È un'area appositamente creata nella porzione stack della memoria del sistema operativo per gestire la comunicazione tra processi",
+            "È un'area appositamente creata nella porzione stack della memoria di un processo per gestire le chiamate di funzione",
+            "È un'area appositamente creata nella porzione stack della memoria del sistema operativo per gestire le interruzioni"
+        ],
+        "correct": "c",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Calcolare il tempo medio di attesa (average waiting time) dei seguenti processi, assumendo una politica di scheduling First Come First Served (FCFS) e che il processo A esegua all'istante t=4 una chiamata di I/O che si completerà dopo 3 unità di tempo, ossia all'istante t=7. Nel calcolo, si consideri trascurabile il tempo necessario ad eseguire il context switch:",
+        "answers": [
+            "5.5",
+            "4.5",
+            "5",
+            "5.75"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": "63"
+    }
 ]
