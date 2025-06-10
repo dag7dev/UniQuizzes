@@ -5,7 +5,7 @@
             "Falso",
             "Vero"
         ],
-        "correct": "",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "dd if=filein of=fileout bs=1 seek=10 count=100"
     },
@@ -26,7 +26,7 @@
             "Falso",
             "Vero"
         ],
-        "correct": "b",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -37,7 +37,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -72,7 +72,7 @@
             "ghilmnopqrstuvwxyzABCDEFGHILMN",
             "GHILMNOPQRSTUVWXYZ"
         ],
-        "correct": "",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -127,7 +127,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "studente@debian9:~$ /home/studente/dir1/dir2 \nstudente@debian9:~$ ~/dir1/dir2/",
         "img": ""
@@ -138,7 +138,7 @@
             "Falso",
             "Vero"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -149,7 +149,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -160,7 +160,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -182,7 +182,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "a",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -204,7 +204,7 @@
             "Falso",
             "Vero"
         ],
-        "correct": "a",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -216,7 +216,7 @@
             "Nulla. Un segnale di SIGINT inviato in usermode non viene considerato dal processo che lo riceve.",
             "Il processo xterm viene terminato con segnale SIGINT"
         ],
-        "correct": "",
+        "correct": "c",
         "answers_have_code": 0,
         "code": "shell_1: xterm\nshell_2: ps -C xterm\n#restituisce xtermPID\nshell 2: kill -s SIGINT xtermPID",
         "img": ""
@@ -227,7 +227,7 @@
             "Falso",
             "Vero"
         ],
-        "correct": "",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "~$ jobs -p",
         "img": ""
@@ -250,7 +250,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "SIGINT\nSIGABRT\nSIGTERM",
         "img": ""
@@ -283,7 +283,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -306,7 +306,7 @@
             "Il processo sleep viene mandato in esecuzione in background",
             "Nessuno. In usermode i processi ignorano il segnale di SIGSTOP. L'invio del segnale SIGCONT quindi non modifica lo stato del processo"
         ],
-        "correct": "",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "shell_1: sleep 300\nshell_2: ps -C sleep\n#restituisce sleepPID\nshell_2: kill -s SIGSTOP sleepPID\nshell_2: kill -s SIGCONT sleepPID",
         "img": ""
