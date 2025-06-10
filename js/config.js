@@ -27,6 +27,7 @@ var jsonFiles = { // load other quizzes
     "so12024.json": "SO1 2024",
     "so1.json": "SO1",
     "so2.json": "SO2",
+    "so2_2025_mz.json": "SO2 2025 (MZ)",
     "swInedite.json": "SW - Inedite",
     "OLD_so1.json": "Archivio SO1",
     "2022_FDS.json": "FDS 2022",
