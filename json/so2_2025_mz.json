@@ -21,12 +21,12 @@
         "img": ""
     },
     {
-        "question": "Si consideri il comando 'ln -s myfile mylink' dopo la sua esecuzione, l'output dei comandi \"du myfile\" e \"du mylink\" sara' diverso",
+        "question": "Si consideri il comando 'ln -s myfile mylink'.Dopo la sua esecuzione, l'output dei comandi \"du myfile\" e \"du mylink\" sara' diverso",
         "answers": [
             "Falso",
             "Vero"
         ],
-        "correct": "a",
+        "correct": "b",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -59,6 +59,18 @@
             "ls -lu nomefile",
             "Is -Ic nomefile",
             "ls -la nomefile"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Per visualizzare la lista dei file presenti nella CWD ordinati per modified time si utilizza il comando:",
+        "answers": [
+            "ls -lt",
+            "Is -lut",
+            "ls -la"
         ],
         "correct": "a",
         "answers_have_code": 0,
@@ -142,9 +154,20 @@
         "answers_have_code": 0,
         "code": "",
         "img": ""
+    },    
+    {
+        "question": "Consideriamo il file eseguibile myProgram con proprietario utente1 e con permessi di accesso -rwsr-xr-x, Se utente2 esegue myProgramma si osserva che il RUID = EUID",
+        "answers": [
+            "Falso",
+            "Vero"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
     },
     {
-        "question": "Supponiamo di avere una directory '/home/dir' creata da root con permessi di accesso '0777/drwxrwxrwt (owner root)' ed al suo interno il file filename, creato da root, con permessi di accesso '0770/-rwxrwx --- (owner root)'. Un qualsiasi utente puo' rimovere il file filename eseguendo, in user mode, il comando 'rm /home/dir/filename'",
+        "question": "Supponiamo di avere una directory '/home/dir' creata da root con permessi di accesso '1777/drwxrwxrwt (owner root)' ed al suo interno il file filename, creato da root, con permessi di accesso '0770/-rwxrwx --- (owner root)'. Un qualsiasi utente puo' rimovere il file filename eseguendo, in user mode, il comando 'rm /home/dir/filename'",
         "answers": [
             "Vero",
             "Falso"
@@ -156,6 +179,17 @@
     },
     {
         "question": "I permessi di accesso del file eseguibile '/usr/bin/passwd' sono impostati a '4755/-rwsr-xr-x'. per impedire che un qualsiasi utente, operante in usermode, possa eseguire il comando passwd e quindi modificare il file '/etc/passwd'",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "I permessi di accesso del file eseguibile '/usr/bin/passwd' sono impostati a '1755/-rwxr-xr-t' per consentire ad un qualsiasi utente, operante in usermode, di eseguire il comando passwd e quindi modificare il file '/etc/passwd'",
         "answers": [
             "Vero",
             "Falso"
@@ -182,7 +216,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "b",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "",
         "img": ""
@@ -222,6 +256,18 @@
         "img": ""
     },
     {
+        "question": "Si assuma di avere due shell aperte, etichettate come shell_1 e shell_2 e si consideri la seguente sequenza di comandi (shell_i:cmd indica che cmd e' eseguitto nella shell i, i=1,2) eseguiti in usermode. Quale e' il loro effetto?",
+        "answers": [
+            "Il processo xterm viene messo nello stato T",
+            "Nulla. In usermode l'invio di un segnale di SIGSTOP ad un processo non ha effetto",
+            "Il processo xterm viene mandato in esecuzione in background"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "shell_1: xterm\nshell_2: ps -C xterm\n#restituisce xtermPID\nshell 2: kill -s SIGSTOP xtermPID",
+        "img": ""
+    },
+    {
         "question": "Per conoscere lo stato di un job in esecuzione si deve utilizzare il comando",
         "answers": [
             "Falso",
@@ -241,7 +287,7 @@
         ],
         "correct": "a",
         "answers_have_code": 0,
-        "code": "sudo adduser - -home=/home/testdir - -no-create-home usertest",
+        "code": "sudo adduser --home=/home/testdir --no-create-home usertest",
         "img": ""
     },
     {
@@ -253,6 +299,17 @@
         "correct": "a",
         "answers_have_code": 0,
         "code": "SIGINT\nSIGABRT\nSIGTERM",
+        "img": ""
+    },
+    {
+        "question": "I seguenti segnali non possono essere catturati e gestiti da un programma c eseguito in usermode",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "SIGKILL\nSIGINT\nSIGABRT",
         "img": ""
     },
     {
@@ -289,6 +346,17 @@
         "img": ""
     },
     {
+        "question": "Si consideri il comando 'ln -s myfile mylink'. Dopo la sua esecuzione, myfile e mylink avranno un diverso inode.",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
         "question": "Il comando 'chmod 6774 nomefile' imposta i seguenti permessi per il file nomefile '- r w s r w s r - -'",
         "answers": [
             "Falso",
@@ -310,5 +378,95 @@
         "answers_have_code": 0,
         "code": "shell_1: sleep 300\nshell_2: ps -C sleep\n#restituisce sleepPID\nshell_2: kill -s SIGSTOP sleepPID\nshell_2: kill -s SIGCONT sleepPID",
         "img": ""
+    },    
+    {
+        "question": "Il comando ~$ sleep 30 | sleep 15 | sleep 10 & crea 1 job in background",
+        "answers": [
+            "Falso",
+            "Vero"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },    
+    {
+        "question": "La directory /tmp ha i permessi di accesso impostati a 1777/drwxrwxrwt per consentire a tutti gli utenti di leggere, creare e rimuovere file anche se non hanno permessi di scrittura su di essi.",
+        "answers": [
+            "Falso",
+            "Vero"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Consideriamo il file eseguibile myProgram con proprietario utente1 e con permessi di accesso -rwxr-xr-x. Se utente2 esegue myProgram si osserva che il RUID è diverso dal EUID",
+        "answers": [
+            "Falso",
+            "Vero"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Supponiamo di avere una directory '/home/dir' creata da root con permessi di accesso '1777/drwxrwxrwt (owner root)' ed al suo interno il file filename, creato da root, con permessi di accesso '0770/-rwxrwx--- (owner root)' Un qualsiasi utente puo' rimovere il file filename eseguendo, in user mode, il comando rm /home/dir/filename",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Per eseguire con successo il comando studente@hostname~$ sudo -u usertest stat file_di_usertest quale password deve essere fornita?",
+        "answers": [
+            "La password dell'utente usertest",
+            "La password dell'utente studente",
+            "La password di root"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Il comando adduser utente1; adduser utente1 studente , dopo aver creato l'utente utente1, genera errore nell'esecuzione del secondo comando in quanto utente1 esiste già.",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Dopo l'esecuzione del comando ln filename link1, il comando \"stat filename\" e \"stat link1\" avranno output uguale a meno del campo \"File\".",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "a",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
+    },
+    {
+        "question": "Una directory con i permessi di accesso settati a rw- --- --- permette all'utente proprietario della directory di: leggere il contenuto della directory inclusi gli attributi del file; impostare la directory come cwd; attraversare la directory;",
+        "answers": [
+            "Vero",
+            "Falso"
+        ],
+        "correct": "b",
+        "answers_have_code": 0,
+        "code": "",
+        "img": ""
     }
+    
 ]
