@@ -127,7 +127,7 @@
             "Vero",
             "Falso"
         ],
-        "correct": "b",
+        "correct": "a",
         "answers_have_code": 0,
         "code": "studente@debian9:~$ /home/studente/dir1/dir2 \nstudente@debian9:~$ ~/dir1/dir2/",
         "img": ""
