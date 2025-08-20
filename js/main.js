@@ -241,7 +241,7 @@ function init() {
         timerHandler(timer)
     }
 
-    h3Explaination.innerText = "+" + correctAnswerPoints + " for each correct answer, +" + wrongAnswerPoints + " for each wrong answer, +" + noAnswerPoints + " for each no answer"
+    h3Explaination.innerText = "+" + correctAnswerPoints + " for each correct answer, -" + wrongAnswerPoints + " for each wrong answer, +" + noAnswerPoints + " for each no answer"
 
     // check: JSONFile exist => if not it will not load
     if (typeof jsonFiles === 'undefined' || jsonFiles.constructor != Object) {
